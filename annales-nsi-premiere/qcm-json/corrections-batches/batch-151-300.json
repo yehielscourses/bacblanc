@@ -1,0 +1,752 @@
+[
+  {
+    "id": 151,
+    "bonne_reponse": "C",
+    "explication": "En complément à deux sur 8 bits, 1111 1111 représente −1 car c'est la représentation de −1 dans ce codage."
+  },
+  {
+    "id": 152,
+    "bonne_reponse": "D",
+    "explication": "2A en hexadécimal vaut 42 et 2 en hexadécimal vaut 2, donc la somme décimale est 44."
+  },
+  {
+    "id": 153,
+    "bonne_reponse": "C",
+    "explication": "a AND b vaut False, donc NOT(False) vaut True."
+  },
+  {
+    "id": 154,
+    "bonne_reponse": "C",
+    "explication": "UTF-8 code chaque caractère sur un nombre variable d'octets, de 1 à 4 selon le caractère."
+  },
+  {
+    "id": 155,
+    "bonne_reponse": "B",
+    "explication": "La boucle externe crée 5 lignes et la boucle interne 3 valeurs i×j, ce qui donne [[0,0,0],[0,1,2],[0,2,4],[0,3,6],[0,4,8]]."
+  },
+  {
+    "id": 156,
+    "bonne_reponse": "C",
+    "explication": "Le numéro de sécurité sociale est un identifiant unique, adapté pour fusionner les deux tables."
+  },
+  {
+    "id": 157,
+    "bonne_reponse": "B",
+    "explication": "La fonction parcourt la liste et remplace chaque élément par 0, d'où [0, 0, 0]."
+  },
+  {
+    "id": 158,
+    "bonne_reponse": "A",
+    "explication": "d['tortue'] accède à la clé 'tortue' et renvoie la valeur associée 'reptile'."
+  },
+  {
+    "id": 159,
+    "bonne_reponse": "A",
+    "explication": "La dernière colonne (indice 7) contient He, Ne, Ar : gaz_rares = [periode[7] for periode in mendeleiev]."
+  },
+  {
+    "id": 160,
+    "bonne_reponse": "B",
+    "explication": "La scie est l'élément d'indice 1, donc t[1]['quantité'] vaut 3."
+  },
+  {
+    "id": 161,
+    "bonne_reponse": "B",
+    "explication": "t est une liste dont chaque élément est un dictionnaire."
+  },
+  {
+    "id": 162,
+    "bonne_reponse": "B",
+    "explication": "method=\"POST\" envoie les données dans le corps de la requête HTTP, et non dans l'URL."
+  },
+  {
+    "id": 163,
+    "bonne_reponse": "C",
+    "explication": "Une transmission chiffrée est une transmission d'informations cryptées pour les protéger."
+  },
+  {
+    "id": 164,
+    "bonne_reponse": "B",
+    "explication": "this.style.color = \"blue\" change la couleur du texte du bouton cliqué en bleu."
+  },
+  {
+    "id": 165,
+    "bonne_reponse": "C",
+    "explication": "Saisir une URL dans la barre d'adresse envoie une requête GET, jamais une requête POST."
+  },
+  {
+    "id": 166,
+    "bonne_reponse": "A",
+    "explication": "La RAM est une mémoire volatile : son contenu disparaît à l'arrêt de l'alimentation."
+  },
+  {
+    "id": 167,
+    "bonne_reponse": "A",
+    "explication": "La RAM sert à stocker temporairement les données et instructions pendant l'exécution des programmes."
+  },
+  {
+    "id": 168,
+    "bonne_reponse": "B",
+    "explication": "La commande chmod permet de modifier les droits d'accès d'un fichier ou d'un répertoire."
+  },
+  {
+    "id": 169,
+    "bonne_reponse": "B",
+    "explication": "IP peut choisir un autre chemin : les paquets peuvent transiter par le routeur D si C est détruit."
+  },
+  {
+    "id": 170,
+    "bonne_reponse": "D",
+    "explication": "La RAM perd son contenu en cas de coupure de l'alimentation, car elle est volatile."
+  },
+  {
+    "id": 171,
+    "bonne_reponse": "C",
+    "explication": "cd .. change le répertoire courant vers le répertoire parent."
+  },
+  {
+    "id": 172,
+    "bonne_reponse": "B",
+    "explication": "sqrt(2×x) n'est défini que si 2×x ≥ 0, donc la précondition est x ≥ 0."
+  },
+  {
+    "id": 173,
+    "bonne_reponse": "A",
+    "explication": "Seul le premier return est exécuté dans essai(), qui renvoie donc 2."
+  },
+  {
+    "id": 174,
+    "bonne_reponse": "C",
+    "explication": "La comparaison x+y==z est peu fiable avec des flottants à cause des erreurs d'arrondi."
+  },
+  {
+    "id": 175,
+    "bonne_reponse": "C",
+    "explication": "Le code décale les éléments vers la gauche et place le premier en fin, donnant [3, 4, 5, 2, 1]."
+  },
+  {
+    "id": 176,
+    "bonne_reponse": "D",
+    "explication": "[0] * 7 crée une liste de 7 zéros : [0, 0, 0, 0, 0, 0, 0]."
+  },
+  {
+    "id": 177,
+    "bonne_reponse": "B",
+    "explication": "Il faut comparer liste[i] et liste[iMax] pour mettre à jour l'indice du maximum."
+  },
+  {
+    "id": 178,
+    "bonne_reponse": "C",
+    "explication": "La boucle s'exécute tant que cpt > 8 ; cpt passe de 20 à 8, donc cpt vaut 8 à la fin."
+  },
+  {
+    "id": 179,
+    "bonne_reponse": "C",
+    "explication": "p double à chaque tour (1, 2, 4, 8…), suite strictement croissante de positifs, donc la boucle termine."
+  },
+  {
+    "id": 180,
+    "bonne_reponse": "D",
+    "explication": "La fonction parcourt la liste et retient le maximum, ici 35."
+  },
+  {
+    "id": 181,
+    "bonne_reponse": "D",
+    "explication": "Pour −n, on complète à deux la représentation de n=0110 1110, ce qui donne 1001 0010."
+  },
+  {
+    "id": 182,
+    "bonne_reponse": "B",
+    "explication": "Le complément à deux sert à représenter des entiers relatifs, y compris les négatifs, en binaire."
+  },
+  {
+    "id": 183,
+    "bonne_reponse": "B",
+    "explication": "c = 2**3 = 8 et d = 8 % 3 = 2."
+  },
+  {
+    "id": 184,
+    "bonne_reponse": "C",
+    "explication": "Arial est une police d'écriture, pas une méthode d'encodage de caractères."
+  },
+  {
+    "id": 185,
+    "bonne_reponse": "A",
+    "explication": "x == 3 est vrai, donc l'expression x == 3 or y == 5 s'évalue à True."
+  },
+  {
+    "id": 186,
+    "bonne_reponse": "A",
+    "explication": "La fonction compare chaque élément à m et retient le plus grand : c'est le maximum de L."
+  },
+  {
+    "id": 187,
+    "bonne_reponse": "C",
+    "explication": "La compréhension filtre les éléments strictement supérieurs à 3 : [6, 8, 21]."
+  },
+  {
+    "id": 188,
+    "bonne_reponse": "C",
+    "explication": "On garde les multiples de 3 : [3, 6, 9]."
+  },
+  {
+    "id": 189,
+    "bonne_reponse": "D",
+    "explication": "T[2][1] désigne la 3e ligne (indice 2), 2e colonne (indice 1), soit 8."
+  },
+  {
+    "id": 190,
+    "bonne_reponse": "C",
+    "explication": "f parcourt le dictionnaire et renvoie la première clé dont la valeur dépasse 18, soit \"charlotte\"."
+  },
+  {
+    "id": 191,
+    "bonne_reponse": "A",
+    "explication": "Un fichier CSV utilise des virgules pour séparer les champs sur chaque ligne."
+  },
+  {
+    "id": 192,
+    "bonne_reponse": "A",
+    "explication": "L'opérateur + concatène deux listes : data = data1 + data2 regroupe toutes les tuples."
+  },
+  {
+    "id": 193,
+    "bonne_reponse": "D",
+    "explication": "C'est le navigateur Web qui interprète le HTML et affiche la page à l'utilisateur."
+  },
+  {
+    "id": 194,
+    "bonne_reponse": "D",
+    "explication": "onmouseover déclenche une action quand la souris survole un élément de la page."
+  },
+  {
+    "id": 195,
+    "bonne_reponse": "C",
+    "explication": "onclick contient du code JavaScript à exécuter lors d'un clic."
+  },
+  {
+    "id": 196,
+    "bonne_reponse": "C",
+    "explication": "Le sélecteur #tab-nav a cible les liens à l'intérieur de l'élément d'id tab-nav."
+  },
+  {
+    "id": 197,
+    "bonne_reponse": "C",
+    "explication": "chmod a+x donne le droit d'exécution (x) à tous les utilisateurs (a)."
+  },
+  {
+    "id": 198,
+    "bonne_reponse": "C",
+    "explication": "cp fichier ./ copie interro.txt dans le répertoire courant."
+  },
+  {
+    "id": 199,
+    "bonne_reponse": "C",
+    "explication": "mv *.txt Documents déplace les fichiers .txt vers le sous-répertoire Documents du répertoire courant."
+  },
+  {
+    "id": 200,
+    "bonne_reponse": "C",
+    "explication": "La commande cat affiche le contenu d'un fichier à l'écran."
+  },
+  {
+    "id": 201,
+    "bonne_reponse": "C",
+    "explication": "Il n'est pas interdit d'étudier un système propriétaire ; cette affirmation est fausse."
+  },
+  {
+    "id": 202,
+    "bonne_reponse": "D",
+    "explication": "[0] * 7 produit la liste [0, 0, 0, 0, 0, 0, 0]."
+  },
+  {
+    "id": 203,
+    "bonne_reponse": "C",
+    "explication": "Il faut 0 ≤ a ≤ b et b < len(T) pour que tous les indices parcourus soient valides."
+  },
+  {
+    "id": 204,
+    "bonne_reponse": "B",
+    "explication": "On met à jour m quand L[i] > m pour suivre le maximum courant."
+  },
+  {
+    "id": 205,
+    "bonne_reponse": "B",
+    "explication": "La dichotomie ajoute au plus une comparaison quand la taille double, donc k+1."
+  },
+  {
+    "id": 206,
+    "bonne_reponse": "B",
+    "explication": "La lettre 'e' apparaît 2 fois dans \"Vive l'informatique\"."
+  },
+  {
+    "id": 207,
+    "bonne_reponse": "C",
+    "explication": "La fonction réduit l'intervalle [i,j] par dichotomie : c'est une recherche dichotomique."
+  },
+  {
+    "id": 208,
+    "bonne_reponse": "B",
+    "explication": "Avec i=K-1 et i=i-1, i diminue sans jamais atteindre K, donc la boucle est infinie."
+  },
+  {
+    "id": 209,
+    "bonne_reponse": "C",
+    "explication": "Sur 16 bits non signés, le maximum est 2^16−1 = 65535."
+  },
+  {
+    "id": 210,
+    "bonne_reponse": "C",
+    "explication": "15 s'écrit 1111 en binaire, soit 4 bits."
+  },
+  {
+    "id": 211,
+    "bonne_reponse": "D",
+    "explication": "−42 en complément à deux sur 8 bits s'écrit 1101 0110."
+  },
+  {
+    "id": 212,
+    "bonne_reponse": "C",
+    "explication": "L[1][2] vaut 0.82, un nombre flottant."
+  },
+  {
+    "id": 213,
+    "bonne_reponse": "C",
+    "explication": "On additionne toutes les quantités sauf les bananes : 430+274+137 = 841."
+  },
+  {
+    "id": 214,
+    "bonne_reponse": "C",
+    "explication": "matrice[1][2] est l'élément ligne 1, colonne 2, soit 6."
+  },
+  {
+    "id": 215,
+    "bonne_reponse": "B",
+    "explication": "len(L) vaut 3 (nombre de sous-listes), pas 6 : cette égalité est fausse."
+  },
+  {
+    "id": 216,
+    "bonne_reponse": "B",
+    "explication": "CSV (Comma-Separated Values) est un format de fichier pour stocker des données tabulaires."
+  },
+  {
+    "id": 217,
+    "bonne_reponse": "C",
+    "explication": "list(lettres.keys()) renvoie la liste des clés : [\"a\", \"b\", \"c\"]."
+  },
+  {
+    "id": 218,
+    "bonne_reponse": "B",
+    "explication": "La fonction renvoie True lorsque le compteur d'occurrences de 8 dépasse 1, donc au moins deux fois."
+  },
+  {
+    "id": 219,
+    "bonne_reponse": "A",
+    "explication": "Un bouton submit envoie les données du formulaire vers l'URL indiquée par l'attribut action."
+  },
+  {
+    "id": 220,
+    "bonne_reponse": "C",
+    "explication": "Le code JavaScript doit être placé entre les balises <script> et </script>."
+  },
+  {
+    "id": 221,
+    "bonne_reponse": "B",
+    "explication": "L'attribut onclick=\"actionBouton();\" associe la fonction JavaScript au clic sur le bouton."
+  },
+  {
+    "id": 222,
+    "bonne_reponse": "A",
+    "explication": "La commande mkdir crée un nouveau répertoire."
+  },
+  {
+    "id": 223,
+    "bonne_reponse": "D",
+    "explication": "Le groupe a les droits r-x (lecture et exécution), pas l'écriture : cette affirmation est fausse."
+  },
+  {
+    "id": 224,
+    "bonne_reponse": "C",
+    "explication": "Le routage par paquets permet une utilisation efficace et partagée des liens réseau."
+  },
+  {
+    "id": 225,
+    "bonne_reponse": "D",
+    "explication": "import os charge le module os que le programme pourra utiliser."
+  },
+  {
+    "id": 226,
+    "bonne_reponse": "C",
+    "explication": "Pour c=18, les conditions successives fixent p à 15 puis à 19, qui est la valeur renvoyée."
+  },
+  {
+    "id": 227,
+    "bonne_reponse": "C",
+    "explication": "f(35) divise par 2 à chaque tour : 35→17→8→4→2→1→0, soit 6 divisions, donc 6."
+  },
+  {
+    "id": 228,
+    "bonne_reponse": "C",
+    "explication": "Les étapes montrent une zone triée qui s'agrandit à gauche en insérant chaque élément : tri par insertion."
+  },
+  {
+    "id": 229,
+    "bonne_reponse": "D",
+    "explication": "La fonction retourne l'indice r du plus grand élément, pas sa valeur."
+  },
+  {
+    "id": 230,
+    "bonne_reponse": "C",
+    "explication": "s = 1+2+3+4 = 10 et i vaut 5 quand la boucle s'arrête, d'où (10, 5)."
+  },
+  {
+    "id": 231,
+    "bonne_reponse": "A",
+    "explication": "L'algorithme glouton prend d'abord les plus grosses pièces : 5+5+5+2+1 = 18 euros."
+  },
+  {
+    "id": 232,
+    "bonne_reponse": "D",
+    "explication": "Le caractère « é » n'appartient pas à l'ASCII (7 bits), contrairement à a, @ et l'espace."
+  },
+  {
+    "id": 233,
+    "bonne_reponse": "B",
+    "explication": "1110 1101 en binaire se regroupe en 1101=E et 1110=D, soit ED en hexadécimal."
+  },
+  {
+    "id": 234,
+    "bonne_reponse": "A",
+    "explication": "c est True si a==b ou si a > b+10, ce qui correspond à l'expression booléenne proposée."
+  },
+  {
+    "id": 235,
+    "bonne_reponse": "C",
+    "explication": "En addition binaire, la retenue est a ET b et la somme est a OU EXCLUSIF b."
+  },
+  {
+    "id": 236,
+    "bonne_reponse": "D",
+    "explication": "7B692 + 4C81E = C7EB0 en hexadécimal."
+  },
+  {
+    "id": 237,
+    "bonne_reponse": "B",
+    "explication": "L[0][2] est le 3e élément de la 1re ligne, soit 3."
+  },
+  {
+    "id": 238,
+    "bonne_reponse": "D",
+    "explication": "Pour la ligne i et colonne j, la valeur C×i+j produit 0,1,2 puis 3,4,5 pour construitTable(2,3)."
+  },
+  {
+    "id": 239,
+    "bonne_reponse": "B",
+    "explication": "range(5) donne i de 0 à 4, et i**2 produit [0, 1, 4, 9, 16]."
+  },
+  {
+    "id": 240,
+    "bonne_reponse": "A",
+    "explication": "Les descripteurs sont les noms des colonnes : nom, prenom et date_naissance."
+  },
+  {
+    "id": 241,
+    "bonne_reponse": "D",
+    "explication": "Un fichier CSV stocke des données structurées en tableau (lignes et colonnes)."
+  },
+  {
+    "id": 242,
+    "bonne_reponse": "B",
+    "explication": "Une page Web sécurisée utilise le protocole HTTPS."
+  },
+  {
+    "id": 243,
+    "bonne_reponse": "C",
+    "explication": "403 Forbidden est un code d'erreur renvoyé par le serveur (accès refusé)."
+  },
+  {
+    "id": 244,
+    "bonne_reponse": "B",
+    "explication": "JavaScript s'exécute côté client, sur la machine de l'utilisateur via le navigateur."
+  },
+  {
+    "id": 245,
+    "bonne_reponse": "A",
+    "explication": "cd ../mesPhotos depuis mesVideos place l'utilisateur dans /home/user/mesPhotos."
+  },
+  {
+    "id": 246,
+    "bonne_reponse": "A",
+    "explication": "Le moniteur est un périphérique de sortie (affichage), pas d'entrée."
+  },
+  {
+    "id": 247,
+    "bonne_reponse": "A",
+    "explication": "L'architecture de Von Neumann comprend l'UAL, l'unité de contrôle, la mémoire et les E/S."
+  },
+  {
+    "id": 248,
+    "bonne_reponse": "C",
+    "explication": "Le transistor, inventé vers 1947, a permis le miniaturisation et le développement des ordinateurs modernes."
+  },
+  {
+    "id": 249,
+    "bonne_reponse": "A",
+    "explication": "puissance(2,0) devrait renvoyer 1 mais renvoie 2 car la boucle ne s'exécute pas : ce test détecte l'erreur."
+  },
+  {
+    "id": 250,
+    "bonne_reponse": "C",
+    "explication": "tableau1 + tableau2 a 6 éléments, donc len vaut 6."
+  },
+  {
+    "id": 251,
+    "bonne_reponse": "A",
+    "explication": "HTML est un langage de balisage, pas un langage de programmation."
+  },
+  {
+    "id": 252,
+    "bonne_reponse": "C",
+    "explication": "L'algorithme cherche le minimum et l'échange : c'est le tri par sélection, de coût quadratique O(n²)."
+  },
+  {
+    "id": 253,
+    "bonne_reponse": "C",
+    "explication": "Le tri par insertion est quadratique : une liste 10 fois plus grande prend environ 100 fois plus de temps."
+  },
+  {
+    "id": 254,
+    "bonne_reponse": "A",
+    "explication": "Les flottants ne sont pas exacts : x peut ne jamais valoir exactement 0.0, donc la boucle peut ne pas s'arrêter."
+  },
+  {
+    "id": 255,
+    "bonne_reponse": "A",
+    "explication": "Les caractères mal affichés (Ã©, etc.) indiquent un problème d'encodage des caractères."
+  },
+  {
+    "id": 256,
+    "bonne_reponse": "D",
+    "explication": "not(a or b) = True implique que a or b est False, donc a et b sont tous deux False."
+  },
+  {
+    "id": 257,
+    "bonne_reponse": "A",
+    "explication": "P[1][\"âge\"] = 25 modifie la clé « âge » du deuxième dictionnaire de la liste P."
+  },
+  {
+    "id": 258,
+    "bonne_reponse": "A",
+    "explication": "On initialise les compteurs à 0 puis on incrémente effectifs[lettre] pour chaque lettre de sequence."
+  },
+  {
+    "id": 259,
+    "bonne_reponse": "C",
+    "explication": "return etendue, moyenne renvoie un couple de valeurs, donc un tuple."
+  },
+  {
+    "id": 260,
+    "bonne_reponse": "B",
+    "explication": "t[1][2] accède à la 2e sous-liste, 3e élément, soit 7."
+  },
+  {
+    "id": 261,
+    "bonne_reponse": "B",
+    "explication": "Tri par âge décroissant : McCarthy vécut 84 ans, le plus long, donc sa ligne arrive en premier."
+  },
+  {
+    "id": 262,
+    "bonne_reponse": "C",
+    "explication": "Le format PNG stocke des images sous forme de tableau de pixels."
+  },
+  {
+    "id": 263,
+    "bonne_reponse": "A",
+    "explication": "Les champs de formulaire doivent être placés entre les balises <form> et </form>."
+  },
+  {
+    "id": 264,
+    "bonne_reponse": "D",
+    "explication": "Les balises <form> et </form> délimitent un formulaire HTML."
+  },
+  {
+    "id": 265,
+    "bonne_reponse": "B",
+    "explication": "this.style.color = \"red\" colore le texte du bouton cliqué en rouge."
+  },
+  {
+    "id": 266,
+    "bonne_reponse": "A",
+    "explication": "Le JavaScript du bouton s'exécute entièrement dans le navigateur de l'utilisateur."
+  },
+  {
+    "id": 267,
+    "bonne_reponse": "C",
+    "explication": "Le code HTTP 404 signifie que la ressource demandée est introuvable."
+  },
+  {
+    "id": 268,
+    "bonne_reponse": "C",
+    "explication": "La commande mv permet de déplacer ou renommer un fichier."
+  },
+  {
+    "id": 269,
+    "bonne_reponse": "C",
+    "explication": "Les échanges sur Internet sont régis par des protocoles (TCP/IP, HTTP, etc.)."
+  },
+  {
+    "id": 270,
+    "bonne_reponse": "A",
+    "explication": "Un routeur interconnecte des réseaux et achemine les paquets entre eux."
+  },
+  {
+    "id": 271,
+    "bonne_reponse": "C",
+    "explication": "Après a=a-b et b=a+b, on obtient a=b-a pour échanger a et b sans variable temporaire."
+  },
+  {
+    "id": 272,
+    "bonne_reponse": "D",
+    "explication": "L'algorithme des k plus proches voisins appartient aux algorithmes de classification et d'apprentissage."
+  },
+  {
+    "id": 273,
+    "bonne_reponse": "C",
+    "explication": "L[1] vaut 2 ; ce nombre apparaît 3 fois dans la liste, donc c vaut 3."
+  },
+  {
+    "id": 274,
+    "bonne_reponse": "C",
+    "explication": "S additionne tous les éléments : 1+4+3+8+2 = 18."
+  },
+  {
+    "id": 275,
+    "bonne_reponse": "A",
+    "explication": "Il faut if T[i] > maxi: puis maxi = T[i] pour mettre à jour le maximum."
+  },
+  {
+    "id": 276,
+    "bonne_reponse": "D",
+    "explication": "L'algorithme glouton prend les plus grandes valeurs d'abord : 10+10+1 = 21."
+  },
+  {
+    "id": 277,
+    "bonne_reponse": "B",
+    "explication": "4085 < 4096 = 2^12, il faut donc 12 bits pour le coder."
+  },
+  {
+    "id": 278,
+    "bonne_reponse": "A",
+    "explication": "173 = 128+32+8+4+1, soit 1010 1101 en binaire."
+  },
+  {
+    "id": 279,
+    "bonne_reponse": "D",
+    "explication": "11,0101 en binaire vaut 3 + 1/4 + 1/16 = 3,3125 en décimal."
+  },
+  {
+    "id": 280,
+    "bonne_reponse": "C",
+    "explication": "−108 en complément à deux sur 8 bits s'écrit 1001 0100."
+  },
+  {
+    "id": 281,
+    "bonne_reponse": "C",
+    "explication": "En Python, le premier élément d'une liste s'accède avec L[0]."
+  },
+  {
+    "id": 282,
+    "bonne_reponse": "C",
+    "explication": "Les indices dont la date de décès (colonne 3) dépasse 1954 sont 1, 3 et 4."
+  },
+  {
+    "id": 283,
+    "bonne_reponse": "A",
+    "explication": "collection[1][2] est le 3e élément du 2e tuple, l'année 1970."
+  },
+  {
+    "id": 284,
+    "bonne_reponse": "A",
+    "explication": "maxi retourne le premier tuple dont le score (indice 1) est maximal, ici ('Alice', 17)."
+  },
+  {
+    "id": 285,
+    "bonne_reponse": "D",
+    "explication": "maFonction() est définie dans le fichier externe script.js référencé en bas de page."
+  },
+  {
+    "id": 286,
+    "bonne_reponse": "A",
+    "explication": "JavaScript s'exécute sur la machine de l'utilisateur, dans son navigateur Web."
+  },
+  {
+    "id": 287,
+    "bonne_reponse": "C",
+    "explication": "HTTPS chiffre les échanges entre le client et le serveur."
+  },
+  {
+    "id": 288,
+    "bonne_reponse": "D",
+    "explication": "alert(\"Auteurs anonymes\") ouvre une fenêtre popup affichant ce message."
+  },
+  {
+    "id": 289,
+    "bonne_reponse": "D",
+    "explication": "L'unité d'affichage n'est pas une composante du modèle de Von Neumann (entrées/sorties regroupées)."
+  },
+  {
+    "id": 290,
+    "bonne_reponse": "D",
+    "explication": "IP fragmente les données en paquets pouvant emprunter des routes différentes et arriver dans un ordre quelconque."
+  },
+  {
+    "id": 291,
+    "bonne_reponse": "D",
+    "explication": "Internet inaccessible mais réseau local OK indique une panne de la passerelle Internet (routeur)."
+  },
+  {
+    "id": 292,
+    "bonne_reponse": "A",
+    "explication": "f renvoie True si deux sous-listes identiques existent, comme [2,3] en positions 0 et 3."
+  },
+  {
+    "id": 293,
+    "bonne_reponse": "C",
+    "explication": "range(1, len(tableau)) parcourt les indices 1 à len-1 pour comparer chaque élément au maximum."
+  },
+  {
+    "id": 294,
+    "bonne_reponse": "D",
+    "explication": "Les 5 voisins les plus proches de X sont 3 disques et 2 losanges : la classe majoritaire est celle des disques."
+  },
+  {
+    "id": 295,
+    "bonne_reponse": "C",
+    "explication": "Le rendu de monnaie par pièces décroissantes est un algorithme glouton."
+  },
+  {
+    "id": 296,
+    "bonne_reponse": "B",
+    "explication": "Seuls « bleu » (a==4 or b>a) et « jaune » (a==3 or a<b) s'affichent."
+  },
+  {
+    "id": 297,
+    "bonne_reponse": "B",
+    "explication": "X=22 et m=10 après la boucle, donc X/m = 2,2."
+  },
+  {
+    "id": 298,
+    "bonne_reponse": "B",
+    "explication": "Une boucle unique sur n éléments double son temps d'exécution quand n double : complexité linéaire."
+  },
+  {
+    "id": 299,
+    "bonne_reponse": "C",
+    "explication": "1101 1001 + 11 0110 = 1 0000 1111 en binaire, soit 271 en décimal."
+  },
+  {
+    "id": 300,
+    "bonne_reponse": "B",
+    "explication": "n = 10001 en binaire vaut 17 ; 2n = 34 s'écrit 100010 en binaire (décalage d'un bit vers la gauche)."
+  }
+]

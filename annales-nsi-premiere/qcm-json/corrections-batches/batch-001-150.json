@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "bonne_reponse": "D",
+    "explication": "En hexadécimal, CBD - BAC = 111 (3297 - 2988 = 309 = 0x111)."
+  },
+  {
+    "id": 2,
+    "bonne_reponse": "B",
+    "explication": "A7 + 84 en base 16 donne 12B (167 + 132 = 299)."
+  },
+  {
+    "id": 3,
+    "bonne_reponse": "D",
+    "explication": "En complément à deux sur 8 bits, -7 s'obtient en inversant 7 (0000 0111) puis en ajoutant 1, ce qui donne 1111 1001."
+  },
+  {
+    "id": 4,
+    "bonne_reponse": "C",
+    "explication": "Sur 16 bits non signés, le maximum est 2^16 - 1, car on code les entiers de 0 à 2^16 - 1."
+  },
+  {
+    "id": 5,
+    "bonne_reponse": "B",
+    "explication": "Deux entiers sur 8 bits valent au plus 255 chacun ; leur produit vaut au plus 65025, qui nécessite 16 bits."
+  },
+  {
+    "id": 6,
+    "bonne_reponse": "B",
+    "explication": "Ajouter trois zéros à droite en binaire revient à multiplier par 2^3, donc par 8."
+  },
+  {
+    "id": 7,
+    "bonne_reponse": "B",
+    "explication": "Pour la ligne i et la colonne j, la valeur est p*i + j : par exemple i=0 donne [0,1,2], i=1 donne [3,4,5], etc."
+  },
+  {
+    "id": 8,
+    "bonne_reponse": "B",
+    "explication": "t[2] vaut 9 ; après t[2] = t[2] + 5, la liste devient [2, 8, 14, 2]."
+  },
+  {
+    "id": 9,
+    "bonne_reponse": "C",
+    "explication": "m est initialisé à 6 puis remplacé par mois[1] dès que m > mois[1] : on conserve donc la température minimale."
+  },
+  {
+    "id": 10,
+    "bonne_reponse": "D",
+    "explication": "t[3] - t[1] = 12 - 6 = 6."
+  },
+  {
+    "id": 11,
+    "bonne_reponse": "A",
+    "explication": "d.keys() renvoie la vue des clés du dictionnaire, soit 'couleur', 'taille' et 'marque'."
+  },
+  {
+    "id": 12,
+    "bonne_reponse": "C",
+    "explication": "Les indices commencent à 0 : L[2] désigne le troisième élément, qui vaut 10."
+  },
+  {
+    "id": 13,
+    "bonne_reponse": "A",
+    "explication": "La compréhension [ [0]*3 for i in range(4) ] crée 4 listes distinctes de 3 zéros."
+  },
+  {
+    "id": 14,
+    "bonne_reponse": "B",
+    "explication": "Dans un dictionnaire, 'Chloé' est une clé associée à l'adresse e-mail chloe@nsi.com."
+  },
+  {
+    "id": 15,
+    "bonne_reponse": "C",
+    "explication": "La fonction retient les noms (2e élément) des personnes de sexe 'F', soit 'Hopper' et 'Lovelace'."
+  },
+  {
+    "id": 16,
+    "bonne_reponse": "C",
+    "explication": "La valeur 12 se trouve en ligne 3, colonne 0 : tableau[3][0]."
+  },
+  {
+    "id": 17,
+    "bonne_reponse": "C",
+    "explication": "table[1][2] modifie la 2e ligne (indice 1) et la 3e colonne (indice 2), qui passe à 5."
+  },
+  {
+    "id": 18,
+    "bonne_reponse": "C",
+    "explication": "append(4) ajoute 4 à la fin de la liste : [5, 4, 3, 4, 7, 4]."
+  },
+  {
+    "id": 19,
+    "bonne_reponse": "D",
+    "explication": "En HTML, l'attribut onclick permet d'exécuter une fonction JavaScript au clic sur le bouton."
+  },
+  {
+    "id": 20,
+    "bonne_reponse": "D",
+    "explication": "PHP est exécuté côté serveur ; JavaScript, HTML et CSS s'exécutent ou s'interprètent côté client."
+  },
+  {
+    "id": 21,
+    "bonne_reponse": "A",
+    "explication": "Un formulaire HTML commence par la balise ouvrante <form>."
+  },
+  {
+    "id": 22,
+    "bonne_reponse": "B",
+    "explication": "Les délimiteurs <body> et </body> sont des balises HTML."
+  },
+  {
+    "id": 23,
+    "bonne_reponse": "D",
+    "explication": "Pour un mot de passe, on utilise la méthode POST afin de ne pas exposer les données dans l'URL."
+  },
+  {
+    "id": 24,
+    "bonne_reponse": "A",
+    "explication": "Le prénom saisi se trouve dans l'élément <input> dont l'attribut id vaut 'champ1'."
+  },
+  {
+    "id": 25,
+    "bonne_reponse": "D",
+    "explication": "Depuis documents, ../sauvegardes/NSI2.txt remonte d'un niveau puis entre dans sauvegardes."
+  },
+  {
+    "id": 26,
+    "bonne_reponse": "A",
+    "explication": "L'antémémoire (cache) est la plus rapide, puis la RAM (SDRAM), puis le SSD."
+  },
+  {
+    "id": 27,
+    "bonne_reponse": "D",
+    "explication": "Depuis ~/Doc/QCM, cd ../../Hack/Reponses remonte de deux niveaux puis entre dans Hack/Reponses."
+  },
+  {
+    "id": 28,
+    "bonne_reponse": "B",
+    "explication": "Le serveur DNS associe un nom de domaine (URL) à une adresse IP."
+  },
+  {
+    "id": 29,
+    "bonne_reponse": "B",
+    "explication": "chmod a+w accorde le droit d'écriture (w) à tous (a = all) sur le fichier."
+  },
+  {
+    "id": 30,
+    "bonne_reponse": "C",
+    "explication": "La commande pwd (print working directory) affiche le répertoire courant."
+  },
+  {
+    "id": 31,
+    "bonne_reponse": "C",
+    "explication": "C++ est un langage de programmation ; HTML, CSS et WEB ne le sont pas."
+  },
+  {
+    "id": 32,
+    "bonne_reponse": "D",
+    "explication": "La boucle additionne 6+5+4+3+2+1+0, soit 21."
+  },
+  {
+    "id": 33,
+    "bonne_reponse": "D",
+    "explication": "(random.randint(0,4) - 2) * 2 produit les valeurs -4, -2, 0, 2 et 4."
+  },
+  {
+    "id": 34,
+    "bonne_reponse": "D",
+    "explication": "assert b!=0 échoue si b=0 et lève une AssertionError qui interrompt l'exécution."
+  },
+  {
+    "id": 35,
+    "bonne_reponse": "C",
+    "explication": "L'algorithme échange les valeurs de x et y : f(2019,2020) renvoie (2020, 2019)."
+  },
+  {
+    "id": 36,
+    "bonne_reponse": "D",
+    "explication": "La fonction ajoute k au total seulement si k est pair (k % 2 == 0)."
+  },
+  {
+    "id": 37,
+    "bonne_reponse": "A",
+    "explication": "La dichotomie exige une liste triée pour pouvoir éliminer une moitié à chaque étape."
+  },
+  {
+    "id": 38,
+    "bonne_reponse": "C",
+    "explication": "Pour chaque i, j parcourt 0..i-1 : le nombre d'affichages vaut 0+1+...+(n-1)."
+  },
+  {
+    "id": 39,
+    "bonne_reponse": "C",
+    "explication": "La fonction retourne l'indice de la dernière occurrence de 'e', qui est 18 dans « Vive l'informatique »."
+  },
+  {
+    "id": 40,
+    "bonne_reponse": "B",
+    "explication": "Une seule boucle de n itérations donne un temps linéaire en n."
+  },
+  {
+    "id": 41,
+    "bonne_reponse": "B",
+    "explication": "Au pire cas, le tri à bulles effectue n(n-1)/2 échanges, soit 45 pour n = 10."
+  },
+  {
+    "id": 42,
+    "bonne_reponse": "A",
+    "explication": "L'algorithme glouton de rendu de monnaie choisit d'abord la plus grande pièce possible, puis continue par valeurs décroissantes."
+  },
+  {
+    "id": 43,
+    "bonne_reponse": "C",
+    "explication": "86 en décimal vaut 56 en hexadécimal et 27 vaut 1B, donc le codage hexadécimal est (0, 56, 1B)."
+  },
+  {
+    "id": 44,
+    "bonne_reponse": "C",
+    "explication": "157 = 9 * 16 + 13, soit 9D en hexadécimal."
+  },
+  {
+    "id": 45,
+    "bonne_reponse": "D",
+    "explication": "761 en base 2 s'écrit 1011111001, soit 10 1111 0001 en groupes de 4 bits."
+  },
+  {
+    "id": 46,
+    "bonne_reponse": "D",
+    "explication": "True or (True and False) = True or False = True."
+  },
+  {
+    "id": 47,
+    "bonne_reponse": "C",
+    "explication": "L'ASCII ne couvre pas les caractères accentués, contrairement à des codages comme UTF-8."
+  },
+  {
+    "id": 48,
+    "bonne_reponse": "D",
+    "explication": "f(4) renvoie (4, 16), qui est un tuple (couple de valeurs)."
+  },
+  {
+    "id": 49,
+    "bonne_reponse": "B",
+    "explication": "On accède directement à une valeur d'un dictionnaire avec la syntaxe d[clé]."
+  },
+  {
+    "id": 50,
+    "bonne_reponse": "C",
+    "explication": "La diagonale principale passe par les indices [0][0], [1][1] et [2][2] ; tictactoe[1][1] = 'X' complète cette diagonale."
+  },
+  {
+    "id": 51,
+    "bonne_reponse": "A",
+    "explication": "M[1][3] désigne la 2e sous-liste (indice 1), 4e élément (indice 3), soit 'H'."
+  },
+  {
+    "id": 52,
+    "bonne_reponse": "C",
+    "explication": "L[2] = 25 remplace le 3e élément : [15, 17, 25, 23]."
+  },
+  {
+    "id": 53,
+    "bonne_reponse": "D",
+    "explication": "Les valeurs de t[0][j] vérifient k % p = j, donc elles ne sont pas toutes multiples de p (ex. t[0][1] = 4 si n=4, p=3)."
+  },
+  {
+    "id": 54,
+    "bonne_reponse": "C",
+    "explication": "Les cases avec i+j = 3 forment l'anti-diagonale : (0,3), (1,2), (2,1), (3,0)."
+  },
+  {
+    "id": 55,
+    "bonne_reponse": "C",
+    "explication": "CSV (Comma Separated Values) sépare les données par un caractère délimiteur, souvent une virgule."
+  },
+  {
+    "id": 56,
+    "bonne_reponse": "D",
+    "explication": "Un fichier CSV contient des données séparées par des caractères comme des virgules ou des points-virgules."
+  },
+  {
+    "id": 57,
+    "bonne_reponse": "B",
+    "explication": "'Chloé' est une clé du dictionnaire contacts, pas une valeur."
+  },
+  {
+    "id": 58,
+    "bonne_reponse": "C",
+    "explication": "La première ligne d'un CSV contient généralement les noms des colonnes (descripteurs des champs)."
+  },
+  {
+    "id": 59,
+    "bonne_reponse": "C",
+    "explication": "Après la ligne d'en-tête, il reste 5 lignes de données, indexées de 0 à 4 dans le tableau Python."
+  },
+  {
+    "id": 60,
+    "bonne_reponse": "A",
+    "explication": "L'attribut onclick=\"traitement()\" appelle la fonction JavaScript au clic sur le bouton."
+  },
+  {
+    "id": 61,
+    "bonne_reponse": "B",
+    "explication": "La méthode POST envoie les données dans le corps de la requête, pas dans l'URL."
+  },
+  {
+    "id": 62,
+    "bonne_reponse": "D",
+    "explication": "Avec method=\"post\", les données du formulaire ne sont pas visibles dans la barre d'adresse du navigateur."
+  },
+  {
+    "id": 63,
+    "bonne_reponse": "D",
+    "explication": "La méthode POST est préférable pour transmettre des données sensibles car elles n'apparaissent pas dans l'URL."
+  },
+  {
+    "id": 64,
+    "bonne_reponse": "C",
+    "explication": "Les cases à cocher multiples utilisent <input type=\"checkbox\">."
+  },
+  {
+    "id": 65,
+    "bonne_reponse": "D",
+    "explication": "L'événement onmouseover déclenche une action lorsque la souris survole l'élément."
+  },
+  {
+    "id": 66,
+    "bonne_reponse": "D",
+    "explication": "rm * supprime tous les fichiers du répertoire courant, sans toucher aux sous-répertoires."
+  },
+  {
+    "id": 67,
+    "bonne_reponse": "A",
+    "explication": "cp source destination crée une copie du fichier source sous le nom destination."
+  },
+  {
+    "id": 68,
+    "bonne_reponse": "B",
+    "explication": "La commande cat file.txt affiche le contenu du fichier dans le terminal."
+  },
+  {
+    "id": 69,
+    "bonne_reponse": "A",
+    "explication": "chmod u+rw accorde au propriétaire (u) les droits de lecture et d'écriture sur le fichier."
+  },
+  {
+    "id": 70,
+    "bonne_reponse": "A",
+    "explication": "Le compteur ordinal (program counter) contient l'adresse de la prochaine instruction à exécuter."
+  },
+  {
+    "id": 71,
+    "bonne_reponse": "B",
+    "explication": "La commande ls liste le contenu du répertoire courant."
+  },
+  {
+    "id": 72,
+    "bonne_reponse": "B",
+    "explication": "Les entiers a et b ne sont pas modifiés car ils sont passés par valeur ; c est une variable locale à la fonction."
+  },
+  {
+    "id": 73,
+    "bonne_reponse": "B",
+    "explication": "ranger(3,4,1) renvoie (3,1,4) et non (1,3,4) : l'échange de a et c n'est jamais effectué après celui de b et c."
+  },
+  {
+    "id": 74,
+    "bonne_reponse": "B",
+    "explication": "La construction if/else est une structure conditionnelle."
+  },
+  {
+    "id": 75,
+    "bonne_reponse": "B",
+    "explication": "floor(-2.2) renvoie le plus grand entier inférieur ou égal à -2.2, soit -3."
+  },
+  {
+    "id": 76,
+    "bonne_reponse": "B",
+    "explication": "comparaison(6,5) renvoie 5 (branche else), qui est un entier."
+  },
+  {
+    "id": 77,
+    "bonne_reponse": "A",
+    "explication": "Le produit d'une liste se calcule en initialisant p à 1 puis en multipliant par chaque élément."
+  },
+  {
+    "id": 78,
+    "bonne_reponse": "B",
+    "explication": "La fonction cherche l'indice du minimum à partir de l'indice 0 : la valeur minimale 1 est à l'indice 2."
+  },
+  {
+    "id": 79,
+    "bonne_reponse": "B",
+    "explication": "Pour trouver le maximum dans une liste non triée de 100 éléments, il faut au minimum 99 comparaisons."
+  },
+  {
+    "id": 80,
+    "bonne_reponse": "B",
+    "explication": "À chaque itération, t accumule la somme des éléments déjà parcourus de la liste."
+  },
+  {
+    "id": 81,
+    "bonne_reponse": "C",
+    "explication": "La recherche du maximum parcourt une fois le tableau : le coût est linéaire en n."
+  },
+  {
+    "id": 82,
+    "bonne_reponse": "A",
+    "explication": "mv déplace (ou renomme) un fichier d'un emplacement à un autre."
+  },
+  {
+    "id": 83,
+    "bonne_reponse": "C",
+    "explication": "UTF-8 permet de coder l'ensemble des caractères Unicode, y compris les caractères non latins et accentués."
+  },
+  {
+    "id": 84,
+    "bonne_reponse": "A",
+    "explication": "X est la 24e lettre ; son code ASCII vaut 0x41 + 23 = 0x58."
+  },
+  {
+    "id": 85,
+    "bonne_reponse": "C",
+    "explication": "64 en binaire sur un octet s'écrit 0100 0000 (2^6 = 64)."
+  },
+  {
+    "id": 86,
+    "bonne_reponse": "B",
+    "explication": "1100 0011 en binaire se regroupe en 1100 = C et 0011 = 3, soit C3 en hexadécimal."
+  },
+  {
+    "id": 87,
+    "bonne_reponse": "A",
+    "explication": "[2*k for k in range(5)] produit [0, 2, 4, 6, 8]."
+  },
+  {
+    "id": 88,
+    "bonne_reponse": "C",
+    "explication": "B[i][j] = A[j][i] transpose la matrice : B = [[1,4,7], [2,5,8], [3,6,9]]."
+  },
+  {
+    "id": 89,
+    "bonne_reponse": "D",
+    "explication": "Pour accéder à la valeur associée à la clé 'z', on écrit d['z']."
+  },
+  {
+    "id": 90,
+    "bonne_reponse": "C",
+    "explication": "Les indices commencent à 0 : E est le 5e élément, donc alphabet[4]."
+  },
+  {
+    "id": 91,
+    "bonne_reponse": "A",
+    "explication": "L[3] vaut 7, puis L[7] vaut 3."
+  },
+  {
+    "id": 92,
+    "bonne_reponse": "A",
+    "explication": "En ordre lexicographique sur les chaînes, '112' < '19' < '27' < '45' < '8' (comparaison caractère par caractère)."
+  },
+  {
+    "id": 93,
+    "bonne_reponse": "D",
+    "explication": "uneLigne[3] affiche la 4e colonne (indice 3), soit les noms en majuscules : AIN, AISNE, ALLIER, etc."
+  },
+  {
+    "id": 94,
+    "bonne_reponse": "C",
+    "explication": "0011 1011 en binaire se regroupe en 0011 = 3 et 1011 = B, soit 3B en hexadécimal."
+  },
+  {
+    "id": 95,
+    "bonne_reponse": "B",
+    "explication": "Le fluor est à la ligne 1 (indice 1), colonne 6 (indice 6) : mendeleiev[1][6] = 'F'."
+  },
+  {
+    "id": 96,
+    "bonne_reponse": "C",
+    "explication": "Comme pour la question 15, la fonction renvoie les noms des informaticiennes : ['Hopper', 'Lovelace']."
+  },
+  {
+    "id": 97,
+    "bonne_reponse": "B",
+    "explication": "Dans une URL, le nom de domaine du serveur est jaimelaneige.com."
+  },
+  {
+    "id": 98,
+    "bonne_reponse": "D",
+    "explication": "Le clic sur un bouton génère l'événement click en JavaScript/HTML."
+  },
+  {
+    "id": 99,
+    "bonne_reponse": "D",
+    "explication": "Ni GET ni POST ne chiffrent les données : c'est le protocole HTTPS qui assure le chiffrement."
+  },
+  {
+    "id": 100,
+    "bonne_reponse": "C",
+    "explication": "Le préfixe https:// indique que la communication est chiffrée via TLS/SSL."
+  },
+  {
+    "id": 101,
+    "bonne_reponse": "D",
+    "explication": "La méthode POST permet d'envoyer les données saisies dans un formulaire HTML vers un serveur."
+  },
+  {
+    "id": 102,
+    "bonne_reponse": "B",
+    "explication": "L'attribut onmouseover exécute du JavaScript lorsque la souris survole l'élément."
+  },
+  {
+    "id": 103,
+    "bonne_reponse": "C",
+    "explication": "ROM signifie Read Only Memory (mémoire morte en lecture seule)."
+  },
+  {
+    "id": 104,
+    "bonne_reponse": "A",
+    "explication": "Le motif fich* correspond à fich.txt et mafich.txt dans le répertoire courant."
+  },
+  {
+    "id": 105,
+    "bonne_reponse": "C",
+    "explication": "Un thermomètre est uniquement un capteur ; l'écran tactile est entrée/sortie, le moteur est une sortie."
+  },
+  {
+    "id": 106,
+    "bonne_reponse": "C",
+    "explication": "La commande mkdir travail crée un dossier nommé travail dans le répertoire courant."
+  },
+  {
+    "id": 107,
+    "bonne_reponse": "A",
+    "explication": "chmod modifie les permissions (autorisations d'accès) d'un fichier."
+  },
+  {
+    "id": 108,
+    "bonne_reponse": "C",
+    "explication": "range(n, p+1) parcourt tous les entiers de n à p inclus, pour calculer n + (n+1) + ... + p."
+  },
+  {
+    "id": 109,
+    "bonne_reponse": "C",
+    "explication": "HTML est un langage de balisage, pas un langage de programmation."
+  },
+  {
+    "id": 110,
+    "bonne_reponse": "C",
+    "explication": "La boucle met à jour m dès que m < L[j] : m contient le maximum de la liste."
+  },
+  {
+    "id": 111,
+    "bonne_reponse": "A",
+    "explication": "a diminue à chaque tour (4, 3, 2, ...) et reste toujours < 5 : la boucle while ne se termine jamais."
+  },
+  {
+    "id": 112,
+    "bonne_reponse": "C",
+    "explication": "La recherche dichotomique nécessite un tableau trié en ordre croissant."
+  },
+  {
+    "id": 113,
+    "bonne_reponse": "C",
+    "explication": "La recherche parcourt linéairement la liste : son coût est linéaire en la taille de la liste."
+  },
+  {
+    "id": 114,
+    "bonne_reponse": "B",
+    "explication": "Après 10 exécutions du corps de boucle, i vaut 10 et non 9 (car i est incrémenté après chaque passage)."
+  },
+  {
+    "id": 115,
+    "bonne_reponse": "A",
+    "explication": "Le bit de poids fort vaut 0 (0111 0101), donc le nombre est positif en complément à deux."
+  },
+  {
+    "id": 116,
+    "bonne_reponse": "B",
+    "explication": "0010 1100 en binaire vaut 2C en hexadécimal (0010 = 2, 1100 = C)."
+  },
+  {
+    "id": 117,
+    "bonne_reponse": "D",
+    "explication": "En hexadécimal, 1, 10, 100, 1000... sont des puissances de 16 (16^0, 16^1, 16^2, 16^3...)."
+  },
+  {
+    "id": 118,
+    "bonne_reponse": "A",
+    "explication": "106 = 6 * 16 + 10, soit 6A en hexadécimal."
+  },
+  {
+    "id": 119,
+    "bonne_reponse": "C",
+    "explication": "0010 0110 + 1000 1110 = 1011 0100 (addition binaire avec retenues)."
+  },
+  {
+    "id": 120,
+    "bonne_reponse": "C",
+    "explication": "72 nécessite 7 bits car 2^6 = 64 < 72 <= 128 = 2^7."
+  },
+  {
+    "id": 121,
+    "bonne_reponse": "D",
+    "explication": "t[9] provoque une IndexError car la liste t ne contient que 5 éléments (indices 0 à 4)."
+  },
+  {
+    "id": 122,
+    "bonne_reponse": "B",
+    "explication": "[i*2 for i in range(10)] produit [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]."
+  },
+  {
+    "id": 123,
+    "bonne_reponse": "D",
+    "explication": "billes est un dictionnaire : une structure associant des clés (couleurs) à des valeurs (quantités)."
+  },
+  {
+    "id": 124,
+    "bonne_reponse": "A",
+    "explication": "resultats['Amina'] accède directement à la valeur associée à la clé 'Amina', qui vaut 1."
+  },
+  {
+    "id": 125,
+    "bonne_reponse": "B",
+    "explication": "s = s + tab[i] accumule la somme des éléments ; 10+11+12+13+14 = 60."
+  },
+  {
+    "id": 126,
+    "bonne_reponse": "C",
+    "explication": "On ajoute c[0] lorsque c[1]=='marie' : ['marc','marie'], ['paul','marie'] et ['marie','marie'] donnent ['marc','paul','marie']."
+  },
+  {
+    "id": 127,
+    "bonne_reponse": "C",
+    "explication": "Les données entre guillemets séparées par des virgules constituent un fichier au format CSV."
+  },
+  {
+    "id": 128,
+    "bonne_reponse": "C",
+    "explication": "L'opérateur + sur deux listes les concatène : [1,2,3] + [4,5,6] = [1,2,3,4,5,6]."
+  },
+  {
+    "id": 129,
+    "bonne_reponse": "C",
+    "explication": "HTTP est un protocole de communication ; GET et POST en sont des méthodes, HTML un langage de balisage."
+  },
+  {
+    "id": 130,
+    "bonne_reponse": "C",
+    "explication": "<input type=\"text\" /> est la balise standard pour saisir du texte dans un formulaire."
+  },
+  {
+    "id": 131,
+    "bonne_reponse": "C",
+    "explication": "Un lien hypertexte s'écrit <a href=\"URL\">texte</a>."
+  },
+  {
+    "id": 132,
+    "bonne_reponse": "D",
+    "explication": "Une requête POST peut transmettre différents types de données sans les afficher dans l'URL."
+  },
+  {
+    "id": 133,
+    "bonne_reponse": "D",
+    "explication": "Une erreur 404 signifie que la page est introuvable ; changer le titre du forum ne provoque pas cette erreur si l'URL reste la même."
+  },
+  {
+    "id": 134,
+    "bonne_reponse": "C",
+    "explication": "Pour stocker et afficher des commentaires à tous les visiteurs, il faut un traitement côté serveur (PHP, Python, etc.)."
+  },
+  {
+    "id": 135,
+    "bonne_reponse": "D",
+    "explication": "mkdir foo crée le dossier foo, puis mv *.py foo y déplace entier.py et flottant.py."
+  },
+  {
+    "id": 136,
+    "bonne_reponse": "D",
+    "explication": "La carte mère interconnecte et fait communiquer les composants (processeur, mémoire, périphériques...)."
+  },
+  {
+    "id": 137,
+    "bonne_reponse": "C",
+    "explication": "cd ../images depuis documents remonte au parent puis entre dans images, au même niveau que documents."
+  },
+  {
+    "id": 138,
+    "bonne_reponse": "A",
+    "explication": "man pwd affiche le manuel (documentation) de la commande pwd."
+  },
+  {
+    "id": 139,
+    "bonne_reponse": "B",
+    "explication": "traceroute permet de visualiser le chemin (itinéraire) des paquets vers une destination réseau."
+  },
+  {
+    "id": 140,
+    "bonne_reponse": "C",
+    "explication": "L'unité arithmétique et logique (UAL/ALU) réalise les opérations de calcul et logiques."
+  },
+  {
+    "id": 141,
+    "bonne_reponse": "A",
+    "explication": "f(x+1) est appelée mais sa valeur de retour n'est pas affectée à x, qui reste 0."
+  },
+  {
+    "id": 142,
+    "bonne_reponse": "A",
+    "explication": "somme = somme + notes[cpt] accumule les notes pour calculer leur moyenne."
+  },
+  {
+    "id": 143,
+    "bonne_reponse": "D",
+    "explication": "for i in range(1, n+1) parcourt 1, 2, ..., n pour calculer n! = 1 * 2 * ... * n."
+  },
+  {
+    "id": 144,
+    "bonne_reponse": "D",
+    "explication": "Un seul passage permute les paires mal ordonnées : [4,8,-7,0,1] devient [4,-7,0,1,8]."
+  },
+  {
+    "id": 145,
+    "bonne_reponse": "A",
+    "explication": "La fonction renvoie True si chaque élément est exactement égal au précédent plus 1 (entiers consécutifs)."
+  },
+  {
+    "id": 146,
+    "bonne_reponse": "C",
+    "explication": "On met à jour index quand T[i] > T[index], c'est-à-dire quand on trouve une valeur plus grande."
+  },
+  {
+    "id": 147,
+    "bonne_reponse": "A",
+    "explication": "La fonction parcourt L et renvoie True dès que n == x, sinon False : elle teste l'appartenance de n à L."
+  },
+  {
+    "id": 148,
+    "bonne_reponse": "C",
+    "explication": "Le tri par insertion a un coût quadratique O(n^2) dans le pire des cas."
+  },
+  {
+    "id": 149,
+    "bonne_reponse": "C",
+    "explication": "101001 - 101 en binaire = 100100 (38 - 5 = 33 en décimal)."
+  },
+  {
+    "id": 150,
+    "bonne_reponse": "C",
+    "explication": "3F en hexadécimal = 3 * 16 + 15 = 48 + 15 = 63."
+  }
+]
