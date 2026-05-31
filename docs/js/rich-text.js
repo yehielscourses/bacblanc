@@ -39,6 +39,19 @@ function looksLikeCodeLine(line) {
   return false;
 }
 
+/** Début de phrase française (hors bloc de code) */
+function looksLikeProseLine(line) {
+  const t = line.trim();
+  if (!t) return false;
+  if (/^(On |Que |Quelle |Quel |Quels |Combien |Comment |Où |Pourquoi |Parmi |Par exemple|Dans |Pour |À |Au |Durant|Sachant|La |Le |Les |Un |Une |Il |L'|Une et une)/i.test(t)) {
+    return !looksLikeCodeLine(line);
+  }
+  if (/\?$/.test(t) && !/[=<>]/.test(t) && !/^def /.test(t) && !/^for /.test(t)) {
+    return !looksLikeCodeLine(line);
+  }
+  return false;
+}
+
 /** Suite probable d'un bloc de code déjà commencé */
 function continuesCodeBlock(line) {
   if (looksLikeCodeLine(line)) return true;
