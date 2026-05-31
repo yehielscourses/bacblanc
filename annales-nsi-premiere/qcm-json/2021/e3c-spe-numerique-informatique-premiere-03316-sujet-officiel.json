@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n('avril',20), ('mai',23), ('juin',25),\n('juillet',29), ('août',25), ('septembre',22),\n('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\nif (m > mois[1]):\nm = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
+          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n              ('avril',20), ('mai',23), ('juin',25),\n              ('juillet',29), ('août',25), ('septembre',22),\n              ('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\n        if (m > mois[1]):\n         m = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On définit :\ncontacts = {'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+          "enonce": "On définit :\ncontacts = {'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n         'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On considère la liste de p-uplets suivante :\nTable = [('Grace','Hopper','F',1906),('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815), ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+          "enonce": "On considère la liste de p-uplets suivante :\nTable = [('Grace','Hopper','F',1906),('Tim', 'Berners-Lee', 'H', 1955),\n          ('Ada', 'Lovelace', 'F', 1815), ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\n    mystere = []\n    for ligne in table:\n        if ligne[2] == 'F':\n            mystere.append(ligne[1])\n    return mystere\nQue vaut  fonctionMystere(table)?",
           "reponses": [
             {
               "lettre": "A",
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\nPrénom :\n<input type=\"text\" id=\"champ1\" name=\"p\"/>\n<br/>\n<input type=\"hidden\" name=\"util\" value=\"1549\"/>\n<input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
+          "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\n    Prénom :\n        <input type=\"text\" id=\"champ1\" name=\"p\"/>\n    <br/>\n    <input type=\"hidden\" name=\"util\" value=\"1549\"/>\n    <input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\ns = s + n\nn = n -1\nQue contient la variable s à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\n    s = s + n\n    n = n -1\nQue contient la variable s à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "enonce": "La\n    documentation\n        de\n            la\n                bibliothèque\n                    random\n                        de\n                            Python\n                                précise\n                                    que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\ns = 0\nfor k in T:\nif k % 2 == 0:\ns = s+k\nreturn s",
+          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\n    s = 0\n    for k in T:\n        if k % 2 == 0:\n            s = s+k\n    return s",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On exécute le script suivant :\nfor i in range(n):\nfor j in range(i):\nprint('NSI')\nCombien de fois le mot NSI est-il affiché ?",
+          "enonce": "On exécute le script suivant :\nfor i in range(n):\n    for j in range(i):\n        print('NSI')\nCombien de fois le mot NSI est-il affiché ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\nindexResultat = 0\nfor i in range(len(phrase)):\nif phrase[i]== lettre:\nindexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\n    indexResultat = 0\n    for i in range(len(phrase)):\n    if phrase[i]== lettre:\n        indexResultat=i\n    return indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -913,25 +913,25 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "for i in range(n//2):\nfor j in range(i+1,n):\nprint('hello')"
+              "texte": "for i in range(n//2):\n    for j in range(i+1,n):\n        print('hello')"
             },
             {
               "lettre": "B",
-              "texte": "for i in range(n):\nprint('hello')"
+              "texte": "for i in range(n):\n    print('hello')"
             },
             {
               "lettre": "C",
-              "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\nprint('hello')"
+              "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\n    print('hello')"
             },
             {
               "lettre": "D",
-              "texte": "for i in range(n//2):\nfor j in range(n//2):\nprint('hello')"
+              "texte": "for i in range(n//2):\n    for j in range(n//2):\n        print('hello')"
             }
           ]
         },
         {
           "numero": "G.5",
-          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\nfor i in range (1, len(tab)):\nfor j in range (len(tab) - i):\nif tab[j]>tab[j+1]:\ntab[j],tab[j+1] = tab[j+1], tab[j]",
+          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\n    for i in range (1, len(tab)):\n        for j in range (len(tab) - i):\n            if tab[j]>tab[j+1]:\n                tab[j],tab[j+1] = tab[j+1], tab[j]",
           "reponses": [
             {
               "lettre": "A",

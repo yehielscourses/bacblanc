@@ -103,7 +103,7 @@
         },
         {
           "numero": "A.5",
-          "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\nx = x * 2",
+          "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\n    x = x * 2",
           "reponses": [
             {
               "lettre": "A",
@@ -153,23 +153,23 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [ ['A', 'B', 'C', 'D'],\n['E', 'F', 'G', 'H'],\n['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
+          "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [ ['A', 'B', 'C', 'D'],\n            ['E', 'F', 'G', 'H'],\n            ['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "L = []\nfor i in range(3):\nfor j in range(4):\nL.append(tab[i][j])"
+              "texte": "L = []\nfor i in range(3):\n    for j in range(4):\n        L.append(tab[i][j])"
             },
             {
               "lettre": "B",
-              "texte": "L = []\nfor i in range(4):\nfor j in range(3):\nL.append(tab[i][j])"
+              "texte": "L = []\nfor i in range(4):\n    for j in range(3):\n        L.append(tab[i][j])"
             },
             {
               "lettre": "C",
-              "texte": "L = []\nfor i in range(3):\nL.append(tab[i])"
+              "texte": "L = []\nfor i in range(3):\n    L.append(tab[i])"
             },
             {
               "lettre": "D",
-              "texte": "L = []\nfor i in range(4):\nL.append(tab[i])"
+              "texte": "L = []\nfor i in range(4):\n    L.append(tab[i])"
             }
           ]
         },
@@ -325,17 +325,17 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
         {
           "numero": "C.3",
-          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\ns = 0\nfor k in T:\nif k == 8:\ns = s+1\nif s > 1:\nreturn True\nelse:\nreturn False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
+          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\n     s = 0\n    for k in T:\n        if k == 8:\n            s = s+1\n    if s > 1:\n        return True\n    else:\n        return False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On considère la table suivants :\nt = [ {'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [ {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n{'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n{'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\nif i[a] > 10:\nprint(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
+          "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n        {'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n        {'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\n     if i[a] > 10:\n         print(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
           "reponses": [
             {
               "lettre": "A",
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\nFirst name : <input type=\"text\" name = \"fname\"><br>\nLast name : <input type=\"text\" name = \"lname\"><br>\n<input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
+          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\n   First name : <input type=\"text\" name = \"fname\"><br>\n   Last name : <input type=\"text\" name = \"lname\"><br>\n   <input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "Voici un extrait d'un document HTML.\n<body>\n.........\nClic !\n</button>\n<h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
+          "enonce": "Voici un extrait d'un document HTML.\n<body>\n    .........\n    Clic !\n    </button>\n    <h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,29 +771,29 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de\nnombres :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\n..............\n..............\nreturn m\nQue faut-il écrire à la place des lignes pointillées ?",
+          "enonce": "On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de\nnombres :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        ..............\n        ..............\n    return m\nQue faut-il écrire à la place des lignes pointillées ?",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "if m < L[i]:\nL[i] = m"
+              "texte": "if m < L[i]:\n    L[i] = m"
             },
             {
               "lettre": "B",
-              "texte": "if L[i-1] < L[i]:\nm = L[i]"
+              "texte": "if L[i-1] < L[i]:\n    m = L[i]"
             },
             {
               "lettre": "C",
-              "texte": "if L[i] < L[0]:\nL[i],L[0] = L[0],L[i]"
+              "texte": "if L[i] < L[0]:\n    L[i],L[0] = L[0],L[i]"
             },
             {
               "lettre": "D",
-              "texte": "if L[i] > m:\nm = L[i]"
+              "texte": "if L[i] > m:\n    m = L[i]"
             }
           ]
         },
         {
           "numero": "F.5",
-          "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+          "enonce": "On définit deux fonctions :\ndef f(x):\n    y = 2*x + 1\n    return y\ndef calcul(x):\n    y = x - 1\n    return f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎'.\ndef puissance(a,m):\np = 1\nn = 0\nwhile n < m:\n#\np = p * a\nn = n + 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎'.\ndef puissance(a,m):\n    p = 1\n    n = 0\n    while n < m:\n        #\n        p = p * a\n        n = n + 1\n    return p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\nindexResultat = 0\nfor i in range(len(phrase)):\nif phrase[i]== lettre:\nindexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\n    indexResultat = 0\n    for i in range(len(phrase)):\n    if phrase[i]== lettre:\n        indexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\nresultat = resultat * compt\ncompt = compt + 1\nLaquelle de ces affirmations est vraie ?",
+          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\n   resultat = resultat * compt\n   compt = compt + 1\nLaquelle de ces affirmations est vraie ?",
           "reponses": [
             {
               "lettre": "A",

@@ -63,19 +63,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝑂𝑈 𝑏"
             },
             {
               "lettre": "B",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝐸𝑇 𝑏"
             },
             {
               "lettre": "C",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
             },
             {
               "lettre": "D",
-              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n    𝑠= 𝑎 𝐸𝑇 𝑏"
             }
           ]
         },
@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "Voici une définition incomplète d'une fonction qui renvoie le couple du quotient et du reste de la division\neuclidienne :\ndef divEuclid(n,d):\n'''renvoie le couple formé du quotient et du reste dans la division de n par d'''\nq = 0\nwhile n-d > 0:\nq = q + 1\nn = n - d\n.......\nPar quelle instruction faut-il remplacer la ligne en pointillés pour que l'appel\n(quotient,reste) = divEuclid(15,6)\naffecte les valeurs attendues ?",
+          "enonce": "Voici une définition incomplète d'une fonction qui renvoie le couple du quotient et du reste de la division\neuclidienne :\ndef divEuclid(n,d):\n    '''renvoie le couple formé du quotient et du reste dans la division de n par d'''\n    q = 0\n    while n-d > 0:\n        q = q + 1\n        n = n - d\n    .......\nPar quelle instruction faut-il remplacer la ligne en pointillés pour que l'appel\n(quotient,reste) = divEuclid(15,6)\naffecte les valeurs attendues ?",
           "reponses": [
             {
               "lettre": "A",
@@ -249,7 +249,7 @@
             },
             {
               "lettre": "B",
-              "texte": "for nb in range(400) :\nimpairs = 1 + 2 * nb"
+              "texte": "for nb in range(400) :\n    impairs = 1 + 2 * nb"
             },
             {
               "lettre": "C",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On définit en Python la fonction suivante :\ndef f(L):\nS = []\nfor i in range(len(L)-1):\nS.append(L[i] + L[i+1])\nreturn S\nQuelle est la liste renvoyée par f([1, 2, 3, 4, 5, 6]) ?",
+          "enonce": "On définit en Python la fonction suivante :\ndef f(L):\n    S = []\n    for i in range(len(L)-1):\n        S.append(L[i] + L[i+1])\n    return S\nQuelle est la liste renvoyée par f([1, 2, 3, 4, 5, 6]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\nreturn personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n        ['von neumann','john', 1903, 1957],\n        ['turing', 'alan', 1912, 1954],\n        ['mccarthy', 'john', 1927, 2011],\n        ['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\n    return personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
+          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On définit la fonction :\ndef fib(n):\nt = [0] * n\nt[1] = 1\nfor in in range(2,n):\nt[i] = t[i-1] + t[i-2]\nreturn t\nQuelle est la valeur renvoyée par l'appel fib(6) ?",
+          "enonce": "On définit la fonction :\ndef fib(n):\n    t = [0] * n\n    t[1] = 1\n    for in in range(2,n):\n        t[i] = t[i-1] + t[i-2]\n    return t\nQuelle est la valeur renvoyée par l'appel fib(6) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\nRenvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
+          "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\n    Renvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On exécute le script suivant :\nfor i in range(n):\nfor j in range(i):\nprint('NSI')\nCombien de fois le mot NSI est-il affiché ?",
+          "enonce": "On exécute le script suivant :\nfor i in range(n):\n    for j in range(i):\n        print('NSI')\nCombien de fois le mot NSI est-il affiché ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.\ndef produit(a,b):\nc = 0\ni = 0\nwhile i < b:\n#\ni = i + 1\nc = c + a\nreturn c\nQuelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?",
+          "enonce": "La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.\ndef produit(a,b):\n    c = 0\n    i = 0\n    while i < b:\n        #\n        i = i + 1\n        c = c + a\n    return c\nQuelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Que calcule la fonction suivante ?\ndef mystere(liste):\nvaleur_de_retour = True\nindice = 0\nwhile indice < len(liste) - 1:\nif liste[indice] > liste[indice + 1]:\nvaleur_de_retour = False\nindice = indice + 1\nreturn valeur_de_retour",
+          "enonce": "Que calcule la fonction suivante ?\ndef mystere(liste):\n    valeur_de_retour = True\n    indice = 0\n    while indice < len(liste) - 1:\n        if liste[indice] > liste[indice + 1]:\n            valeur_de_retour = False\n        indice = indice + 1\n    return valeur_de_retour",
           "reponses": [
             {
               "lettre": "A",

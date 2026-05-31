@@ -103,7 +103,8 @@
               "lettre": "D",
               "texte": "é"
             }
-          ]
+          ],
+          "avertissement_extraction": "attendu 4 réponses, extrait 5"
         },
         {
           "numero": "A.5",
@@ -161,19 +162,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "B",
-              "texte": "effectifs = {}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "C",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             },
             {
               "lettre": "D",
-              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             }
           ]
         },
@@ -223,7 +224,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\nreturn (x, x**2)",
+          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\n    return (x, x**2)",
           "reponses": [
             {
               "lettre": "A",
@@ -317,7 +318,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\nif table[index][3] > 1954:\nL.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n                ['von neumann','john', 1903, 1957],\n                ['turing', 'alan', 1912, 1954],\n                ['mccarthy', 'john', 1927, 2011],\n                ['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\n    if table[index][3] > 1954:\n        L.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -339,7 +340,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -361,7 +362,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On exécute le code suivant :\ndef maxi(t):\nm = t[0]\nfor x in t:\nif x[1] >= m[1]:\nm = x\nreturn m\nL = [  ('Alice', 17), ('Barnabé', 17),\n('Casimir', 17), ('Doriane', 17),\n('Emilien', 14), ('Fabienne', 16) ]\nQuelle est alors la valeur de maxi(L) ?",
+          "enonce": "On exécute le code suivant :\ndef maxi(t):\n    m = t[0]\n    for x in t:\n        if x[1] >= m[1]:\n            m = x\n    return m\nL = [  ('Alice', 17), ('Barnabé', 17),\n            ('Casimir', 17), ('Doriane', 17),\n            ('Emilien', 14), ('Fabienne', 16) ]\nQuelle est alors la valeur de maxi(L) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -455,7 +456,7 @@
         },
         {
           "numero": "D.2",
-          "enonce": "Un navigateur affiche la page HTML suivante :\n<html lang=\"fr\">\n<head>\n<meta charset=\"utf-8\">\n<link rel=\"stylesheet\" href=\"style.css\">\n<title>Un bouton</title>\n</head>\n<body>\n<button onclick=\"maFonction()\">Cliquer ici</button>\n</body>\n<script src=\"script.js\"></script>\n</html>\nLorsque l'on clique sur le bouton, l'action déclenchée maFonction() est définie :",
+          "enonce": "Un navigateur affiche la page HTML suivante :\n<html lang=\"fr\">\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <title>Un bouton</title>\n</head>\n<body>\n    <button onclick=\"maFonction()\">Cliquer ici</button>\n</body>\n<script src=\"script.js\"></script>\n</html>\nLorsque l'on clique sur le bouton, l'action déclenchée maFonction() est définie :",
           "reponses": [
             {
               "lettre": "A",
@@ -543,7 +544,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n<h1>Les auteurs de ce site</h1>\n<button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\nfunction auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
+          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n    <h1>Les auteurs de ce site</h1>\n    <button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\n    function auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
           "reponses": [
             {
               "lettre": "A",
@@ -709,7 +710,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -731,7 +732,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
           "reponses": [
             {
               "lettre": "A",
@@ -753,7 +754,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On définit la fonction f suivante qui prend en argument une liste t d'entiers :\ndef f(t):\nn = len(t)\nfor i in range(n-1):\nfor j in range(i+1,n):\nif t[i] == t[j]:\nreturn True\nreturn False\nPour quelle valeur de t, f(t) vaut-elle True ?",
+          "enonce": "On définit la fonction f suivante qui prend en argument une liste t d'entiers :\ndef f(t):\n    n = len(t)\n    for i in range(n-1):\n        for j in range(i+1,n):\n            if t[i] == t[j]:\n                return True\n    return False\nPour quelle valeur de t, f(t) vaut-elle True ?",
           "reponses": [
             {
               "lettre": "A",
@@ -797,7 +798,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\ntmp = tableau[0]\nfor i in range(......): # à compléter\nif tableau[i] > tmp:\ntmp = tableau[i]\nreturn tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
+          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\n    tmp = tableau[0]\n    for i in range(......): # à compléter\n        if tableau[i] > tmp:\n            tmp = tableau[i]\n    return tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
           "reponses": [
             {
               "lettre": "A",
@@ -819,7 +820,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -847,7 +848,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\nt = 0\nfor e in liste :\nt = t + e\n# assertion vraie à cet endroit\nreturn t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
+          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\n    t = 0\n    for e in liste :\n        t = t + e\n        # assertion vraie à cet endroit\n    return t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
           "reponses": [
             {
               "lettre": "A",
@@ -869,7 +870,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
+          "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\n            X\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
           "reponses": [
             {
               "lettre": "A",
@@ -895,7 +896,7 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "les algorithmes de classification et d'apprentissage\nX"
+              "texte": "les algorithmes de classification et d'apprentissage"
             },
             {
               "lettre": "B",
@@ -913,7 +914,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\nprint('vert')\nif a > b and b == 4:\nprint('rouge')\nif a == 4 or b > a:\nprint('bleu')\nif a == 3 or a < b:\nprint('jaune')",
+          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\n    print('vert')\nif a > b and b == 4:\n    print('rouge')\nif a == 4 or b > a:\n    print('bleu')\nif a == 3 or a < b:\n    print('jaune')",
           "reponses": [
             {
               "lettre": "A",
@@ -935,7 +936,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\nX = X + k\nm = m + 1",
+          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\n    X = X + k\n    m = m + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -957,7 +958,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",

@@ -119,7 +119,7 @@
             },
             {
               "lettre": "D",
-              "texte": "a  = False b = True\nc = True"
+              "texte": "a  = False b = True\n    c = True"
             }
           ]
         },
@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On considère le code suivant :\ndef feed(t):\nfor i in range(len(t)):\nt[i] = 0\nreturn t\nQue renvoie feed([12, 24, 32]) ?",
+          "enonce": "On considère le code suivant :\ndef feed(t):\n    for i in range(len(t)):\n        t[i] = 0\n    return t\nQue renvoie feed([12, 24, 32]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\nreturn (x, x**2)",
+          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\n    return (x, x**2)",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\nt = []\nfor i in range(L):\nligne = []\nfor j in range(C):\n......\nt.append(ligne)\nreturn t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n[0, 1, 2],\n[3, 4, 5]\n]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
+          "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\n    t = []\n    for i in range(L):\n        ligne = []\n        for j in range(C):\n            ......\n        t.append(ligne)\n    return t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n    [0, 1, 2],\n    [3, 4, 5]\n         ]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\ns = 0\nfor k in T:\nif k == 8:\ns = s+1\nif s > 1:\nreturn True\nelse:\nreturn False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
+          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\n     s = 0\n    for k in T:\n        if k == 8:\n            s = s+1\n    if s > 1:\n        return True\n    else:\n        return False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nOn considère le code suivant :\nimport csv\nwith open('departements.csv', newline='') as monFichier:\nlesLignes = csv.reader(monFichier)\nfor uneLigne in lesLignes:\nprint(uneLigne[3])\nQue va produire l'exécution de ce code ?",
+          "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nOn considère le code suivant :\nimport csv\nwith open('departements.csv', newline='') as monFichier:\n    lesLignes = csv.reader(monFichier)\n    for uneLigne in lesLignes:\n        print(uneLigne[3])\nQue va produire l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -429,7 +429,7 @@
       "questions": [
         {
           "numero": "D.1",
-          "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"blue\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"blue\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\ns = s + n\nn = n -1\nQue contient la variable s à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\n    s = s + n\n    n = n -1\nQue contient la variable s à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
+          "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\n                X\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -925,13 +925,13 @@
             },
             {
               "lettre": "D",
-              "texte": "35\nX"
+              "texte": "35"
             }
           ]
         },
         {
           "numero": "G.5",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",

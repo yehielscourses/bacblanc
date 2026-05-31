@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n[24,25,26,27],\n[35,36,49,33],\n[61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
+          "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n    [24,25,26,27],\n    [35,36,49,33],\n    [61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,25 +291,26 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On écrit la fonction suivante :\ndef extreme(t, test):\nm = t[0]\nfor x in t:\nif test(x,m):\nm = x\nreturn m\nOn dispose d'une liste L dont les éléments sont des couples (nom, note).\nPar exemple :\nL = [  ('Alice', 17), ('Barnabé', 18),\n('Casimir', 17), ('Doriane', 20),\n('Emilien', 15), ('Fabienne', 16) ]\nOn aimerait que l'appel de fonction extreme(L, test) renvoie un couple présentant la note maximale.\nQuelle définition de la fonction test peut-on utiliser ?",
+          "enonce": "On écrit la fonction suivante :\ndef extreme(t, test):\n    m = t[0]\n    for x in t:\n        if test(x,m):\n            m = x\n    return m\nOn dispose d'une liste L dont les éléments sont des couples (nom, note).\nPar exemple :\nL = [  ('Alice', 17), ('Barnabé', 18),\n            ('Casimir', 17), ('Doriane', 20),\n            ('Emilien', 15), ('Fabienne', 16) ]\nOn aimerait que l'appel de fonction extreme(L, test) renvoie un couple présentant la note maximale.\nQuelle définition de la fonction test peut-on utiliser ?",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "def test(a,b):\nreturn a[0] < b[0]"
+              "texte": "def test(a,b):\n    return a[0] < b[0]"
             },
             {
               "lettre": "A",
-              "texte": "def test(a,b):\nreturn a[0] > b[0]"
+              "texte": "def test(a,b):\n    return a[0] > b[0]"
             },
             {
               "lettre": "B",
-              "texte": "def test(a,b):\nreturn a[1] < b[1]"
+              "texte": "def test(a,b):\n    return a[1] < b[1]"
             },
             {
               "lettre": "D",
-              "texte": "def test(a,b):\nreturn a[1] > b[1]"
+              "texte": "def test(a,b):\n    return a[1] > b[1]"
             }
-          ]
+          ],
+          "avertissement_extraction": "lettres invalides: ['A', 'A', 'B', 'D']"
         },
         {
           "numero": "C.2",
@@ -401,7 +402,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On exécute le code suivant :\ndict = {\n\"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n\"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\nfor cle, valeur in dic.items() :\nif valeur > 18:\nreturn cle\nQue renvoie l'appel f(dict) ?",
+          "enonce": "On exécute le code suivant :\ndict = {\n            \"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n            \"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\n    for cle, valeur in dic.items() :\n        if valeur > 18:\n            return cle\nQue renvoie l'appel f(dict) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -451,7 +452,7 @@
         },
         {
           "numero": "D.2",
-          "enonce": "Voici un extrait d'un document HTML.\n<body>\n.........\nClic !\n</button>\n<h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
+          "enonce": "Voici un extrait d'un document HTML.\n<body>\n    .........\n    Clic !\n    </button>\n    <h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +728,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "enonce": "La\n    documentation\n        de\n            la\n                bibliothèque\n                    random\n                        de\n                            Python\n                                précise\n                                    que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +750,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +772,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 3\nb = 6\nif a > 5 or b != 3:\nb = 4\nelse:\nb = 2",
+          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 3\nb = 6\nif a > 5 or b != 3:\n    b = 4\nelse:\n    b = 2",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +794,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\n    if a > b :\n        a, b = b, a\n    if b > c:\n        b, c = c, b\n    return a, b, c",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +866,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On exécute le script suivant :\nfor i in range(n):\nfor j in range(i):\nprint('NSI')\nCombien de fois le mot NSI est-il affiché ?",
+          "enonce": "On exécute le script suivant :\nfor i in range(n):\n    for j in range(i):\n        print('NSI')\nCombien de fois le mot NSI est-il affiché ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +932,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "La fonction ci-dessous renvoie le maximum d'une liste.\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\n#\nif L[i] > m:\nm = L[i]\nreturn m\nAu passage dans la ligne marquée d'un #, quelle propriété reste toujours vérifiée ?",
+          "enonce": "La fonction ci-dessous renvoie le maximum d'une liste.\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        #\n        if L[i] > m:\n            m = L[i]\n    return m\nAu passage dans la ligne marquée d'un #, quelle propriété reste toujours vérifiée ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +954,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef\ntrier(L)\n:\nfor\ni\nin\nrange(len(L)):\nindice_min\n=\ni\nfor\nj\nin\nrange(i+1,\nlen(L)):\nif\nL[j]\n<\nL[indice_min]\n:\nindice_min\n=\nj\nL[i], L[indice_min] = L[indice_min], L[i]\n#\nassertion\nvraie\nà\ncet\nendroit\nreturn L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
+          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef\n                                trier(L)\n                                                                    :\n    for\n                        i\n                                        in\n                                                            range(len(L)):\n    indice_min\n                                    =\n                                                                    i\n    for\n                    j\n                            in\n                                                range(i+1,\n                                                                len(L)):\n        if\n                    L[j]\n                                <\n                                                    L[indice_min]\n                                                                    :\n            indice_min\n                                        =\n                                                                    j\n        L[i], L[indice_min] = L[indice_min], L[i]\n        #\n                assertion\n                            vraie\n                                            à\n                                                        cet\n                                                                endroit\n    return L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
           "reponses": [
             {
               "lettre": "A",

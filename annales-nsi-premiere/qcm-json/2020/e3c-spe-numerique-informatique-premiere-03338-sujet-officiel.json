@@ -125,7 +125,7 @@
         },
         {
           "numero": "A.6",
-          "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\nPourquoi cela ?",
+          "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\n Pourquoi cela ?",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "La fonction ci-dessous prend en argument deux nombres entiers.\ndef f(n1,n2):\netendue = max(n1,n2)-min(n1,n2)\nmoyenne = (n1+n2)/2\nreturn etendue,moyenne\nQuel est le type de la valeur renvoyée par un appel à cette fonction ?",
+          "enonce": "La fonction ci-dessous prend en argument deux nombres entiers.\ndef f(n1,n2):\n    etendue = max(n1,n2)-min(n1,n2)\n    moyenne = (n1+n2)/2\n    return etendue,moyenne\nQuel est le type de la valeur renvoyée par un appel à cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche\nle numéro de Dupond ?\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]\nfor\ni\nin\nrange(len(repertoire)):\nif\n......\n:\nprint(repertoire[i]['tel'])",
+          "enonce": "Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche\nle numéro de Dupond ?\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n    {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]\nfor\n        i\n            in\n                    range(len(repertoire)):\n    if\n        ......\n                        :\n        print(repertoire[i]['tel'])",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\nsomme = 0\nfor i in range(.........):   # ligne à modifier\nsomme = somme + i\nreturn somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
+          "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\n    somme = 0\n    for i in range(.........):   # ligne à modifier\n        somme = somme + i\n    return somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)Que vaut le couple (a,b) à la fin de l'exécution ?",
+          "enonce": "On exécute le script Python suivant :\ndef cube(a):\n    a = a*a*a\n    return a\na = 2\nb = cube(a)Que vaut le couple (a,b) à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+          "enonce": "On définit la fonction suivante :\ndef rey(n):\n    i = 0\n    while i <= n:\n        i = 2*i\n    return i\nQuelle valeur renvoie l'appel rey(100) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\ng = 0\nd = len(L)-1\nwhile g <= d:\nm = (g+d)//2\nif L[m] == x:\nreturn m\nelif L[m] < x:\ng = m+1\nelse:\nd = m-1\nreturn None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
+          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\n    g = 0\n    d = len(L)-1\n    while g <= d:\n        m = (g+d)//2\n        if L[m] == x:\n            return m\n        elif L[m] < x:\n            g = m+1\n        else:\n            d = m-1\n    return None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On considère le code incomplet suivant qui recherche le maximum dans une liste.\nliste = [5,12,15,3,15,17,29,1]\niMax = 0\nfor i in range(1,len(liste)):\n............\niMax = i\nprint (liste[iMax])\nPar quoi faut-il remplacer la ligne pointillée ?",
+          "enonce": "On considère le code incomplet suivant qui recherche le maximum dans une liste.\nliste = [5,12,15,3,15,17,29,1]\niMax = 0\nfor i in range(1,len(liste)):\n    ............\n    iMax = i\nprint (liste[iMax])\nPar quoi faut-il remplacer la ligne pointillée ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",

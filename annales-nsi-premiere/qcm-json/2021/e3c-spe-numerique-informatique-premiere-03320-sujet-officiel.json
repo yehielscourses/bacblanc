@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On exécute le script suivant.\nm = []\nfor i in range(5):\nn = []\nfor j in range(3):\nn.append(i*j)\nm.append(n)\nQuelle est la valeur de m à la fin de son exécution ?",
+          "enonce": "On exécute le script suivant.\nm = []\nfor i in range(5):\n    n = []\n    for j in range(3):\n        n.append(i*j)\n    m.append(n)\nQuelle est la valeur de m à la fin de son exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On exécute le code suivant :\nA = [ [1,2,3], [4,5,6], [7,8,9] ]\nB = [ [0,0,0], [0,0,0], [0,0,0] ]\nfor i in range(3):\nfor j in range(3):\nB[i][j] = A[j][i]\nQue vaut B à la fin de l'exécution ?",
+          "enonce": "On exécute le code suivant :\nA = [ [1,2,3], [4,5,6], [7,8,9] ]\nB = [ [0,0,0], [0,0,0], [0,0,0] ]\nfor i in range(3):\n    for j in range(3):\n        B[i][j] = A[j][i]\nQue vaut B à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
+          "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On considère le code suivant :\ndef feed(t):\nfor i in range(len(t)):\nt[i] = 0\nreturn t\nQue renvoie feed([12, 24, 32]) ?",
+          "enonce": "On considère le code suivant :\ndef feed(t):\n    for i in range(len(t)):\n        t[i] = 0\n    return t\nQue renvoie feed([12, 24, 32]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+          "enonce": "On a défini :\nmendeleiev = [\n        ['H','.', '.','.','.','.','.','He'],\n        ['Li','Be','B','C','N','O','Fl','Ne'],\n        ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n        ...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"blue\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"blue\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -633,7 +633,7 @@
         },
         {
           "numero": "E.4",
-          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
+          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\n                    C\n            B\n        A\n                        E\n                                V\n    S\n                D\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
           "reponses": [
             {
               "lettre": "A",
@@ -649,23 +649,7 @@
             },
             {
               "lettre": "D",
-              "texte": "le téléchargement se poursuit mais des données seront perdues\nS"
-            },
-            {
-              "lettre": "A",
-              "texte": ""
-            },
-            {
-              "lettre": "B",
-              "texte": ""
-            },
-            {
-              "lettre": "C",
-              "texte": ""
-            },
-            {
-              "lettre": "D",
-              "texte": "E\nV"
+              "texte": "le téléchargement se poursuit mais des données seront perdues"
             }
           ]
         },
@@ -721,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\nreturn sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
+          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\n    return sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -743,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On exécute le script suivant :\ndef calcul(a,b):\na = a + 2\nb = b + 5\nc = a + b\nreturn c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
+          "enonce": "On exécute le script suivant :\ndef calcul(a,b):\n    a = a + 2\n    b = b + 5\n    c = a + b\n    return c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
           "reponses": [
             {
               "lettre": "A",
@@ -765,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On exécute le code suivant :\ndef essai():\na = 2\nb = 3\nc = 4\nreturn a\nreturn b\nreturn c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef essai():\n    a = 2\n    b = 3\n    c = 4\n    return a\n    return b\n    return c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -787,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -809,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\ntmp = t[0]\nfor i in range(1,n-1):\nt[i] = t[i+1]\nt[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    tmp = t[0]\n    for i in range(1,n-1):\n        t[i] = t[i+1]\n    t[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -859,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On considère le code incomplet suivant qui recherche le maximum dans une liste.\nliste = [5,12,15,3,15,17,29,1]\niMax = 0\nfor i in range(1,len(liste)):\n............\niMax = i\nprint (liste[iMax])\nPar quoi faut-il remplacer la ligne pointillée ?",
+          "enonce": "On considère le code incomplet suivant qui recherche le maximum dans une liste.\nliste = [5,12,15,3,15,17,29,1]\niMax = 0\nfor i in range(1,len(liste)):\n    ............\n    iMax = i\nprint (liste[iMax])\nPar quoi faut-il remplacer la ligne pointillée ?",
           "reponses": [
             {
               "lettre": "A",
@@ -881,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On exécute le script suivant :\nliste = [17, 12, 5, 18, 2, 7, 9, 15, 14, 20]\nsomme = 0\ni = 0\nwhile i < len(liste):\nsomme = somme + liste[i]\ni = i + 1\nresultat = somme / len(liste)\nQuelle affirmation est fausse parmi les suivantes ?",
+          "enonce": "On exécute le script suivant :\nliste = [17, 12, 5, 18, 2, 7, 9, 15, 14, 20]\nsomme = 0\ni = 0\nwhile i < len(liste):\n    somme = somme + liste[i]\n    i = i + 1\nresultat = somme / len(liste)\nQuelle affirmation est fausse parmi les suivantes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -903,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "À la fin de l'exécution du code suivant, quelle sera la valeur de la variable cpt ?\na = 1\ncpt = 20\nwhile cpt > 8:\na = 2*a\ncpt = cpt – 1",
+          "enonce": "À la fin de l'exécution du code suivant, quelle sera la valeur de la variable cpt ?\na = 1\ncpt = 20\nwhile cpt > 8:\n    a = 2*a\n    cpt = cpt – 1",
           "reponses": [
             {
               "lettre": "A",
@@ -925,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -947,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\np = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
+          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\n    p = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
           "reponses": [
             {
               "lettre": "A",
@@ -969,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",

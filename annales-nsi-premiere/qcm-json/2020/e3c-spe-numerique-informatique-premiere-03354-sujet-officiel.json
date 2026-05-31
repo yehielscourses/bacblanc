@@ -19,19 +19,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    True\nTrue\n        False\n                    True\nTrue\n        True\n                    True"
             },
             {
               "lettre": "B",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    True\nTrue\n        True\n                    True"
             },
             {
               "lettre": "C",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    False\nTrue\n        True\n                    True"
             },
             {
               "lettre": "D",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    False\nTrue\n        True\n                    False"
             }
           ]
         },
@@ -53,7 +53,7 @@
             },
             {
               "lettre": "D",
-              "texte": "la connexion à Internet présente des coupures\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nTrue\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nFalse"
+              "texte": "la connexion à Internet présente des coupures"
             }
           ]
         },
@@ -175,23 +175,23 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [\n['A', 'B', 'C', 'D'],\n['E', 'F', 'G', 'H'],\n['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
+          "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [\n        ['A', 'B', 'C', 'D'],\n            ['E', 'F', 'G', 'H'],\n            ['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "L = []\nfor i in range(3):\nfor j in range(4):\nL.append(tab[i][j])"
+              "texte": "L = []\nfor i in range(3):\n    for j in range(4):\n        L.append(tab[i][j])"
             },
             {
               "lettre": "B",
-              "texte": "L = []\nfor i in range(4):\nfor j in range(3):\nL.append(tab[i][j])"
+              "texte": "L = []\nfor i in range(4):\n    for j in range(3):\n        L.append(tab[i][j])"
             },
             {
               "lettre": "C",
-              "texte": "L = []\nfor i in range(3):\nL.append(tab[i])"
+              "texte": "L = []\nfor i in range(3):\n    L.append(tab[i])"
             },
             {
               "lettre": "D",
-              "texte": "L = []\nfor i in range(4):\nL.append(tab[i])"
+              "texte": "L = []\nfor i in range(4):\n    L.append(tab[i])"
             }
           ]
         },
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815),\n('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n                ('Tim', 'Berners-Lee', 'H', 1955),\n                ('Ada', 'Lovelace', 'F', 1815),\n                ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\n    mystere = []\n    for ligne in table:\n        if ligne[2] == 'F':\n            mystere.append(ligne[1])\n    return mystere\nQue vaut  fonctionMystere(table)?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
+          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On exécute le script suivant.\na = 11\nfor i in range(3):\na = a * 2\na = a - 10\nQue contient la variable a à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant.\na = 11\nfor i in range(3):\n    a = a * 2\n    a = a - 10\nQue contient la variable a à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\nn = n + 2",
+          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\n    n = n + 2",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\ntmp = t[0]\nfor i in range(1,n-1):\nt[i] = t[i+1]\nt[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    tmp = t[0]\n    for i in range(1,n-1):\n        t[i] = t[i+1]\n    t[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\nt = 0\nfor e in liste :\nt = t + e\n# assertion vraie à cet endroit\nreturn t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
+          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\n    t = 0\n    for e in liste :\n        t = t + e\n        # assertion vraie à cet endroit\n    return t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\np = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
+          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\n    p = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",
@@ -935,19 +935,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "i = K+1\nwhile i < K:\ni = i + 1"
+              "texte": "i = K+1\nwhile i < K:\n    i = i + 1"
             },
             {
               "lettre": "B",
-              "texte": "i = K-1\nwhile i < K:\ni = i - 1"
+              "texte": "i = K-1\nwhile i < K:\n    i = i - 1"
             },
             {
               "lettre": "C",
-              "texte": "i = K-1\nwhile i < K:\ni = i + 1"
+              "texte": "i = K-1\nwhile i < K:\n    i = i + 1"
             },
             {
               "lettre": "D",
-              "texte": "i = K+1\nwhile i >= K:\ni = i - 1"
+              "texte": "i = K+1\nwhile i >= K:\n    i = i - 1"
             }
           ]
         },

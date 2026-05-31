@@ -75,7 +75,7 @@
             },
             {
               "lettre": "D",
-              "texte": "a  = False b = True\nc = True"
+              "texte": "a  = False b = True\n    c = True"
             }
           ]
         },
@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On considère le script suivant :\nbilles = {'vert': 6, 'rouge': 15, 'bleu': 11, 'jaune': 2, 'orange': 17 }\ntotal = 0\nfor n in billes.XXXXXXX():\ntotal = total + n\nPar quoi faut-il remplacer XXXXXXX dans ce script pour qu'à la fin de son exécution la variable total contienne le\nnombre total de billes ?",
+          "enonce": "On considère le script suivant :\nbilles = {'vert': 6, 'rouge': 15, 'bleu': 11, 'jaune': 2, 'orange': 17 }\ntotal = 0\nfor n in billes.XXXXXXX():\n    total = total + n\nPar quoi faut-il remplacer XXXXXXX dans ce script pour qu'à la fin de son exécution la variable total contienne le\nnombre total de billes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -249,7 +249,7 @@
             },
             {
               "lettre": "B",
-              "texte": "for nb in range(400) :\nimpairs = 1 + 2 * nb"
+              "texte": "for nb in range(400) :\n    impairs = 1 + 2 * nb"
             },
             {
               "lettre": "C",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\ns = 0\nfor k in T:\nif k == 8:\ns = s+1\nif s > 1:\nreturn True\nelse:\nreturn False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
+          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\n     s = 0\n    for k in T:\n        if k == 8:\n            s = s+1\n    if s > 1:\n        return True\n    else:\n        return False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,23 +335,23 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On considère une table de données <films> qui est une liste de dictionnaires \"Titre\", \"Réalisateur\",\"Date\".\nUn enregistrement de la table contient un titre de film, le nom de son réalisateur et l'année de sortie du film.\nfilms = [{\"Titre\": \"ET\", \"Réalisateur\": \"Spielberg\", \"Date\": 1982},\n{\"Titre\": \"Ready Player One\", \"Réalisateur\": \"Spielberg\", \"Date\": 2018},\n{\"Titre\": \"The Artist\", \"Réalisateur\": \"Hazanavicius\", \"Date\": 2011},\n...]\nOn souhaite obtenir la liste des films réalisés par \"Spielberg\" ou par \"Hazanavicius\" depuis l'année 2000.\nQuelle doit être la condition utilisée pour sélectionner les enregistrements correspondants, lors du parcours de\nla table ?",
+          "enonce": "On considère une table de données <films> qui est une liste de dictionnaires \"Titre\", \"Réalisateur\",\"Date\".\nUn enregistrement de la table contient un titre de film, le nom de son réalisateur et l'année de sortie du film.\n   films = [{\"Titre\": \"ET\", \"Réalisateur\": \"Spielberg\", \"Date\": 1982},\n        {\"Titre\": \"Ready Player One\", \"Réalisateur\": \"Spielberg\", \"Date\": 2018},\n        {\"Titre\": \"The Artist\", \"Réalisateur\": \"Hazanavicius\", \"Date\": 2011},\n        ...]\nOn souhaite obtenir la liste des films réalisés par \"Spielberg\" ou par \"Hazanavicius\" depuis l'année 2000.\nQuelle doit être la condition utilisée pour sélectionner les enregistrements correspondants, lors du parcours de\nla table ?",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] ==  \"Hazanavicius\")\nand film[\"Date\"] >= 2000"
+              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] ==  \"Hazanavicius\")\n    and film[\"Date\"] >= 2000"
             },
             {
               "lettre": "B",
-              "texte": "film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\"\nand film[\"Date\"] >= 2000"
+              "texte": "film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\"\n    and film[\"Date\"] >= 2000"
             },
             {
               "lettre": "C",
-              "texte": "film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] == \"Hazanavicius\"\nor film[\"Date\"] >= 2000"
+              "texte": "film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] == \"Hazanavicius\"\n    or film[\"Date\"] >= 2000"
             },
             {
               "lettre": "D",
-              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\")\nor film[\"Date\"] >= 2000"
+              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\")\n    or film[\"Date\"] >= 2000"
             }
           ]
         },
@@ -429,7 +429,7 @@
       "questions": [
         {
           "numero": "D.1",
-          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n<h1>Les auteurs de ce site</h1>\n<button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\nfunction auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
+          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n    <h1>Les auteurs de ce site</h1>\n    <button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\n    function auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On définit la fonction f suivante qui prend en argument une liste t d'entiers :\ndef f(t):\nn = len(t)\nfor i in range(n-1):\nfor j in range(i+1,n):\nif t[i] == t[j]:\nreturn True\nreturn False\nPour quelle valeur de t, f(t) vaut-elle True ?",
+          "enonce": "On définit la fonction f suivante qui prend en argument une liste t d'entiers :\ndef f(t):\n    n = len(t)\n    for i in range(n-1):\n        for j in range(i+1,n):\n            if t[i] == t[j]:\n                return True\n    return False\nPour quelle valeur de t, f(t) vaut-elle True ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\nreturn sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
+          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\n    return sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+          "enonce": "On définit deux fonctions :\ndef f(x):\n    y = 2*x + 1\n    return y\ndef calcul(x):\n    y = x - 1\n    return f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\nalert(i)\ni = i + 1\n}\nalert(\"Fin\")",
+          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\n    alert(i)\n    i = i + 1\n}\nalert(\"Fin\")",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\nindexResultat = 0\nfor i in range(len(phrase)):\nif phrase[i]== lettre:\nindexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\n    indexResultat = 0\n    for i in range(len(phrase)):\n    if phrase[i]== lettre:\n        indexResultat=i\n    return indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On définit la fonction f comme suit :\ndef f(L):\na = L[0]\nfor x in L:\nif x < a:\na = x\nreturn a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
+          "enonce": "On définit la fonction f comme suit :\ndef f(L):\n    a = L[0]\n    for x in L:\n        if x < a:\n            a = x\n    return a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\ni = 0\nfor j in phrase:\nif j == lettre:\ni = i+1\nreturn i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\n    i = 0\n    for j in phrase:\n        if j == lettre:\n            i = i+1\n    return i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\nfor i in range (1, len(tab)):\nfor j in range (len(tab) - i):\nif tab[j]>tab[j+1]:\ntab[j],tab[j+1] = tab[j+1], tab[j]",
+          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\n    for i in range (1, len(tab)):\n        for j in range (len(tab) - i):\n            if tab[j]>tab[j+1]:\n                tab[j],tab[j+1] = tab[j+1], tab[j]",
           "reponses": [
             {
               "lettre": "A",

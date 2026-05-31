@@ -59,7 +59,7 @@
         },
         {
           "numero": "A.3",
-          "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\nB\nS\n0\n0\n1\n0\n1\n0\n1\n0\n1\n1\n1\n1",
+          "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\n    B\n        S\n0\n    0\n        1\n0\n    1\n        0\n1\n    0\n        1\n1\n    1\n        1",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n{\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nComment accéder à la chaîne de caractères \"Alan\" ?",
+          "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n      {\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nComment accéder à la chaîne de caractères \"Alan\" ?",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On exécute le script suivant :\ndef ajoute(stock,element,quantite):\nif element in stock:\nstock[element] = stock[element] + quantite\nelse:\nstock[element] = quantite\nstock = { 'clous': 14, 'vis': 27, 'boulons': 8, 'écrous': 24 }\najoute(stock,'vis',5)\najoute(stock,'chevilles',3)\nQuelle est la valeur de la variable stock à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant :\ndef ajoute(stock,element,quantite):\n    if element in stock:\n        stock[element] = stock[element] + quantite\n    else:\n        stock[element] = quantite\nstock = { 'clous': 14, 'vis': 27, 'boulons': 8, 'écrous': 24 }\najoute(stock,'vis',5)\najoute(stock,'chevilles',3)\nQuelle est la valeur de la variable stock à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n(7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
+          "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n                (7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "Quelle est la valeur de x après exécution du programme ci-dessous ?\nt = [[3,4,5,1],[33,6,1,2]]\nx = t[0][0]\nfor i in range(len(t)):\nfor j in range(len(t[i])):\nif x < t[i][j]:\nx = t[i][j]",
+          "enonce": "Quelle est la valeur de x après exécution du programme ci-dessous ?\nt = [[3,4,5,1],[33,6,1,2]]\nx = t[0][0]\nfor i in range(len(t)):\n    for j in range(len(t[i])):\n        if x < t[i][j]:\n            x = t[i][j]",
           "reponses": [
             {
               "lettre": "A",
@@ -391,17 +391,17 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
         {
           "numero": "C.6",
-          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
+          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n        {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
           "reponses": [
             {
               "lettre": "A",
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n<h1>Les auteurs de ce site</h1>\n<button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\nfunction auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
+          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n    <h1>Les auteurs de ce site</h1>\n    <button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\n    function auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
           "reponses": [
             {
               "lettre": "A",
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n<div>\n<label for=\"nom\">Classe:</label>\n<input type=\"text\" id=\"nom\" name=\"leNom\" />\n</div>\n<div>\n<label for=\"effectif\">Effectif:</label>\n<input type=\"number\" id=\"effectif\" name=\"n\" />\n</div>\n<div>\n<button type=\"submit\">Go!</button>\n</div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
+          "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n    <div>\n        <label for=\"nom\">Classe:</label>\n        <input type=\"text\" id=\"nom\" name=\"leNom\" />\n    </div>\n    <div>\n        <label for=\"effectif\">Effectif:</label>\n        <input type=\"number\" id=\"effectif\" name=\"n\" />\n    </div>\n    <div>\n        <button type=\"submit\">Go!</button>\n    </div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
+          "enonce": "On exécute le script Python suivant :\ndef cube(a):\n    a = a*a*a\n    return a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On exécute le script Python suivant :\ndef cube(L):\nfor i in range(len(L)):\nL[i] = L[i] * L[i] * L[i]\nreturn L\nL = [2, 5]\nb = cube(L)\nQue vaut le couple (L,b) à la fin de l'exécution ?",
+          "enonce": "On exécute le script Python suivant :\ndef cube(L):\n    for i in range(len(L)):\n        L[i] = L[i] * L[i] * L[i]\n        return L\nL = [2, 5]\nb = cube(L)\nQue vaut le couple (L,b) à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Avec la définition de fonction capital_double suivante, que peut-on toujours affirmer à propos du résultat n\nretourné par la fonction ?\ndef capital_double (capital, interet):\nmontant = capital\nn = 0\nwhile montant <= 2 * capital:\nmontant = montant + interet\nn = n + 1\nreturn n",
+          "enonce": "Avec la définition de fonction capital_double suivante, que peut-on toujours affirmer à propos du résultat n\nretourné par la fonction ?\ndef capital_double (capital, interet):\n    montant = capital\n    n = 0\n    while montant <= 2 * capital:\n        montant = montant + interet\n        n = n + 1\n    return n",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+          "enonce": "On définit la fonction suivante :\ndef rey(n):\n    i = 0\n    while i <= n:\n        i = 2*i\n    return i\nQuelle valeur renvoie l'appel rey(100) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\n# assertion vraie à cet endroit\nreturn L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
+          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n        # assertion vraie à cet endroit\n    return L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\nt = 0\nfor e in liste :\nt = t + e\n# assertion vraie à cet endroit\nreturn t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
+          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\n    t = 0\n    for e in liste :\n        t = t + e\n        # assertion vraie à cet endroit\n    return t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\nS = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
+          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\n    S = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",

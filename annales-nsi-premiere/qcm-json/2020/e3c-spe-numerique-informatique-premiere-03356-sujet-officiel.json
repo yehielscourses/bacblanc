@@ -103,7 +103,7 @@
         },
         {
           "numero": "A.5",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nc = False\nif a==b:\nc = True\nif a > b+10:\nc = True",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nc = False\nif a==b:\n    c = True\nif a > b+10:\n    c = True",
           "reponses": [
             {
               "lettre": "A",
@@ -125,7 +125,7 @@
         },
         {
           "numero": "A.6",
-          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\nx = x - 0.1",
+          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\n    x = x - 0.1",
           "reponses": [
             {
               "lettre": "A",
@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On exécute le script suivant :\ninventaire = {'pommes': 430, 'bananes': 312,\n'oranges' : 274, 'poires' : 137}\nstock = 0\nfor fruit in inventaire.keys():\nif fruit != 'bananes':\nstock = stock + inventaire[fruit]\nQue contient la variable stock à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant :\ninventaire = {'pommes': 430, 'bananes': 312,\n              'oranges' : 274, 'poires' : 137}\nstock = 0\nfor fruit in inventaire.keys():\n    if fruit != 'bananes':\n        stock = stock + inventaire[fruit]\nQue contient la variable stock à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "On considère le code suivant :\ndef f(L):\nreturn [x*x for x in L if x%2 == 1]\ncarre = f([0,1,2,3,4,5,6,7,8,9])\nQue vaut carre à la fin de son exécution ?",
+          "enonce": "On considère le code suivant :\ndef f(L):\n    return [x*x for x in L if x%2 == 1]\ncarre = f([0,1,2,3,4,5,6,7,8,9])\nQue vaut carre à la fin de son exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -347,11 +347,11 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
+          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n                {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\nif table[index][3] > 1954:\nL.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n            ['von neumann','john', 1903, 1957],\n            ['turing', 'alan', 1912, 1954],\n            ['mccarthy', 'john', 1927, 2011],\n            ['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\n    if table[index][3] > 1954:\n        L.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n<div>\n<label for=\"nom\">Classe:</label>\n<input type=\"text\" id=\"nom\" name=\"leNom\" />\n</div>\n<div>\n<label for=\"effectif\">Effectif:</label>\n<input type=\"number\" id=\"effectif\" name=\"n\" />\n</div>\n<div>\n<button type=\"submit\">Go!</button>\n</div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
+          "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n    <div>\n        <label for=\"nom\">Classe:</label>\n        <input type=\"text\" id=\"nom\" name=\"leNom\" />\n    </div>\n    <div>\n        <label for=\"effectif\">Effectif:</label>\n        <input type=\"number\" id=\"effectif\" name=\"n\" />\n    </div>\n    <div>\n        <button type=\"submit\">Go!</button>\n    </div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :\ndef minimum(L):\nmini = 0\nfor e in L:\nif e < mini:\nmini = e\nreturn mini\nCette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son\nminimum ?",
+          "enonce": "En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :\ndef minimum(L):\n    mini = 0\n    for e in L:\n        if e < mini:\n            mini = e\n    return mini\nCette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son\nminimum ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On exécute le script suivant.\na,b = 10,3\nif a < 10:\na,b = a+2,b+a\nQuelle est la valeur de b à la fin de son exécution ?",
+          "enonce": "On exécute le script suivant.\na,b = 10,3\nif a < 10:\n    a,b = a+2,b+a\nQuelle est la valeur de b à la fin de son exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\nif m < L[j]:\nm = L[j]",
+          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\n    if m < L[j]:\n        m = L[j]",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\nfor i in range (1, len(tab)):\nfor j in range (len(tab) - i):\nif tab[j]>tab[j+1]:\ntab[j],tab[j+1] = tab[j+1], tab[j]",
+          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\n    for i in range (1, len(tab)):\n        for j in range (len(tab) - i):\n            if tab[j]>tab[j+1]:\n                tab[j],tab[j+1] = tab[j+1], tab[j]",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\ni = 0\nfor j in phrase:\nif j == lettre:\ni = i+1\nreturn i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\n    i = 0\n    for j in phrase:\n        if j == lettre:\n            i = i+1\n    return i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\ntotal = ...\nfor valeur in tableau:\ntotal = total + valeur\nreturn total / ...",
+          "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\n    total = ...\n    for valeur in tableau:\n        total = total + valeur\n    return total / ...",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\nn = 0\nfor item in L:\nif item == x:\nn = n + 1\nreturn n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
+          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\n    n = 0\n    for item in L:\n        if item == x:\n            n = n + 1\n    return n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
           "reponses": [
             {
               "lettre": "A",

@@ -201,19 +201,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "B",
-              "texte": "effectifs = {}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "C",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             },
             {
               "lettre": "D",
-              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             }
           ]
         },
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On définit :\nstock = [ {'nom': 'flageolets', 'quantité': 50, 'prix': 5.68},\n{'nom': 'caviar', 'quantité': 0, 'prix': 99.99},\n.........\n.........\n{'nom': 'biscuits', 'quantité': 100, 'prix': 7.71}  ]\nQuelle expression permet d'obtenir la liste des noms des produits effectivement présents dans le stock (c'est-à-\ndire ceux dont la quantité n'est pas nulle) ?",
+          "enonce": "On définit :\nstock = [ {'nom': 'flageolets', 'quantité': 50, 'prix': 5.68},\n    {'nom': 'caviar', 'quantité': 0, 'prix': 99.99},\n    .........\n    .........\n    {'nom': 'biscuits', 'quantité': 100, 'prix': 7.71}  ]\nQuelle expression permet d'obtenir la liste des noms des produits effectivement présents dans le stock (c'est-à-\ndire ceux dont la quantité n'est pas nulle) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "Soit la table de données suivante :\nnom\nprenom\ndate_naissance\nDupont\nPierre\n17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
+          "enonce": "Soit la table de données suivante :\nnom\n    prenom\n            date_naissance\nDupont\n    Pierre\n        17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "Quelle est la valeur de la variable t1 à la fin de l'exécution du script suivant :\nt1 = [['Valenciennes', 24],['Lille', 23],['Laon', 31],['Arras', 18]]\nt2 = [['Lille', 62],['Arras', 53],['Valenciennes', 67],['Laon', 48]]\nfor i in range(len(t1)):\nfor v in t2:\nif v[0] == t1[i][0]:\nt1[i].append(v[1])",
+          "enonce": "Quelle est la valeur de la variable t1 à la fin de l'exécution du script suivant :\nt1 = [['Valenciennes', 24],['Lille', 23],['Laon', 31],['Arras', 18]]\nt2 = [['Lille', 62],['Arras', 53],['Valenciennes', 67],['Laon', 48]]\nfor i in range(len(t1)):\n    for v in t2:\n        if v[0] == t1[i][0]:\n            t1[i].append(v[1])",
           "reponses": [
             {
               "lettre": "A",
@@ -451,7 +451,7 @@
         },
         {
           "numero": "D.2",
-          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\nFirst name : <input type=\"text\" name = \"fname\"><br>\nLast name : <input type=\"text\" name = \"lname\"><br>\n<input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
+          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\n   First name : <input type=\"text\" name = \"fname\"><br>\n   Last name : <input type=\"text\" name = \"lname\"><br>\n   <input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "Un navigateur affiche la page HTML suivante :\n<html lang=\"fr\">\n<head>\n<meta charset=\"utf-8\">\n<link rel=\"stylesheet\" href=\"style.css\">\n<title>Un bouton</title>\n</head>\n<body>\n<button onclick=\"maFonction()\">Cliquer ici</button>\n</body>\n<script src=\"script.js\"></script>\n</html>\nLorsque l'on clique sur le bouton, l'action déclenchée maFonction() est définie :",
+          "enonce": "Un navigateur affiche la page HTML suivante :\n<html lang=\"fr\">\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <title>Un bouton</title>\n</head>\n<body>\n    <button onclick=\"maFonction()\">Cliquer ici</button>\n</body>\n<script src=\"script.js\"></script>\n</html>\nLorsque l'on clique sur le bouton, l'action déclenchée maFonction() est définie :",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+          "enonce": "On définit deux fonctions :\ndef f(x):\n    y = 2*x + 1\n    return y\ndef calcul(x):\n    y = x - 1\n    return f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.\ndef produit(a,b):\nc = 0\ni = 0\nwhile i < b:\n#\ni = i + 1\nc = c + a\nreturn c\nQuelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?",
+          "enonce": "La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.\ndef produit(a,b):\n    c = 0\n    i = 0\n    while i < b:\n        #\n        i = i + 1\n        c = c + a\n    return c\nQuelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\nprint('vert')\nif a > b and b == 4:\nprint('rouge')\nif a == 4 or b > a:\nprint('bleu')\nif a == 3 or a < b:\nprint('jaune')",
+          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\n    print('vert')\nif a > b and b == 4:\n    print('rouge')\nif a == 4 or b > a:\n    print('bleu')\nif a == 3 or a < b:\n    print('jaune')",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",

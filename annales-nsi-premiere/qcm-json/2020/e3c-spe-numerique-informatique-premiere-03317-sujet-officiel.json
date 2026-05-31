@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\nreturn (x, x**2)",
+          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\n    return (x, x**2)",
           "reponses": [
             {
               "lettre": "A",
@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n['O', 'O', 'O'],\n['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
+          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n        ['O', 'O', 'O'],\n        ['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "Soient n et p deux entiers au moins égaux à 2. On définit une liste de listes t par le code suivant :\n# n et p sont initialisés dans les lignes précédentes\nt = [ [ 0 for j in range(p) ] for i in range(n) ]\nfor k in range(n*p):\nt[k%n][k%p] = k\nUne et une seule des affirmations suivantes est fausse. Laquelle ?",
+          "enonce": "Soient n et p deux entiers au moins égaux à 2. On définit une liste de listes t par le code suivant :\n# n et p sont initialisés dans les lignes précédentes\nt = [ [ 0 for j in range(p) ] for i in range(n) ]\nfor k in range(n*p):\n    t[k%n][k%p] = k\nUne et une seule des affirmations suivantes est fausse. Laquelle ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\nfor j in range(4):\nif (i+j) == 3:\nimage[i][j] = 1",
+          "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\n    for j in range(4):\n        if (i+j) == 3:\n            image[i][j] = 1",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n    'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n# chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
+          "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n        # chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
           "reponses": [
             {
               "lettre": "A",
@@ -451,7 +451,7 @@
         },
         {
           "numero": "D.2",
-          "enonce": "Dans une page HTML se trouve le formulaire suivant :\n<form method=\".........\" action=\"traitement.html\">\n<p>Nom : <input type=\"text\" name=\"nom\"></p>\n<p>Mot de passe : <input type=\"password\" name=\"mdp\"></p>\n<p><input type=\"submit\" name=\"envoi\" value=\"Envoyer\"></p>\n</form>\nPar quoi faut-il remplacer les pointillés pour que les données du formulaire n'apparaissent pas dans l'URL au\nmoment où l'utilisateur soumet le formulaire au serveur ?",
+          "enonce": "Dans une page HTML se trouve le formulaire suivant :\n<form method=\".........\" action=\"traitement.html\">\n    <p>Nom : <input type=\"text\" name=\"nom\"></p>\n    <p>Mot de passe : <input type=\"password\" name=\"mdp\"></p>\n    <p><input type=\"submit\" name=\"envoi\" value=\"Envoyer\"></p>\n</form>\nPar quoi faut-il remplacer les pointillés pour que les données du formulaire n'apparaissent pas dans l'URL au\nmoment où l'utilisateur soumet le formulaire au serveur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -473,7 +473,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\nFirst name : <input type=\"text\" name = \"fname\"><br>\nLast name : <input type=\"text\" name = \"lname\"><br>\n<input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
+          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\n   First name : <input type=\"text\" name = \"fname\"><br>\n   Last name : <input type=\"text\" name = \"lname\"><br>\n   <input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "On considère le formulaire ci-dessous :\nQuel est votre langage préféré ?\nPython □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
+          "enonce": "On considère le formulaire ci-dessous :\n    Quel est votre langage préféré ?\n        Python □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On exécute le script suivant :\ndef calcul(a,b):\na = a + 2\nb = b + 5\nc = a + b\nreturn c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
+          "enonce": "On exécute le script suivant :\ndef calcul(a,b):\n    a = a + 2\n    b = b + 5\n    c = a + b\n    return c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "enonce": "La\n    documentation\n            de\n                la\n                    bibliothèque\n                        random\n                            de\n                                Python\n                                    précise\n                                        que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\n    if a > b :\n        a, b = b, a\n    if b > c:\n        b, c = c, b\n    return a, b, c",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On considère la fonction suivante :\ndef f(T,i):\nindice = i\nm = T[i]\nfor k in range(i+1, len(T)):\nif T[k] < m:\nindice = k\nm = T[k]\nreturn indice\nQuelle est la valeur de f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0) ?",
+          "enonce": "On considère la fonction suivante :\ndef f(T,i):\n    indice = i\n    m = T[i]\n    for k in range(i+1, len(T)):\n        if T[k] < m:\n            indice = k\n            m = T[k]\n    return indice\nQuelle est la valeur de f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\nt = 0\nfor e in liste :\nt = t + e\n# assertion vraie à cet endroit\nreturn t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
+          "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\n    t = 0\n    for e in liste :\n        t = t + e\n        # assertion vraie à cet endroit\n    return t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
           "reponses": [
             {
               "lettre": "A",

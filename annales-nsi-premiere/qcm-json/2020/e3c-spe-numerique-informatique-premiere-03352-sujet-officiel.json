@@ -59,7 +59,8 @@
               "lettre": "D",
               "texte": "é"
             }
-          ]
+          ],
+          "avertissement_extraction": "attendu 4 réponses, extrait 5"
         },
         {
           "numero": "A.3",
@@ -267,7 +268,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n('avril',20), ('mai',23), ('juin',25),\n('juillet',29), ('août',25), ('septembre',22),\n('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\nif (m > mois[1]):\nm = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
+          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n              ('avril',20), ('mai',23), ('juin',25),\n              ('juillet',29), ('août',25), ('septembre',22),\n              ('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\n        if (m > mois[1]):\n         m = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -295,7 +296,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -317,7 +318,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+          "enonce": "On a défini :\nmendeleiev = [\n            ['H','.', '.','.','.','.','.','He'],\n            ['Li','Be','B','C','N','O','Fl','Ne'],\n            ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n            ...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
           "reponses": [
             {
               "lettre": "A",
@@ -339,7 +340,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\nreturn personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n        ['von neumann','john', 1903, 1957],\n        ['turing', 'alan', 1912, 1954],\n        ['mccarthy', 'john', 1927, 2011],\n        ['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\n    return personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -395,11 +396,11 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
@@ -709,7 +710,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -731,7 +732,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\nRenvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
+          "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\n    Renvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
           "reponses": [
             {
               "lettre": "A",
@@ -775,7 +776,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -797,7 +798,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\ntmp = t[0]\nfor i in range(1,n-1):\nt[i] = t[i+1]\nt[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    tmp = t[0]\n    for i in range(1,n-1):\n        t[i] = t[i+1]\n    t[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -819,7 +820,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\ntmp = tableau[0]\nfor i in range(......): # à compléter\nif tableau[i] > tmp:\ntmp = tableau[i]\nreturn tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
+          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\n    tmp = tableau[0]\n    for i in range(......): # à compléter\n        if tableau[i] > tmp:\n            tmp = tableau[i]\n    return tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
           "reponses": [
             {
               "lettre": "A",
@@ -847,7 +848,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\nn = 0\nfor item in L:\nif item == x:\nn = n + 1\nreturn n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
+          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\n    n = 0\n    for item in L:\n        if item == x:\n            n = n + 1\n    return n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
           "reponses": [
             {
               "lettre": "A",
@@ -869,7 +870,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\nif k == L[1]:\nc = c+1",
+          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\n    if k == L[1]:\n        c = c+1",
           "reponses": [
             {
               "lettre": "A",
@@ -913,7 +914,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\nS = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
+          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\n    S = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -935,7 +936,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -957,7 +958,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\ng = 0\nd = len(L)-1\nwhile g <= d:\nm = (g+d)//2\nif L[m] == x:\nreturn m\nelif L[m] < x:\ng = m+1\nelse:\nd = m-1\nreturn None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
+          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\n    g = 0\n    d = len(L)-1\n    while g <= d:\n        m = (g+d)//2\n        if L[m] == x:\n            return m\n        elif L[m] < x:\n            g = m+1\n        else:\n            d = m-1\n    return None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
           "reponses": [
             {
               "lettre": "A",

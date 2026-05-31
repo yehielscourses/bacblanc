@@ -1,6 +1,6 @@
 {
   "description": "Banque unique de questions QCM NSI Première (E3C), dédoublonnées par énoncé — avec bonne réponse et explication pour chaque question",
-  "sources": "104 fichiers JSON dans annales-nsi-premiere/qcm-json/",
+  "sources": "103 fichiers JSON dans annales-nsi-premiere/qcm-json/",
   "nombre_questions_total_sources": 4284,
   "nombre_questions_uniques": 605,
   "doublons_exclus": 3679,
@@ -227,7 +227,7 @@
       "numero_original": "B.3",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n('avril',20), ('mai',23), ('juin',25),\n('juillet',29), ('août',25), ('septembre',22),\n('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\nif (m > mois[1]):\nm = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
+      "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n              ('avril',20), ('mai',23), ('juin',25),\n              ('juillet',29), ('août',25), ('septembre',22),\n              ('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\n        if (m > mois[1]):\n         m = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -362,7 +362,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit :\ncontacts = {'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+      "enonce": "On définit :\ncontacts = {'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n         'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
       "reponses": [
         {
           "lettre": "A",
@@ -389,7 +389,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère la liste de p-uplets suivante :\nTable = [('Grace','Hopper','F',1906),('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815), ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+      "enonce": "On considère la liste de p-uplets suivante :\nTable = [('Grace','Hopper','F',1906),('Tim', 'Berners-Lee', 'H', 1955),\n          ('Ada', 'Lovelace', 'F', 1815), ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\n    mystere = []\n    for ligne in table:\n        if ligne[2] == 'F':\n            mystere.append(ligne[1])\n    return mystere\nQue vaut  fonctionMystere(table)?",
       "reponses": [
         {
           "lettre": "A",
@@ -632,7 +632,7 @@
       "numero_original": "D.6",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\nPrénom :\n<input type=\"text\" id=\"champ1\" name=\"p\"/>\n<br/>\n<input type=\"hidden\" name=\"util\" value=\"1549\"/>\n<input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
+      "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\n    Prénom :\n        <input type=\"text\" id=\"champ1\" name=\"p\"/>\n    <br/>\n    <input type=\"hidden\" name=\"util\" value=\"1549\"/>\n    <input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
       "reponses": [
         {
           "lettre": "A",
@@ -848,7 +848,7 @@
       "numero_original": "F.2",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\ns = s + n\nn = n -1\nQue contient la variable s à la fin de cette exécution ?",
+      "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\n    s = s + n\n    n = n -1\nQue contient la variable s à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -875,7 +875,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+      "enonce": "La\n    documentation\n        de\n            la\n                bibliothèque\n                    random\n                        de\n                            Python\n                                précise\n                                    que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
       "reponses": [
         {
           "lettre": "A",
@@ -902,7 +902,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+      "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -929,7 +929,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+      "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -956,7 +956,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\ns = 0\nfor k in T:\nif k % 2 == 0:\ns = s+k\nreturn s",
+      "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\n    s = 0\n    for k in T:\n        if k % 2 == 0:\n            s = s+k\n    return s",
       "reponses": [
         {
           "lettre": "A",
@@ -1010,7 +1010,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le script suivant :\nfor i in range(n):\nfor j in range(i):\nprint('NSI')\nCombien de fois le mot NSI est-il affiché ?",
+      "enonce": "On exécute le script suivant :\nfor i in range(n):\n    for j in range(i):\n        print('NSI')\nCombien de fois le mot NSI est-il affiché ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1037,7 +1037,7 @@
       "numero_original": "G.3",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\nindexResultat = 0\nfor i in range(len(phrase)):\nif phrase[i]== lettre:\nindexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
+      "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\n    indexResultat = 0\n    for i in range(len(phrase)):\n    if phrase[i]== lettre:\n        indexResultat=i\n    return indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1068,19 +1068,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "for i in range(n//2):\nfor j in range(i+1,n):\nprint('hello')"
+          "texte": "for i in range(n//2):\n    for j in range(i+1,n):\n        print('hello')"
         },
         {
           "lettre": "B",
-          "texte": "for i in range(n):\nprint('hello')"
+          "texte": "for i in range(n):\n    print('hello')"
         },
         {
           "lettre": "C",
-          "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\nprint('hello')"
+          "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\n    print('hello')"
         },
         {
           "lettre": "D",
-          "texte": "for i in range(n//2):\nfor j in range(n//2):\nprint('hello')"
+          "texte": "for i in range(n//2):\n    for j in range(n//2):\n        print('hello')"
         }
       ],
       "bonne_reponse": "B",
@@ -1091,7 +1091,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\nfor i in range (1, len(tab)):\nfor j in range (len(tab) - i):\nif tab[j]>tab[j+1]:\ntab[j],tab[j+1] = tab[j+1], tab[j]",
+      "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\n    for i in range (1, len(tab)):\n        for j in range (len(tab) - i):\n            if tab[j]>tab[j+1]:\n                tab[j],tab[j+1] = tab[j+1], tab[j]",
       "reponses": [
         {
           "lettre": "A",
@@ -1280,7 +1280,7 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\nreturn (x, x**2)",
+      "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\n    return (x, x**2)",
       "reponses": [
         {
           "lettre": "A",
@@ -1334,7 +1334,7 @@
       "numero_original": "B.3",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n['O', 'O', 'O'],\n['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
+      "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n        ['O', 'O', 'O'],\n        ['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1415,7 +1415,7 @@
       "numero_original": "B.6",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "Soient n et p deux entiers au moins égaux à 2. On définit une liste de listes t par le code suivant :\n# n et p sont initialisés dans les lignes précédentes\nt = [ [ 0 for j in range(p) ] for i in range(n) ]\nfor k in range(n*p):\nt[k%n][k%p] = k\nUne et une seule des affirmations suivantes est fausse. Laquelle ?",
+      "enonce": "Soient n et p deux entiers au moins égaux à 2. On définit une liste de listes t par le code suivant :\n# n et p sont initialisés dans les lignes précédentes\nt = [ [ 0 for j in range(p) ] for i in range(n) ]\nfor k in range(n*p):\n    t[k%n][k%p] = k\nUne et une seule des affirmations suivantes est fausse. Laquelle ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1442,7 +1442,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\nfor j in range(4):\nif (i+j) == 3:\nimage[i][j] = 1",
+      "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\n    for j in range(4):\n        if (i+j) == 3:\n            image[i][j] = 1",
       "reponses": [
         {
           "lettre": "A",
@@ -1523,7 +1523,7 @@
       "numero_original": "C.4",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+      "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n    'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1577,7 +1577,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n# chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
+      "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n        # chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
       "reponses": [
         {
           "lettre": "A",
@@ -1631,7 +1631,7 @@
       "numero_original": "D.2",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Dans une page HTML se trouve le formulaire suivant :\n<form method=\".........\" action=\"traitement.html\">\n<p>Nom : <input type=\"text\" name=\"nom\"></p>\n<p>Mot de passe : <input type=\"password\" name=\"mdp\"></p>\n<p><input type=\"submit\" name=\"envoi\" value=\"Envoyer\"></p>\n</form>\nPar quoi faut-il remplacer les pointillés pour que les données du formulaire n'apparaissent pas dans l'URL au\nmoment où l'utilisateur soumet le formulaire au serveur ?",
+      "enonce": "Dans une page HTML se trouve le formulaire suivant :\n<form method=\".........\" action=\"traitement.html\">\n    <p>Nom : <input type=\"text\" name=\"nom\"></p>\n    <p>Mot de passe : <input type=\"password\" name=\"mdp\"></p>\n    <p><input type=\"submit\" name=\"envoi\" value=\"Envoyer\"></p>\n</form>\nPar quoi faut-il remplacer les pointillés pour que les données du formulaire n'apparaissent pas dans l'URL au\nmoment où l'utilisateur soumet le formulaire au serveur ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1658,7 +1658,7 @@
       "numero_original": "D.3",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\nFirst name : <input type=\"text\" name = \"fname\"><br>\nLast name : <input type=\"text\" name = \"lname\"><br>\n<input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
+      "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\n   First name : <input type=\"text\" name = \"fname\"><br>\n   Last name : <input type=\"text\" name = \"lname\"><br>\n   <input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1712,7 +1712,7 @@
       "numero_original": "D.5",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "On considère le formulaire ci-dessous :\nQuel est votre langage préféré ?\nPython □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
+      "enonce": "On considère le formulaire ci-dessous :\n    Quel est votre langage préféré ?\n        Python □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
       "reponses": [
         {
           "lettre": "A",
@@ -1928,7 +1928,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script suivant :\ndef calcul(a,b):\na = a + 2\nb = b + 5\nc = a + b\nreturn c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
+      "enonce": "On exécute le script suivant :\ndef calcul(a,b):\n    a = a + 2\n    b = b + 5\n    c = a + b\n    return c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
       "reponses": [
         {
           "lettre": "A",
@@ -1955,7 +1955,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+      "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\n    if a > b :\n        a, b = b, a\n    if b > c:\n        b, c = c, b\n    return a, b, c",
       "reponses": [
         {
           "lettre": "A",
@@ -1982,7 +1982,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+      "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2036,7 +2036,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+      "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2063,7 +2063,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+      "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
       "reponses": [
         {
           "lettre": "A",
@@ -2090,7 +2090,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère la fonction suivante :\ndef f(T,i):\nindice = i\nm = T[i]\nfor k in range(i+1, len(T)):\nif T[k] < m:\nindice = k\nm = T[k]\nreturn indice\nQuelle est la valeur de f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0) ?",
+      "enonce": "On considère la fonction suivante :\ndef f(T,i):\n    indice = i\n    m = T[i]\n    for k in range(i+1, len(T)):\n        if T[k] < m:\n            indice = k\n            m = T[k]\n    return indice\nQuelle est la valeur de f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2144,7 +2144,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\nt = 0\nfor e in liste :\nt = t + e\n# assertion vraie à cet endroit\nreturn t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
+      "enonce": "Un algorithme de calcul de moyenne est implémenté de la façon suivante :\ndef moyenne(liste) :\n    t = 0\n    for e in liste :\n        t = t + e\n        # assertion vraie à cet endroit\n    return t/len(liste)\nParmi les propositions suivantes, laquelle reste vraie à la fin de chaque itération de la boucle ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2360,7 +2360,7 @@
       "numero_original": "B.2",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On exécute le code suivant :\nA = [ [1,2,3], [4,5,6], [7,8,9] ]\nB = [ [0,0,0], [0,0,0], [0,0,0] ]\nfor i in range(3):\nfor j in range(3):\nB[i][j] = A[j][i]\nQue vaut B à la fin de l'exécution ?",
+      "enonce": "On exécute le code suivant :\nA = [ [1,2,3], [4,5,6], [7,8,9] ]\nB = [ [0,0,0], [0,0,0], [0,0,0] ]\nfor i in range(3):\n    for j in range(3):\n        B[i][j] = A[j][i]\nQue vaut B à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2414,7 +2414,7 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
+      "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2495,7 +2495,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nOn considère le code suivant :\nimport csv\nwith open('departements.csv', newline='') as monFichier:\nlesLignes = csv.reader(monFichier)\nfor uneLigne in lesLignes:\nprint(uneLigne[3])\nQue va produire l'exécution de ce code ?",
+      "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nOn considère le code suivant :\nimport csv\nwith open('departements.csv', newline='') as monFichier:\n    lesLignes = csv.reader(monFichier)\n    for uneLigne in lesLignes:\n        print(uneLigne[3])\nQue va produire l'exécution de ce code ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2549,7 +2549,7 @@
       "numero_original": "C.4",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+      "enonce": "On a défini :\nmendeleiev = [\n                    ['H','.', '.','.','.','.','.','He'],\n                    ['Li','Be','B','C','N','O','Fl','Ne'],\n                    ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n                    ...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2576,7 +2576,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815),\n('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+      "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n                ('Tim', 'Berners-Lee', 'H', 1955),\n                ('Ada', 'Lovelace', 'F', 1815),\n                ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\n    mystere = []\n    for ligne in table:\n        if ligne[2] == 'F':\n            mystere.append(ligne[1])\n    return mystere\nQue vaut  fonctionMystere(table)?",
       "reponses": [
         {
           "lettre": "A",
@@ -2900,7 +2900,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\nsomme = 0\nfor i in range(.........):   # ligne à modifier\nsomme = somme + i\nreturn somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
+      "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\n    somme = 0\n    for i in range(.........):   # ligne à modifier\n        somme = somme + i\n    return somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
       "reponses": [
         {
           "lettre": "A",
@@ -2954,7 +2954,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\nif m < L[j]:\nm = L[j]",
+      "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\n    if m < L[j]:\n        m = L[j]",
       "reponses": [
         {
           "lettre": "A",
@@ -2981,7 +2981,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+      "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3035,7 +3035,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n# x est la valeur à chercher\n# y est une liste de valeurs\nfor i in range(len(y)):\nif x == y[i]:\nreturn i\nreturn None\nQuel est le coût de cet algorithme ?",
+      "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n    # x est la valeur à chercher\n    # y est une liste de valeurs\n    for i in range(len(y)):\n        if x == y[i]:\n            return i\n    return None\nQuel est le coût de cet algorithme ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3062,7 +3062,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le script suivant :\nliste = [17, 12, 5, 18, 2, 7, 9, 15, 14, 20]\nsomme = 0\ni = 0\nwhile i < len(liste):\nsomme = somme + liste[i]\ni = i + 1\nresultat = somme / len(liste)\nQuelle affirmation est fausse parmi les suivantes ?",
+      "enonce": "On exécute le script suivant :\nliste = [17, 12, 5, 18, 2, 7, 9, 15, 14, 20]\nsomme = 0\ni = 0\nwhile i < len(liste):\n    somme = somme + liste[i]\n    i = i + 1\nresultat = somme / len(liste)\nQuelle affirmation est fausse parmi les suivantes ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3359,7 +3359,7 @@
       "numero_original": "B.6",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On considère la fonction suivante :\ndef somme(tab):\ns = 0\nfor i in range(len(tab)):\n......\nreturn s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
+      "enonce": "On considère la fonction suivante :\ndef somme(tab):\n    s = 0\n    for i in range(len(tab)):\n        ......\n    return s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3386,7 +3386,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On exécute le script suivant :\nasso = []\nL =  [ ['marc','marie'], ['marie','jean'], ['paul','marie'], ['marie','marie'],\n['marc','anne']   ]\nfor c in L :\nif c[1]==’marie’:\nasso.append(c[0])\nQue vaut asso à la fin de l'exécution ?",
+      "enonce": "On exécute le script suivant :\nasso = []\nL =  [ ['marc','marie'], ['marie','jean'], ['paul','marie'], ['marie','marie'],\n    ['marc','anne']   ]\nfor c in L :\n     if c[1]==’marie’:\n           asso.append(c[0])\nQue vaut asso à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3791,7 +3791,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+      "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
       "reponses": [
         {
           "lettre": "A",
@@ -3818,7 +3818,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On considère le code suivant\ndef moyenne(notes):\nsomme = 0\nfor cpt in range(len(notes)):\n....\nm = somme/len(notes)\nreturn m\nPar quoi remplacer la ligne en pointillée pour que cette fonction calcule la moyenne d'une liste de nombres ?",
+      "enonce": "On considère le code suivant\ndef moyenne(notes):\n    somme = 0\n    for cpt in range(len(notes)):\n        ....\n    m = somme/len(notes)\n    return m\nPar quoi remplacer la ligne en pointillée pour que cette fonction calcule la moyenne d'une liste de nombres ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3845,7 +3845,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+      "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
       "reponses": [
         {
           "lettre": "A",
@@ -3872,7 +3872,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\nfor i in range(n-1):\nif t[i] > t[i+1]:\nt[i],t[i+1] = t[i+1],t[i]\nL = [4, 8, -7, 0, 1]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+      "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    for i in range(n-1):\n        if t[i] > t[i+1]:\n            t[i],t[i+1] = t[i+1],t[i]\nL = [4, 8, -7, 0, 1]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3899,7 +3899,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\nfor i in range(len(t) - 1):\nif t[i] + 1 != t[i+1]:\nreturn False\nreturn True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
+      "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\n    for i in range(len(t) - 1):\n        if t[i] + 1 != t[i+1]:\n            return False\n    return True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
       "reponses": [
         {
           "lettre": "A",
@@ -3926,7 +3926,7 @@
       "numero_original": "G.3",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Soit l'algorithme suivant, qui permet de retrouver l'index de l'élément maximum dans un tableau de données :\ndef maximum(T) :\nindex= 0\nfor i in range(len(T)) :\nif ...... :\nindex = i\nreturn index\nCompléter l'instruction conditionnelle pour que la fonction calcule le résultat attendu  :",
+      "enonce": "Soit l'algorithme suivant, qui permet de retrouver l'index de l'élément maximum dans un tableau de données :\ndef maximum(T) :\n    index= 0\n    for i in range(len(T)) :\n        if ...... :\n            index = i\n    return index\nCompléter l'instruction conditionnelle pour que la fonction calcule le résultat attendu  :",
       "reponses": [
         {
           "lettre": "A",
@@ -3953,7 +3953,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\nfor x in L:\nif n == x:\nreturn True\nreturn False",
+      "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\n    for x in L:\n        if n == x:\n            return True\n    return False",
       "reponses": [
         {
           "lettre": "A",
@@ -4169,7 +4169,7 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On exécute le script suivant.\nm = []\nfor i in range(5):\nn = []\nfor j in range(3):\nn.append(i*j)\nm.append(n)\nQuelle est la valeur de m à la fin de son exécution ?",
+      "enonce": "On exécute le script suivant.\nm = []\nfor i in range(5):\n    n = []\n    for j in range(3):\n        n.append(i*j)\n    m.append(n)\nQuelle est la valeur de m à la fin de son exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4223,7 +4223,7 @@
       "numero_original": "B.5",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On considère le code suivant :\ndef feed(t):\nfor i in range(len(t)):\nt[i] = 0\nreturn t\nQue renvoie feed([12, 24, 32]) ?",
+      "enonce": "On considère le code suivant :\ndef feed(t):\n    for i in range(len(t)):\n        t[i] = 0\n    return t\nQue renvoie feed([12, 24, 32]) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4277,7 +4277,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+      "enonce": "On a défini :\nmendeleiev = [\n        ['H','.', '.','.','.','.','.','He'],\n        ['Li','Be','B','C','N','O','Fl','Ne'],\n        ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n        ...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4304,7 +4304,7 @@
       "numero_original": "C.4",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+      "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4331,7 +4331,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+      "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4412,7 +4412,7 @@
       "numero_original": "D.5",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"blue\"\n}",
+      "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"blue\"\n}",
       "reponses": [
         {
           "lettre": "A",
@@ -4547,7 +4547,7 @@
       "numero_original": "E.4",
       "theme_id": "E",
       "theme_nom": "architectures matérielles et systèmes d'exploitation",
-      "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
+      "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\n                    C\n            B\n        A\n                        E\n                                V\n    S\n                D\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4628,7 +4628,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\nreturn sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
+      "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\n    return sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4655,7 +4655,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le code suivant :\ndef essai():\na = 2\nb = 3\nc = 4\nreturn a\nreturn b\nreturn c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
+      "enonce": "On exécute le code suivant :\ndef essai():\n    a = 2\n    b = 3\n    c = 4\n    return a\n    return b\n    return c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4682,7 +4682,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+      "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4709,7 +4709,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\ntmp = t[0]\nfor i in range(1,n-1):\nt[i] = t[i+1]\nt[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+      "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    tmp = t[0]\n    for i in range(1,n-1):\n        t[i] = t[i+1]\n    t[n-1] = tmp\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4763,7 +4763,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère le code incomplet suivant qui recherche le maximum dans une liste.\nliste = [5,12,15,3,15,17,29,1]\niMax = 0\nfor i in range(1,len(liste)):\n............\niMax = i\nprint (liste[iMax])\nPar quoi faut-il remplacer la ligne pointillée ?",
+      "enonce": "On considère le code incomplet suivant qui recherche le maximum dans une liste.\nliste = [5,12,15,3,15,17,29,1]\niMax = 0\nfor i in range(1,len(liste)):\n    ............\n    iMax = i\nprint (liste[iMax])\nPar quoi faut-il remplacer la ligne pointillée ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4790,7 +4790,7 @@
       "numero_original": "G.3",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "À la fin de l'exécution du code suivant, quelle sera la valeur de la variable cpt ?\na = 1\ncpt = 20\nwhile cpt > 8:\na = 2*a\ncpt = cpt – 1",
+      "enonce": "À la fin de l'exécution du code suivant, quelle sera la valeur de la variable cpt ?\na = 1\ncpt = 20\nwhile cpt > 8:\n    a = 2*a\n    cpt = cpt – 1",
       "reponses": [
         {
           "lettre": "A",
@@ -4817,7 +4817,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\np = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
+      "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\n    p = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
       "reponses": [
         {
           "lettre": "A",
@@ -4844,7 +4844,7 @@
       "numero_original": "G.6",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+      "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5006,7 +5006,7 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\nm = L[0]\nfor x in L:\nif x > m:\nm = x\nreturn m\nQue calcule cette fonction ?",
+      "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\n    m = L[0]\n    for x in L:\n        if x > m:\n            m = x\n    return m\nQue calcule cette fonction ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5114,7 +5114,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On exécute le code suivant :\ndict = {\n\"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n\"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\nfor cle, valeur in dic.items() :\nif valeur > 18:\nreturn cle\nQue renvoie l'appel f(dict) ?",
+      "enonce": "On exécute le code suivant :\ndict = {\n            \"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n            \"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\n    for cle, valeur in dic.items() :\n        if valeur > 18:\n            return cle\nQue renvoie l'appel f(dict) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5153,11 +5153,11 @@
         },
         {
           "lettre": "C",
-          "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+          "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
         },
         {
           "lettre": "D",
-          "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+          "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
         }
       ],
       "bonne_reponse": "A",
@@ -5276,7 +5276,7 @@
       "numero_original": "D.6",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n<li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n<li><a href=\"onglet2.html\">Onglet 2</a></li>\n<li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
+      "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n    <li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n    <li><a href=\"onglet2.html\">Onglet 2</a></li>\n    <li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5465,7 +5465,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+      "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5492,7 +5492,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+      "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5546,7 +5546,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\ni = 0\nfor j in phrase:\nif j == lettre:\ni = i+1\nreturn i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
+      "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\n    i = 0\n    for j in phrase:\n        if j == lettre:\n            i = i+1\n    return i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5573,7 +5573,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère la fonction suivante :\ndef f(x,L):\ni = 0\nj = len(L)-1\nwhile i<j:\nk = (i+j)//2\nif x <= L[k]:\nj = k\nelse:\ni = k + 1\nreturn i\nCette fonction implémente :",
+      "enonce": "On considère la fonction suivante :\ndef f(x,L):\n    i = 0\n    j = len(L)-1\n    while i<j:\n        k = (i+j)//2\n        if x <= L[k]:\n            j = k\n        else:\n            i = k + 1\n    return i\nCette fonction implémente :",
       "reponses": [
         {
           "lettre": "A",
@@ -5604,19 +5604,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "i = K+1\nwhile i < K:\ni = i + 1"
+          "texte": "i = K+1\nwhile i < K:\n    i = i + 1"
         },
         {
           "lettre": "B",
-          "texte": "i = K-1\nwhile i < K:\ni = i - 1"
+          "texte": "i = K-1\nwhile i < K:\n    i = i - 1"
         },
         {
           "lettre": "C",
-          "texte": "i = K-1\nwhile i < K:\ni = i + 1"
+          "texte": "i = K-1\nwhile i < K:\n    i = i + 1"
         },
         {
           "lettre": "D",
-          "texte": "i = K+1\nwhile i >= K:\ni = i - 1"
+          "texte": "i = K+1\nwhile i >= K:\n    i = i - 1"
         }
       ],
       "bonne_reponse": "B",
@@ -5735,7 +5735,7 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On exécute le script suivant :\ninventaire = {'pommes': 430, 'bananes': 312,\n'oranges' : 274, 'poires' : 137}\nstock = 0\nfor fruit in inventaire.keys():\nif fruit != 'bananes':\nstock = stock + inventaire[fruit]\nQue contient la variable stock à la fin de cette exécution ?",
+      "enonce": "On exécute le script suivant :\ninventaire = {'pommes': 430, 'bananes': 312,\n              'oranges' : 274, 'poires' : 137}\nstock = 0\nfor fruit in inventaire.keys():\n    if fruit != 'bananes':\n        stock = stock + inventaire[fruit]\nQue contient la variable stock à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5870,7 +5870,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\ns = 0\nfor k in T:\nif k == 8:\ns = s+1\nif s > 1:\nreturn True\nelse:\nreturn False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
+      "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\n     s = 0\n    for k in T:\n        if k == 8:\n            s = s+1\n    if s > 1:\n        return True\n    else:\n        return False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
       "reponses": [
         {
           "lettre": "A",
@@ -5951,7 +5951,7 @@
       "numero_original": "D.6",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Voici un extrait d'un document HTML.\n<body>\n.........\nClic !\n</button>\n<h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
+      "enonce": "Voici un extrait d'un document HTML.\n<body>\n    .........\n    Clic !\n    </button>\n    <h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6086,7 +6086,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On considère la fonction ci-dessous :\ndef maFonction(c):\nif c <= 10:\np = 12\nif c <= 18:\np = 15\nif c <= 40:\np = 19\nelse:\np = 20\nreturn p\nQue renvoie maFonction(18) ?",
+      "enonce": "On considère la fonction ci-dessous :\ndef maFonction(c):\n    if c <= 10:\n        p = 12\n    if c <= 18:\n        p = 15\n    if c <= 40:\n        p = 19\n    else:\n        p = 20\n    return p\nQue renvoie maFonction(18) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6113,7 +6113,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction suivante :\ndef f(n):\nc = 0\nwhile n > 0:\nc = c + 1\nn = n // 2\nreturn c\nQuel est la valeur renvoyée par l'appel f(35) ?",
+      "enonce": "On définit la fonction suivante :\ndef f(n):\n    c = 0\n    while n > 0:\n        c = c + 1\n        n = n // 2\n    return c\nQuel est la valeur renvoyée par l'appel f(35) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6167,7 +6167,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "def traitement(tableau):\nr = 0\nfor i in range(1, len(tableau)):\nif tableau[i] > tableau[r]:\nr = i\nreturn r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
+      "enonce": "def traitement(tableau):\n    r = 0\n    for i in range(1, len(tableau)):\n        if tableau[i] > tableau[r]:\n            r = i\n    return r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
       "reponses": [
         {
           "lettre": "A",
@@ -6194,7 +6194,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+      "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
       "reponses": [
         {
           "lettre": "A",
@@ -6302,7 +6302,7 @@
       "numero_original": "A.4",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\nc = True\nelif a > b+10:\nc = True\nelse:\nc = False",
+      "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\n    c = True\nelif a > b+10:\n    c = True\nelse:\n    c = False",
       "reponses": [
         {
           "lettre": "A",
@@ -6333,19 +6333,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝑏"
+          "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝑂𝑈 𝑏"
         },
         {
           "lettre": "B",
-          "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+          "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝐸𝑇 𝑏"
         },
         {
           "lettre": "C",
-          "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
+          "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
         },
         {
           "lettre": "D",
-          "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+          "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n    𝑠= 𝑎 𝐸𝑇 𝑏"
         }
       ],
       "bonne_reponse": "C",
@@ -6410,7 +6410,7 @@
       "numero_original": "B.2",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\nt = []\nfor i in range(L):\nligne = []\nfor j in range(C):\n......\nt.append(ligne)\nreturn t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n[0, 1, 2],\n[3, 4, 5]\n]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
+      "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\n    t = []\n    for i in range(L):\n        ligne = []\n        for j in range(C):\n            ......\n        t.append(ligne)\n    return t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n    [0, 1, 2],\n    [3, 4, 5]\n                 ]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6464,7 +6464,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Soit la table de données suivante :\nnom\nprenom\ndate_naissance\nDupont\nPierre\n17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
+      "enonce": "Soit la table de données suivante :\nnom\n        prenom\n                date_naissance\nDupont\n        Pierre\n            17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6707,7 +6707,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+      "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
       "reponses": [
         {
           "lettre": "A",
@@ -6788,7 +6788,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\nreturn L\nQuelle est l'affirmation exacte ?",
+      "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n    return L\nQuelle est l'affirmation exacte ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6842,7 +6842,7 @@
       "numero_original": "A.1",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\nx = x - 0.1",
+      "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\n    x = x - 0.1",
       "reponses": [
         {
           "lettre": "A",
@@ -6923,7 +6923,7 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n{\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nQue fait alors l'instruction P[1][\"âge\"] = 25 ?",
+      "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n      {\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nQue fait alors l'instruction P[1][\"âge\"] = 25 ?",
       "reponses": [
         {
           "lettre": "A",
@@ -6954,19 +6954,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+          "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
         },
         {
           "lettre": "B",
-          "texte": "effectifs = {}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+          "texte": "effectifs = {}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
         },
         {
           "lettre": "C",
-          "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+          "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
         },
         {
           "lettre": "D",
-          "texte": "effectifs = {}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+          "texte": "effectifs = {}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
         }
       ],
       "bonne_reponse": "A",
@@ -6977,7 +6977,7 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "La fonction ci-dessous prend en argument deux nombres entiers.\ndef f(n1,n2):\netendue = max(n1,n2)-min(n1,n2)\nmoyenne = (n1+n2)/2\nreturn etendue,moyenne\nQuel est le type de la valeur renvoyée par un appel à cette fonction ?",
+      "enonce": "La fonction ci-dessous prend en argument deux nombres entiers.\ndef f(n1,n2):\n    etendue = max(n1,n2)-min(n1,n2)\n    moyenne = (n1+n2)/2\n    return etendue,moyenne\nQuel est le type de la valeur renvoyée par un appel à cette fonction ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7031,7 +7031,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\nreturn personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
+      "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n        ['von neumann','john', 1903, 1957],\n        ['turing', 'alan', 1912, 1954],\n        ['mccarthy', 'john', 1927, 2011],\n        ['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\n    return personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7116,19 +7116,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "<body>\n</body>"
+          "texte": "<body>\n            </body>"
         },
         {
           "lettre": "B",
-          "texte": "<html>\n</html>"
+          "texte": "<html>\n            </html>"
         },
         {
           "lettre": "C",
-          "texte": "<div>\n</div>"
+          "texte": "<div>\n            </div>"
         },
         {
           "lettre": "D",
-          "texte": "<form>\n</form>"
+          "texte": "<form>\n            </form>"
         }
       ],
       "bonne_reponse": "D",
@@ -7139,7 +7139,7 @@
       "numero_original": "D.4",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+      "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
       "reponses": [
         {
           "lettre": "A",
@@ -7166,7 +7166,7 @@
       "numero_original": "D.5",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Voici un extrait d'une page HTML :\n<script>\nfunction sommeNombres(formulaire) {\nvar somme = formulaire.n1.value + formulaire.n2.value;\nconsole.log(somme);\n}\n</script>\n<form>\nNombre 1 : <input name=\"n1\" value=\"30\">  <br>\nNombre 2 : <input name=\"n2\" value=\"10\">  <br>\n<input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
+      "enonce": "Voici un extrait d'une page HTML :\n<script>\n    function sommeNombres(formulaire) {\n        var somme = formulaire.n1.value + formulaire.n2.value;\n        console.log(somme);\n    }\n</script>\n<form>\n    Nombre 1 : <input name=\"n1\" value=\"30\">  <br>\n    Nombre 2 : <input name=\"n2\" value=\"10\">  <br>\n    <input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
       "reponses": [
         {
           "lettre": "A",
@@ -7355,7 +7355,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\nif k == L[1]:\nc = c+1",
+      "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\n    if k == L[1]:\n        c = c+1",
       "reponses": [
         {
           "lettre": "A",
@@ -7382,7 +7382,7 @@
       "numero_original": "G.3",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\nS = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
+      "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\n    S = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7409,7 +7409,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+      "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
       "reponses": [
         {
           "lettre": "A",
@@ -7598,7 +7598,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\nif table[index][3] > 1954:\nL.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
+      "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n                ['von neumann','john', 1903, 1957],\n                ['turing', 'alan', 1912, 1954],\n                ['mccarthy', 'john', 1927, 2011],\n                ['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\n    if table[index][3] > 1954:\n        L.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7625,7 +7625,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+      "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7652,7 +7652,7 @@
       "numero_original": "C.4",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On exécute le code suivant :\ndef maxi(t):\nm = t[0]\nfor x in t:\nif x[1] >= m[1]:\nm = x\nreturn m\nL = [  ('Alice', 17), ('Barnabé', 17),\n('Casimir', 17), ('Doriane', 17),\n('Emilien', 14), ('Fabienne', 16) ]\nQuelle est alors la valeur de maxi(L) ?",
+      "enonce": "On exécute le code suivant :\ndef maxi(t):\n    m = t[0]\n    for x in t:\n        if x[1] >= m[1]:\n            m = x\n    return m\nL = [  ('Alice', 17), ('Barnabé', 17),\n            ('Casimir', 17), ('Doriane', 17),\n            ('Emilien', 14), ('Fabienne', 16) ]\nQuelle est alors la valeur de maxi(L) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7679,7 +7679,7 @@
       "numero_original": "D.2",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Un navigateur affiche la page HTML suivante :\n<html lang=\"fr\">\n<head>\n<meta charset=\"utf-8\">\n<link rel=\"stylesheet\" href=\"style.css\">\n<title>Un bouton</title>\n</head>\n<body>\n<button onclick=\"maFonction()\">Cliquer ici</button>\n</body>\n<script src=\"script.js\"></script>\n</html>\nLorsque l'on clique sur le bouton, l'action déclenchée maFonction() est définie :",
+      "enonce": "Un navigateur affiche la page HTML suivante :\n<html lang=\"fr\">\n<head>\n    <meta charset=\"utf-8\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <title>Un bouton</title>\n</head>\n<body>\n    <button onclick=\"maFonction()\">Cliquer ici</button>\n</body>\n<script src=\"script.js\"></script>\n</html>\nLorsque l'on clique sur le bouton, l'action déclenchée maFonction() est définie :",
       "reponses": [
         {
           "lettre": "A",
@@ -7760,7 +7760,7 @@
       "numero_original": "D.6",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Une page HTML comporte ce bout de code :\n<article>\n<h1>Les auteurs de ce site</h1>\n<button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\nfunction auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
+      "enonce": "Une page HTML comporte ce bout de code :\n<article>\n    <h1>Les auteurs de ce site</h1>\n    <button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\n    function auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7868,7 +7868,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction f suivante qui prend en argument une liste t d'entiers :\ndef f(t):\nn = len(t)\nfor i in range(n-1):\nfor j in range(i+1,n):\nif t[i] == t[j]:\nreturn True\nreturn False\nPour quelle valeur de t, f(t) vaut-elle True ?",
+      "enonce": "On définit la fonction f suivante qui prend en argument une liste t d'entiers :\ndef f(t):\n    n = len(t)\n    for i in range(n-1):\n        for j in range(i+1,n):\n            if t[i] == t[j]:\n                return True\n    return False\nPour quelle valeur de t, f(t) vaut-elle True ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7895,7 +7895,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\ntmp = tableau[0]\nfor i in range(......): # à compléter\nif tableau[i] > tmp:\ntmp = tableau[i]\nreturn tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
+      "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\n    tmp = tableau[0]\n    for i in range(......): # à compléter\n        if tableau[i] > tmp:\n            tmp = tableau[i]\n    return tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7922,7 +7922,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
+      "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\n            X\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
       "reponses": [
         {
           "lettre": "A",
@@ -7953,7 +7953,7 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "les algorithmes de classification et d'apprentissage\nX"
+          "texte": "les algorithmes de classification et d'apprentissage"
         },
         {
           "lettre": "B",
@@ -7976,7 +7976,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\nprint('vert')\nif a > b and b == 4:\nprint('rouge')\nif a == 4 or b > a:\nprint('bleu')\nif a == 3 or a < b:\nprint('jaune')",
+      "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\n    print('vert')\nif a > b and b == 4:\n    print('rouge')\nif a == 4 or b > a:\n    print('bleu')\nif a == 3 or a < b:\n    print('jaune')",
       "reponses": [
         {
           "lettre": "A",
@@ -8003,7 +8003,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\nX = X + k\nm = m + 1",
+      "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\n    X = X + k\n    m = m + 1",
       "reponses": [
         {
           "lettre": "A",
@@ -8030,7 +8030,7 @@
       "numero_original": "G.6",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+      "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
       "reponses": [
         {
           "lettre": "A",
@@ -8192,7 +8192,7 @@
       "numero_original": "A.6",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\na\nb\nform\nTrue\nTrue\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nQuelle est cette formule booléenne form ?",
+      "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\n    a\n        b\n            form\n    True\n        True\n            False\n    False\n        True\n            False\n    True\n        False\n            True\n    False\n        False\n            False\nQuelle est cette formule booléenne form ?",
       "reponses": [
         {
           "lettre": "A",
@@ -8381,7 +8381,7 @@
       "numero_original": "D.1",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "On considère l’extrait suivant d'une page web d'un site de vente en ligne.\n<form id=\"fmCreerCommande\" name=\"fmCreerCommande\" action=\"gestion.php\" method=\"post\">\n<input type=\"HIDDEN\" name=\"reference\" value=\"F1245\">\n<label for=\"quantite\" class=\"dropdown\">Quantité :</label>\n<select name=\"quantite\" autocomplete=\"off\" id=\"quantite\" class=\"dropdown\">\n<option value=\"1\" selected>1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n</select>\n<div id=\"btnMulti\" class=\"clValidBtn\">\n<input type=\"button\" value=\"Ajouter\" class=\"btn\" onclick=\"ajouterProduit()\">\n</div>\n</form>\nQuelle est la méthode utilisée pour transmettre les informations saisies dans ce formulaire ?",
+      "enonce": "On considère l’extrait suivant d'une page web d'un site de vente en ligne.\n<form id=\"fmCreerCommande\" name=\"fmCreerCommande\" action=\"gestion.php\" method=\"post\">\n    <input type=\"HIDDEN\" name=\"reference\" value=\"F1245\">\n    <label for=\"quantite\" class=\"dropdown\">Quantité :</label>\n    <select name=\"quantite\" autocomplete=\"off\" id=\"quantite\" class=\"dropdown\">\n        <option value=\"1\" selected>1</option>\n        <option value=\"2\">2</option>\n        <option value=\"3\">3</option>\n    </select>\n    <div id=\"btnMulti\" class=\"clValidBtn\">\n        <input type=\"button\" value=\"Ajouter\" class=\"btn\" onclick=\"ajouterProduit()\">\n    </div>\n</form>\nQuelle est la méthode utilisée pour transmettre les informations saisies dans ce formulaire ?",
       "reponses": [
         {
           "lettre": "A",
@@ -8597,7 +8597,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\nb = 10\nelif a > 6:\nb = 3",
+      "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\n    b = 10\nelif a > 6:\n    b = 3",
       "reponses": [
         {
           "lettre": "A",
@@ -8651,7 +8651,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\ni = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
+      "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\n    i = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -8867,7 +8867,7 @@
       "numero_original": "A.6",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\nPourquoi cela ?",
+      "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\n Pourquoi cela ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9002,7 +9002,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n(7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
+      "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n        (7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9029,7 +9029,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Quelle est la valeur de la variable t1 à la fin de l'exécution du script suivant :\nt1 = [['Valenciennes', 24],['Lille', 23],['Laon', 31],['Arras', 18]]\nt2 = [['Lille', 62],['Arras', 53],['Valenciennes', 67],['Laon', 48]]\nfor i in range(len(t1)):\nfor v in t2:\nif v[0] == t1[i][0]:\nt1[i].append(v[1])",
+      "enonce": "Quelle est la valeur de la variable t1 à la fin de l'exécution du script suivant :\nt1 = [['Valenciennes', 24],['Lille', 23],['Laon', 31],['Arras', 18]]\nt2 = [['Lille', 62],['Arras', 53],['Valenciennes', 67],['Laon', 48]]\nfor i in range(len(t1)):\n    for v in t2:\n        if v[0] == t1[i][0]:\n            t1[i].append(v[1])",
       "reponses": [
         {
           "lettre": "A",
@@ -9056,7 +9056,7 @@
       "numero_original": "D.1",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\nfunction BoutonGris() {\nvar btn = document.createElement(\"BUTTON\");\nbtn.innerHTML = \"Annulation\";\ndocument.getElementById(\"DIV\").appendChild(btn);\n}",
+      "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\nfunction BoutonGris() {\n    var btn = document.createElement(\"BUTTON\");\n    btn.innerHTML = \"Annulation\";\n    document.getElementById(\"DIV\").appendChild(btn);\n}",
       "reponses": [
         {
           "lettre": "A",
@@ -9218,7 +9218,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\nalert(i)\ni = i + 1\n}\nalert(\"Fin\")",
+      "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\n    alert(i)\n    i = i + 1\n}\nalert(\"Fin\")",
       "reponses": [
         {
           "lettre": "A",
@@ -9272,23 +9272,23 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n[\n[0, 0, 0, …, 0],\n[0, 0, 0, …, 0],\n[0, 0, 0, …, 0]\n….\n[0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
+      "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n    [\n        [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0]\n        ….\n        [0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
       "reponses": [
         {
           "lettre": "A",
-          "texte": "hauteur = len(G[0])\nlargeur = len(G)"
+          "texte": "hauteur = len(G[0])\n    largeur = len(G)"
         },
         {
           "lettre": "B",
-          "texte": "hauteur = len(G)\nlargeur = len(G[0])"
+          "texte": "hauteur = len(G)\n    largeur = len(G[0])"
         },
         {
           "lettre": "C",
-          "texte": "hauteur = len(G[0])\nlargeur = len(G[1])"
+          "texte": "hauteur = len(G[0])\n    largeur = len(G[1])"
         },
         {
           "lettre": "D",
-          "texte": "hauteur = len(G[1])\nlargeur = len(G[0])"
+          "texte": "hauteur = len(G[1])\n    largeur = len(G[0])"
         }
       ],
       "bonne_reponse": "B",
@@ -9353,7 +9353,7 @@
       "numero_original": "C.5",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche\nle numéro de Dupond ?\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]\nfor i in range(len(repertoire)):\nif ......   :\nprint(repertoire[i]['tel'])",
+      "enonce": "Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche\nle numéro de Dupond ?\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n        {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]\nfor i in range(len(repertoire)):\n    if ......   :\n        print(repertoire[i]['tel'])",
       "reponses": [
         {
           "lettre": "A",
@@ -9380,7 +9380,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+      "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n    {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9434,7 +9434,7 @@
       "numero_original": "D.2",
       "theme_id": "D",
       "theme_nom": "interactions entre l'homme et la machine sur le Web",
-      "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n<div>\n<label for=\"nom\">Classe:</label>\n<input type=\"text\" id=\"nom\" name=\"leNom\" />\n</div>\n<div>\n<label for=\"effectif\">Effectif:</label>\n<input type=\"number\" id=\"effectif\" name=\"n\" />\n</div>\n<div>\n<button type=\"submit\">Go!</button>\n</div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
+      "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n    <div>\n        <label for=\"nom\">Classe:</label>\n        <input type=\"text\" id=\"nom\" name=\"leNom\" />\n    </div>\n    <div>\n        <label for=\"effectif\">Effectif:</label>\n        <input type=\"number\" id=\"effectif\" name=\"n\" />\n    </div>\n    <div>\n        <button type=\"submit\">Go!</button>\n    </div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9542,7 +9542,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+      "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9569,7 +9569,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\nn = 0\nfor item in L:\nif item == x:\nn = n + 1\nreturn n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
+      "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\n    n = 0\n    for item in L:\n        if item == x:\n            n = n + 1\n    return n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9596,7 +9596,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\np = 1\nn = m\nq = a\nwhile n > 0:\nif n%2 == 0:\nq = q * q\n#\nn = n // 2\nelse:\np = q * p\nn = n - 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+      "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\n    p = 1\n    n = m\n    q = a\n    while n > 0:\n        if n%2 == 0:\n            q = q * q\n            #\n            n = n // 2\n        else:\n            p = q * p\n            n = n - 1\n    return p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
       "reponses": [
         {
           "lettre": "A",
@@ -9866,7 +9866,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
+      "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n    {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
       "reponses": [
         {
           "lettre": "A",
@@ -10028,7 +10028,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction :\ndef fib(n):\nt = [0] * n\nt[1] = 1\nfor in in range(2,n):\nt[i] = t[i-1] + t[i-2]\nreturn t\nQuelle est la valeur renvoyée par l'appel fib(6) ?",
+      "enonce": "On définit la fonction :\ndef fib(n):\n    t = [0] * n\n    t[1] = 1\n    for in in range(2,n):\n        t[i] = t[i-1] + t[i-2]\n    return t\nQuelle est la valeur renvoyée par l'appel fib(6) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10055,7 +10055,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script suivant :\na = 10\nif a < 5:\na = 20\nelif a < 100:\na = 500\nelif a < 1000:\na = 1\nelse:\na = 0\nQuelle est la valeur de la variable a à la fin de cette exécution ?",
+      "enonce": "On exécute le script suivant :\na = 10\nif a < 5:\n    a = 20\nelif a < 100:\n    a = 500\nelif a < 1000:\n    a = 1\nelse:\n    a = 0\nQuelle est la valeur de la variable a à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10082,7 +10082,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On considère le code suivant :\ndef puiss(y,x):\nres = y\nfor i in range(x):\nres = res*y\nreturn res\nQuelles sont les préconditions sur les arguments ?",
+      "enonce": "On considère le code suivant :\ndef puiss(y,x):\n    res = y\n    for i in range(x):\n         res = res*y\n    return res\nQuelles sont les préconditions sur les arguments ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10109,7 +10109,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\nRenvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
+      "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\n    Renvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10136,7 +10136,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "L'algorithme suivant permet de calculer la somme des N premiers entiers, où N est un nombre entier donné :\ni =0\nsomme =0\nwhile i < N :\ni = i +1\nsomme = somme + i\nUn invariant de boucle de cet algorithme est le suivant :",
+      "enonce": "L'algorithme suivant permet de calculer la somme des N premiers entiers, où N est un nombre entier donné :\ni =0\nsomme =0\nwhile i < N :\n    i = i +1\n    somme = somme + i\nUn invariant de boucle de cet algorithme est le suivant :",
       "reponses": [
         {
           "lettre": "A",
@@ -10163,7 +10163,7 @@
       "numero_original": "A.1",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "Quelle est la représentation hexadécimale de l'entier dont la représentation binaire s'écrit :\n0100 1001 1101 0011  ?",
+      "enonce": "Quelle est la représentation hexadécimale de l'entier dont la représentation binaire s'écrit :\n    0100 1001 1101 0011  ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10217,7 +10217,7 @@
       "numero_original": "A.4",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nc = False\nif a==b:\nc = True\nif a > b+10:\nc = True",
+      "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nc = False\nif a==b:\n    c = True\nif a > b+10:\n    c = True",
       "reponses": [
         {
           "lettre": "A",
@@ -10275,19 +10275,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "def xor(a,b):\nreturn (not(a) and b) or (a and b)"
+          "texte": "def xor(a,b):\n    return (not(a) and b) or (a and b)"
         },
         {
           "lettre": "B",
-          "texte": "def xor(a,b):\nreturn (a or b) and not(a)"
+          "texte": "def xor(a,b):\n    return (a or b) and not(a)"
         },
         {
           "lettre": "C",
-          "texte": "def xor(a,b):\nreturn (a and not(b)) or (b and not(a))"
+          "texte": "def xor(a,b):\n    return (a and not(b)) or (b and not(a))"
         },
         {
           "lettre": "D",
-          "texte": "def xor(a,b):\nreturn (a or not(b)) and (b or not(a))"
+          "texte": "def xor(a,b):\n    return (a or not(b)) and (b or not(a))"
         }
       ],
       "bonne_reponse": "C",
@@ -10325,7 +10325,7 @@
       "numero_original": "B.3",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On dispose du dictionnaire regions ci-dessous :\nregions = {\n'Mayotte': 376, 'Pays de la Loire': 32082,\n'La Réunion': 2504, 'Grand Est': 57441,\n'Martinique': 1128, 'Corse': 8680,\n'Bretagne': 27208, 'Nouvelle-Aquitaine': 84036  }\nParmi les instructions suivantes, laquelle permet d'ajouter une nouvelle région ?",
+      "enonce": "On dispose du dictionnaire regions ci-dessous :\nregions = {\n    'Mayotte': 376, 'Pays de la Loire': 32082,\n    'La Réunion': 2504, 'Grand Est': 57441,\n    'Martinique': 1128, 'Corse': 8680,\n    'Bretagne': 27208, 'Nouvelle-Aquitaine': 84036  }\nParmi les instructions suivantes, laquelle permet d'ajouter une nouvelle région ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10379,7 +10379,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On écrit la fonction suivante :\ndef extreme(t, test):\nm = t[0]\nfor x in t:\nif test(x,m):\nm = x\nreturn m\nOn dispose d'une liste L dont les éléments sont des couples (nom, note).\nPar exemple :\nL = [  ('Alice', 17), ('Barnabé', 18),\n('Casimir', 17), ('Doriane', 20),\n('Emilien', 15), ('Fabienne', 16) ]\nOn aimerait que l'appel de fonction extreme(L, test) renvoie un couple présentant la note maximale.\nQuelle définition de la fonction test peut-on utiliser ?",
+      "enonce": "On écrit la fonction suivante :\ndef extreme(t, test):\n    m = t[0]\n    for x in t:\n        if test(x,m):\n            m = x\n    return m\nOn dispose d'une liste L dont les éléments sont des couples (nom, note).\nPar exemple :\nL = [  ('Alice', 17), ('Barnabé', 18),\n            ('Casimir', 17), ('Doriane', 20),\n            ('Emilien', 15), ('Fabienne', 16) ]\nOn aimerait que l'appel de fonction extreme(L, test) renvoie un couple présentant la note maximale.\nQuelle définition de la fonction test peut-on utiliser ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10595,7 +10595,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\nn = n + 2",
+      "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\n    n = n + 2",
       "reponses": [
         {
           "lettre": "A",
@@ -10622,7 +10622,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+      "enonce": "On définit la fonction suivante :\ndef rey(n):\n    i = 0\n    while i <= n:\n        i = 2*i\n    return i\nQuelle valeur renvoie l'appel rey(100) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10692,7 +10692,7 @@
         },
         {
           "lettre": "D",
-          "texte": "a  = False b = True\nc = True"
+          "texte": "a  = False b = True\n    c = True"
         }
       ],
       "bonne_reponse": "B",
@@ -10730,7 +10730,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n(\"Durand\", \"Jacques\", 2),\n(\"Dutronc\", \"Jean\", 3),\n...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\nif clients[i][1] == \"Jean\":\nx = clients[i]",
+      "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n        (\"Durand\", \"Jacques\", 2),\n        (\"Dutronc\", \"Jean\", 3),\n        ...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\n   if clients[i][1] == \"Jean\":\n           x = clients[i]",
       "reponses": [
         {
           "lettre": "A",
@@ -10865,7 +10865,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On construit une liste L de la façon suivante :\nL = []\nfor i in range(1,11,2)\nL.append(5*i)\net on obtient ainsi la liste [5, 15, 25, 35, 45].\nOn pourrait aussi procéder de la façon suivante :\nL = []\n# ligne 1 .......\nwhile i < 11:\nL.append(5*i)\n# ligne 2 .......\nQue faudrait-il écrire en ligne 1 et en ligne 2 pour obtenir le même résultat ?",
+      "enonce": "On construit une liste L de la façon suivante :\nL = []\nfor i in range(1,11,2)\n    L.append(5*i)\net on obtient ainsi la liste [5, 15, 25, 35, 45].\nOn pourrait aussi procéder de la façon suivante :\nL = []\n# ligne 1 .......\nwhile i < 11:\n    L.append(5*i)\n    # ligne 2 .......\nQue faudrait-il écrire en ligne 1 et en ligne 2 pour obtenir le même résultat ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10892,7 +10892,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 3\nb = 6\nif a > 5 or b != 3:\nb = 4\nelse:\nb = 2",
+      "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 3\nb = 6\nif a > 5 or b != 3:\n    b = 4\nelse:\n    b = 2",
       "reponses": [
         {
           "lettre": "A",
@@ -10919,7 +10919,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\n# assertion vraie à cet endroit\nreturn L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
+      "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n        # assertion vraie à cet endroit\n    return L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10946,7 +10946,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\nresultat = resultat * compt\ncompt = compt + 1\nLaquelle de ces affirmations est vraie ?",
+      "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\n   resultat = resultat * compt\n   compt = compt + 1\nLaquelle de ces affirmations est vraie ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10973,7 +10973,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\nif k > element:\nelement = k",
+      "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\n    if k > element:\n        element = k",
       "reponses": [
         {
           "lettre": "A",
@@ -11081,7 +11081,7 @@
       "numero_original": "A.3",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\nB\nS\n0\n0\n1\n0\n1\n0\n1\n0\n1\n1\n1\n1",
+      "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\n    B\n        S\n0\n    0\n        1\n0\n    1\n        0\n1\n    0\n        1\n1\n    1\n        1",
       "reponses": [
         {
           "lettre": "A",
@@ -11243,7 +11243,7 @@
       "numero_original": "B.5",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n{\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nComment accéder à la chaîne de caractères \"Alan\" ?",
+      "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n      {\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nComment accéder à la chaîne de caractères \"Alan\" ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11270,7 +11270,7 @@
       "numero_original": "B.6",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On exécute le script suivant :\ndef ajoute(stock,element,quantite):\nif element in stock:\nstock[element] = stock[element] + quantite\nelse:\nstock[element] = quantite\nstock = { 'clous': 14, 'vis': 27, 'boulons': 8, 'écrous': 24 }\najoute(stock,'vis',5)\najoute(stock,'chevilles',3)\nQuelle est la valeur de la variable stock à la fin de cette exécution ?",
+      "enonce": "On exécute le script suivant :\ndef ajoute(stock,element,quantite):\n    if element in stock:\n        stock[element] = stock[element] + quantite\n    else:\n        stock[element] = quantite\nstock = { 'clous': 14, 'vis': 27, 'boulons': 8, 'écrous': 24 }\najoute(stock,'vis',5)\najoute(stock,'chevilles',3)\nQuelle est la valeur de la variable stock à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11297,7 +11297,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Quelle est la valeur de x après exécution du programme ci-dessous ?\nt = [[3,4,5,1],[33,6,1,2]]\nx = t[0][0]\nfor i in range(len(t)):\nfor j in range(len(t[i])):\nif x < t[i][j]:\nx = t[i][j]",
+      "enonce": "Quelle est la valeur de x après exécution du programme ci-dessous ?\nt = [[3,4,5,1],[33,6,1,2]]\nx = t[0][0]\nfor i in range(len(t)):\n    for j in range(len(t[i])):\n        if x < t[i][j]:\n            x = t[i][j]",
       "reponses": [
         {
           "lettre": "A",
@@ -11432,7 +11432,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
+      "enonce": "On exécute le script Python suivant :\ndef cube(a):\n    a = a*a*a\n    return a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11459,7 +11459,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script Python suivant :\ndef cube(L):\nfor i in range(len(L)):\nL[i] = L[i] * L[i] * L[i]\nreturn L\nL = [2, 5]\nb = cube(L)\nQue vaut le couple (L,b) à la fin de l'exécution ?",
+      "enonce": "On exécute le script Python suivant :\ndef cube(L):\n    for i in range(len(L)):\n        L[i] = L[i] * L[i] * L[i]\n        return L\nL = [2, 5]\nb = cube(L)\nQue vaut le couple (L,b) à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11486,7 +11486,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Avec la définition de fonction capital_double suivante, que peut-on toujours affirmer à propos du résultat n\nretourné par la fonction ?\ndef capital_double (capital, interet):\nmontant = capital\nn = 0\nwhile montant <= 2 * capital:\nmontant = montant + interet\nn = n + 1\nreturn n",
+      "enonce": "Avec la définition de fonction capital_double suivante, que peut-on toujours affirmer à propos du résultat n\nretourné par la fonction ?\ndef capital_double (capital, interet):\n    montant = capital\n    n = 0\n    while montant <= 2 * capital:\n        montant = montant + interet\n        n = n + 1\n    return n",
       "reponses": [
         {
           "lettre": "A",
@@ -11594,7 +11594,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
+      "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11675,7 +11675,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+      "enonce": "On définit deux fonctions :\ndef f(x):\n    y = 2*x + 1\n    return y\ndef calcul(x):\n    y = x - 1\n    return f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11702,7 +11702,7 @@
       "numero_original": "F.3",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\ny = 1\nwhile y < x:\ny = y + 1\nx = x – 1",
+      "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\n    y = 1\n    while y < x:\n        y = y + 1\n        x = x – 1",
       "reponses": [
         {
           "lettre": "A",
@@ -11783,7 +11783,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On définit la fonction f comme suit :\ndef f(L):\na = L[0]\nfor x in L:\nif x < a:\na = x\nreturn a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
+      "enonce": "On définit la fonction f comme suit :\ndef f(L):\n    a = L[0]\n    for x in L:\n        if x < a:\n            a = x\n    return a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -11891,23 +11891,23 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [\n['A', 'B', 'C', 'D'],\n['E', 'F', 'G', 'H'],\n['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
+      "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [\n        ['A', 'B', 'C', 'D'],\n            ['E', 'F', 'G', 'H'],\n            ['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
       "reponses": [
         {
           "lettre": "A",
-          "texte": "L = []\nfor i in range(3):\nfor j in range(4):\nL.append(tab[i][j])"
+          "texte": "L = []\nfor i in range(3):\n    for j in range(4):\n        L.append(tab[i][j])"
         },
         {
           "lettre": "B",
-          "texte": "L = []\nfor i in range(4):\nfor j in range(3):\nL.append(tab[i][j])"
+          "texte": "L = []\nfor i in range(4):\n    for j in range(3):\n        L.append(tab[i][j])"
         },
         {
           "lettre": "C",
-          "texte": "L = []\nfor i in range(3):\nL.append(tab[i])"
+          "texte": "L = []\nfor i in range(3):\n    L.append(tab[i])"
         },
         {
           "lettre": "D",
-          "texte": "L = []\nfor i in range(4):\nL.append(tab[i])"
+          "texte": "L = []\nfor i in range(4):\n    L.append(tab[i])"
         }
       ],
       "bonne_reponse": "A",
@@ -11972,23 +11972,23 @@
       "numero_original": "C.5",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère une table de données <films> qui est une liste de dictionnaires \"Titre\", \"Réalisateur\",\"Date\".\nUn enregistrement de la table contient un titre de film, le nom de son réalisateur et l'année de sortie du film.\nfilms = [{\"Titre\": \"ET\", \"Réalisateur\": \"Spielberg\", \"Date\": 1982},\n{\"Titre\": \"Ready Player One\", \"Réalisateur\": \"Spielberg\", \"Date\": 2018},\n{\"Titre\": \"The Artist\", \"Réalisateur\": \"Hazanavicius\", \"Date\": 2011},\n...]\nOn souhaite obtenir la liste des films réalisés par \"Spielberg\" ou par \"Hazanavicius\" depuis l'année 2000.\nQuelle doit être la condition utilisée pour sélectionner les enregistrements correspondants, lors du parcours de\nla table ?",
+      "enonce": "On considère une table de données <films> qui est une liste de dictionnaires \"Titre\", \"Réalisateur\",\"Date\".\nUn enregistrement de la table contient un titre de film, le nom de son réalisateur et l'année de sortie du film.\n   films = [{\"Titre\": \"ET\", \"Réalisateur\": \"Spielberg\", \"Date\": 1982},\n        {\"Titre\": \"Ready Player One\", \"Réalisateur\": \"Spielberg\", \"Date\": 2018},\n        {\"Titre\": \"The Artist\", \"Réalisateur\": \"Hazanavicius\", \"Date\": 2011},\n        ...]\nOn souhaite obtenir la liste des films réalisés par \"Spielberg\" ou par \"Hazanavicius\" depuis l'année 2000.\nQuelle doit être la condition utilisée pour sélectionner les enregistrements correspondants, lors du parcours de\nla table ?",
       "reponses": [
         {
           "lettre": "A",
-          "texte": "(film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] ==  \"Hazanavicius\")\nand film[\"Date\"] >= 2000"
+          "texte": "(film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] ==  \"Hazanavicius\")\n    and film[\"Date\"] >= 2000"
         },
         {
           "lettre": "B",
-          "texte": "film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\"\nand film[\"Date\"] >= 2000"
+          "texte": "film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\"\n    and film[\"Date\"] >= 2000"
         },
         {
           "lettre": "C",
-          "texte": "film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] == \"Hazanavicius\"\nor film[\"Date\"] >= 2000"
+          "texte": "film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] == \"Hazanavicius\"\n    or film[\"Date\"] >= 2000"
         },
         {
           "lettre": "D",
-          "texte": "(film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\")\nor film[\"Date\"] >= 2000"
+          "texte": "(film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\")\n    or film[\"Date\"] >= 2000"
         }
       ],
       "bonne_reponse": "A",
@@ -12107,7 +12107,7 @@
       "numero_original": "F.2",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\nfor k in range(1,n):\nt[k] = t[k] + t[k-1]\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+      "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    for k in range(1,n):\n        t[k] = t[k] + t[k-1]\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
       "reponses": [
         {
           "lettre": "A",
@@ -12134,7 +12134,7 @@
       "numero_original": "G.6",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction suivante doit déterminer la valeur maximale d'un tableau de nombres passé en argument. Avec\nquelles expressions faut-il remplacer les pointillés du script suivant pour que la fonction soit correcte ?\ndef maximum(T):\nmaxi = T[0]\nn = len(T)\nfor i in range(i, .....):\nif T[i] > maxi:\nmaxi = ......\nreturn maxi",
+      "enonce": "La fonction suivante doit déterminer la valeur maximale d'un tableau de nombres passé en argument. Avec\nquelles expressions faut-il remplacer les pointillés du script suivant pour que la fonction soit correcte ?\ndef maximum(T):\n    maxi = T[0]\n    n = len(T)\n    for i in range(i, .....):\n        if T[i] > maxi:\n            maxi = ......\n    return maxi",
       "reponses": [
         {
           "lettre": "A",
@@ -12269,7 +12269,7 @@
       "numero_original": "B.3",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On a défini\nrepertoire = [\n{'nom': 'Francette', 'poste': 412},\n{'nom': 'Jeanne', 'poste': 222},\n{'nom': 'Éric', 'poste': 231}       ]\nQuelle expression permet d'accéder au poste d'Éric ?",
+      "enonce": "On a défini\nrepertoire = [\n    {'nom': 'Francette', 'poste': 412},\n        {'nom': 'Jeanne', 'poste': 222},\n        {'nom': 'Éric', 'poste': 231}       ]\nQuelle expression permet d'accéder au poste d'Éric ?",
       "reponses": [
         {
           "lettre": "A",
@@ -12296,7 +12296,7 @@
       "numero_original": "B.5",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "Voici une définition incomplète d'une fonction qui renvoie le couple du quotient et du reste de la division\neuclidienne :\ndef divEuclid(n,d):\n'''renvoie le couple formé du quotient et du reste dans la division de n par d'''\nq = 0\nwhile n-d > 0:\nq = q + 1\nn = n - d\n.......\nPar quelle instruction faut-il remplacer la ligne en pointillés pour que l'appel\n(quotient,reste) = divEuclid(15,6)\naffecte les valeurs attendues ?",
+      "enonce": "Voici une définition incomplète d'une fonction qui renvoie le couple du quotient et du reste de la division\neuclidienne :\ndef divEuclid(n,d):\n    '''renvoie le couple formé du quotient et du reste dans la division de n par d'''\n    q = 0\n    while n-d > 0:\n        q = q + 1\n        n = n - d\n    .......\nPar quelle instruction faut-il remplacer la ligne en pointillés pour que l'appel\n(quotient,reste) = divEuclid(15,6)\naffecte les valeurs attendues ?",
       "reponses": [
         {
           "lettre": "A",
@@ -12323,7 +12323,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n{\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n......\n{\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
+      "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n    {\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n    ......\n    {\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
       "reponses": [
         {
           "lettre": "A",
@@ -12377,7 +12377,7 @@
       "numero_original": "E.4",
       "theme_id": "E",
       "theme_nom": "architectures matérielles et systèmes d'exploitation",
-      "enonce": "Pour analyser les réponses saisies par l'utilisateur dans un formulaire d’une page Web personnelle, hébergée\nchez unfournisseur d'accès à internet, on dispose du code suivant :\n<?php if ($_POST['choix']=='choix4')\n{echo 'Bravo,';}\nelse\n{echo \"Non, vous vous trompez !\";}\n?>\nOù s’exécutera ce code ?",
+      "enonce": "Pour analyser les réponses saisies par l'utilisateur dans un formulaire d’une page Web personnelle, hébergée\nchez unfournisseur d'accès à internet, on dispose du code suivant :\n<?php if ($_POST['choix']=='choix4')\n    {echo 'Bravo,';}\n        else\n    {echo \"Non, vous vous trompez !\";}\n    ?>\nOù s’exécutera ce code ?",
       "reponses": [
         {
           "lettre": "A",
@@ -12431,7 +12431,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\ntotal = ...\nfor valeur in tableau:\ntotal = total + valeur\nreturn total / ...",
+      "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\n    total = ...\n    for valeur in tableau:\n        total = total + valeur\n    return total / ...",
       "reponses": [
         {
           "lettre": "A",
@@ -12674,7 +12674,7 @@
       "numero_original": "F.2",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)Que vaut le couple (a,b) à la fin de l'exécution ?",
+      "enonce": "On exécute le script Python suivant :\ndef cube(a):\n    a = a*a*a\n    return a\na = 2\nb = cube(a)Que vaut le couple (a,b) à la fin de l'exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -12701,7 +12701,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\ng = 0\nd = len(L)-1\nwhile g <= d:\nm = (g+d)//2\nif L[m] == x:\nreturn m\nelif L[m] < x:\ng = m+1\nelse:\nd = m-1\nreturn None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
+      "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\n    g = 0\n    d = len(L)-1\n    while g <= d:\n        m = (g+d)//2\n        if L[m] == x:\n            return m\n        elif L[m] < x:\n            g = m+1\n        else:\n            d = m-1\n    return None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13214,7 +13214,7 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "Quelle est la valeur de la variable S à la fin de l'exécution du script suivant ?\nres =  [ [1,2,3], [4,5,6], [7,8,9] ]\nS = 0\nfor i in range(3):\nS = S + res[i][2]",
+      "enonce": "Quelle est la valeur de la variable S à la fin de l'exécution du script suivant ?\nres =  [ [1,2,3], [4,5,6], [7,8,9] ]\nS = 0\nfor i in range(3):\n    S = S + res[i][2]",
       "reponses": [
         {
           "lettre": "A",
@@ -13268,7 +13268,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le code suivant\ndef calculPourcentage (prix,reduction):\nassert reduction >= 0, 'la réduction doit être un nombre positif'\nassert reduction < 100, 'la réduction doit être inférieure à 100'\nassert prix > 0, 'le prix doit être un nombre strictement positif'\nremise = (reduction*prix)/100\nprix_remise = prix - remise\nreturn prix_remise\nQuelle est la valeur renvoyée par l'appel calcul(30,100) ?",
+      "enonce": "On exécute le code suivant\ndef calculPourcentage (prix,reduction):\n    assert reduction >= 0, 'la réduction doit être un nombre positif'\n    assert reduction < 100, 'la réduction doit être inférieure à 100'\n    assert prix > 0, 'le prix doit être un nombre strictement positif'\n    remise = (reduction*prix)/100\n    prix_remise = prix - remise\n    return prix_remise\nQuelle est la valeur renvoyée par l'appel calcul(30,100) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13295,7 +13295,7 @@
       "numero_original": "G.3",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On définit une fonction de calcul de la moyenne d'une liste de nombres :\ndef moyenne(L):\ns = 0\nn = len(L)\nfor x in L:\ns = s + x\nreturn s/n\nCombien cette fonction utilise-t-elle d'additions et de divisions pour calculer la moyenne d'une liste de 7 nombres\n?",
+      "enonce": "On définit une fonction de calcul de la moyenne d'une liste de nombres :\ndef moyenne(L):\n    s = 0\n    n = len(L)\n    for x in L:\n        s = s + x\n    return s/n\nCombien cette fonction utilise-t-elle d'additions et de divisions pour calculer la moyenne d'une liste de 7 nombres\n?",
       "reponses": [
         {
           "lettre": "A",
@@ -13353,19 +13353,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "def ok(echiquier,i,j):\nfor col in range(i):\nif echiquier[i][col] == 1:\nreturn False\nreturn True"
+          "texte": "def ok(echiquier,i,j):\n    for col in range(i):\n        if echiquier[i][col] == 1:\n            return False\n        return True"
         },
         {
           "lettre": "B",
-          "texte": "def ok(echiquier,i,j):\nfor lig in range(i):\nif echiquier[lig][j] == 1:\nreturn False\nreturn True"
+          "texte": "def ok(echiquier,i,j):\n    for lig in range(i):\n        if echiquier[lig][j] == 1:\n            return False\n        return True"
         },
         {
           "lettre": "C",
-          "texte": "def ok(echiquier,i,j):\nfor col in range(j):\nif echiquier[i][col] == 1:\nreturn False\nreturn True"
+          "texte": "def ok(echiquier,i,j):\n    for col in range(j):\n        if echiquier[i][col] == 1:\n            return False\n    return True"
         },
         {
           "lettre": "D",
-          "texte": "def ok(echiquier,i,j):\nfor lig in range(j):\nif echiquier[lig][j] == 1:\nreturn False\nreturn True"
+          "texte": "def ok(echiquier,i,j):\n    for lig in range(j):\n        if echiquier[lig][j] == 1:\n            return False\n    return True"
         }
       ],
       "bonne_reponse": "C",
@@ -13376,7 +13376,7 @@
       "numero_original": "C.5",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère des dictionnaires comme\n{ 'nom': 'Jérôme', 'NSI': 16.2, 'maths': 11.4, 'physique': 13.0 }\npour retenir les notes d'un élève.\nOn définit :\ndef somme(notes):\nreturn notes['NSI'] + notes['maths'] + notes['physique']\ndef plusPetit(n1, n2):\nif n1['NSI'] < n2['NSI']:\nreturn True\nif n1['NSI'] == n2['NSI']:\nif somme(n1) < somme(n2):\nreturn True\nelif somme(n1) == somme(n2) and n1['nom'] < n2['nom']:\nreturn True\nreturn False\npour définir un ordre croissant sur ces dictionnaires.\nRanger dans l'ordre croissant les dictionnaires suivants :\nn1 = { 'nom': \"Albert\", 'NSI': 12.3, 'maths': 14.0, 'physique': 8.7 }\nn2 = { 'nom': \"Béatrice\", 'NSI': 12.3, 'maths': 11.0, 'physique': 12.5 }\nn3 = { 'nom': \"Colin\", 'NSI': 12.3, 'maths': 7.0, 'physique': 15.7 }\nn4 = { 'nom': \"Daniel\", 'NSI': 13.4, 'maths': 9.0, 'physique': 5.2 }\nn5 = { 'nom': \"Emilie\", 'NSI': 16.1, 'maths': 5.3, 'physique': 14.4 }",
+      "enonce": "On considère des dictionnaires comme\n{ 'nom': 'Jérôme', 'NSI': 16.2, 'maths': 11.4, 'physique': 13.0 }\npour retenir les notes d'un élève.\nOn définit :\ndef somme(notes):\n    return notes['NSI'] + notes['maths'] + notes['physique']\ndef plusPetit(n1, n2):\n    if n1['NSI'] < n2['NSI']:\n        return True\n    if n1['NSI'] == n2['NSI']:\n        if somme(n1) < somme(n2):\n            return True\n        elif somme(n1) == somme(n2) and n1['nom'] < n2['nom']:\n            return True\n    return False\npour définir un ordre croissant sur ces dictionnaires.\nRanger dans l'ordre croissant les dictionnaires suivants :\nn1 = { 'nom': \"Albert\", 'NSI': 12.3, 'maths': 14.0, 'physique': 8.7 }\nn2 = { 'nom': \"Béatrice\", 'NSI': 12.3, 'maths': 11.0, 'physique': 12.5 }\nn3 = { 'nom': \"Colin\", 'NSI': 12.3, 'maths': 7.0, 'physique': 15.7 }\nn4 = { 'nom': \"Daniel\", 'NSI': 13.4, 'maths': 9.0, 'physique': 5.2 }\nn5 = { 'nom': \"Emilie\", 'NSI': 16.1, 'maths': 5.3, 'physique': 14.4 }",
       "reponses": [
         {
           "lettre": "A",
@@ -13457,7 +13457,7 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :\ndef minimum(L):\nmini = 0\nfor e in L:\nif e < mini:\nmini = e\nreturn mini\nCette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son\nminimum ?",
+      "enonce": "En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :\ndef minimum(L):\n    mini = 0\n    for e in L:\n        if e < mini:\n            mini = e\n    return mini\nCette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son\nminimum ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13484,7 +13484,7 @@
       "numero_original": "F.2",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On a défini une fonction somme qui doit calculer la somme des éléments de la liste passée en argument de la\nfaçon suivante :\ndef somme(L):\ns = L[0]\nfor i in range(len(L)):\ns = s + L[i]\nreturn s\nCette fonction a été mal programmée. Quel appel parmi les suivants permet de mettre en évidence son\nincorrection ?",
+      "enonce": "On a défini une fonction somme qui doit calculer la somme des éléments de la liste passée en argument de la\nfaçon suivante :\ndef somme(L):\n    s = L[0]\n    for i in range(len(L)):\n        s = s + L[i]\n    return s\nCette fonction a été mal programmée. Quel appel parmi les suivants permet de mettre en évidence son\nincorrection ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13511,7 +13511,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit une fonction f de la façon suivante :\ndef f(L,m):\nR = []\nfor i in range(len(L)):\nif L[i] > m:\nR.append(L[i])\nreturn R\nOn définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].\nQue vaut f(L,4) ?",
+      "enonce": "On définit une fonction f de la façon suivante :\ndef f(L,m):\n    R = []\n    for i in range(len(L)):\n        if L[i] > m:\n            R.append(L[i])\n    return R\nOn définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].\nQue vaut f(L,4) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13565,7 +13565,7 @@
       "numero_original": "A.3",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "On considère l'extrait de code suivant :\nwhile (a < 20) or (b > 50):\n......\n......\nQuelles conditions permettent de mettre fin à cette boucle ?",
+      "enonce": "On considère l'extrait de code suivant :\nwhile (a < 20) or (b > 50):\n    ......\n    ......\nQuelles conditions permettent de mettre fin à cette boucle ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13619,7 +13619,7 @@
       "numero_original": "B.2",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On dispose d'une liste L :\nL = [6, 2, 8, 24, 3, 6, 7, 8]\nQuelle est la valeur de M après exécution du code suivant ?\np = 8\nM = [x for x in L if x<p] + [x for x in L if x==p]\n+ [x for x in L if x>p]",
+      "enonce": "On dispose d'une liste L :\nL = [6, 2, 8, 24, 3, 6, 7, 8]\nQuelle est la valeur de M après exécution du code suivant ?\np = 8\nM = [x for x in L if x<p] + [x for x in L if x==p]\n                + [x for x in L if x>p]",
       "reponses": [
         {
           "lettre": "A",
@@ -13646,7 +13646,7 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On définit en Python la fonction suivante :\ndef f(L):\nU = []\nfor i in L:\nU.append(i**2 - 1)\nreturn U\nQue vaut f([-1, 0, 1, 2]) ?",
+      "enonce": "On définit en Python la fonction suivante :\ndef f(L):\n    U = []\n    for i in L:\n        U.append(i**2 - 1)\n    return U\nQue vaut f([-1, 0, 1, 2]) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13700,7 +13700,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script suivant.\na = 11\nfor i in range(3):\na = a * 2\na = a - 10\nQue contient la variable a à la fin de cette exécution ?",
+      "enonce": "On exécute le script suivant.\na = 11\nfor i in range(3):\n    a = a * 2\n    a = a - 10\nQue contient la variable a à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -13727,7 +13727,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Que fait la fonction suivante :\ndef trouver(L):\ni = 0\nfor j in range(1, len(L)):\nif L[j] >= L[i]:\ni = j\nreturn i",
+      "enonce": "Que fait la fonction suivante :\ndef trouver(L):\n    i = 0\n    for j in range(1, len(L)):\n        if L[j] >= L[i]:\n            i = j\n    return i",
       "reponses": [
         {
           "lettre": "A",
@@ -13862,7 +13862,7 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "Un programme Python présente la ligne suivante\nx = [ \"x1\", \"x2\", \"x3\" ]\nElle définit :",
+      "enonce": "Un programme Python présente la ligne suivante\nx = [ \"x1\", \"x2\", \"x3\" ]\n Elle définit :",
       "reponses": [
         {
           "lettre": "A",
@@ -13970,7 +13970,7 @@
       "numero_original": "F.6",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nwhile n != 20:\nn = n + 2",
+      "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nwhile n != 20:\n    n = n + 2",
       "reponses": [
         {
           "lettre": "A",
@@ -13997,7 +13997,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On considère la fonction Python suivante, qui prend en argument une liste L et renvoie le maximum des éléments\nde la liste :\ndef rechercheMaximum(L):\nmax = L[0]\nfor i in range(len(L)):\nif L[i] > max:\nmax = L[i]\nreturn max\nOn note 𝑛 la taille de la liste.\nQuelle est la complexité en nombre d’opérations de l’algorithme ?",
+      "enonce": "On considère la fonction Python suivante, qui prend en argument une liste L et renvoie le maximum des éléments\nde la liste :\ndef rechercheMaximum(L):\n    max = L[0]\n   for i in range(len(L)):\n        if L[i] > max:\n            max = L[i]\n    return max\nOn note 𝑛 la taille de la liste.\nQuelle est la complexité en nombre d’opérations de l’algorithme ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14186,7 +14186,7 @@
       "numero_original": "B.1",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On considère le script suivant :\nbilles = {'vert': 6, 'rouge': 15, 'bleu': 11, 'jaune': 2, 'orange': 17 }\ntotal = 0\nfor n in billes.XXXXXXX():\ntotal = total + n\nPar quoi faut-il remplacer XXXXXXX dans ce script pour qu'à la fin de son exécution la variable total contienne le\nnombre total de billes ?",
+      "enonce": "On considère le script suivant :\nbilles = {'vert': 6, 'rouge': 15, 'bleu': 11, 'jaune': 2, 'orange': 17 }\ntotal = 0\nfor n in billes.XXXXXXX():\n    total = total + n\nPar quoi faut-il remplacer XXXXXXX dans ce script pour qu'à la fin de son exécution la variable total contienne le\nnombre total de billes ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14248,7 +14248,7 @@
         },
         {
           "lettre": "B",
-          "texte": "for nb in range(400) :\nimpairs = 1 + 2 * nb"
+          "texte": "for nb in range(400) :\n    impairs = 1 + 2 * nb"
         },
         {
           "lettre": "C",
@@ -14321,7 +14321,7 @@
       "numero_original": "B.3",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On considère le code suivant :\ndef f(L):\nreturn [x*x for x in L if x%2 == 1]\ncarre = f([0,1,2,3,4,5,6,7,8,9])\nQue vaut carre à la fin de son exécution ?",
+      "enonce": "On considère le code suivant :\ndef f(L):\n    return [x*x for x in L if x%2 == 1]\ncarre = f([0,1,2,3,4,5,6,7,8,9])\nQue vaut carre à la fin de son exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14402,7 +14402,7 @@
       "numero_original": "F.4",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On exécute le script suivant.\na,b = 10,3\nif a < 10:\na,b = a+2,b+a\nQuelle est la valeur de b à la fin de son exécution ?",
+      "enonce": "On exécute le script suivant.\na,b = 10,3\nif a < 10:\n    a,b = a+2,b+a\nQuelle est la valeur de b à la fin de son exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14537,7 +14537,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On définit :\ndef traite(chaine,a):\nnouvelle_chaine = \"\"\nfor k in range(len(chaine)):\nif chaine[k] != a:\nnouvelle_chaine = nouvelle_chaine + chaine[k]\nreturn nouvelle_chaine\nQuelle est la valeur renvoyée par l'appel traite(\"histoire\",\"i\") ?",
+      "enonce": "On définit :\ndef traite(chaine,a):\n    nouvelle_chaine = \"\"\n    for k in range(len(chaine)):\n        if chaine[k] != a:\n            nouvelle_chaine = nouvelle_chaine + chaine[k]\n    return nouvelle_chaine\nQuelle est la valeur renvoyée par l'appel traite(\"histoire\",\"i\") ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14564,7 +14564,7 @@
       "numero_original": "A.2",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\nx = x * 2",
+      "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\n    x = x * 2",
       "reponses": [
         {
           "lettre": "A",
@@ -14618,7 +14618,7 @@
       "numero_original": "B.4",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "t1 est un tableau à n lignes et n colonnes. On souhaite remplir un tableau t2 de mêmes dimensions que t1 avec\nles contraintes suivantes : les lignes de t2 sont les colonnes de t1 et les colonnes de t2 sont les lignes de t1.\nPar quelle instruction faut-il remplacer la ligne en pointillées du code suivant ?\nfor i in range(n):\nfor j in range(n):\n......",
+      "enonce": "t1 est un tableau à n lignes et n colonnes. On souhaite remplir un tableau t2 de mêmes dimensions que t1 avec\nles contraintes suivantes : les lignes de t2 sont les colonnes de t1 et les colonnes de t2 sont les lignes de t1.\nPar quelle instruction faut-il remplacer la ligne en pointillées du code suivant ?\nfor i in range(n):\n    for j in range(n):\n        ......",
       "reponses": [
         {
           "lettre": "A",
@@ -14645,7 +14645,7 @@
       "numero_original": "C.2",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n{'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n{'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\nif i[a] > 10:\nprint(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
+      "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n        {'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n    {'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\n     if i[a] > 10:\n         print(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
       "reponses": [
         {
           "lettre": "A",
@@ -14672,23 +14672,23 @@
       "numero_original": "F.1",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de\nnombres :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\n..............\n..............\nreturn m\nQue faut-il écrire à la place des lignes pointillées ?",
+      "enonce": "On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de\nnombres :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        ..............\n        ..............\n    return m\nQue faut-il écrire à la place des lignes pointillées ?",
       "reponses": [
         {
           "lettre": "A",
-          "texte": "if m < L[i]:\nL[i] = m"
+          "texte": "if m < L[i]:\n    L[i] = m"
         },
         {
           "lettre": "B",
-          "texte": "if L[i-1] < L[i]:\nm = L[i]"
+          "texte": "if L[i-1] < L[i]:\n    m = L[i]"
         },
         {
           "lettre": "C",
-          "texte": "if L[i] < L[0]:\nL[i],L[0] = L[0],L[i]"
+          "texte": "if L[i] < L[0]:\n    L[i],L[0] = L[0],L[i]"
         },
         {
           "lettre": "D",
-          "texte": "if L[i] > m:\nm = L[i]"
+          "texte": "if L[i] > m:\n    m = L[i]"
         }
       ],
       "bonne_reponse": "D",
@@ -14780,23 +14780,23 @@
       "numero_original": "B.5",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On dispose d'une liste L constituée de 12 caractères.\nL = [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]\nParmi les propositions suivantes, laquelle permet de convertir cette liste en une table tab constituée d'une liste\nde trois sous-listes contenant chacune quatre caractères contenant dans l'ordre,  et contenant les 12 caractères\nde L dans l'ordre.\n# à la fin, on a l'égalité :\ntab == [ ['A', 'B', 'C', 'D'],\n['E', 'F', 'G', 'H'],\n['I', 'J', 'K', 'L'] ]",
+      "enonce": "On dispose d'une liste L constituée de 12 caractères.\nL = [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]\nParmi les propositions suivantes, laquelle permet de convertir cette liste en une table tab constituée d'une liste\nde trois sous-listes contenant chacune quatre caractères contenant dans l'ordre,  et contenant les 12 caractères\nde L dans l'ordre.\n# à la fin, on a l'égalité :\ntab == [ ['A', 'B', 'C', 'D'],\n            ['E', 'F', 'G', 'H'],\n            ['I', 'J', 'K', 'L'] ]",
       "reponses": [
         {
           "lettre": "A",
-          "texte": "tab = []\nfor i in range(4):\ntemp = []\nfor j in range(3):\ntemp.append(L[4*i + j])\ntab.append(temp)"
+          "texte": "tab = []\nfor i in range(4):\n    temp = []\n    for j in range(3):\n        temp.append(L[4*i + j])\n    tab.append(temp)"
         },
         {
           "lettre": "B",
-          "texte": "tab = []\nfor i in range(4):\ntemp = []\nfor j in range(3):\ntemp.append(L[3*i + j])\ntab.append(temp)"
+          "texte": "tab = []\nfor i in range(4):\n    temp = []\n    for j in range(3):\n        temp.append(L[3*i + j])\n    tab.append(temp)"
         },
         {
           "lettre": "C",
-          "texte": "tab = []\nfor i in range(3):\ntemp = []\nfor j in range(4):\ntemp.append(L[3*i + j])\ntab.append(temp)"
+          "texte": "tab = []\nfor i in range(3):\n    temp = []\n    for j in range(4):\n        temp.append(L[3*i + j])\n    tab.append(temp)"
         },
         {
           "lettre": "D",
-          "texte": "tab = []\nfor i in range(3):\ntemp = []\nfor j in range(4):\ntemp.append(L[4*i + j])\ntab.append(temp)"
+          "texte": "tab = []\nfor i in range(3):\n    temp = []\n    for j in range(4):\n        temp.append(L[4*i + j])\n    tab.append(temp)"
         }
       ],
       "bonne_reponse": "D",
@@ -14807,7 +14807,7 @@
       "numero_original": "B.6",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n[ [0, 0, 0, …, 0],\n[0, 0, 0, …, 0],\n[0, 0, 0, …, 0],\n……\n[0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
+      "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n    [ [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0],\n        ……\n        [0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14834,7 +14834,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On a récupéré le contenu d'un fichier CSV contenant le nom, le prénom et l'âge de personnes dans une table\nimplémentée par la liste de dictionnaires suivante :\ntable = [{\"nom\": \"dupont\",\"prenom\": \"jean\",\"age\": 16},\n{\"nom\": \"durant\",\"prenom\": \"pierre\",\"age\": 15},\n.....\n....\n{\"nom\": \"doe\",\"prenom\": \"jane\",\"age\": 16}]\nQuelle expression représente-t-elle la liste des noms des personnes dont l'âge a pour valeur 16 ?",
+      "enonce": "On a récupéré le contenu d'un fichier CSV contenant le nom, le prénom et l'âge de personnes dans une table\nimplémentée par la liste de dictionnaires suivante :\ntable = [{\"nom\": \"dupont\",\"prenom\": \"jean\",\"age\": 16},\n             {\"nom\": \"durant\",\"prenom\": \"pierre\",\"age\": 15},\n              .....\n        ....\n             {\"nom\": \"doe\",\"prenom\": \"jane\",\"age\": 16}]\nQuelle expression représente-t-elle la liste des noms des personnes dont l'âge a pour valeur 16 ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14888,7 +14888,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction maxi ci-dessous a pour but de renvoyer la valeur maximale présente dans la liste qui lui est passée\nen argument.\ndef maxi(L):\ndernier_indice = len(L) - 1\nvaleur_max = L[0]\nfor i in range(1,dernier_indice):\nif L[i] > valeur_max:\nvaleur_max = liste[i]\nreturn valeur_max\nCette fonction a été mal programmée. On souhaite réaliser un test pour le démontrer.\nParmi les propositions suivantes, laquelle mettra la fonction maxi en défaut ?",
+      "enonce": "La fonction maxi ci-dessous a pour but de renvoyer la valeur maximale présente dans la liste qui lui est passée\nen argument.\ndef maxi(L):\n    dernier_indice = len(L) - 1\n    valeur_max = L[0]\n    for i in range(1,dernier_indice):\n        if L[i] > valeur_max:\n            valeur_max = liste[i]\n    return valeur_max\nCette fonction a été mal programmée. On souhaite réaliser un test pour le démontrer.\nParmi les propositions suivantes, laquelle mettra la fonction maxi en défaut ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14915,7 +14915,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le script suivant :\nliste=[48, 17, 25 , 9, 34, 12, -5, 89, 54, 12, 78, 8, 155, -85]\ndef recherche(liste):\nvaleur_1 = liste[0]\nvaleur_2 = liste[0]\nfor item in liste:\nif item < valeur_1:\nvaleur_1 = item\nelif item > valeur_2:\nvaleur_2 = item\nreturn(valeur_1, valeur_2)\nQue va renvoyer l'appel recherche(liste) ?",
+      "enonce": "On exécute le script suivant :\nliste=[48, 17, 25 , 9, 34, 12, -5, 89, 54, 12, 78, 8, 155, -85]\ndef recherche(liste):\n    valeur_1 = liste[0]\n    valeur_2 = liste[0]\n    for item in liste:\n    if item < valeur_1:\n        valeur_1 = item\n    elif item > valeur_2:\n        valeur_2 = item\n    return(valeur_1, valeur_2)\nQue va renvoyer l'appel recherche(liste) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -14996,7 +14996,7 @@
       "numero_original": "B.2",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n[24,25,26,27],\n[35,36,49,33],\n[61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
+      "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n    [24,25,26,27],\n    [35,36,49,33],\n    [61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15027,11 +15027,11 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "T = []\nfor k in range(10):\nT.append(2*k)"
+          "texte": "T = []\nfor k in range(10):\n    T.append(2*k)"
         },
         {
           "lettre": "B",
-          "texte": "T = [0] * 10\nfor k in range(9):\nT[k+1] = 2*(k+1)"
+          "texte": "T = [0] * 10\nfor k in range(9):\n    T[k+1] = 2*(k+1)"
         },
         {
           "lettre": "C",
@@ -15039,7 +15039,7 @@
         },
         {
           "lettre": "D",
-          "texte": "T = [0] * 10\nfor k in range(0):\nT[k+1] = 2*T[k]"
+          "texte": "T = [0] * 10\nfor k in range(0):\n    T[k+1] = 2*T[k]"
         }
       ],
       "bonne_reponse": "D",
@@ -15077,7 +15077,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\nreturn math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
+      "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\n    return math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15104,7 +15104,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On définit une fonction de recherche dichotomique de l'indice d'un élément x à l'intérieur d'une liste triée de la\nfaçon suivante:\ndef recherchee(x, liste_triee):\na = 0\nb = len(liste_triee)-1\nwhile a < b:\nm = (a + b)//2\nif liste_triee[m] == x:\nreturn m\nelif liste_triee[m] > x:\nb = m - 1\nelse:\n........\nreturn a\nPar quoi faut-il remplacer la ligne pointillée pour répondre à l'objectif ?",
+      "enonce": "On définit une fonction de recherche dichotomique de l'indice d'un élément x à l'intérieur d'une liste triée de la\nfaçon suivante:\ndef recherchee(x, liste_triee):\n    a = 0\n    b = len(liste_triee)-1\n    while a < b:\n        m = (a + b)//2\n        if liste_triee[m] == x:\n            return m\n        elif liste_triee[m] > x:\n            b = m - 1\n        else:\n            ........\n    return a\nPar quoi faut-il remplacer la ligne pointillée pour répondre à l'objectif ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15212,7 +15212,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.\ndef produit(a,b):\nc = 0\ni = 0\nwhile i < b:\n#\ni = i + 1\nc = c + a\nreturn c\nQuelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?",
+      "enonce": "La fonction suivante prend en arguments deux entiers positifs et renvoie leur produit.\ndef produit(a,b):\n    c = 0\n    i = 0\n    while i < b:\n        #\n        i = i + 1\n        c = c + a\n    return c\nQuelle propriété reste vraie à chaque passage par la ligne marquée d'un # ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15239,7 +15239,7 @@
       "numero_original": "G.6",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le script suivant :\ndef f(L,x):\nr = 0\nfor e in L:\nif e >= x:\nr = r + 1\nreturn r\nQuelle est la valeur renvoyée par l'appel f([1,2,2,8,3,5,6,0,10],5) ?",
+      "enonce": "On exécute le script suivant :\ndef f(L,x):\n    r = 0\n    for e in L:\n        if e >= x:\n            r = r + 1\n    return r\nQuelle est la valeur renvoyée par l'appel f([1,2,2,8,3,5,6,0,10],5) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15324,19 +15324,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "def nombreDistincts(L):\nn = 1\nfor i in range(1,len(L)):\nif L[i] != L[i-1]:\nn = n + 1\nreturn n"
+          "texte": "def nombreDistincts(L):\n    n = 1\n    for i in range(1,len(L)):\n        if L[i] != L[i-1]:\n            n = n + 1\n    return n"
         },
         {
           "lettre": "B",
-          "texte": "def nombreDistincts(L):\nn = 1\nfor i in range(0,len(L)-1):\nif L[i] != L[i+1]:\nn = n + 1\nreturn n"
+          "texte": "def nombreDistincts(L):\n    n = 1\n    for i in range(0,len(L)-1):\n        if L[i] != L[i+1]:\n            n = n + 1\n    return n"
         },
         {
           "lettre": "C",
-          "texte": "def nombreDistincts(L):\nn = 0\nfor i in range(0,len(L)-1):\nif L[i] != L[i+1]:\nn = n + 1\nreturn n"
+          "texte": "def nombreDistincts(L):\n    n = 0\n    for i in range(0,len(L)-1):\n        if L[i] != L[i+1]:\n            n = n + 1\n    return n"
         },
         {
           "lettre": "D",
-          "texte": "def nombreDistincts(L):\nn = 0\nfor i in range(1,len(L)):\nif L[i] != L[i-1]:\nn = n + 1\nreturn n"
+          "texte": "def nombreDistincts(L):\n    n = 0\n    for i in range(1,len(L)):\n        if L[i] != L[i-1]:\n            n = n + 1\n    return n"
         }
       ],
       "bonne_reponse": "C",
@@ -15347,7 +15347,7 @@
       "numero_original": "G.4",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction ci-dessous renvoie le maximum d'une liste.\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\n#\nif L[i] > m:\nm = L[i]\nreturn m\nAu passage dans la ligne marquée d'un #, quelle propriété reste toujours vérifiée ?",
+      "enonce": "La fonction ci-dessous renvoie le maximum d'une liste.\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        #\n        if L[i] > m:\n            m = L[i]\n    return m\nAu passage dans la ligne marquée d'un #, quelle propriété reste toujours vérifiée ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15509,7 +15509,7 @@
       "numero_original": "G.3",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎'.\ndef puissance(a,m):\np = 1\nn = 0\nwhile n < m:\n#\np = p * a\nn = n + 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+      "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎'.\ndef puissance(a,m):\n    p = 1\n    n = 0\n    while n < m:\n        #\n        p = p * a\n        n = n + 1\n    return p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15563,7 +15563,7 @@
       "numero_original": "F.5",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "On définit :\ndef f(a,m):\ni = 1\nn = 0\nwhile n <= m:\ni = i * a\nn = n + 1\nreturn i\nQuelle est la valeur renvoyée par l'appel f(2,4) ?",
+      "enonce": "On définit :\ndef f(a,m):\n    i = 1\n    n = 0\n    while n <= m:\n        i = i * a\n        n = n + 1\n    return i\nQuelle est la valeur renvoyée par l'appel f(2,4) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15779,7 +15779,7 @@
       "numero_original": "C.3",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle expression vaut-elle 'RIO' parmi les suivantes ?",
+      "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle expression vaut-elle 'RIO' parmi les suivantes ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15833,7 +15833,7 @@
       "numero_original": "C.1",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On définit :\nstock = [ {'nom': 'flageolets', 'quantité': 50, 'prix': 5.68},\n{'nom': 'caviar', 'quantité': 0, 'prix': 99.99},\n.........\n.........\n{'nom': 'biscuits', 'quantité': 100, 'prix': 7.71}  ]\nQuelle expression permet d'obtenir la liste des noms des produits effectivement présents dans le stock (c'est-à-\ndire ceux dont la quantité n'est pas nulle) ?",
+      "enonce": "On définit :\nstock = [ {'nom': 'flageolets', 'quantité': 50, 'prix': 5.68},\n    {'nom': 'caviar', 'quantité': 0, 'prix': 99.99},\n    .........\n    .........\n    {'nom': 'biscuits', 'quantité': 100, 'prix': 7.71}  ]\nQuelle expression permet d'obtenir la liste des noms des produits effectivement présents dans le stock (c'est-à-\ndire ceux dont la quantité n'est pas nulle) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15860,7 +15860,7 @@
       "numero_original": "B.6",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On définit en Python la fonction suivante :\ndef f(L):\nS = []\nfor i in range(len(L)-1):\nS.append(L[i] + L[i+1])\nreturn S\nQuelle est la liste renvoyée par f([1, 2, 3, 4, 5, 6]) ?",
+      "enonce": "On définit en Python la fonction suivante :\ndef f(L):\n    S = []\n    for i in range(len(L)-1):\n        S.append(L[i] + L[i+1])\n    return S\nQuelle est la liste renvoyée par f([1, 2, 3, 4, 5, 6]) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15914,7 +15914,7 @@
       "numero_original": "G.6",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "Que calcule la fonction suivante ?\ndef mystere(liste):\nvaleur_de_retour = True\nindice = 0\nwhile indice < len(liste) - 1:\nif liste[indice] > liste[indice + 1]:\nvaleur_de_retour = False\nindice = indice + 1\nreturn valeur_de_retour",
+      "enonce": "Que calcule la fonction suivante ?\ndef mystere(liste):\n    valeur_de_retour = True\n    indice = 0\n    while indice < len(liste) - 1:\n        if liste[indice] > liste[indice + 1]:\n            valeur_de_retour = False\n        indice = indice + 1\n    return valeur_de_retour",
       "reponses": [
         {
           "lettre": "A",
@@ -15941,7 +15941,7 @@
       "numero_original": "C.4",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "On considère le code suivant :\ndef clearfield(f):\nfor i in range(len(f)):\nfiche[i]['code'] = None\nreturn f\nfiche = [ {\"nom\": \"pierre\", \"note\": 5.99, \"code\": 125},\n{\"nom\": \"pol\", \"note\": 2.99, \"code\": 82},\n{\"nom\": \"jack\", \"note\": 7.99, \"code\": 135}     ]\nQue renvoie clearfield(fiche) ?",
+      "enonce": "On considère le code suivant :\ndef clearfield(f):\n    for i in range(len(f)):\n        fiche[i]['code'] = None\n    return f\nfiche = [ {\"nom\": \"pierre\", \"note\": 5.99, \"code\": 125},\n            {\"nom\": \"pol\", \"note\": 2.99, \"code\": 82},\n            {\"nom\": \"jack\", \"note\": 7.99, \"code\": 135}     ]\nQue renvoie clearfield(fiche) ?",
       "reponses": [
         {
           "lettre": "A",
@@ -15972,19 +15972,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i <= n:\nfact = fact * i\ni = i + 1\nreturn fact"
+          "texte": "def factorielle(n):\n    i = 0\n    fact = 1\n    while i <= n:\n        fact = fact * i\n        i = i + 1\nreturn fact"
         },
         {
           "lettre": "B",
-          "texte": "def factorielle(n):\ni = 1\nfact = 1\nwhile i < n:\nfact = fact * i\ni = i + 1\nreturn fact"
+          "texte": "def factorielle(n):\n    i = 1\n    fact = 1\n    while i < n:\n        fact = fact * i\n        i = i + 1\nreturn fact"
         },
         {
           "lettre": "C",
-          "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i < n:\ni = i + 1\nfact = fact * i\nreturn fact"
+          "texte": "def factorielle(n):\n    i = 0\n    fact = 1\n    while i < n:\n        i = i + 1\n        fact = fact * i\nreturn fact"
         },
         {
           "lettre": "D",
-          "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i <= n:\ni = i + 1\nfact = fact * i\nreturn fact"
+          "texte": "def factorielle(n):\n    i = 0\n    fact = 1\n    while i <= n:\n        i = i + 1\n        fact = fact * i\nreturn fact"
         }
       ],
       "bonne_reponse": "C",
@@ -15995,7 +15995,7 @@
       "numero_original": "G.1",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "On exécute le script suivant :\nliste = [4,8,12,6,2]\ndef permute(L):\nfor k in range(len(L)-1:\nif L[k] > L[k+1]:\nL[k],L[k+1] = L[k+1],L[k]\npermute(liste)\nQuelle est la valeur de liste à la fin de l'exécution du script ?",
+      "enonce": "On exécute le script suivant :\nliste = [4,8,12,6,2]\ndef permute(L):\n    for k in range(len(L)-1:\n        if L[k] > L[k+1]:\n            L[k],L[k+1] = L[k+1],L[k]\npermute(liste)\nQuelle est la valeur de liste à la fin de l'exécution du script ?",
       "reponses": [
         {
           "lettre": "A",
@@ -16022,7 +16022,7 @@
       "numero_original": "F.2",
       "theme_id": "F",
       "theme_nom": "langages et programmation",
-      "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥# pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+      "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥# pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
       "reponses": [
         {
           "lettre": "A",
@@ -16111,7 +16111,7 @@
         },
         {
           "lettre": "B",
-          "texte": "Z\n=\n[\np\nfor\np\nin\nL\nif\n(p['marque']\n==\n'Canon'\nand\np['focale']\n==\n'19mm')\nand (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
+          "texte": "Z\n    =\n        [\n            p\n                for\n                    p\n                        in\n                            L\n                                if\n                                    (p['marque']\n                                        ==\n                                            'Canon'\n                                                    and\n                                                        p['focale']\n                                                            ==\n                                                                '19mm')\nand (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
         },
         {
           "lettre": "C",
@@ -16119,7 +16119,7 @@
         },
         {
           "lettre": "D",
-          "texte": "Z\n=\n[\np\nfor\np\nin\nL\nif\n(p['marque']\n==\n'Canon'\nand\np['focale']\n==\n'19mm')\nor (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
+          "texte": "Z\n    =\n        [\n            p\n                for\n                    p\n                        in\n                            L\n                                if\n                                    (p['marque']\n                                        ==\n                                            'Canon'\n                                                    and\n                                                        p['focale']\n                                                            ==\n                                                                '19mm')\nor (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
         }
       ],
       "bonne_reponse": "D",
@@ -16130,7 +16130,7 @@
       "numero_original": "G.2",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\np = 1\nn = m\nq = a\nwhile n > 0:\n#\nif n%2 == 0:\nq = q * q\nn = n // 2\nelse:\np = q * p\nn = n - 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+      "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\n    p = 1\n    n = m\n    q = a\n    while n > 0:\n        #\n        if n%2 == 0:\n            q = q * q\n            n = n // 2\n        else:\n            p = q * p\n            n = n - 1\n    return p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
       "reponses": [
         {
           "lettre": "A",
@@ -16211,7 +16211,7 @@
       "numero_original": "B.6",
       "theme_id": "B",
       "theme_nom": "types construits",
-      "enonce": "On exécute le script suivant :\ndef quoi(liste):\nmaListe = []\nfor i in range(len(liste))\nmaListe.append(liste[i][0])\nreturn maListe\nL = [[5,8,12,1], [20,11,3,8], [3,12,1,4], [2,13,17,3]]\nm = quoi(L)\nQue contient la variable m à la fin de cette exécution ?",
+      "enonce": "On exécute le script suivant :\ndef quoi(liste):\n    maListe = []\n    for i in range(len(liste))\n        maListe.append(liste[i][0])\n    return maListe\nL = [[5,8,12,1], [20,11,3,8], [3,12,1,4], [2,13,17,3]]\nm = quoi(L)\nQue contient la variable m à la fin de cette exécution ?",
       "reponses": [
         {
           "lettre": "A",
@@ -16238,7 +16238,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique, son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n(7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
+      "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique, son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n    (7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
       "reponses": [
         {
           "lettre": "A",
@@ -16292,7 +16292,7 @@
       "numero_original": "C.6",
       "theme_id": "C",
       "theme_nom": "traitement de données en tables",
-      "enonce": "Quelle est la valeur de la variable table après exécution du programme Python suivant ?\ntable = [12, 43, 6, 22, 37]\nfor i in range(len(table) - 1):\nif table[i] > table[i+1]:\ntable[i],table[i+1] = table[i+1], table[i]",
+      "enonce": "Quelle est la valeur de la variable table après exécution du programme Python suivant ?\ntable = [12, 43, 6, 22, 37]\nfor i in range(len(table) - 1):\n    if table[i] > table[i+1]:\n        table[i],table[i+1] = table[i+1], table[i]",
       "reponses": [
         {
           "lettre": "A",
@@ -16319,7 +16319,7 @@
       "numero_original": "G.5",
       "theme_id": "G",
       "theme_nom": "algorithmique",
-      "enonce": "La fonction suivante prend en paramètre un tableau non vide de nombres réels.\ndef mystere(T):\nk = len(T)\nval = T[k-1]\nif k == 1:\nreturn T[k-1]\nelse:\nwhile k >= 0:\nif val < T[k-2]:\nval = T[k-2]\nk = k-1\nreturn val\nQuelle est la valeur renvoyée par cette fonction ?",
+      "enonce": "La fonction suivante prend en paramètre un tableau non vide de nombres réels.\ndef mystere(T):\n    k = len(T)\n    val = T[k-1]\n    if k == 1:\n        return T[k-1]\n    else:\n        while k >= 0:\n            if val < T[k-2]:\n                val = T[k-2]\n            k = k-1\n    return val\nQuelle est la valeur renvoyée par cette fonction ?",
       "reponses": [
         {
           "lettre": "A",

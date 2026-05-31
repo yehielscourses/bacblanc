@@ -15,7 +15,7 @@
       "questions": [
         {
           "numero": "A.1",
-          "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\nx = x * 2",
+          "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\n    x = x * 2",
           "reponses": [
             {
               "lettre": "A",
@@ -37,7 +37,7 @@
         },
         {
           "numero": "A.2",
-          "enonce": "Quelle est la représentation hexadécimale de l'entier dont la représentation binaire s'écrit :\n0100 1001 1101 0011  ?",
+          "enonce": "Quelle est la représentation hexadécimale de l'entier dont la représentation binaire s'écrit :\n        0100 1001 1101 0011  ?",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "Quelle est la valeur de la variable S à la fin de l'exécution du script suivant ?\nres =  [ [1,2,3], [4,5,6], [7,8,9] ]\nS = 0\nfor i in range(3):\nS = S + res[i][2]",
+          "enonce": "Quelle est la valeur de la variable S à la fin de l'exécution du script suivant ?\nres =  [ [1,2,3], [4,5,6], [7,8,9] ]\nS = 0\nfor i in range(3):\n    S = S + res[i][2]",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On dispose d'une liste L :\nL = [6, 2, 8, 24, 3, 6, 7, 8]\nQuelle est la valeur de M après exécution du code suivant ?\np = 8\nM = [x for x in L if x<p] + [x for x in L if x==p]\n+ [x for x in L if x>p]",
+          "enonce": "On dispose d'une liste L :\nL = [6, 2, 8, 24, 3, 6, 7, 8]\nQuelle est la valeur de M après exécution du code suivant ?\np = 8\nM = [x for x in L if x<p] + [x for x in L if x==p]\n        + [x for x in L if x>p]",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On considère des dictionnaires comme\n{ 'nom': 'Jérôme', 'NSI': 16.2, 'maths': 11.4, 'physique': 13.0 }\npour retenir les notes d'un élève.\nOn définit :\ndef somme(notes):\nreturn notes['NSI'] + notes['maths'] + notes['physique']\ndef plusPetit(n1, n2):\nif n1['NSI'] < n2['NSI']:\nreturn True\nif n1['NSI'] == n2['NSI']:\nif somme(n1) < somme(n2):\nreturn True\nelif somme(n1) == somme(n2) and n1['nom'] < n2['nom']:\nreturn True\nreturn False\npour définir un ordre croissant sur ces dictionnaires.\nRanger dans l'ordre croissant les dictionnaires suivants :\nn1 = { 'nom': \"Albert\", 'NSI': 12.3, 'maths': 14.0, 'physique': 8.7 }\nn2 = { 'nom': \"Béatrice\", 'NSI': 12.3, 'maths': 11.0, 'physique': 12.5 }\nn3 = { 'nom': \"Colin\", 'NSI': 12.3, 'maths': 7.0, 'physique': 15.7 }\nn4 = { 'nom': \"Daniel\", 'NSI': 13.4, 'maths': 9.0, 'physique': 5.2 }\nn5 = { 'nom': \"Emilie\", 'NSI': 16.1, 'maths': 5.3, 'physique': 14.4 }",
+          "enonce": "On considère des dictionnaires comme\n{ 'nom': 'Jérôme', 'NSI': 16.2, 'maths': 11.4, 'physique': 13.0 }\npour retenir les notes d'un élève.\nOn définit :\ndef somme(notes):\n    return notes['NSI'] + notes['maths'] + notes['physique']\ndef plusPetit(n1, n2):\n    if n1['NSI'] < n2['NSI']:\n        return True\n    if n1['NSI'] == n2['NSI']:\n        if somme(n1) < somme(n2):\n            return True\n        elif somme(n1) == somme(n2) and n1['nom'] < n2['nom']:\n            return True\n    return False\npour définir un ordre croissant sur ces dictionnaires.\nRanger dans l'ordre croissant les dictionnaires suivants :\nn1 = { 'nom': \"Albert\", 'NSI': 12.3, 'maths': 14.0, 'physique': 8.7 }\nn2 = { 'nom': \"Béatrice\", 'NSI': 12.3, 'maths': 11.0, 'physique': 12.5 }\nn3 = { 'nom': \"Colin\", 'NSI': 12.3, 'maths': 7.0, 'physique': 15.7 }\nn4 = { 'nom': \"Daniel\", 'NSI': 13.4, 'maths': 9.0, 'physique': 5.2 }\nn5 = { 'nom': \"Emilie\", 'NSI': 16.1, 'maths': 5.3, 'physique': 14.4 }",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n    'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
+          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n    {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit\n1 × 2 × 3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit\n1 × 2 × 3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥# pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥# pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la somme\ndes éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la somme\ndes éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n    S = 0\n    for i in range(a, b+1) :\n        S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On considère le code suivant :\ndef puiss(y,x):\nres = y\nfor i in range(x):\nres = res*y\nreturn res\nQuelles sont les préconditions sur les arguments ?",
+          "enonce": "On considère le code suivant :\ndef puiss(y,x):\n    res = y\n    for i in range(x):\n         res = res*y\n    return res\nQuelles sont les préconditions sur les arguments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\nreturn math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
+          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\n    return math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\n# assertion vraie à cet endroit\nreturn L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
+          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n        # assertion vraie à cet endroit\n    return L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\ng = 0\nd = len(L)-1\nwhile g <= d:\nm = (g+d)//2\nif L[m] == x:\nreturn m\nelif L[m] < x:\ng = m+1\nelse:\nd = m-1\nreturn None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
+          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\n    g = 0\n    d = len(L)-1\n    while g <= d:\n        m = (g+d)//2\n        if L[m] == x:\n            return m\n        elif L[m] < x:\n            g = m+1\n        else:\n            d = m-1\n    return None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",

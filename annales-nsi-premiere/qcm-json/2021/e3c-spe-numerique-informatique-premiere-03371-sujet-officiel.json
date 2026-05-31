@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On considère le code suivant :\ndef feed(t):\nfor i in range(len(t)):\nt[i] = 0\nreturn t\nQue renvoie feed([12, 24, 32]) ?",
+          "enonce": "On considère le code suivant :\ndef feed(t):\n    for i in range(len(t)):\n        t[i] = 0\n    return t\nQue renvoie feed([12, 24, 32]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On considère la fonction suivante :\ndef somme(tab):\ns = 0\nfor i in range(len(tab)):\n......\nreturn s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
+          "enonce": "On considère la fonction suivante :\ndef somme(tab):\n    s = 0\n    for i in range(len(tab)):\n        ......\n    return s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+          "enonce": "On a défini :\nmendeleiev = [\n                ['H','.', '.','.','.','.','.','He'],\n                ['Li','Be','B','C','N','O','Fl','Ne'],\n                ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n                ...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On considère le code suivant :\ndef clearfield(f):\nfor i in range(len(f)):\nfiche[i]['code'] = None\nreturn f\nfiche = [ {\"nom\": \"pierre\", \"note\": 5.99, \"code\": 125},\n{\"nom\": \"pol\", \"note\": 2.99, \"code\": 82},\n{\"nom\": \"jack\", \"note\": 7.99, \"code\": 135}     ]\nQue renvoie clearfield(fiche) ?",
+          "enonce": "On considère le code suivant :\ndef clearfield(f):\n    for i in range(len(f)):\n        fiche[i]['code'] = None\n    return f\nfiche = [ {\"nom\": \"pierre\", \"note\": 5.99, \"code\": 125},\n            {\"nom\": \"pol\", \"note\": 2.99, \"code\": 82},\n            {\"nom\": \"jack\", \"note\": 7.99, \"code\": 135}     ]\nQue renvoie clearfield(fiche) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -473,7 +473,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "Voici un extrait d'un document HTML.\n<body>\n.........\nClic !\n</button>\n<h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
+          "enonce": "Voici un extrait d'un document HTML.\n<body>\n    .........\n    Clic !\n    </button>\n    <h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "Voici un extrait d'une page HTML :\n<script>\nfunction sommeNombres(formulaire) {\nvar somme = formulaire.n1.value + formulaire.n2.value;\nconsole.log(somme);\n}\n</script>\n<form>\nNombre 1 : <input name=\"n1\" value=\"30\">  <br>\nNombre 2 : <input name=\"n2\" value=\"10\">  <br>\n<input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
+          "enonce": "Voici un extrait d'une page HTML :\n<script>\n    function sommeNombres(formulaire) {\n        var somme = formulaire.n1.value + formulaire.n2.value;\n        console.log(somme);\n    }\n</script>\n<form>\n    Nombre 1 : <input name=\"n1\" value=\"30\">  <br>\n    Nombre 2 : <input name=\"n2\" value=\"10\">  <br>\n    <input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -731,25 +731,25 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i <= n:\nfact = fact * i\ni = i + 1\nreturn fact"
+              "texte": "def factorielle(n):\n    i = 0\n    fact = 1\n    while i <= n:\n        fact = fact * i\n        i = i + 1\nreturn fact"
             },
             {
               "lettre": "B",
-              "texte": "def factorielle(n):\ni = 1\nfact = 1\nwhile i < n:\nfact = fact * i\ni = i + 1\nreturn fact"
+              "texte": "def factorielle(n):\n    i = 1\n    fact = 1\n    while i < n:\n        fact = fact * i\n        i = i + 1\nreturn fact"
             },
             {
               "lettre": "C",
-              "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i < n:\ni = i + 1\nfact = fact * i\nreturn fact"
+              "texte": "def factorielle(n):\n    i = 0\n    fact = 1\n    while i < n:\n        i = i + 1\n        fact = fact * i\nreturn fact"
             },
             {
               "lettre": "D",
-              "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i <= n:\ni = i + 1\nfact = fact * i\nreturn fact"
+              "texte": "def factorielle(n):\n    i = 0\n    fact = 1\n    while i <= n:\n        i = i + 1\n        fact = fact * i\nreturn fact"
             }
           ]
         },
         {
           "numero": "F.3",
-          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "enonce": "La\n    documentation\n            de\n                la\n                    bibliothèque\n                        random\n                            de\n                                Python\n                                    précise\n                                        que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\n    if a > b :\n        a, b = b, a\n    if b > c:\n        b, c = c, b\n    return a, b, c",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+          "enonce": "On définit deux fonctions :\ndef f(x):\n    y = 2*x + 1\n    return y\ndef calcul(x):\n    y = x - 1\n    return f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On exécute le script suivant :\nliste = [4,8,12,6,2]\ndef permute(L):\nfor k in range(len(L)-1:\nif L[k] > L[k+1]:\nL[k],L[k+1] = L[k+1],L[k]\npermute(liste)\nQuelle est la valeur de liste à la fin de l'exécution du script ?",
+          "enonce": "On exécute le script suivant :\nliste = [4,8,12,6,2]\ndef permute(L):\n    for k in range(len(L)-1:\n        if L[k] > L[k+1]:\n            L[k],L[k+1] = L[k+1],L[k]\npermute(liste)\nQuelle est la valeur de liste à la fin de l'exécution du script ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\ng = 0\nd = len(L)-1\nwhile g <= d:\nm = (g+d)//2\nif L[m] == x:\nreturn m\nelif L[m] < x:\ng = m+1\nelse:\nd = m-1\nreturn None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
+          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\n    g = 0\n    d = len(L)-1\n    while g <= d:\n        m = (g+d)//2\n        if L[m] == x:\n            return m\n        elif L[m] < x:\n            g = m+1\n        else:\n            d = m-1\n    return None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",

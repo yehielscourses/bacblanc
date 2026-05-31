@@ -59,7 +59,7 @@
         },
         {
           "numero": "A.3",
-          "enonce": "Quelle est la représentation hexadécimale de l'entier dont la représentation binaire s'écrit :\n0100 1001 1101 0011  ?",
+          "enonce": "Quelle est la représentation hexadécimale de l'entier dont la représentation binaire s'écrit :\n    0100 1001 1101 0011  ?",
           "reponses": [
             {
               "lettre": "A",
@@ -125,7 +125,7 @@
         },
         {
           "numero": "A.6",
-          "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\nPourquoi cela ?",
+          "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\n Pourquoi cela ?",
           "reponses": [
             {
               "lettre": "A",
@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
+          "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
           "reponses": [
             {
               "lettre": "A",
@@ -245,19 +245,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "def ok(echiquier,i,j):\nfor col in range(i):\nif echiquier[i][col] == 1:\nreturn False\nreturn True"
+              "texte": "def ok(echiquier,i,j):\n    for col in range(i):\n        if echiquier[i][col] == 1:\n            return False\n        return True"
             },
             {
               "lettre": "B",
-              "texte": "def ok(echiquier,i,j):\nfor lig in range(i):\nif echiquier[lig][j] == 1:\nreturn False\nreturn True"
+              "texte": "def ok(echiquier,i,j):\n    for lig in range(i):\n        if echiquier[lig][j] == 1:\n            return False\n        return True"
             },
             {
               "lettre": "C",
-              "texte": "def ok(echiquier,i,j):\nfor col in range(j):\nif echiquier[i][col] == 1:\nreturn False\nreturn True"
+              "texte": "def ok(echiquier,i,j):\n    for col in range(j):\n        if echiquier[i][col] == 1:\n            return False\n    return True"
             },
             {
               "lettre": "D",
-              "texte": "def ok(echiquier,i,j):\nfor lig in range(j):\nif echiquier[lig][j] == 1:\nreturn False\nreturn True"
+              "texte": "def ok(echiquier,i,j):\n    for lig in range(j):\n        if echiquier[lig][j] == 1:\n            return False\n    return True"
             }
           ]
         },
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+          "enonce": "On a défini :\nmendeleiev = [\n                ['H','.', '.','.','.','.','.','He'],\n                ['Li','Be','B','C','N','O','Fl','Ne'],\n                ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n                ...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère des dictionnaires comme\n{ 'nom': 'Jérôme', 'NSI': 16.2, 'maths': 11.4, 'physique': 13.0 }\npour retenir les notes d'un élève.\nOn définit :\ndef somme(notes):\nreturn notes['NSI'] + notes['maths'] + notes['physique']\ndef plusPetit(n1, n2):\nif n1['NSI'] < n2['NSI']:\nreturn True\nif n1['NSI'] == n2['NSI']:\nif somme(n1) < somme(n2):\nreturn True\nelif somme(n1) == somme(n2) and n1['nom'] < n2['nom']:\nreturn True\nreturn False\npour définir un ordre croissant sur ces dictionnaires.\nRanger dans l'ordre croissant les dictionnaires suivants :\nn1 = { 'nom': \"Albert\", 'NSI': 12.3, 'maths': 14.0, 'physique': 8.7 }\nn2 = { 'nom': \"Béatrice\", 'NSI': 12.3, 'maths': 11.0, 'physique': 12.5 }\nn3 = { 'nom': \"Colin\", 'NSI': 12.3, 'maths': 7.0, 'physique': 15.7 }\nn4 = { 'nom': \"Daniel\", 'NSI': 13.4, 'maths': 9.0, 'physique': 5.2 }\nn5 = { 'nom': \"Emilie\", 'NSI': 16.1, 'maths': 5.3, 'physique': 14.4 }",
+          "enonce": "On considère des dictionnaires comme\n{ 'nom': 'Jérôme', 'NSI': 16.2, 'maths': 11.4, 'physique': 13.0 }\npour retenir les notes d'un élève.\nOn définit :\ndef somme(notes):\n    return notes['NSI'] + notes['maths'] + notes['physique']\ndef plusPetit(n1, n2):\n    if n1['NSI'] < n2['NSI']:\n        return True\n    if n1['NSI'] == n2['NSI']:\n        if somme(n1) < somme(n2):\n            return True\n        elif somme(n1) == somme(n2) and n1['nom'] < n2['nom']:\n            return True\n    return False\npour définir un ordre croissant sur ces dictionnaires.\nRanger dans l'ordre croissant les dictionnaires suivants :\nn1 = { 'nom': \"Albert\", 'NSI': 12.3, 'maths': 14.0, 'physique': 8.7 }\nn2 = { 'nom': \"Béatrice\", 'NSI': 12.3, 'maths': 11.0, 'physique': 12.5 }\nn3 = { 'nom': \"Colin\", 'NSI': 12.3, 'maths': 7.0, 'physique': 15.7 }\nn4 = { 'nom': \"Daniel\", 'NSI': 13.4, 'maths': 9.0, 'physique': 5.2 }\nn5 = { 'nom': \"Emilie\", 'NSI': 16.1, 'maths': 5.3, 'physique': 14.4 }",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\nfunction BoutonGris() {\nvar btn = document.createElement(\"BUTTON\");\nbtn.innerHTML = \"Annulation\";\ndocument.getElementById(\"DIV\").appendChild(btn);\n}",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\nfunction BoutonGris() {\n    var btn = document.createElement(\"BUTTON\");\n    btn.innerHTML = \"Annulation\";\n    document.getElementById(\"DIV\").appendChild(btn);\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :\ndef minimum(L):\nmini = 0\nfor e in L:\nif e < mini:\nmini = e\nreturn mini\nCette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son\nminimum ?",
+          "enonce": "En voulant programmer une fonction qui calcule la valeur minimale d'une liste d'entiers, on a écrit :\ndef minimum(L):\n    mini = 0\n    for e in L:\n        if e < mini:\n            mini = e\n    return mini\nCette fonction a été mal programmée. Pour quelle liste ne donnera-t-elle pas le résultat attendu, c'est-à-dire son\nminimum ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On a défini une fonction somme qui doit calculer la somme des éléments de la liste passée en argument de la\nfaçon suivante :\ndef somme(L):\ns = L[0]\nfor i in range(len(L)):\ns = s + L[i]\nreturn s\nCette fonction a été mal programmée. Quel appel parmi les suivants permet de mettre en évidence son\nincorrection ?",
+          "enonce": "On a défini une fonction somme qui doit calculer la somme des éléments de la liste passée en argument de la\nfaçon suivante :\ndef somme(L):\n    s = L[0]\n    for i in range(len(L)):\n        s = s + L[i]\n    return s\nCette fonction a été mal programmée. Quel appel parmi les suivants permet de mettre en évidence son\nincorrection ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On exécute le script suivant :\na = 10\nif a < 5:\na = 20\nelif a < 100:\na = 500\nelif a < 1000:\na = 1\nelse:\na = 0\nQuelle est la valeur de la variable a à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant :\na = 10\nif a < 5:\n    a = 20\nelif a < 100:\n    a = 500\nelif a < 1000:\n    a = 1\nelse:\n    a = 0\nQuelle est la valeur de la variable a à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On définit une fonction f de la façon suivante :\ndef f(L,m):\nR = []\nfor i in range(len(L)):\nif L[i] > m:\nR.append(L[i])\nreturn R\nOn définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].\nQue vaut f(L,4) ?",
+          "enonce": "On définit une fonction f de la façon suivante :\ndef f(L,m):\n    R = []\n    for i in range(len(L)):\n        if L[i] > m:\n            R.append(L[i])\n    return R\nOn définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].\nQue vaut f(L,4) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Soit l'algorithme suivant, qui permet de retrouver l'index de l'élément maximum dans un tableau de données :\ndef maximum(T) :\nindex= 0\nfor i in range(len(T)) :\nif ...... :\nindex = i\nreturn index\nCompléter l'instruction conditionnelle pour que la fonction calcule le résultat attendu  :",
+          "enonce": "Soit l'algorithme suivant, qui permet de retrouver l'index de l'élément maximum dans un tableau de données :\ndef maximum(T) :\n    index= 0\n    for i in range(len(T)) :\n        if ...... :\n            index = i\n    return index\nCompléter l'instruction conditionnelle pour que la fonction calcule le résultat attendu  :",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On exécute le script suivant :\nfor i in range(n):\nfor j in range(i):\nprint('NSI')\nCombien de fois le mot NSI est-il affiché ?",
+          "enonce": "On exécute le script suivant :\nfor i in range(n):\n    for j in range(i):\n        print('NSI')\nCombien de fois le mot NSI est-il affiché ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\nfor x in L:\nif n == x:\nreturn True\nreturn False",
+          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\n    for x in L:\n        if n == x:\n            return True\n    return False",
           "reponses": [
             {
               "lettre": "A",

@@ -241,29 +241,29 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On dispose d'une liste L constituée de 12 caractères.\nL = [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]\nParmi les propositions suivantes, laquelle permet de convertir cette liste en une table tab constituée d'une liste\nde trois sous-listes contenant chacune quatre caractères contenant dans l'ordre,  et contenant les 12 caractères\nde L dans l'ordre.\n# à la fin, on a l'égalité :\ntab == [ ['A', 'B', 'C', 'D'],\n['E', 'F', 'G', 'H'],\n['I', 'J', 'K', 'L'] ]",
+          "enonce": "On dispose d'une liste L constituée de 12 caractères.\nL = [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]\nParmi les propositions suivantes, laquelle permet de convertir cette liste en une table tab constituée d'une liste\nde trois sous-listes contenant chacune quatre caractères contenant dans l'ordre,  et contenant les 12 caractères\nde L dans l'ordre.\n# à la fin, on a l'égalité :\ntab == [ ['A', 'B', 'C', 'D'],\n            ['E', 'F', 'G', 'H'],\n            ['I', 'J', 'K', 'L'] ]",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "tab = []\nfor i in range(4):\ntemp = []\nfor j in range(3):\ntemp.append(L[4*i + j])\ntab.append(temp)"
+              "texte": "tab = []\nfor i in range(4):\n    temp = []\n    for j in range(3):\n        temp.append(L[4*i + j])\n    tab.append(temp)"
             },
             {
               "lettre": "B",
-              "texte": "tab = []\nfor i in range(4):\ntemp = []\nfor j in range(3):\ntemp.append(L[3*i + j])\ntab.append(temp)"
+              "texte": "tab = []\nfor i in range(4):\n    temp = []\n    for j in range(3):\n        temp.append(L[3*i + j])\n    tab.append(temp)"
             },
             {
               "lettre": "C",
-              "texte": "tab = []\nfor i in range(3):\ntemp = []\nfor j in range(4):\ntemp.append(L[3*i + j])\ntab.append(temp)"
+              "texte": "tab = []\nfor i in range(3):\n    temp = []\n    for j in range(4):\n        temp.append(L[3*i + j])\n    tab.append(temp)"
             },
             {
               "lettre": "D",
-              "texte": "tab = []\nfor i in range(3):\ntemp = []\nfor j in range(4):\ntemp.append(L[4*i + j])\ntab.append(temp)"
+              "texte": "tab = []\nfor i in range(3):\n    temp = []\n    for j in range(4):\n        temp.append(L[4*i + j])\n    tab.append(temp)"
             }
           ]
         },
         {
           "numero": "B.6",
-          "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n[ [0, 0, 0, …, 0],\n[0, 0, 0, …, 0],\n[0, 0, 0, …, 0],\n……\n[0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
+          "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n    [ [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0],\n        ……\n        [0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
           "reponses": [
             {
               "lettre": "A",
@@ -303,11 +303,11 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On a récupéré le contenu d'un fichier CSV contenant le nom, le prénom et l'âge de personnes dans une table\nimplémentée par la liste de dictionnaires suivante :\ntable = [{\"nom\": \"dupont\",\"prenom\": \"jean\",\"age\": 16},\n{\"nom\": \"durant\",\"prenom\": \"pierre\",\"age\": 15},\n.....\n....\n{\"nom\": \"doe\",\"prenom\": \"jane\",\"age\": 16}]\nQuelle expression représente-t-elle la liste des noms des personnes dont l'âge a pour valeur 16 ?",
+          "enonce": "On a récupéré le contenu d'un fichier CSV contenant le nom, le prénom et l'âge de personnes dans une table\nimplémentée par la liste de dictionnaires suivante :\ntable = [{\"nom\": \"dupont\",\"prenom\": \"jean\",\"age\": 16},\n             {\"nom\": \"durant\",\"prenom\": \"pierre\",\"age\": 15},\n              .....\n        ....\n             {\"nom\": \"doe\",\"prenom\": \"jane\",\"age\": 16}]\nQuelle expression représente-t-elle la liste des noms des personnes dont l'âge a pour valeur 16 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On considère la table suivants :\nt = [ {'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [ {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
+          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -429,7 +429,7 @@
       "questions": [
         {
           "numero": "D.1",
-          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -499,19 +499,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "<body>\n</body>"
+              "texte": "<body>\n    </body>"
             },
             {
               "lettre": "B",
-              "texte": "<html>\n</html>"
+              "texte": "<html>\n    </html>"
             },
             {
               "lettre": "C",
-              "texte": "<div>\n</div>"
+              "texte": "<div>\n    </div>"
             },
             {
               "lettre": "D",
-              "texte": "<form>\n</form>"
+              "texte": "<form>\n    </form>"
             }
           ]
         },
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "On considère le formulaire ci-dessous :\nQuel est votre langage préféré ?\nPython □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
+          "enonce": "On considère le formulaire ci-dessous :\n        Quel est votre langage préféré ?\n            Python □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
+          "enonce": "On exécute le script Python suivant :\ndef cube(a):\n    a = a*a*a\n    return a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\ns = s + n\nn = n -1\nQue contient la variable s à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant.\nn = 6\ns = 0\nwhile n >= 0:\n    s = s + n\n    n = n -1\nQue contient la variable s à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "La fonction maxi ci-dessous a pour but de renvoyer la valeur maximale présente dans la liste qui lui est passée\nen argument.\ndef maxi(L):\ndernier_indice = len(L) - 1\nvaleur_max = L[0]\nfor i in range(1,dernier_indice):\nif L[i] > valeur_max:\nvaleur_max = liste[i]\nreturn valeur_max\nCette fonction a été mal programmée. On souhaite réaliser un test pour le démontrer.\nParmi les propositions suivantes, laquelle mettra la fonction maxi en défaut ?",
+          "enonce": "La fonction maxi ci-dessous a pour but de renvoyer la valeur maximale présente dans la liste qui lui est passée\nen argument.\ndef maxi(L):\n    dernier_indice = len(L) - 1\n    valeur_max = L[0]\n    for i in range(1,dernier_indice):\n        if L[i] > valeur_max:\n            valeur_max = liste[i]\n    return valeur_max\nCette fonction a été mal programmée. On souhaite réaliser un test pour le démontrer.\nParmi les propositions suivantes, laquelle mettra la fonction maxi en défaut ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\nif k == L[1]:\nc = c+1",
+          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\n    if k == L[1]:\n        c = c+1",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On exécute le script suivant :\nliste=[48, 17, 25 , 9, 34, 12, -5, 89, 54, 12, 78, 8, 155, -85]\ndef recherche(liste):\nvaleur_1 = liste[0]\nvaleur_2 = liste[0]\nfor item in liste:\nif item < valeur_1:\nvaleur_1 = item\nelif item > valeur_2:\nvaleur_2 = item\nreturn(valeur_1, valeur_2)\nQue va renvoyer l'appel recherche(liste) ?",
+          "enonce": "On exécute le script suivant :\nliste=[48, 17, 25 , 9, 34, 12, -5, 89, 54, 12, 78, 8, 155, -85]\ndef recherche(liste):\n    valeur_1 = liste[0]\n    valeur_2 = liste[0]\n    for item in liste:\n    if item < valeur_1:\n        valeur_1 = item\n    elif item > valeur_2:\n        valeur_2 = item\n    return(valeur_1, valeur_2)\nQue va renvoyer l'appel recherche(liste) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\nfor i in range(len(t) - 1):\nif t[i] + 1 != t[i+1]:\nreturn False\nreturn True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
+          "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\n    for i in range(len(t) - 1):\n        if t[i] + 1 != t[i+1]:\n            return False\n    return True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
           "reponses": [
             {
               "lettre": "A",

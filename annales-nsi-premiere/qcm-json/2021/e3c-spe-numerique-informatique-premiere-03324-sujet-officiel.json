@@ -15,7 +15,7 @@
       "questions": [
         {
           "numero": "A.1",
-          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\nx = x - 0.1",
+          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\n    x = x - 0.1",
           "reponses": [
             {
               "lettre": "A",
@@ -103,7 +103,7 @@
         },
         {
           "numero": "A.5",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\nc = True\nelif a > b+10:\nc = True\nelse:\nc = False",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\n    c = True\nelif a > b+10:\n    c = True\nelse:\nc = False",
           "reponses": [
             {
               "lettre": "A",
@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n{\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nQue fait alors l'instruction P[1][\"âge\"] = 25 ?",
+          "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n      {\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nQue fait alors l'instruction P[1][\"âge\"] = 25 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n['O', 'O', 'O'],\n['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
+          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n        ['O', 'O', 'O'],\n        ['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
           "reponses": [
             {
               "lettre": "A",
@@ -201,25 +201,25 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "B",
-              "texte": "effectifs = {}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "C",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             },
             {
               "lettre": "D",
-              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             }
           ]
         },
         {
           "numero": "B.4",
-          "enonce": "La fonction ci-dessous prend en argument deux nombres entiers.\ndef f(n1,n2):\netendue = max(n1,n2)-min(n1,n2)\nmoyenne = (n1+n2)/2\nreturn etendue,moyenne\nQuel est le type de la valeur renvoyée par un appel à cette fonction ?",
+          "enonce": "La fonction ci-dessous prend en argument deux nombres entiers.\ndef f(n1,n2):\n    etendue = max(n1,n2)-min(n1,n2)\n    moyenne = (n1+n2)/2\n    return etendue,moyenne\nQuel est le type de la valeur renvoyée par un appel à cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\nreturn personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n        ['von neumann','john', 1903, 1957],\n        ['turing', 'alan', 1912, 1954],\n        ['mccarthy', 'john', 1927, 2011],\n        ['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\n    return personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -455,19 +455,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "<body>\n</body>"
+              "texte": "<body>\n            </body>"
             },
             {
               "lettre": "B",
-              "texte": "<html>\n</html>"
+              "texte": "<html>\n            </html>"
             },
             {
               "lettre": "C",
-              "texte": "<div>\n</div>"
+              "texte": "<div>\n            </div>"
             },
             {
               "lettre": "D",
-              "texte": "<form>\n</form>"
+              "texte": "<form>\n            </form>"
             }
           ]
         },
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "Voici un extrait d'une page HTML :\n<script>\nfunction sommeNombres(formulaire) {\nvar somme = formulaire.n1.value + formulaire.n2.value;\nconsole.log(somme);\n}\n</script>\n<form>\nNombre 1 : <input name=\"n1\" value=\"30\">  <br>\nNombre 2 : <input name=\"n2\" value=\"10\">  <br>\n<input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
+          "enonce": "Voici un extrait d'une page HTML :\n<script>\n    function sommeNombres(formulaire) {\n        var somme = formulaire.n1.value + formulaire.n2.value;\n        console.log(somme);\n    }\n</script>\n<form>\n    Nombre 1 : <input name=\"n1\" value=\"30\">  <br>\n    Nombre 2 : <input name=\"n2\" value=\"10\">  <br>\n    <input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\nif m < L[j]:\nm = L[j]",
+          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\n    if m < L[j]:\n        m = L[j]",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\nif k == L[1]:\nc = c+1",
+          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\n    if k == L[1]:\n        c = c+1",
           "reponses": [
             {
               "lettre": "A",
@@ -887,12 +887,13 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\nS = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
-          "reponses": []
+          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\n    S = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
+          "reponses": [],
+          "avertissement_extraction": "attendu 4 réponses, extrait 0"
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",
@@ -936,7 +937,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Soit l'algorithme suivant, qui permet de retrouver l'index de l'élément maximum dans un tableau de données :\ndef maximum(T) :\nindex= 0\nfor i in range(len(T)) :\nif ...... :\nindex = i\nreturn index\nCompléter l'instruction conditionnelle pour que la fonction calcule le résultat attendu  :",
+          "enonce": "Soit l'algorithme suivant, qui permet de retrouver l'index de l'élément maximum dans un tableau de données :\ndef maximum(T) :\n    index= 0\n    for i in range(len(T)) :\n        if ...... :\n            index = i\n    return index\nCompléter l'instruction conditionnelle pour que la fonction calcule le résultat attendu  :",
           "reponses": [
             {
               "lettre": "A",

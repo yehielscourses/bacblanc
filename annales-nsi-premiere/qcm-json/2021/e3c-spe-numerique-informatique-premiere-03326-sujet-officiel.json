@@ -125,7 +125,7 @@
         },
         {
           "numero": "A.6",
-          "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\na\nb\nform\nTrue\nTrue\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nQuelle est cette formule booléenne form ?",
+          "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\n    a\n        b\n            form\n    True\n        True\n            False\n    False\n        True\n            False\n    True\n        False\n            True\n    False\n        False\n            False\nQuelle est cette formule booléenne form ?",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n['O', 'O', 'O'],\n['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
+          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n    ['O', 'O', 'O'],\n    ['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+          "enonce": "On a défini :\nmendeleiev = [\n    ['H','.', '.','.','.','.','.','He'],\n    ['Li','Be','B','C','N','O','Fl','Ne'],\n    ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n    ...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
           "reponses": [
             {
               "lettre": "A",
@@ -429,7 +429,7 @@
       "questions": [
         {
           "numero": "D.1",
-          "enonce": "On considère l’extrait suivant d'une page web d'un site de vente en ligne.\n<form id=\"fmCreerCommande\" name=\"fmCreerCommande\" action=\"gestion.php\" method=\"post\">\n<input type=\"HIDDEN\" name=\"reference\" value=\"F1245\">\n<label for=\"quantite\" class=\"dropdown\">Quantité :</label>\n<select name=\"quantite\" autocomplete=\"off\" id=\"quantite\" class=\"dropdown\">\n<option value=\"1\" selected>1</option>\n<option value=\"2\">2</option>\n<option value=\"3\">3</option>\n</select>\n<div id=\"btnMulti\" class=\"clValidBtn\">\n<input type=\"button\" value=\"Ajouter\" class=\"btn\" onclick=\"ajouterProduit()\">\n</div>\n</form>\nQuelle est la méthode utilisée pour transmettre les informations saisies dans ce formulaire ?",
+          "enonce": "On considère l’extrait suivant d'une page web d'un site de vente en ligne.\n<form id=\"fmCreerCommande\" name=\"fmCreerCommande\" action=\"gestion.php\" method=\"post\">\n    <input type=\"HIDDEN\" name=\"reference\" value=\"F1245\">\n    <label for=\"quantite\" class=\"dropdown\">Quantité :</label>\n    <select name=\"quantite\" autocomplete=\"off\" id=\"quantite\" class=\"dropdown\">\n        <option value=\"1\" selected>1</option>\n        <option value=\"2\">2</option>\n        <option value=\"3\">3</option>\n    </select>\n    <div id=\"btnMulti\" class=\"clValidBtn\">\n        <input type=\"button\" value=\"Ajouter\" class=\"btn\" onclick=\"ajouterProduit()\">\n    </div>\n</form>\nQuelle est la méthode utilisée pour transmettre les informations saisies dans ce formulaire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\nsomme = 0\nfor i in range(.........):   # ligne à modifier\nsomme = somme + i\nreturn somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
+          "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\n    somme = 0\n    for i in range(.........):   # ligne à modifier\n        somme = somme + i\n    return somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\nb = 10\nelif a > 6:\nb = 3",
+          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\n    b = 10\nelif a > 6:\n    b = 3",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\ni = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
+          "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\n    i = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\nfor i in range (1, len(tab)):\nfor j in range (len(tab) - i):\nif tab[j]>tab[j+1]:\ntab[j],tab[j+1] = tab[j+1], tab[j]",
+          "enonce": "Combien d’échanges effectue la fonction Python suivante pour trier un tableau de 10 éléments au pire des cas ?\ndef tri (tab):\n    for i in range (1, len(tab)):\n        for j in range (len(tab) - i):\n            if tab[j]>tab[j+1]:\n                tab[j],tab[j+1] = tab[j+1], tab[j]",
           "reponses": [
             {
               "lettre": "A",
