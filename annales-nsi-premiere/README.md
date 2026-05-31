@@ -45,11 +45,40 @@ Recherche effectuée le **31 mai 2026** sur :
 
 Le dossier `eduscol-officiel/` est donc **vide** ; il est réservé à d’éventuels ajouts futurs si le ministère republie ces sujets.
 
+## QCM extraits (JSON)
+
+Les QCM de chaque PDF sont exportés dans `qcm-json/`, en conservant l’arborescence par année :
+
+| Dossier | Fichiers JSON |
+|---------|----------------|
+| `qcm-json/2020/` | 53 |
+| `qcm-json/2021/` | 51 |
+
+Un fichier JSON porte le même nom de base que le PDF (ex. `e3c-spe-numerique-informatique-premiere-03316-sujet-officiel.json`).
+
+Structure d’un fichier :
+
+- métadonnées : `source_pdf`, `slug`, `annee`, `code`, `type` (`sujet` ou `corrige`)
+- `themes` : 7 thèmes (A–G), chacun avec 6 questions
+- chaque question : `numero`, `enonce`, `reponses` (lettres A–D)
+
+Régénération :
+
+```bash
+pip install pymupdf
+python3 scripts/extract_qcm_from_pdfs.py
+```
+
+**Limites :** les PDF du sujet zéro 2020 (`zero-1-sujet` et `zero-1-corrige`) utilisent une police non extractible ; les JSON correspondants indiquent `extraction: "echec"`.
+
 ## Vérification
 
 ```bash
 find /workspace/annales-nsi-premiere -name '*.pdf' | wc -l
 # Attendu : 104 (103 sujets + 1 corrigé sujet zéro 2020)
+
+find /workspace/annales-nsi-premiere/qcm-json -name '*.json' | wc -l
+# Attendu : 104
 ```
 
 ## Date du téléchargement

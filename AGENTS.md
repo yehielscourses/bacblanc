@@ -4,17 +4,20 @@ Guidance for AI agents working in this repository.
 
 ## Cursor Cloud specific instructions
 
-This repository is currently a **greenfield stub**: the only tracked file is `README.md` (`# bacblanc`). There is no application source, dependency manifest, Docker setup, CI config, or test suite on `main`.
+This repository hosts **E3C NSI Première** annales (PDF) and extracted QCM JSON under `annales-nsi-premiere/`.
 
 ### Services
 
 | Service | Required? | Notes |
 |---------|-----------|--------|
-| — | — | Nothing to start until an app stack is added |
+| — | — | No runtime services |
 
 ### Lint / test / build / run
 
-Not applicable yet. Once code lands, document the real commands here (for example `npm run lint`, `npm test`, `npm run dev`) and add them to the repo README.
+| Command | Purpose |
+|---------|---------|
+| `pip install -r requirements.txt` | PDF extraction dependency (`pymupdf`) |
+| `python3 scripts/extract_qcm_from_pdfs.py` | Regenerate `annales-nsi-premiere/qcm-json/` from PDFs |
 
 ### VM update script
 
