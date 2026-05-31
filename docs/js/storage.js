@@ -1,3 +1,5 @@
+import { safeStorageGet, safeStorageRemove, safeStorageSet } from './compat.js';
+
 const KEYS = {
   mastered: 'nsi-quiz-mastered-ids',
   answerLog: 'nsi-quiz-answer-log',
@@ -14,7 +16,7 @@ const KEYS = {
 
 export function getMasteredIds() {
   try {
-    const raw = localStorage.getItem(KEYS.mastered);
+    const raw = safeStorageGet(KEYS.mastered);
     return raw ? new Set(JSON.parse(raw)) : new Set();
   } catch {
     return new Set();
@@ -24,16 +26,16 @@ export function getMasteredIds() {
 export function addMasteredId(id) {
   const set = getMasteredIds();
   set.add(id);
-  localStorage.setItem(KEYS.mastered, JSON.stringify([...set]));
+  safeStorageSet(KEYS.mastered, JSON.stringify([...set]));
 }
 
 export function clearMastered() {
-  localStorage.removeItem(KEYS.mastered);
+  safeStorageRemove(KEYS.mastered);
 }
 
 export function getAnswerLog() {
   try {
-    const raw = localStorage.getItem(KEYS.answerLog);
+    const raw = safeStorageGet(KEYS.answerLog);
     return raw ? /** @type {AnswerEntry[]} */ (JSON.parse(raw)) : [];
   } catch {
     return [];
@@ -45,16 +47,16 @@ export function appendAnswer(entry) {
   log.push(entry);
   const max = 2000;
   if (log.length > max) log.splice(0, log.length - max);
-  localStorage.setItem(KEYS.answerLog, JSON.stringify(log));
+  safeStorageSet(KEYS.answerLog, JSON.stringify(log));
 }
 
 export function clearAnswerLog() {
-  localStorage.removeItem(KEYS.answerLog);
+  safeStorageRemove(KEYS.answerLog);
 }
 
 export function getSeriesResults() {
   try {
-    const raw = localStorage.getItem(KEYS.seriesHistory);
+    const raw = safeStorageGet(KEYS.seriesHistory);
     return raw ? /** @type {SeriesResult[]} */ (JSON.parse(raw)) : [];
   } catch {
     return [];
@@ -65,20 +67,20 @@ export function appendSeriesResult(result) {
   const list = getSeriesResults();
   list.push(result);
   if (list.length > 50) list.splice(0, list.length - 50);
-  localStorage.setItem(KEYS.seriesHistory, JSON.stringify(list));
+  safeStorageSet(KEYS.seriesHistory, JSON.stringify(list));
 }
 
 export function resetAllProgress() {
   clearMastered();
   clearAnswerLog();
-  localStorage.removeItem(KEYS.seriesHistory);
+  safeStorageRemove(KEYS.seriesHistory);
   clearPausedSeries();
 }
 
 /** @returns {PausedSeries | null} */
 export function getPausedSeries() {
   try {
-    const raw = localStorage.getItem(KEYS.pausedSeries);
+    const raw = safeStorageGet(KEYS.pausedSeries);
     return raw ? /** @type {PausedSeries} */ (JSON.parse(raw)) : null;
   } catch {
     return null;
@@ -87,19 +89,19 @@ export function getPausedSeries() {
 
 /** @param {PausedSeries} state */
 export function savePausedSeries(state) {
-  localStorage.setItem(KEYS.pausedSeries, JSON.stringify(state));
+  safeStorageSet(KEYS.pausedSeries, JSON.stringify(state));
 }
 
 export function clearPausedSeries() {
-  localStorage.removeItem(KEYS.pausedSeries);
+  safeStorageRemove(KEYS.pausedSeries);
 }
 
 export function getColorSchemePreference() {
-  const v = localStorage.getItem(KEYS.colorScheme);
+  const v = safeStorageGet(KEYS.colorScheme);
   if (v === 'light' || v === 'dark' || v === 'system') return v;
   return 'system';
 }
 
 export function setColorSchemePreference(scheme) {
-  localStorage.setItem(KEYS.colorScheme, scheme);
+  safeStorageSet(KEYS.colorScheme, scheme);
 }
