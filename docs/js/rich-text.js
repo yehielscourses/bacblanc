@@ -3,6 +3,8 @@
  * Sécurisé : échappement HTML puis transformation ciblée.
  */
 
+import { setElementContent } from './compat.js';
+
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
@@ -194,5 +196,5 @@ export function renderRichContent(text, kind = 'explanation') {
  * @param {'enonce' | 'explanation'} kind
  */
 export function setRichContent(el, text, kind = 'explanation') {
-  el.replaceChildren(renderRichContent(text, kind));
+  setElementContent(el, renderRichContent(text, kind));
 }

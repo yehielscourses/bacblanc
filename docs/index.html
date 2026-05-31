@@ -6,25 +6,24 @@
   <meta name="description" content="Entraînement QCM NSI Première — E3C avec corrections">
   <meta name="base-path" content="/bacblanc/">
   <title>QCM NSI Première — E3C</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css?v=3">
+  <link rel="stylesheet" href="css/app.css?v=4">
   <script>
     (function () {
-      var stored = localStorage.getItem('nsi-quiz-color-scheme');
-      var scheme;
-      if (stored === 'light' || stored === 'dark') {
-        scheme = stored;
-      } else {
-        scheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      document.documentElement.setAttribute('data-theme', scheme);
+      try {
+        var stored = localStorage.getItem('nsi-quiz-color-scheme');
+        var scheme;
+        if (stored === 'light' || stored === 'dark') {
+          scheme = stored;
+        } else {
+          scheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', scheme);
+      } catch (e) { /* stockage bloqué (Vanadium strict, etc.) */ }
     })();
   </script>
 </head>
-<body>
-  <div id="app" class="app" hidden>
+<body class="is-loading">
+  <div id="app" class="app">
     <header class="header">
       <div class="header__brand">
         <span class="header__logo" aria-hidden="true">NSI</span>
@@ -163,11 +162,22 @@
     </footer>
   </div>
 
-  <div id="loading" class="loading">
+  <div id="loading" class="loading loading--active">
     <div class="loading__spinner" aria-hidden="true"></div>
     <p>Chargement des questions…</p>
   </div>
 
-  <script type="module" src="js/app.js?v=3"></script>
+  <script>
+    window.addEventListener('error', function (event) {
+      var loading = document.getElementById('loading');
+      if (!loading || loading.classList.contains('loading--done')) return;
+      loading.classList.add('loading--active', 'loading--error');
+      document.body.classList.add('is-loading');
+      var msg = (event && event.message) ? String(event.message) : 'Erreur de chargement';
+      loading.innerHTML = '<p class="error-banner">' + msg.replace(/</g, '&lt;') + '</p>' +
+        '<p class="muted" style="margin-top:0.75rem;font-size:0.875rem">Sur Vanadium : activez « JavaScript JIT » pour ce site (menu ⋮ → Paramètres du site).</p>';
+    });
+  </script>
+  <script type="module" src="js/app.js?v=4"></script>
 </body>
 </html>

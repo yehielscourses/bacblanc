@@ -27,6 +27,7 @@ import {
 import { getColorSchemePreference } from './storage.js';
 import { setRichContent } from './rich-text.js';
 import { AI_PROVIDERS, buildQuizPrompt, openAiProvider } from './ai-assist.js';
+import { yieldToMain, mayNeedJitHint, isStorageAvailable } from './compat.js';
 
 const QCM_DATA_URL = () => assetUrl('data/qcm.json');
 
@@ -85,7 +86,14 @@ async function loadQuestions() {
     throw new Error(`Impossible de joindre les données (${url}). Vérifiez l'URL de la page.`);
   }
   if (!res.ok) throw new Error(`Impossible de charger les questions (${res.status}) — ${url}`);
-  const data = await res.json();
+  const text = await res.text();
+  await yieldToMain();
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    throw new Error('Fichier des questions illisible (JSON invalide).');
+  }
   questions = data.questions || [];
   if (questions.length === 0) throw new Error('Aucune question dans le fichier');
   const count = data.nombre_questions_uniques ?? questions.length;
@@ -158,8 +166,11 @@ function renderHomeStats() {
     statsEl.innerHTML += `<div class="stat-block" style="grid-column:1/-1"><div class="stat-block__label">Sous-notes par thème (illimité)</div>${themeLines}</div>`;
   }
 
+  const storageNote = !isStorageAvailable()
+    ? ' · stockage local indisponible (progression non sauvegardée)'
+    : '';
   $('#mastered-count').textContent =
-    `${mastered} question${mastered > 1 ? 's' : ''} maîtrisée${mastered > 1 ? 's' : ''} · ${avail} restante${avail > 1 ? 's' : ''} dans la banque`;
+    `${mastered} question${mastered > 1 ? 's' : ''} maîtrisée${mastered > 1 ? 's' : ''} · ${avail} restante${avail > 1 ? 's' : ''} dans la banque${storageNote}`;
 }
 
 function persistPausedSeries() {
@@ -677,26 +688,28 @@ function bindEvents() {
 
 function hideLoadingScreen() {
   const loading = document.getElementById('loading');
-  const app = document.getElementById('app');
   if (loading) {
-    loading.hidden = true;
+    loading.classList.remove('loading--active');
     loading.classList.add('loading--done');
   }
-  if (app) app.hidden = false;
   document.body.classList.remove('is-loading');
 }
 
 function showLoadingError(err) {
   const loading = document.getElementById('loading');
-  const app = document.getElementById('app');
   if (!loading) return;
-  loading.hidden = false;
+  loading.classList.add('loading--active');
   loading.classList.remove('loading--done');
   loading.classList.add('loading--error');
   document.body.classList.add('is-loading');
-  if (app) app.hidden = true;
   const msg = err instanceof Error ? err.message : String(err);
-  loading.innerHTML = `<p class="error-banner">${escapeHtml(msg)}</p><p class="muted" style="margin-top:0.75rem;font-size:0.875rem">Vérifiez votre connexion ou rechargez la page (Ctrl+Shift+R).</p>`;
+  const jitTip = mayNeedJitHint()
+    ? '<p class="muted" style="margin-top:0.5rem;font-size:0.8125rem">Sur <strong>Vanadium</strong> : menu ⋮ → « Paramètres du site » → activer <strong>JavaScript JIT</strong>, puis recharger.</p>'
+    : '';
+  const storageTip = !isStorageAvailable()
+    ? '<p class="muted" style="margin-top:0.5rem;font-size:0.8125rem">Le stockage local est bloqué : la progression ne sera pas sauvegardée.</p>'
+    : '';
+  loading.innerHTML = `<p class="error-banner">${escapeHtml(msg)}</p><p class="muted" style="margin-top:0.75rem;font-size:0.875rem">Rechargez la page. Si le problème persiste, videz le cache du site.</p>${jitTip}${storageTip}`;
 }
 
 function bindOptional(id, event, handler) {
@@ -716,13 +729,17 @@ async function init() {
 
   const loadTimeout = window.setTimeout(() => {
     const loading = document.getElementById('loading');
-    if (loading && !loading.classList.contains('loading--done') && !loading.classList.contains('loading--error')) {
-      const hint = document.createElement('p');
-      hint.className = 'muted loading__hint';
-      hint.textContent = 'Le chargement prend plus de temps que prévu…';
-      if (!loading.querySelector('.loading__hint')) loading.appendChild(hint);
+    if (loading && loading.classList.contains('loading--active') && !loading.classList.contains('loading--error')) {
+      if (!loading.querySelector('.loading__hint')) {
+        const hint = document.createElement('p');
+        hint.className = 'muted loading__hint';
+        hint.textContent = mayNeedJitHint()
+          ? 'Chargement lent… Sur Vanadium, activez « JavaScript JIT » pour ce site (menu ⋮ → Paramètres du site).'
+          : 'Le chargement prend plus de temps que prévu…';
+        loading.appendChild(hint);
+      }
     }
-  }, 8000);
+  }, 6000);
 
   try {
     await loadQuestions();

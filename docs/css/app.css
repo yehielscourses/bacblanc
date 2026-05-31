@@ -1,6 +1,6 @@
 /* NSI QCM Quiz — design tokens */
 :root {
-  --font: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --radius: 12px;
   --radius-sm: 8px;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
@@ -350,7 +350,7 @@ body {
   margin-bottom: 1rem;
   padding: 0.85rem 1rem;
   border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent-soft) 50%, var(--bg-elevated));
+  background: var(--accent-soft);
 }
 
 .resume-banner__text {
@@ -453,13 +453,13 @@ body {
   color: var(--accent);
 }
 
-.theme-badge[data-theme-id="A"] { background: color-mix(in srgb, var(--theme-a) 18%, transparent); color: var(--theme-a); }
-.theme-badge[data-theme-id="B"] { background: color-mix(in srgb, var(--theme-b) 18%, transparent); color: var(--theme-b); }
-.theme-badge[data-theme-id="C"] { background: color-mix(in srgb, var(--theme-c) 18%, transparent); color: var(--theme-c); }
-.theme-badge[data-theme-id="D"] { background: color-mix(in srgb, var(--theme-d) 18%, transparent); color: var(--theme-d); }
-.theme-badge[data-theme-id="E"] { background: color-mix(in srgb, var(--theme-e) 18%, transparent); color: var(--theme-e); }
-.theme-badge[data-theme-id="F"] { background: color-mix(in srgb, var(--theme-f) 18%, transparent); color: var(--theme-f); }
-.theme-badge[data-theme-id="G"] { background: color-mix(in srgb, var(--theme-g) 18%, transparent); color: var(--theme-g); }
+.theme-badge[data-theme-id="A"] { background: rgba(124, 58, 237, 0.15); color: var(--theme-a); }
+.theme-badge[data-theme-id="B"] { background: rgba(8, 145, 178, 0.15); color: var(--theme-b); }
+.theme-badge[data-theme-id="C"] { background: rgba(5, 150, 105, 0.15); color: var(--theme-c); }
+.theme-badge[data-theme-id="D"] { background: rgba(234, 88, 12, 0.15); color: var(--theme-d); }
+.theme-badge[data-theme-id="E"] { background: rgba(79, 70, 229, 0.15); color: var(--theme-e); }
+.theme-badge[data-theme-id="F"] { background: rgba(219, 39, 119, 0.15); color: var(--theme-f); }
+.theme-badge[data-theme-id="G"] { background: rgba(202, 138, 4, 0.15); color: var(--theme-g); }
 
 .question-id {
   font-size: 0.75rem;
@@ -915,12 +915,20 @@ body {
   z-index: 100;
 }
 
-.loading[hidden],
-.loading.loading--done {
+body.is-loading .app {
   display: none !important;
 }
 
-body.is-loading #app[hidden] {
+body:not(.is-loading) .loading {
+  display: none !important;
+}
+
+.loading.loading--active {
+  display: flex;
+}
+
+.loading[hidden],
+.loading.loading--done {
   display: none !important;
 }
 
