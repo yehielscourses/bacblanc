@@ -653,11 +653,13 @@ function openAiMenu() {
           : `Installez l'app ${provider.label}.`;
       } else {
         const viaIntent =
-          result.method === 'android-send'
-            ? ' (intent SEND)'
-            : result.method === 'android-view'
-              ? ' (intent VIEW ?q=)'
-              : '';
+          result.method === 'android-view'
+            ? ' (App Link ?q=)'
+            : result.method === 'android-text-assist'
+              ? ' (TEXT_ASSIST)'
+              : result.method === 'android-send'
+                ? ' (SEND)'
+                : '';
         toast.textContent = result.copied
           ? `Ouverture de ${provider.label}${viaIntent} — texte aussi copié.`
           : `Ouverture de ${provider.label}${viaIntent}…`;
