@@ -6,7 +6,7 @@
   <meta name="description" content="Entraînement QCM NSI Première — E3C avec corrections">
   <meta name="base-path" content="/bacblanc/">
   <title>QCM NSI Première — E3C</title>
-  <link rel="stylesheet" href="css/app.css?v=4">
+  <link rel="stylesheet" href="css/app.css?v=5">
   <script>
     (function () {
       try {
@@ -131,7 +131,7 @@
           <div class="ai-menu__backdrop" id="ai-menu-backdrop"></div>
           <div class="ai-menu__panel card">
             <h3 id="ai-menu-title" class="ai-menu__title">Choisir un assistant</h3>
-            <p class="muted ai-menu__hint">La question et les réponses seront copiées puis ouvertes dans l'application choisie (Android) ou dans le navigateur.</p>
+            <p class="muted ai-menu__hint" id="ai-menu-hint">La question est copiée puis l'application choisie s'ouvre (pas le site web).</p>
             <div id="ai-menu-providers" class="ai-menu__list"></div>
             <button type="button" class="btn btn--ghost btn--sm ai-menu__close" id="ai-menu-close">Fermer</button>
           </div>
@@ -178,6 +178,6 @@
         '<p class="muted" style="margin-top:0.75rem;font-size:0.875rem">Sur Vanadium : activez « JavaScript JIT » pour ce site (menu ⋮ → Paramètres du site).</p>';
     });
   </script>
-  <script type="module" src="js/app.js?v=4"></script>
+  <script type="module" src="js/app.js?v=5"></script>
 </body>
 </html>

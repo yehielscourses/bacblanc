@@ -1,8 +1,9 @@
 /**
- * Ouverture d'assistants IA avec la question QCM pré-remplie (Android + web).
+ * Ouverture d'assistants IA avec la question QCM pré-remplie.
+ * Tente d'ouvrir l'application native (Android / iOS) — pas le site web.
  */
 
-/** @typedef {{ id: string, label: string, icon: string, buildUrl: (prompt: string) => string, androidPackage?: string }} AiProvider */
+/** @typedef {{ id: string, label: string, icon: string, androidPackage?: string, iosScheme?: string }} AiProvider */
 
 /** @param {import('./config.js').Question} q */
 export function buildQuizPrompt(q) {
@@ -32,36 +33,35 @@ export const AI_PROVIDERS = [
     label: 'Gemini',
     icon: '?',
     androidPackage: 'com.google.android.apps.bard',
-    buildUrl: (prompt) =>
-      `https://gemini.google.com/app?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
+    iosScheme: 'googlegemini://',
   },
   {
     id: 'chatgpt',
     label: 'ChatGPT',
-    icon: '?',
+    icon: '??',
     androidPackage: 'com.openai.chatgpt',
-    buildUrl: (prompt) => `https://chatgpt.com/?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
+    iosScheme: 'chatgpt://',
   },
   {
     id: 'claude',
     label: 'Claude',
-    icon: '?',
+    icon: '??',
     androidPackage: 'com.anthropic.claude',
-    buildUrl: (prompt) => `https://claude.ai/new?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
+    iosScheme: 'claude://',
   },
   {
     id: 'perplexity',
     label: 'Perplexity',
-    icon: '?',
+    icon: '??',
     androidPackage: 'ai.perplexity.app.android',
-    buildUrl: (prompt) => `https://www.perplexity.ai/search?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
+    iosScheme: 'perplexity://',
   },
   {
     id: 'grok',
     label: 'Grok',
     icon: '??',
     androidPackage: 'com.twitter.android',
-    buildUrl: (prompt) => `https://grok.com/?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
+    iosScheme: 'twitter://',
   },
 ];
 
@@ -69,20 +69,25 @@ function isAndroid() {
   return /Android/i.test(navigator.userAgent);
 }
 
+function isIos() {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 /**
- * Intent Android : ouvre l'app native avec le texte dans le presse-papiers partagé via SEND.
- * @param {string} prompt
- * @param {string} [packageName]
+ * Lance l'application Android par nom de package (écran d'accueil de l'app).
+ * @param {string} packageName
  */
-function openAndroidIntent(prompt, packageName, fallbackUrl) {
-  const encoded = encodeURIComponent(prompt);
-  const extras = `S.android.intent.extra.TEXT=${encoded}`;
-  const pkg = packageName ? `;package=${packageName}` : '';
-  const fallback = fallbackUrl
-    ? `;S.browser_fallback_url=${encodeURIComponent(fallbackUrl)}`
-    : '';
-  const intent = `intent://send/#Intent;action=android.intent.action.SEND;type=text/plain;${extras}${pkg}${fallback};end`;
+function launchAndroidApp(packageName) {
+  const intent = `intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=${packageName};end`;
   window.location.href = intent;
+}
+
+/**
+ * Tente d'ouvrir l'app iOS via son schéma d'URL.
+ * @param {string} scheme
+ */
+function launchIosApp(scheme) {
+  window.location.href = scheme;
 }
 
 async function copyPrompt(prompt) {
@@ -95,35 +100,61 @@ async function copyPrompt(prompt) {
 }
 
 /**
- * @param {AiProvider} provider
- * @param {string} prompt
+ * @returns {'android' | 'ios' | 'other'}
  */
-export async function openAiProvider(provider, prompt) {
-  const copied = await copyPrompt(prompt);
-
-  const url = provider.buildUrl(prompt);
-
-  if (isAndroid() && provider.androidPackage) {
-    try {
-      openAndroidIntent(prompt, provider.androidPackage, url);
-      return { copied, method: 'intent' };
-    } catch {
-      /* fallback web */
-    }
-  }
-
-  window.open(url, '_blank', 'noopener,noreferrer');
-  return { copied, method: 'web' };
+export function getAiLaunchPlatform() {
+  if (isAndroid()) return 'android';
+  if (isIos()) return 'ios';
+  return 'other';
 }
 
 /**
- * @param {HTMLElement} anchor
- * @param {import('./config.js').Question} question
- * @param {(provider: AiProvider) => void} onSelect
+ * Indique si l'on peut tenter d'ouvrir une application native sur cet appareil.
  */
-export function bindAiMenu(anchor, question, onSelect) {
-  anchor.addEventListener('click', (e) => {
-    e.stopPropagation();
-    onSelect(question);
-  });
+export function canLaunchNativeAiApp() {
+  return getAiLaunchPlatform() !== 'other';
+}
+
+/**
+ * @param {AiProvider} provider
+ * @param {string} prompt
+ * @returns {Promise<{ copied: boolean, method: 'android' | 'ios' | 'unsupported', launched: boolean }>}
+ */
+export async function openAiProvider(provider, prompt) {
+  const copied = await copyPrompt(prompt);
+  const platform = getAiLaunchPlatform();
+
+  if (platform === 'android' && provider.androidPackage) {
+    try {
+      launchAndroidApp(provider.androidPackage);
+      return { copied, method: 'android', launched: true };
+    } catch {
+      return { copied, method: 'android', launched: false };
+    }
+  }
+
+  if (platform === 'ios' && provider.iosScheme) {
+    try {
+      launchIosApp(provider.iosScheme);
+      return { copied, method: 'ios', launched: true };
+    } catch {
+      return { copied, method: 'ios', launched: false };
+    }
+  }
+
+  return { copied, method: 'unsupported', launched: false };
+}
+
+/**
+ * Message d'aide affiché dans le menu selon la plateforme.
+ */
+export function getAiMenuHint() {
+  const platform = getAiLaunchPlatform();
+  if (platform === 'android') {
+    return "La question est copiée dans le presse-papiers, puis l'application choisie s'ouvre. Collez le texte dans le chat de l'app (aucun site web).";
+  }
+  if (platform === 'ios') {
+    return "La question est copiée, puis l'application s'ouvre si elle est installée. Collez le texte dans le chat — l'app ne peut pas être préremplie depuis Safari.";
+  }
+  return "Sur ordinateur, impossible d'ouvrir automatiquement l'app mobile : le texte est copié — ouvrez vous-même Gemini, ChatGPT, etc. et collez-le.";
 }

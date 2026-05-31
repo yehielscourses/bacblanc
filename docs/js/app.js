@@ -26,7 +26,7 @@ import {
 } from './quiz-engine.js';
 import { getColorSchemePreference } from './storage.js';
 import { setRichContent } from './rich-text.js';
-import { AI_PROVIDERS, buildQuizPrompt, openAiProvider } from './ai-assist.js';
+import { AI_PROVIDERS, buildQuizPrompt, openAiProvider, getAiMenuHint } from './ai-assist.js';
 import { yieldToMain, mayNeedJitHint, isStorageAvailable } from './compat.js';
 
 const QCM_DATA_URL = () => assetUrl('data/qcm.json');
@@ -627,6 +627,8 @@ function openAiMenu() {
   if (!q) return;
   const menu = $('#ai-menu');
   const list = $('#ai-menu-providers');
+  const hint = $('#ai-menu-hint');
+  if (hint) hint.textContent = getAiMenuHint();
   list.innerHTML = '';
   const prompt = buildQuizPrompt(q);
 
@@ -640,11 +642,21 @@ function openAiMenu() {
       const result = await openAiProvider(provider, prompt);
       const toast = document.createElement('p');
       toast.className = 'ai-toast';
-      toast.textContent = result.copied
-        ? `Texte copié — ouverture de ${provider.label}…`
-        : `Ouverture de ${provider.label}…`;
+      if (result.method === 'unsupported') {
+        toast.textContent = result.copied
+          ? `Texte copié — ouvrez l'app ${provider.label} et collez-le (ouverture auto impossible sur cet appareil).`
+          : `Ouvrez l'app ${provider.label} et collez la question (presse-papiers indisponible).`;
+      } else if (!result.launched) {
+        toast.textContent = result.copied
+          ? `Texte copié — installez l'app ${provider.label} puis collez le texte.`
+          : `Installez l'app ${provider.label}.`;
+      } else {
+        toast.textContent = result.copied
+          ? `Texte copié — ouverture de ${provider.label}… Collez dans le chat.`
+          : `Ouverture de ${provider.label}…`;
+      }
       document.body.appendChild(toast);
-      setTimeout(() => toast.remove(), 2800);
+      setTimeout(() => toast.remove(), 4200);
     });
     list.appendChild(btn);
   }

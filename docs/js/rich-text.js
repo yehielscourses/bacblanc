@@ -11,10 +11,17 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+/** Points de suspension / placeholders dans un énoncé de code */
+function isCodePlaceholder(line) {
+  const t = line.trim();
+  return /^[.\u2026…]{2,}$/.test(t);
+}
+
 /** Lignes ressemblant à du code (Python, HTML, shell, etc.) */
 function looksLikeCodeLine(line) {
   const t = line.trim();
   if (!t) return false;
+  if (isCodePlaceholder(line)) return true;
   if (/^```/.test(t)) return true;
   if (/^(def |class |for |while |if |elif |else:|import |from |return |print\(|#)/.test(t)) return true;
   if (/^<[a-zA-Z][^>]*>/.test(t) || /^<\/[a-zA-Z]/.test(t)) return true;
@@ -22,10 +29,35 @@ function looksLikeCodeLine(line) {
   if (/^\s{2,}\S/.test(line)) return true;
   if (/^[a-zA-Z_][\w]*\s*=\s*.+/.test(t)) return true;
   if (/^[a-zA-Z_][\w]*\([^)]*\)\s*$/.test(t)) return true;
+  if (/^[a-zA-Z_][\w]*\.(append|extend|insert|pop|remove)\(/.test(t)) return true;
   if (/^\s*(for|if|while)\s*\(/.test(t)) return true;
   if (/^[\w.]+\[[\w.]+\]/.test(t)) return true;
   if (/^t\s*=\s*\[/.test(t)) return true;
+  if (/^\[$/.test(t) || /^\]$/.test(t)) return true;
+  if (/^\[[\d,\s]+\],?$/.test(t)) return true;
   if (/^\[.*\]\s*$/.test(t) && (t.includes(',') || t.includes('['))) return true;
+  return false;
+}
+
+/** Début de phrase française (hors bloc de code) */
+function looksLikeProseLine(line) {
+  const t = line.trim();
+  if (!t) return false;
+  if (/^(On |Que |Quelle |Quel |Quels |Combien |Comment |Où |Pourquoi |Parmi |Par exemple|Dans |Pour |À |Au |Durant|Sachant|La |Le |Les |Un |Une |Il |L'|Une et une)/i.test(t)) {
+    return !looksLikeCodeLine(line);
+  }
+  if (/\?$/.test(t) && !/[=<>]/.test(t) && !/^def /.test(t) && !/^for /.test(t)) {
+    return !looksLikeCodeLine(line);
+  }
+  return false;
+}
+
+/** Suite probable d'un bloc de code déjà commencé */
+function continuesCodeBlock(line) {
+  if (looksLikeCodeLine(line)) return true;
+  if (isCodePlaceholder(line)) return true;
+  if (line.trim() === '') return true;
+  if (looksLikeProseLine(line)) return false;
   return false;
 }
 
@@ -44,10 +76,10 @@ export function splitEnonceBlocks(text) {
     const line = lines[i];
     if (looksLikeCodeLine(line)) {
       const codeLines = [];
-      while (i < lines.length && (looksLikeCodeLine(lines[i]) || (lines[i].trim() === '' && i + 1 < lines.length && looksLikeCodeLine(lines[i + 1])))) {
+      while (i < lines.length && continuesCodeBlock(lines[i])) {
+        if (looksLikeProseLine(lines[i])) break;
         if (lines[i].trim() !== '' || codeLines.length > 0) codeLines.push(lines[i]);
         i += 1;
-        if (i < lines.length && lines[i].trim() === '' && !(i + 1 < lines.length && looksLikeCodeLine(lines[i + 1]))) break;
       }
       const code = codeLines.join('\n').replace(/\n+$/, '');
       if (code.trim()) blocks.push({ type: 'code', content: code });
