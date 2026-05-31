@@ -1,0 +1,995 @@
+{
+  "source_pdf": "annales-nsi-premiere/2021/e3c-spe-numerique-informatique-premiere-03374-sujet-officiel.pdf",
+  "fichier": "e3c-spe-numerique-informatique-premiere-03374-sujet-officiel.pdf",
+  "slug": "spe-numerique-informatique-premiere-03374",
+  "annee": "2021",
+  "code": "G1SNSIN03374",
+  "type": "sujet",
+  "nombre_questions_attendu": 42,
+  "extraction": "ok",
+  "nombre_questions": 42,
+  "themes": [
+    {
+      "id": "A",
+      "nom": "types de base",
+      "questions": [
+        {
+          "numero": "A.1",
+          "enonce": "Quel est le résultat de l'addition binaire  0100 1110 + 0110 1101 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0101 1011"
+            },
+            {
+              "lettre": "B",
+              "texte": "1010 1101"
+            },
+            {
+              "lettre": "C",
+              "texte": "1011 0110"
+            },
+            {
+              "lettre": "D",
+              "texte": "1011 1011"
+            }
+          ]
+        },
+        {
+          "numero": "A.2",
+          "enonce": "Soit 𝑛 l'entier positif dont l'écriture binaire est 10001. Quelle est l'écriture binaire de l'entier 2𝑛 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "20002"
+            },
+            {
+              "lettre": "B",
+              "texte": "100010"
+            },
+            {
+              "lettre": "C",
+              "texte": "010001"
+            },
+            {
+              "lettre": "D",
+              "texte": "1000110001"
+            }
+          ]
+        },
+        {
+          "numero": "A.3",
+          "enonce": "Pour quelles valeurs booléennes des variables a, b et c l'expression (a or b) and (not c) a-t-elle pour valeur True\n?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "a  = True b = False c = True"
+            },
+            {
+              "lettre": "B",
+              "texte": "a  = True b = False c = False"
+            },
+            {
+              "lettre": "C",
+              "texte": "a  = False b = False c = True"
+            },
+            {
+              "lettre": "D",
+              "texte": "a  = False b = True\nc = True"
+            }
+          ]
+        },
+        {
+          "numero": "A.4",
+          "enonce": "Quand on ajoute deux bits 𝑎 et 𝑏, on obtient un bit de somme 𝑠 et un bit de retenue 𝑟. On peut exprimer 𝑠 et 𝑟 à\nl'aide de formules logiques, lesquelles ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝑏"
+            },
+            {
+              "lettre": "B",
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+            },
+            {
+              "lettre": "C",
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
+            },
+            {
+              "lettre": "D",
+              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+            }
+          ]
+        },
+        {
+          "numero": "A.5",
+          "enonce": "Le code ASCII permet de représenter en binaire les caractères alphanumériques. Quel est son principal\ninconvénient ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Il utilise beaucoup de bits."
+            },
+            {
+              "lettre": "B",
+              "texte": "Il ne différencie pas les majuscules des minuscules."
+            },
+            {
+              "lettre": "C",
+              "texte": "Il ne représente pas les caractères accentués."
+            },
+            {
+              "lettre": "D",
+              "texte": "Il n'est pas compatible avec la plupart des systèmes informatiques."
+            }
+          ]
+        },
+        {
+          "numero": "A.6",
+          "enonce": "Quelle est l'écriture décimale de l'entier qui s'écrit 1010 en binaire ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "5"
+            },
+            {
+              "lettre": "B",
+              "texte": "10"
+            },
+            {
+              "lettre": "C",
+              "texte": "20"
+            },
+            {
+              "lettre": "D",
+              "texte": "22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "nom": "types construits",
+      "questions": [
+        {
+          "numero": "B.1",
+          "enonce": "On définit L = [2,3,5,7,-4].\nEn demandant la valeur de L[5], qu'obtient-on ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "-4"
+            },
+            {
+              "lettre": "B",
+              "texte": "2"
+            },
+            {
+              "lettre": "C",
+              "texte": "3"
+            },
+            {
+              "lettre": "D",
+              "texte": "une erreur"
+            }
+          ]
+        },
+        {
+          "numero": "B.2",
+          "enonce": "Pour gérer certaines données EXIF de photographies, on a utilisé le code suivant pour stocker dans une liste L\nde dictionnaires quelques données :\nL = []\nL.append({'marque': 'Canon', 'modele': 'EOS 7D', 'focale': '19mm', 'flash': False})\nL.append({'marque': 'Nikon', 'modele': 'CoolPix A1000', 'focale': '19mm', 'flash': True})\nL.append({'marque': 'Sony', 'modele': 'HK 350', 'focale': '24mm', 'flash': False})\nL.append({'marque': 'Sony', 'modele': 'HK 350', 'focale': '19mm', 'flash': True})\n# ……\n# et ainsi de suite, d'autres informations ont été ajoutées\n# ……\nOn veut extraire de ces informations la liste Z des photographies obtenues avec un Canon ou un Nikon et une\ndistance focale de 19 mm.\nQuelle instruction permet de réaliser cette extraction ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Z = [ p for p in L if (p['marque'] == 'Canon' or p['focale'] == '19mm') and (p['marque'] == 'Nikon' or p['focale']\n== '19mm') ]"
+            },
+            {
+              "lettre": "B",
+              "texte": "Z\n=\n[\np\nfor\np\nin\nL\nif\n(p['marque']\n==\n'Canon'\nand\np['focale']\n==\n'19mm')\nand (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
+            },
+            {
+              "lettre": "C",
+              "texte": "Z = [ p for p in L if (p['marque'] == 'Canon' or p['focale'] == '19mm') or (p['marque'] == 'Nikon' or p['focale']\n== '19mm') ]"
+            },
+            {
+              "lettre": "D",
+              "texte": "Z\n=\n[\np\nfor\np\nin\nL\nif\n(p['marque']\n==\n'Canon'\nand\np['focale']\n==\n'19mm')\nor (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
+            }
+          ]
+        },
+        {
+          "numero": "B.3",
+          "enonce": "On définit : L = [10,9,8,7,6,5,4,3,2,1].\nQuelle est la valeur de L[L[3]] ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "3"
+            },
+            {
+              "lettre": "B",
+              "texte": "4"
+            },
+            {
+              "lettre": "C",
+              "texte": "7"
+            },
+            {
+              "lettre": "D",
+              "texte": "8"
+            }
+          ]
+        },
+        {
+          "numero": "B.4",
+          "enonce": "Quel est le type de la variable billes définie par :\nbilles = {'vert': 6, 'rouge': 15, 'bleu': 11, 'jaune': 2, 'orange': 17 }",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "c'est une séquence"
+            },
+            {
+              "lettre": "B",
+              "texte": "c'est une liste"
+            },
+            {
+              "lettre": "C",
+              "texte": "c'est une liste de listes"
+            },
+            {
+              "lettre": "D",
+              "texte": "c'est un dictionnaire"
+            }
+          ]
+        },
+        {
+          "numero": "B.5",
+          "enonce": "On a défini un dictionnaire :\ncontacts = {'Paul': '0601010182', 'Jacques': '0602413824', 'Claire': '0632451153'}\nQuelle instruction écrire pour ajouter à ce dictionnaire un nouveau contact nommé Juliette avec le numéro de\ntéléphone 0603040506 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "'Juliette': '0603040506'"
+            },
+            {
+              "lettre": "B",
+              "texte": "contacts.append('Juliette': '0603040506')"
+            },
+            {
+              "lettre": "C",
+              "texte": "contacts['Juliette'] = '0603040506'"
+            },
+            {
+              "lettre": "D",
+              "texte": "contacts.append('Juliette', '0603040506')"
+            }
+          ]
+        },
+        {
+          "numero": "B.6",
+          "enonce": "On définit ainsi une liste M :\nM = [['A','B','C','D'], ['E','F','G','H'], ['I','J','K','L']]\nQuelle expression vaut la chaîne de caractères 'H' ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "M[1][3]"
+            },
+            {
+              "lettre": "B",
+              "texte": "M[3][1]"
+            },
+            {
+              "lettre": "C",
+              "texte": "M(7)"
+            },
+            {
+              "lettre": "D",
+              "texte": "M(8)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "nom": "traitement de données en tables",
+      "questions": [
+        {
+          "numero": "C.1",
+          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "'Chloé' est une valeur de la variable contacts"
+            },
+            {
+              "lettre": "B",
+              "texte": "'Chloé' est une clé de la variable contacts"
+            },
+            {
+              "lettre": "C",
+              "texte": "'Chloé' est un attribut de la variable contacts"
+            },
+            {
+              "lettre": "D",
+              "texte": "'Chloé' est un champ de la variable contacts"
+            }
+          ]
+        },
+        {
+          "numero": "C.2",
+          "enonce": "On a extrait les deux premières lignes de différents fichiers.\nDéterminer celui qui est un authentique fichier CSV :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Nom,Pays,Temps\nCamille Muffat,France,241.45"
+            },
+            {
+              "lettre": "B",
+              "texte": "Nom Pays Temps\nCamille Muffat France 241.45"
+            },
+            {
+              "lettre": "C",
+              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+            },
+            {
+              "lettre": "D",
+              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+            }
+          ]
+        },
+        {
+          "numero": "C.3",
+          "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n# chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "de 0 à 3"
+            },
+            {
+              "lettre": "B",
+              "texte": "de 1 à 4"
+            },
+            {
+              "lettre": "C",
+              "texte": "de 0 à 4"
+            },
+            {
+              "lettre": "D",
+              "texte": "de 0 à 5"
+            }
+          ]
+        },
+        {
+          "numero": "C.4",
+          "enonce": "Laquelle de ces listes de chaînes de caractères est triée en ordre croissant ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[\"112\", \"19\", \"27\", \"45\", \"8\"]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[\"8\", \"19\", \"27\", \"45\", \"112\"]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[\"8\", \"112\", \"19\", \"27\", \"45\"]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[\"19\", \"112\", \"27\", \"45\", \"8\"]"
+            }
+          ]
+        },
+        {
+          "numero": "C.5",
+          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "gaz_rares = [ periode[7] for periode in mendeleiev]"
+            },
+            {
+              "lettre": "B",
+              "texte": "gaz_rares = [ periode for periode in mendeleiev[7]]"
+            },
+            {
+              "lettre": "C",
+              "texte": "gaz_rares = [ periode for periode[7] in mendeleiev]"
+            },
+            {
+              "lettre": "D",
+              "texte": "gaz_rares = [ periode[8] for periode in mendeleiev]"
+            }
+          ]
+        },
+        {
+          "numero": "C.6",
+          "enonce": "Que réalise l'instruction suivante :\nmon_fichier = open(\"exemple.txt\", \"r\")",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Elle permet d’ouvrir le fichier \"exemple.txt\" en mode lecture si le fichier est dans le même dossier que le\nfichier du programme Python comportant cette instruction."
+            },
+            {
+              "lettre": "B",
+              "texte": "Elle permet d’ouvrir le fichier \"exemple.txt\" en mode lecture même si le fichier n’est pas dans le même\ndossier que le fichier du programme Python comportant cette instruction."
+            },
+            {
+              "lettre": "C",
+              "texte": "Elle permet d’ouvrir le fichier \"exemple.txt\" en mode écriture si le fichier est dans le même dossier que le\nfichier du programme Python comportant cette instruction."
+            },
+            {
+              "lettre": "D",
+              "texte": "Elle permet d’ouvrir le fichier \"exemple.txt\" en mode écriture même si le fichier n’est pas dans le même\ndossier que le fichier du programme Python comportant cette instruction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "nom": "interactions entre l'homme et la machine sur le Web",
+      "questions": [
+        {
+          "numero": "D.1",
+          "enonce": "Les pages HTML sont affichées par …",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "le compilateur"
+            },
+            {
+              "lettre": "B",
+              "texte": "le serveur"
+            },
+            {
+              "lettre": "C",
+              "texte": "l'interpréteur"
+            },
+            {
+              "lettre": "D",
+              "texte": "le navigateur Web"
+            }
+          ]
+        },
+        {
+          "numero": "D.2",
+          "enonce": "Dans un fichier HTML nommé reservation.html, on a défini au sein d’une balise <script> la fonction confirmer. Ce\nfichier contient aussi la ligne suivante :\n<button onclick=\"confirmer();\">Annuler la réservation</button>\nOn affiche cette page dans un navigateur Web (pour lequel JavaScript est activé).\nEn cliquant sur le bouton « Annuler la réservation » :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Le navigateur va nécessairement générer une requête HTTP à destination du serveur pour confirmer cette\naction."
+            },
+            {
+              "lettre": "B",
+              "texte": "Le navigateur ne peut pas générer une requête HTTP à destination du serveur pour confirmer cette action."
+            },
+            {
+              "lettre": "C",
+              "texte": "Le navigateur va nécessairement déclencher un appel à la fonction confirmer."
+            },
+            {
+              "lettre": "D",
+              "texte": "Le navigateur ne peut pas déclencher un appel à la fonction confirmer."
+            }
+          ]
+        },
+        {
+          "numero": "D.3",
+          "enonce": "Dans quels langages les balises <img>  et <form> sont-elles utilisées ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Python"
+            },
+            {
+              "lettre": "B",
+              "texte": "HTML"
+            },
+            {
+              "lettre": "C",
+              "texte": "Javascript"
+            },
+            {
+              "lettre": "D",
+              "texte": "PHP"
+            }
+          ]
+        },
+        {
+          "numero": "D.4",
+          "enonce": "Quel est le protocole utilisé pour accéder à la page https://www.domaine.gouv.fr/qcm.php?nom=Martin ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "HTTPS"
+            },
+            {
+              "lettre": "B",
+              "texte": "HTTP"
+            },
+            {
+              "lettre": "C",
+              "texte": "WWW"
+            },
+            {
+              "lettre": "D",
+              "texte": "FTP"
+            }
+          ]
+        },
+        {
+          "numero": "D.5",
+          "enonce": "Quelle méthode est utilisée via une requête HTTP pour envoyer une image via un formulaire HTML ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "HEAD"
+            },
+            {
+              "lettre": "B",
+              "texte": "PUT"
+            },
+            {
+              "lettre": "C",
+              "texte": "POST"
+            },
+            {
+              "lettre": "D",
+              "texte": "GET"
+            }
+          ]
+        },
+        {
+          "numero": "D.6",
+          "enonce": "Les pages HTML sont affichées par …",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "le compilateur"
+            },
+            {
+              "lettre": "B",
+              "texte": "le serveur"
+            },
+            {
+              "lettre": "C",
+              "texte": "l'interpréteur"
+            },
+            {
+              "lettre": "D",
+              "texte": "le navigateur Web"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "nom": "architectures matérielles et systèmes d'exploitation",
+      "questions": [
+        {
+          "numero": "E.1",
+          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "la liaison étant coupée, le serveur ne sera plus accessible"
+            },
+            {
+              "lettre": "B",
+              "texte": "le téléchargement n’est pas interrompu car les paquets peuvent transiter par le routeur D"
+            },
+            {
+              "lettre": "C",
+              "texte": "le téléchargement est interrompu, Vivien doit redémarrer une nouvelle connexion à partir de\nzéro"
+            },
+            {
+              "lettre": "D",
+              "texte": "le téléchargement se poursuit mais des données seront perdues"
+            }
+          ]
+        },
+        {
+          "numero": "E.2",
+          "enonce": "Sous Unix, que fait la commande suivante :\nls –a /home/pi >> toto.txt",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "elle liste uniquement les répertoires cachés du répertoire /home/pi"
+            },
+            {
+              "lettre": "B",
+              "texte": "elle liste tous les fichiers du répertoire /home/pi et enregistre le résultat dans un fichier toto.txt"
+            },
+            {
+              "lettre": "C",
+              "texte": "elle liste tous les fichiers des répertoires de /home/pi et de toto.txt"
+            },
+            {
+              "lettre": "D",
+              "texte": "elle liste tous les fichiers du répertoire courant et enregistre le résultat dans un fichier /home/pi/toto.txt\nS"
+            },
+            {
+              "lettre": "A",
+              "texte": ""
+            },
+            {
+              "lettre": "B",
+              "texte": ""
+            },
+            {
+              "lettre": "C",
+              "texte": ""
+            },
+            {
+              "lettre": "D",
+              "texte": "E\nV"
+            }
+          ]
+        },
+        {
+          "numero": "E.3",
+          "enonce": "Laquelle des mémoires suivantes est volatile ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "RAM"
+            },
+            {
+              "lettre": "B",
+              "texte": "disque dur"
+            },
+            {
+              "lettre": "C",
+              "texte": "ROM"
+            },
+            {
+              "lettre": "D",
+              "texte": "clef USB"
+            }
+          ]
+        },
+        {
+          "numero": "E.4",
+          "enonce": "Quel est le rôle de la commande shell ls ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "basculer en mode administrateur"
+            },
+            {
+              "lettre": "B",
+              "texte": "lister le contenu du répertoire courant"
+            },
+            {
+              "lettre": "C",
+              "texte": "donner un accès complet à un fichier"
+            },
+            {
+              "lettre": "D",
+              "texte": "effacer le contenu du répertoire courant"
+            }
+          ]
+        },
+        {
+          "numero": "E.5",
+          "enonce": "Que peut-on dire du système de fichier, suite à l’exécution des commandes suivantes ?\n% cd\n% ls\nDocuments  Images  Videos  help.txt  tutorial.txt  script.py\n% mv *.txt Documents",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "L'utilisateur Documents a pris possession des fichiers help.txt et tutorial.txt"
+            },
+            {
+              "lettre": "B",
+              "texte": "Le répertoire  /Documents contient maintenant les fichiers help.txt et tutorial.txt"
+            },
+            {
+              "lettre": "C",
+              "texte": "Le répertoire  Documents du répertoire de l'utilisateur contient maintenant les fichiers help.txt et tutorial.txt"
+            },
+            {
+              "lettre": "D",
+              "texte": "script.py a été exécuté et a déplacé les fichiers textes"
+            }
+          ]
+        },
+        {
+          "numero": "E.6",
+          "enonce": "Dans une machine sous Linux, dans le répertoire Documents se trouvent un répertoire Final ainsi qu'un\nrépertoire Initial contenant deux fichiers fichier1.txt et fichier2.txt.\nEn étant dans le répertoire Initial, quel est l’effet de la commande  cp * ../Final ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "se placer dans le répertoire Final"
+            },
+            {
+              "lettre": "B",
+              "texte": "déplacer dans le répertoire Initial les fichiers du répertoire Final"
+            },
+            {
+              "lettre": "C",
+              "texte": "copier dans le répertoire Initial les fichiers du répertoire Final"
+            },
+            {
+              "lettre": "D",
+              "texte": "copier dans le répertoire Final les fichiers du répertoire Initial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "nom": "langages et programmation",
+      "questions": [
+        {
+          "numero": "F.1",
+          "enonce": "On considère l'instruction suivante :\nresultat = [0] * 7\nQue contient la variable resultat après son exécution ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "[0]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[[0], [0], [0], [0], [0], [0], [0]]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[0, 0, 0, 0, 0, 0, 0]"
+            }
+          ]
+        },
+        {
+          "numero": "F.2",
+          "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "(8, 8)"
+            },
+            {
+              "lettre": "B",
+              "texte": "(8, 2)"
+            },
+            {
+              "lettre": "C",
+              "texte": "(2, 2)"
+            },
+            {
+              "lettre": "D",
+              "texte": "(2, 8)"
+            }
+          ]
+        },
+        {
+          "numero": "F.3",
+          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "une erreur ZeroDivisionError: division by zero et l'arrêt de l'exécution"
+            },
+            {
+              "lettre": "B",
+              "texte": "une erreur NameError: name 'b' is not defined et l'arrêt de l'exécution"
+            },
+            {
+              "lettre": "C",
+              "texte": "une erreur AssertionError: le deuxième argument est nul et la variable r prend la valeur 0"
+            },
+            {
+              "lettre": "D",
+              "texte": "une erreur AssertionError: le deuxième argument est nul et l'arrêt de l'exécution"
+            }
+          ]
+        },
+        {
+          "numero": "F.4",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "les entiers"
+            },
+            {
+              "lettre": "B",
+              "texte": "les chaînes de caractères"
+            },
+            {
+              "lettre": "C",
+              "texte": "les flottants"
+            },
+            {
+              "lettre": "D",
+              "texte": "les tableaux"
+            }
+          ]
+        },
+        {
+          "numero": "F.5",
+          "enonce": "On exécute le script suivant :\nresultat = [0] * 7\nQue contient la variable resultat après son exécution ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "[0]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[[0], [0], [0], [0], [0], [0], [0]]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[0, 0, 0, 0, 0, 0, 0]"
+            }
+          ]
+        },
+        {
+          "numero": "F.6",
+          "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "64"
+            },
+            {
+              "lettre": "C",
+              "texte": "100"
+            },
+            {
+              "lettre": "D",
+              "texte": "128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "nom": "algorithmique",
+      "questions": [
+        {
+          "numero": "G.1",
+          "enonce": "On dispose en quantité illimité de pièces de 1 euro, 2 euros et 5 euros. On veut totaliser une somme de 18 euros.\nQuelle est la solution donnée par l’algorithme glouton ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[5, 5, 5, 2, 1]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[5, 5, 5, 2, 2, 1]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[5, 5, 2, 2, 2, 1, 1]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[5, 2, 2, 2, 2, 1, 1, 1, 1, 1]"
+            }
+          ]
+        },
+        {
+          "numero": "G.2",
+          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\np = 1\nn = m\nq = a\nwhile n > 0:\n#\nif n%2 == 0:\nq = q * q\nn = n // 2\nelse:\np = q * p\nn = n - 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "𝑝× 𝑞𝑛−1 = 𝑎𝑚"
+            },
+            {
+              "lettre": "B",
+              "texte": "𝑝× 𝑞𝑛= 𝑎𝑚"
+            },
+            {
+              "lettre": "C",
+              "texte": "𝑝× 𝑞𝑛+1 = 𝑎𝑚"
+            },
+            {
+              "lettre": "D",
+              "texte": "𝑝× 𝑞𝑚= 𝑎𝑛"
+            }
+          ]
+        },
+        {
+          "numero": "G.3",
+          "enonce": "Un algorithme de recherche dichotomique dans une liste triée de taille 𝑛 nécessite, dans le pire des cas,\nexactement 𝑘 comparaisons.\nCombien cet algorithme va-t-il utiliser, dans le pire des cas, de comparaisons sur une liste de taille 2𝑛 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "𝑘"
+            },
+            {
+              "lettre": "B",
+              "texte": "𝑘+ 1"
+            },
+            {
+              "lettre": "C",
+              "texte": "2𝑘"
+            },
+            {
+              "lettre": "D",
+              "texte": "2𝑘+ 1"
+            }
+          ]
+        },
+        {
+          "numero": "G.4",
+          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\nif k > element:\nelement = k",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "1"
+            },
+            {
+              "lettre": "C",
+              "texte": "4"
+            },
+            {
+              "lettre": "D",
+              "texte": "10"
+            }
+          ]
+        },
+        {
+          "numero": "G.5",
+          "enonce": "Quelle est la complexité du tri par sélection ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "inconnue"
+            },
+            {
+              "lettre": "B",
+              "texte": "linéaire"
+            },
+            {
+              "lettre": "C",
+              "texte": "quadratique"
+            },
+            {
+              "lettre": "D",
+              "texte": "exponentielle"
+            }
+          ]
+        },
+        {
+          "numero": "G.6",
+          "enonce": "Qu'effectue-t-on en lançant la commande suivante dans un terminal Linux :\nmv /etc/professeur/fichier.conf /home/nsi/fichier.conf",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "un déplacement de fichier"
+            },
+            {
+              "lettre": "B",
+              "texte": "une copie de fichier"
+            },
+            {
+              "lettre": "C",
+              "texte": "un renommage de fichier"
+            },
+            {
+              "lettre": "D",
+              "texte": "un changement de répertoire"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

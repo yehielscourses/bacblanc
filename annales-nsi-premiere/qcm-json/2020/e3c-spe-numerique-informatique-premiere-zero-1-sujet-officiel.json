@@ -1,0 +1,12 @@
+{
+  "source_pdf": "annales-nsi-premiere/2020/e3c-spe-numerique-informatique-premiere-zero-1-sujet-officiel.pdf",
+  "fichier": "e3c-spe-numerique-informatique-premiere-zero-1-sujet-officiel.pdf",
+  "slug": "spe-numerique-informatique-premiere-zero-1",
+  "annee": "2020",
+  "code": null,
+  "type": "sujet",
+  "nombre_questions_attendu": 42,
+  "extraction": "echec",
+  "erreur": "Texte non extractible (police personnalisee / PDF non structure).",
+  "themes": []
+}

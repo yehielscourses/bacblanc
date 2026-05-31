@@ -1,0 +1,979 @@
+{
+  "source_pdf": "annales-nsi-premiere/2021/e3c-spe-numerique-informatique-premiere-03360-sujet-officiel.pdf",
+  "fichier": "e3c-spe-numerique-informatique-premiere-03360-sujet-officiel.pdf",
+  "slug": "spe-numerique-informatique-premiere-03360",
+  "annee": "2021",
+  "code": "G1SNSIN03360",
+  "type": "sujet",
+  "nombre_questions_attendu": 42,
+  "extraction": "ok",
+  "nombre_questions": 42,
+  "themes": [
+    {
+      "id": "A",
+      "nom": "types de base",
+      "questions": [
+        {
+          "numero": "A.1",
+          "enonce": "Parmi les nombres décimaux suivants, lequel a une représentation exacte en binaire ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0,2"
+            },
+            {
+              "lettre": "B",
+              "texte": "0,3"
+            },
+            {
+              "lettre": "C",
+              "texte": "0,4"
+            },
+            {
+              "lettre": "D",
+              "texte": "0,5"
+            }
+          ]
+        },
+        {
+          "numero": "A.2",
+          "enonce": "Combien d'entiers positifs ou nuls (entiers non signés) peut-on représenter en machine sur 32 bits ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "232 −1"
+            },
+            {
+              "lettre": "B",
+              "texte": "232"
+            },
+            {
+              "lettre": "C",
+              "texte": "2 × 32"
+            },
+            {
+              "lettre": "D",
+              "texte": "322"
+            }
+          ]
+        },
+        {
+          "numero": "A.3",
+          "enonce": "On considère l'expression logique (𝑎 or 𝑏) and 𝑎. Quelle est sa table de vérité ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": ""
+            },
+            {
+              "lettre": "B",
+              "texte": ""
+            },
+            {
+              "lettre": "C",
+              "texte": ""
+            },
+            {
+              "lettre": "D",
+              "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nTrue\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nFalse"
+            }
+          ]
+        },
+        {
+          "numero": "A.4",
+          "enonce": "La variable x contient la valeur 3, la variable y contient la variable 4.\nQuelle expression s'évalue en True parmi les quatre propositions suivantes ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "x == 3 or y == 5"
+            },
+            {
+              "lettre": "B",
+              "texte": "x == 3 and y == 5"
+            },
+            {
+              "lettre": "C",
+              "texte": "x != 3 or y == 5"
+            },
+            {
+              "lettre": "D",
+              "texte": "y < 4"
+            }
+          ]
+        },
+        {
+          "numero": "A.5",
+          "enonce": "Combien de nombres entiers positifs peut-on coder en binaire sur 4 bits ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "4"
+            },
+            {
+              "lettre": "B",
+              "texte": "16"
+            },
+            {
+              "lettre": "C",
+              "texte": "64"
+            },
+            {
+              "lettre": "D",
+              "texte": "256"
+            }
+          ]
+        },
+        {
+          "numero": "A.6",
+          "enonce": "Deux entiers positifs ont pour écriture en base 16 :  A7 et 84.\nQuelle est l'écriture en base 16 de leur somme ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "1811"
+            },
+            {
+              "lettre": "B",
+              "texte": "12B"
+            },
+            {
+              "lettre": "C",
+              "texte": "13A"
+            },
+            {
+              "lettre": "D",
+              "texte": "A784"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "nom": "types construits",
+      "questions": [
+        {
+          "numero": "B.1",
+          "enonce": "On définit L = [4,25,10,9,7,13]. Quelle est la valeur de L[2] ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "4"
+            },
+            {
+              "lettre": "B",
+              "texte": "25"
+            },
+            {
+              "lettre": "C",
+              "texte": "10"
+            },
+            {
+              "lettre": "D",
+              "texte": "9"
+            }
+          ]
+        },
+        {
+          "numero": "B.2",
+          "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n[24,25,26,27],\n[35,36,49,33],\n[61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "T[1][2]"
+            },
+            {
+              "lettre": "B",
+              "texte": "T[2][1]"
+            },
+            {
+              "lettre": "C",
+              "texte": "T[2][3]"
+            },
+            {
+              "lettre": "D",
+              "texte": "T[3][2]"
+            }
+          ]
+        },
+        {
+          "numero": "B.3",
+          "enonce": "On définit un dictionnaire : d = { 'couleur': 'vert', 'taille': 42, 'marque': 'le coq sportif' }\nQuelle est la valeur de l'expression d.keys() ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "['couleur', 'taille', 'marque']"
+            },
+            {
+              "lettre": "B",
+              "texte": "[('couleur', 'vert'), ('taille', 42), ('marque', 'le coq sportif')]"
+            },
+            {
+              "lettre": "C",
+              "texte": "['vert', 42, 'le coq sportif']"
+            },
+            {
+              "lettre": "D",
+              "texte": "['couleur': 'vert', 'taille': 42, 'marque': 'le coq sportif']"
+            }
+          ]
+        },
+        {
+          "numero": "B.4",
+          "enonce": "On définit L = [2,3,5,7,-4].\nEn demandant la valeur de L[5], qu'obtient-on ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "-4"
+            },
+            {
+              "lettre": "B",
+              "texte": "2"
+            },
+            {
+              "lettre": "C",
+              "texte": "3"
+            },
+            {
+              "lettre": "D",
+              "texte": "une erreur"
+            }
+          ]
+        },
+        {
+          "numero": "B.5",
+          "enonce": "Parmi les scripts suivants, un seul ne permet pas de générer le tableau [0,2,4,6,8,10,12,14,16,18] noté T.\nQuel est ce script fautif ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "T = []\nfor k in range(10):\nT.append(2*k)"
+            },
+            {
+              "lettre": "B",
+              "texte": "T = [0] * 10\nfor k in range(9):\nT[k+1] = 2*(k+1)"
+            },
+            {
+              "lettre": "C",
+              "texte": "T = [2*k for k in range(10)]"
+            },
+            {
+              "lettre": "D",
+              "texte": "T = [0] * 10\nfor k in range(0):\nT[k+1] = 2*T[k]"
+            }
+          ]
+        },
+        {
+          "numero": "B.6",
+          "enonce": "Si on tape dans la console d'éxécution la commande :\n[1,4,3] + [2,4,5]\nqu'obtient-on ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[3, 8, 8]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[19]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[1, 4, 3, 2, 4, 5]"
+            },
+            {
+              "lettre": "D",
+              "texte": "un message d'erreur car l'addition n'est pas compatible avec les listes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "nom": "traitement de données en tables",
+      "questions": [
+        {
+          "numero": "C.1",
+          "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nQuel est le format de ce fichier ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "YML"
+            },
+            {
+              "lettre": "B",
+              "texte": "XML"
+            },
+            {
+              "lettre": "C",
+              "texte": "CSV"
+            },
+            {
+              "lettre": "D",
+              "texte": "JSON"
+            }
+          ]
+        },
+        {
+          "numero": "C.2",
+          "enonce": "Laquelle de ces affirmations est vraie ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "on ne peut accéder au contenu d'un fichier CSV que par l'intermédiaire d'un programme Python"
+            },
+            {
+              "lettre": "B",
+              "texte": "CSV est un format de chiffrement des données"
+            },
+            {
+              "lettre": "C",
+              "texte": "le format CSV a été conçu pour asssurer la confidentialité d'une partie du code d'un programme"
+            },
+            {
+              "lettre": "D",
+              "texte": "les fichiers CSV sont composés de données séparées par des caractères comme des virgules"
+            }
+          ]
+        },
+        {
+          "numero": "C.3",
+          "enonce": "Soit le tableau défini de la manière suivante : tableau = [[1,3,4],[2,7,8],[9,10,6],[12,11,5]]\nOn souhaite accéder à la valeur 12, on écrit pour cela :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "tableau[4][1]"
+            },
+            {
+              "lettre": "B",
+              "texte": "tableau[1][4]"
+            },
+            {
+              "lettre": "C",
+              "texte": "tableau[3][0]"
+            },
+            {
+              "lettre": "D",
+              "texte": "tableau[0][3]"
+            }
+          ]
+        },
+        {
+          "numero": "C.4",
+          "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n(\"Durand\", \"Jacques\", 2),\n(\"Dutronc\", \"Jean\", 3),\n...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\nif clients[i][1] == \"Jean\":\nx = clients[i]",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Une liste de tuples des noms, prénoms et numéros de tous les clients prénommés Jean"
+            },
+            {
+              "lettre": "B",
+              "texte": "Une liste des numéros de tous les clients prénommés Jean"
+            },
+            {
+              "lettre": "C",
+              "texte": "Un tuple avec le nom, prénom et numéro du premier client prénommé Jean"
+            },
+            {
+              "lettre": "D",
+              "texte": "Un tuple avec le nom, prénom et numéro du dernier client prénommé Jean"
+            }
+          ]
+        },
+        {
+          "numero": "C.5",
+          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815),\n('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[‘Grace’, ‘Ada’]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[('Grace', 'Hopper', 'F', 1906), ('Ada', 'Lovelace', 'F', 1815)]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[‘Hopper’, ’Lovelace’]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[]"
+            }
+          ]
+        },
+        {
+          "numero": "C.6",
+          "enonce": "Qu'est-ce que le format de fichier CSV ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "un format de fichier mis au point par Microsoft pour Excel"
+            },
+            {
+              "lettre": "B",
+              "texte": "un format de fichier pour décrire une base de données"
+            },
+            {
+              "lettre": "C",
+              "texte": "un format de fichier où les données sont séparées par un caractère tel qu'une virgule"
+            },
+            {
+              "lettre": "D",
+              "texte": "un format de fichier décrivant une page Web"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "nom": "interactions entre l'homme et la machine sur le Web",
+      "questions": [
+        {
+          "numero": "D.1",
+          "enonce": "Quelle utilisation faut-il avoir pour garantir qu'une transmission entre un client et un serveur sera-t-elle chiffrée ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Lorsqu'on utilise le navigateur web Firefox"
+            },
+            {
+              "lettre": "B",
+              "texte": "Lorsqu’on utilise la méthode POST"
+            },
+            {
+              "lettre": "C",
+              "texte": "Lorsqu’on utilise le protocole HTTPS"
+            },
+            {
+              "lettre": "D",
+              "texte": "Lorsqu’on utilise HTML et CSS"
+            }
+          ]
+        },
+        {
+          "numero": "D.2",
+          "enonce": "Un élève a écrit une fonction javascript qui détermine la moyenne des valeurs entrées par l'utilisateur dans un\nformulaire de sa page HTML.\nIl place sa fonction javascript :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "entre la balise <js> et la balise </js>"
+            },
+            {
+              "lettre": "B",
+              "texte": "entre la balise <code> et la balise </code>"
+            },
+            {
+              "lettre": "C",
+              "texte": "entre la balise <script> et la balise </script>"
+            },
+            {
+              "lettre": "D",
+              "texte": "entre la balise <javascript> et la balise </javascript>"
+            }
+          ]
+        },
+        {
+          "numero": "D.3",
+          "enonce": "Un internaute clique sur un lien qui envoie la requête HTTP suivante à un serveur :\nhttp://jaimelaneige.com/ma_planche/traitement.php?nom=Snow&prenom=Jon\nQue demande cette requête au serveur ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "de renvoyer le fichier traitement.php en identifiant nom et prénom à Snow et Jon"
+            },
+            {
+              "lettre": "B",
+              "texte": "d'exécuter le fichier traitement.php en identifiant nom et prénom à Snow et Jon"
+            },
+            {
+              "lettre": "C",
+              "texte": "d'indiquer si Jon Snow a bien pris son traitement"
+            },
+            {
+              "lettre": "D",
+              "texte": "de renvoyer le fichier traitement.php en affichant prénom et nom : Jon Snow"
+            }
+          ]
+        },
+        {
+          "numero": "D.4",
+          "enonce": "Un site internet utilise une requête HTTP avec la méthode POST pour transmettre les données d'un formulaire.\nLaquelle des affirmations suivantes est incorrecte ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "les données envoyées ne sont pas visibles"
+            },
+            {
+              "lettre": "B",
+              "texte": "il est possible de transmettre des données de type binaire"
+            },
+            {
+              "lettre": "C",
+              "texte": "les données transmises sont cryptées"
+            },
+            {
+              "lettre": "D",
+              "texte": "il n'y a pas de restriction de longueur pour les données transmises"
+            }
+          ]
+        },
+        {
+          "numero": "D.5",
+          "enonce": "Quel est le protocole utilisé pour accéder à la page https://www.domaine.gouv.fr/qcm.php?nom=Martin ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "HTTPS"
+            },
+            {
+              "lettre": "B",
+              "texte": "HTTP"
+            },
+            {
+              "lettre": "C",
+              "texte": "WWW"
+            },
+            {
+              "lettre": "D",
+              "texte": "FTP"
+            }
+          ]
+        },
+        {
+          "numero": "D.6",
+          "enonce": "Quelle méthode d’envoi des paramètres est-il préférable d’utiliser, pour un formulaire d’une page web, destiné\nà demander à l’utilisateur un mot de passe pour se connecter (le protocole utilisé est HTTPS) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "la méthode PASSWORD"
+            },
+            {
+              "lettre": "B",
+              "texte": "la méthode CRYPT"
+            },
+            {
+              "lettre": "C",
+              "texte": "la méthode GET"
+            },
+            {
+              "lettre": "D",
+              "texte": "la méthode POST"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "nom": "architectures matérielles et systèmes d'exploitation",
+      "questions": [
+        {
+          "numero": "E.1",
+          "enonce": "On a exécuté la commande ls -l et obtenu l’affichage suivant :\ntotal 0\n-rw-rw-rw- 1 etudiant etudiant  15 Jul  2 13:29 exercice\ndrwxrwxrwx 1 etudiant etudiant 512 Jul  2 13:37 seances\nQue permettent d’affirmer les informations obtenues ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "exercice et seances sont deux fichiers"
+            },
+            {
+              "lettre": "B",
+              "texte": "exercice est un fichier et seances est un répertoire"
+            },
+            {
+              "lettre": "C",
+              "texte": "exercice et seances sont deux répertoires"
+            },
+            {
+              "lettre": "D",
+              "texte": "exercice est un répertoire et seances est un fichier"
+            }
+          ]
+        },
+        {
+          "numero": "E.2",
+          "enonce": "Laquelle des mémoires suivantes est volatile ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "RAM"
+            },
+            {
+              "lettre": "B",
+              "texte": "disque dur"
+            },
+            {
+              "lettre": "C",
+              "texte": "ROM"
+            },
+            {
+              "lettre": "D",
+              "texte": "clef USB"
+            }
+          ]
+        },
+        {
+          "numero": "E.3",
+          "enonce": "Quel est le rôle de l’unité arithmétique et logique dans un processeur ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "réaliser les branchements"
+            },
+            {
+              "lettre": "B",
+              "texte": "définir la base des opérations arithmétiques : binaire, octale ou hexadécimale"
+            },
+            {
+              "lettre": "C",
+              "texte": "effectuer les calculs"
+            },
+            {
+              "lettre": "D",
+              "texte": "gérer le contrôle interne du processeur"
+            }
+          ]
+        },
+        {
+          "numero": "E.4",
+          "enonce": "Que peut-on dire du système de fichiers, suite à l’exécution des commandes suivantes ?\n% ls\nentier.py   flottant.py readme.md\n% mkdir foo\n% mv *.py foo",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "les fichiers entier.py, flottant.py, et foo ont été déplacés dans le répertoire de l’utilisateur"
+            },
+            {
+              "lettre": "B",
+              "texte": "l’utilisateur foo est propriétaire des fichiers entier.py et flottant.py"
+            },
+            {
+              "lettre": "C",
+              "texte": "le répertoire foo contient le résultat de l’exécution des deux fichiers entier.py et flottant.py"
+            },
+            {
+              "lettre": "D",
+              "texte": "le répertoire foo contient deux fichiers d’extension .py"
+            }
+          ]
+        },
+        {
+          "numero": "E.5",
+          "enonce": "Parmi les commandes suivantes, laquelle permet à n’importe quel utilisateur d’exécuter le fichier appelé jeu ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "chmod u+x jeu"
+            },
+            {
+              "lettre": "B",
+              "texte": "chmod u+rwx jeu"
+            },
+            {
+              "lettre": "C",
+              "texte": "chmod a+x jeu"
+            },
+            {
+              "lettre": "D",
+              "texte": "chmod a-x jeu"
+            }
+          ]
+        },
+        {
+          "numero": "E.6",
+          "enonce": "Qu'effectue-t-on en lançant la commande suivante dans un terminal Linux :\ncp /etc/professeur/fichier.conf /home/nsi/fichier.conf",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "un déplacement de fichier"
+            },
+            {
+              "lettre": "B",
+              "texte": "une copie de fichier"
+            },
+            {
+              "lettre": "C",
+              "texte": "un renommage de fichier"
+            },
+            {
+              "lettre": "D",
+              "texte": "un changement de répertoire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "nom": "langages et programmation",
+      "questions": [
+        {
+          "numero": "F.1",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "1"
+            },
+            {
+              "lettre": "C",
+              "texte": "2"
+            },
+            {
+              "lettre": "D",
+              "texte": "3"
+            }
+          ]
+        },
+        {
+          "numero": "F.2",
+          "enonce": "Lequel des langages suivants n'est pas un langage de programmation :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "PHP"
+            },
+            {
+              "lettre": "B",
+              "texte": "Javascript"
+            },
+            {
+              "lettre": "C",
+              "texte": "HTML"
+            },
+            {
+              "lettre": "D",
+              "texte": "Python"
+            }
+          ]
+        },
+        {
+          "numero": "F.3",
+          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\nb = 10\nelif a > 6:\nb = 3",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "3"
+            },
+            {
+              "lettre": "B",
+              "texte": "5"
+            },
+            {
+              "lettre": "C",
+              "texte": "6"
+            },
+            {
+              "lettre": "D",
+              "texte": "10"
+            }
+          ]
+        },
+        {
+          "numero": "F.4",
+          "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "64"
+            },
+            {
+              "lettre": "C",
+              "texte": "100"
+            },
+            {
+              "lettre": "D",
+              "texte": "128"
+            }
+          ]
+        },
+        {
+          "numero": "F.5",
+          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\nreturn math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "import GeomPlan\nGeomPlan.aireDisque(8)"
+            },
+            {
+              "lettre": "B",
+              "texte": "import GeomPlan\naireDisque(8)"
+            },
+            {
+              "lettre": "C",
+              "texte": "from GeomPlan import *\naireDisque(8)"
+            },
+            {
+              "lettre": "D",
+              "texte": "from GeomPlan import aireDisque\naireDisque(8)"
+            }
+          ]
+        },
+        {
+          "numero": "F.6",
+          "enonce": "On exécute le code suivant :\ndef essai():\na = 2\nb = 3\nc = 4\nreturn a\nreturn b\nreturn c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "2"
+            },
+            {
+              "lettre": "B",
+              "texte": "3"
+            },
+            {
+              "lettre": "C",
+              "texte": "4"
+            },
+            {
+              "lettre": "D",
+              "texte": "(2,3,4)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "nom": "algorithmique",
+      "questions": [
+        {
+          "numero": "G.1",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "if puis, sur la ligne suivante, maxi = T[i]"
+            },
+            {
+              "lettre": "B",
+              "texte": "while puis, sur la ligne suivante, maxi = T[i]"
+            },
+            {
+              "lettre": "C",
+              "texte": "if puis, sur la ligne suivante, maxi = maxi + 1"
+            },
+            {
+              "lettre": "D",
+              "texte": "while puis, sur la ligne suivante, maxi = maxi + 1"
+            }
+          ]
+        },
+        {
+          "numero": "G.2",
+          "enonce": "On définit une fonction de recherche dichotomique de l'indice d'un élément x à l'intérieur d'une liste triée de la\nfaçon suivante:\ndef recherchee(x, liste_triee):\na = 0\nb = len(liste_triee)-1\nwhile a < b:\nm = (a + b)//2\nif liste_triee[m] == x:\nreturn m\nelif liste_triee[m] > x:\nb = m - 1\nelse:\n........\nreturn a\nPar quoi faut-il remplacer la ligne pointillée pour répondre à l'objectif ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "a = m + 1"
+            },
+            {
+              "lettre": "B",
+              "texte": "a = m - 1"
+            },
+            {
+              "lettre": "C",
+              "texte": "a = b"
+            },
+            {
+              "lettre": "D",
+              "texte": "a = b - m"
+            }
+          ]
+        },
+        {
+          "numero": "G.3",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "reste le même"
+            },
+            {
+              "lettre": "B",
+              "texte": "double aussi"
+            },
+            {
+              "lettre": "C",
+              "texte": "est multiplié par 𝑛"
+            },
+            {
+              "lettre": "D",
+              "texte": "est multiplié par 4"
+            }
+          ]
+        },
+        {
+          "numero": "G.4",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "1 puis p = p * elt"
+            },
+            {
+              "lettre": "B",
+              "texte": "0 puis p = p * elt"
+            },
+            {
+              "lettre": "C",
+              "texte": "1 puis p = elt"
+            },
+            {
+              "lettre": "D",
+              "texte": "0 puis p = elt"
+            }
+          ]
+        },
+        {
+          "numero": "G.5",
+          "enonce": "On dispose de sacs de jetons portant les nombres 10, 5, 3 et 1.\nOn veut obtenir un total de 21 en utilisant ces jetons.\nSi on utilise le principe de l'algorithme glouton, quelle addition va-t-on réaliser pour obtenir ce total de 21 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "5 + 5 + 5 + 5 + 1"
+            },
+            {
+              "lettre": "B",
+              "texte": "10 + 5 + 3 + 3"
+            },
+            {
+              "lettre": "C",
+              "texte": "10 + 5 + 5 + 1"
+            },
+            {
+              "lettre": "D",
+              "texte": "10 + 10 + 1"
+            }
+          ]
+        },
+        {
+          "numero": "G.6",
+          "enonce": "def traitement(tableau):\nr = 0\nfor i in range(1, len(tableau)):\nif tableau[i] > tableau[r]:\nr = i\nreturn r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "la somme des éléments du tableau passé en paramètre"
+            },
+            {
+              "lettre": "B",
+              "texte": "la moyenne des éléments du tableau passé en paramètre"
+            },
+            {
+              "lettre": "C",
+              "texte": "l'élément le plus grand du tableau passé en paramètre"
+            },
+            {
+              "lettre": "D",
+              "texte": "l'indice (ou index) du plusgrand élément du tableau passé en paramètre"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

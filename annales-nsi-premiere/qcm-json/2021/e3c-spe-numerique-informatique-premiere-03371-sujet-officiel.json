@@ -1,0 +1,979 @@
+{
+  "source_pdf": "annales-nsi-premiere/2021/e3c-spe-numerique-informatique-premiere-03371-sujet-officiel.pdf",
+  "fichier": "e3c-spe-numerique-informatique-premiere-03371-sujet-officiel.pdf",
+  "slug": "spe-numerique-informatique-premiere-03371",
+  "annee": "2021",
+  "code": "G1SNSIN03371",
+  "type": "sujet",
+  "nombre_questions_attendu": 42,
+  "extraction": "ok",
+  "nombre_questions": 42,
+  "themes": [
+    {
+      "id": "A",
+      "nom": "types de base",
+      "questions": [
+        {
+          "numero": "A.1",
+          "enonce": "Olivier visite son site préféré pour relire le programme de NSI.\nIl devrait lire le texte ci-dessous :\nL’enseignement de spécialité de numérique et sciences informatiques du cycle terminal de la voie\ngénérale vise l’appropriation des fondements de l’informatique pour préparer les élèves à une\npoursuite d’études dans l’enseignement supérieur, en les formant à la pratique d’une démarche\nscientifique et en développant leur appétence pour des activités de recherche.\nLe paramétrage de son navigateur lui donne l’affichage ci-dessous :\nLâ€™enseignement de spÃ©cialitÃ© de numÃ©rique et sciences informatiques du cycle terminal\nde la voie gÃ©nÃ©rale vise lâ€™appropriation des fondements de lâ€™informatique pour\nprÃ©parer les Ã©lÃ¨ves Ã  une poursuite dâ€™Ã©tudes dans lâ€™enseignement supÃ©rieur, en\nles formant Ã  la pratique dâ€™une dÃ©marche scientifique et en dÃ©veloppant leur appÃ©tence\npour des activitÃ©s de recherche.\nQuel type d’encodage Olivier doit-il choisir dans les paramètres de son navigateur pour afficher correctement le\ntexte ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "ANSI"
+            },
+            {
+              "lettre": "B",
+              "texte": "LATIN-1"
+            },
+            {
+              "lettre": "C",
+              "texte": "UTF-8"
+            },
+            {
+              "lettre": "D",
+              "texte": "ASCII"
+            }
+          ]
+        },
+        {
+          "numero": "A.2",
+          "enonce": "Un nombre entier signé est codé en complément à deux sur 8 bits par : 0111 0101.\nQue peut-on dire ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "c'est un nombre positif"
+            },
+            {
+              "lettre": "B",
+              "texte": "c'est un nombre négatif"
+            },
+            {
+              "lettre": "C",
+              "texte": "c'est un nombre pair"
+            },
+            {
+              "lettre": "D",
+              "texte": "7 bits auraient suffi à représenter cet entier signé en complément à deux"
+            }
+          ]
+        },
+        {
+          "numero": "A.3",
+          "enonce": "Parmi les quatre propositions, quelle est celle qui correspond au résultat de la soustraction en écriture\nhexadécimale CD8FA - 9FF81?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "2E979"
+            },
+            {
+              "lettre": "B",
+              "texte": "3D989"
+            },
+            {
+              "lettre": "C",
+              "texte": "2D979"
+            },
+            {
+              "lettre": "D",
+              "texte": "2DA979"
+            }
+          ]
+        },
+        {
+          "numero": "A.4",
+          "enonce": "La représentation en base 2 sur un octet du nombre décimal 27 s’écrit :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "1110 0100"
+            },
+            {
+              "lettre": "B",
+              "texte": "0001 1011"
+            },
+            {
+              "lettre": "C",
+              "texte": "0011 0110"
+            },
+            {
+              "lettre": "D",
+              "texte": "0001 1010"
+            }
+          ]
+        },
+        {
+          "numero": "A.5",
+          "enonce": "Quelle est, en écriture décimale, la somme d'entiers dont l'écriture en base 16 (hexadécimale) est 2A + 2 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "22"
+            },
+            {
+              "lettre": "B",
+              "texte": "31"
+            },
+            {
+              "lettre": "C",
+              "texte": "49"
+            },
+            {
+              "lettre": "D",
+              "texte": "44"
+            }
+          ]
+        },
+        {
+          "numero": "A.6",
+          "enonce": "Quelle est la représentation en base 2 du nombre représenté dans la base 16 par A6B ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "2667"
+            },
+            {
+              "lettre": "B",
+              "texte": "10101101011"
+            },
+            {
+              "lettre": "C",
+              "texte": "101001101011"
+            },
+            {
+              "lettre": "D",
+              "texte": "110100110101"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "nom": "types construits",
+      "questions": [
+        {
+          "numero": "B.1",
+          "enonce": "On définit le dictionnaire d = {'a': 1, 'b': 2, 'c': 3, 'z': 26}. Quelle expression permet de récupérer la valeur de la\nclé 'z' ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "d[4]"
+            },
+            {
+              "lettre": "B",
+              "texte": "d[26]"
+            },
+            {
+              "lettre": "C",
+              "texte": "d[z]"
+            },
+            {
+              "lettre": "D",
+              "texte": "d['z']"
+            }
+          ]
+        },
+        {
+          "numero": "B.2",
+          "enonce": "On s'intéresse à la valeur 14 présente dans la liste suivante:\nL = [[1,2,3,4,5], [6,7,8,9,10], [11,12,13,14,15], [16,17,18,19,20]].\nQuelle expression vaut 14 parmi les suivantes ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "T[2][3]"
+            },
+            {
+              "lettre": "B",
+              "texte": "T[3][4]"
+            },
+            {
+              "lettre": "C",
+              "texte": "T[3][2]"
+            },
+            {
+              "lettre": "D",
+              "texte": "T[4][3]"
+            }
+          ]
+        },
+        {
+          "numero": "B.3",
+          "enonce": "On construit une matrice par compréhension :\nM = [ [i*j for j in range(4)] for i in range(4) ]\nLaquelle des conditions suivantes est-elle vérifiée ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "M[4][4] == 16"
+            },
+            {
+              "lettre": "B",
+              "texte": "M[0][1] == 1"
+            },
+            {
+              "lettre": "C",
+              "texte": "M[2][3] == 6"
+            },
+            {
+              "lettre": "D",
+              "texte": "M[1][2] == 3"
+            }
+          ]
+        },
+        {
+          "numero": "B.4",
+          "enonce": "Si a vaut False et b vaut True, que vaut l’expression booléenne NOT(a AND b) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "0"
+            },
+            {
+              "lettre": "B",
+              "texte": "False"
+            },
+            {
+              "lettre": "C",
+              "texte": "True"
+            },
+            {
+              "lettre": "D",
+              "texte": "None"
+            }
+          ]
+        },
+        {
+          "numero": "B.5",
+          "enonce": "On considère le code suivant :\ndef feed(t):\nfor i in range(len(t)):\nt[i] = 0\nreturn t\nQue renvoie feed([12, 24, 32]) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[120, 240, 320]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[0, 0, 0]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[ ]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[0]"
+            }
+          ]
+        },
+        {
+          "numero": "B.6",
+          "enonce": "On considère la fonction suivante :\ndef somme(tab):\ns = 0\nfor i in range(len(tab)):\n......\nreturn s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "s = tab[i]"
+            },
+            {
+              "lettre": "B",
+              "texte": "s = s + tab[i]"
+            },
+            {
+              "lettre": "C",
+              "texte": "tab[i] = tab[i] + s"
+            },
+            {
+              "lettre": "D",
+              "texte": "s = s + i"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "nom": "traitement de données en tables",
+      "questions": [
+        {
+          "numero": "C.1",
+          "enonce": "Un fichier CSV …",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "ne peut être lu que par un tableur"
+            },
+            {
+              "lettre": "B",
+              "texte": "est l'unique format utilisé pour construire une base de données"
+            },
+            {
+              "lettre": "C",
+              "texte": "est un fichier texte"
+            },
+            {
+              "lettre": "D",
+              "texte": "est un format propriétaire"
+            }
+          ]
+        },
+        {
+          "numero": "C.2",
+          "enonce": "Les données clients d’une entreprise sont stockées dans un fichier csv. Afin de les importer, on effectue une\nlecture séquentielle de ce fichier par ligne. On affecte à la variable ligne le contenu d’une ligne de ce fichier.\nLa variable c est alors définie ainsi :\nligne = \"dupont;arnaud;245862;france\"\nc = ligne.split(;)\nQue contient cette variable c ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "\"dupontarnaud245862france\""
+            },
+            {
+              "lettre": "B",
+              "texte": "[\"dupont\", \"arnaud\", \"245862\", \"france\"]"
+            },
+            {
+              "lettre": "C",
+              "texte": "3"
+            },
+            {
+              "lettre": "D",
+              "texte": "\"dupont\""
+            }
+          ]
+        },
+        {
+          "numero": "C.3",
+          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "mendeleiev.append('F')"
+            },
+            {
+              "lettre": "B",
+              "texte": "mendeleiev[1][6] = 'F'"
+            },
+            {
+              "lettre": "C",
+              "texte": "mendeleiev[6][1] = 'F'"
+            },
+            {
+              "lettre": "D",
+              "texte": "mendeleiev[-1][-1] = 'F'"
+            }
+          ]
+        },
+        {
+          "numero": "C.4",
+          "enonce": "On considère le code suivant :\ndef clearfield(f):\nfor i in range(len(f)):\nfiche[i]['code'] = None\nreturn f\nfiche = [ {\"nom\": \"pierre\", \"note\": 5.99, \"code\": 125},\n{\"nom\": \"pol\", \"note\": 2.99, \"code\": 82},\n{\"nom\": \"jack\", \"note\": 7.99, \"code\": 135}     ]\nQue renvoie clearfield(fiche) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[{\"nom\": \"pierre\", \"note\": 5.99, \"code\": 125},\n{\"nom\": \"pol\", \"note\": 2.99, \"code\": 82},\n{\"nom\": \"jack\", \"note\": 7.99, \"code\": 135}]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[{\"nom\": \"pierre\", \"note\": None, \"code\": 125},\n{\"nom\": \"pol\", \"note\": None, \"code\": 82},\n{\"nom\": \"jack\", \"note\": None, \"code\": 135}]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[{\"nom\": \"pierre\", \"note\": 5.99, \"None\": 125},\n{\"nom\": \"pol\", \"note\": 2.99, \"None\": 82},\n{\"nom\": \"jack\", \"note\": 7.99, \"None\": 135}]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[{\"nom\": \"pierre\", \"note\": 5.99, \"code\": None},\n{\"nom\": \"pol\", \"note\": 2.99, \"code\": None},\n{\"nom\": \"jack\", \"note\": 7.99, \"code\": None}]"
+            }
+          ]
+        },
+        {
+          "numero": "C.5",
+          "enonce": "Qu'est-ce que le CSV ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "Un langage de programmation"
+            },
+            {
+              "lettre": "B",
+              "texte": "Un format de fichier permettant de stocker de l’information"
+            },
+            {
+              "lettre": "C",
+              "texte": "Un algorithme permettant de rechercher une information dans un fichier"
+            },
+            {
+              "lettre": "D",
+              "texte": "Un format de fichier permettant de définir le style d’une page web"
+            }
+          ]
+        },
+        {
+          "numero": "C.6",
+          "enonce": "Parmi les extensions suivantes, laquelle caractérise un fichier contenant des données que l'on peut associer à un\ntableau de pixels ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "pdf"
+            },
+            {
+              "lettre": "B",
+              "texte": "xls"
+            },
+            {
+              "lettre": "C",
+              "texte": "png"
+            },
+            {
+              "lettre": "D",
+              "texte": "exe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "nom": "interactions entre l'homme et la machine sur le Web",
+      "questions": [
+        {
+          "numero": "D.1",
+          "enonce": "Un élève a écrit une fonction javascript qui détermine la moyenne des valeurs entrées par l'utilisateur dans un\nformulaire de sa page HTML.\nIl place sa fonction javascript :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "entre la balise <js> et la balise </js>"
+            },
+            {
+              "lettre": "B",
+              "texte": "entre la balise <code> et la balise </code>"
+            },
+            {
+              "lettre": "C",
+              "texte": "entre la balise <script> et la balise </script>"
+            },
+            {
+              "lettre": "D",
+              "texte": "entre la balise <javascript> et la balise </javascript>"
+            }
+          ]
+        },
+        {
+          "numero": "D.2",
+          "enonce": "Les pages HTML sont affichées par …",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "le compilateur"
+            },
+            {
+              "lettre": "B",
+              "texte": "le serveur"
+            },
+            {
+              "lettre": "C",
+              "texte": "l'interpréteur"
+            },
+            {
+              "lettre": "D",
+              "texte": "le navigateur Web"
+            }
+          ]
+        },
+        {
+          "numero": "D.3",
+          "enonce": "Voici un extrait d'un document HTML.\n<body>\n.........\nClic !\n</button>\n<h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "<button click = \"actionBouton();\">"
+            },
+            {
+              "lettre": "B",
+              "texte": "<button onclick = \"actionBouton();\">"
+            },
+            {
+              "lettre": "C",
+              "texte": "<button onclick => \"actionBouton();\""
+            },
+            {
+              "lettre": "D",
+              "texte": "<button> onclick = \"actionBouton();\""
+            }
+          ]
+        },
+        {
+          "numero": "D.4",
+          "enonce": "Comment s'appelle la méthode permettant de transmettre  les variables en les faisant apparaître dans la barre\nd’adresse du navigateur ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "URL"
+            },
+            {
+              "lettre": "B",
+              "texte": "HEAD"
+            },
+            {
+              "lettre": "C",
+              "texte": "POST"
+            },
+            {
+              "lettre": "D",
+              "texte": "GET"
+            }
+          ]
+        },
+        {
+          "numero": "D.5",
+          "enonce": "Voici un extrait d'une page HTML :\n<script>\nfunction sommeNombres(formulaire) {\nvar somme = formulaire.n1.value + formulaire.n2.value;\nconsole.log(somme);\n}\n</script>\n<form>\nNombre 1 : <input name=\"n1\" value=\"30\">  <br>\nNombre 2 : <input name=\"n2\" value=\"10\">  <br>\n<input type=\"button\" value=\"Somme\" onclick=\"sommeNombres(this.form)\">\n</form>\nQuand l'utilisateur clique sur le bouton Somme, le calcul de la fonction sommeNombre() se fait :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "uniquement dans le navigateur"
+            },
+            {
+              "lettre": "B",
+              "texte": "uniquement sur le serveur qui héberge la page"
+            },
+            {
+              "lettre": "C",
+              "texte": "à la fois dans le navigateur et sur le serveur"
+            },
+            {
+              "lettre": "D",
+              "texte": "si le calcul est complexe, le navigateur demande au serveur de faire le calcul"
+            }
+          ]
+        },
+        {
+          "numero": "D.6",
+          "enonce": "Quel est le code HTML correct pour créer un hyperlien vers le site Eduscol ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "<a url=\"https://www.eduscol.education.fr/\"> site Eduscol </a>"
+            },
+            {
+              "lettre": "B",
+              "texte": "<a name=\"https://www.eduscol.education.fr/\"> site Eduscol </a>"
+            },
+            {
+              "lettre": "C",
+              "texte": "<a href=\"https://www.eduscol.education.fr/\"> site Eduscol </a>"
+            },
+            {
+              "lettre": "D",
+              "texte": "<a> https://www.eduscol.education.fr/ </a> site Eduscol"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "nom": "architectures matérielles et systèmes d'exploitation",
+      "questions": [
+        {
+          "numero": "E.1",
+          "enonce": "Sur la configuration IP d’une machine nommée MACH01 on peut lire :\nadresse Ipv4 : 172.16.100.201\nMasque de sous-réseau :  255.255.0.0\nPasserelle : 172.16.0.254\nSur la configuration IP d’une machine nommée MACH02 on peut lire :\nadresse Ipv4 : 172.16.100.202\nMasque de sous-réseau :  255.255.0.0\nPasserelle : 172.16.0.254\nDepuis la machine MACH02, à l'aide de quelle commande peut-on tester le dialogue entre ces deux machines ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "ping 172.16.100.201"
+            },
+            {
+              "lettre": "B",
+              "texte": "ping 172.16.100.202"
+            },
+            {
+              "lettre": "C",
+              "texte": "ping 172.16.100.254"
+            },
+            {
+              "lettre": "D",
+              "texte": "ping 255.255.0.0"
+            }
+          ]
+        },
+        {
+          "numero": "E.2",
+          "enonce": "Quelle commande du shell Linux permet de renommer un fichier ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "cp"
+            },
+            {
+              "lettre": "B",
+              "texte": "rm"
+            },
+            {
+              "lettre": "C",
+              "texte": "mv"
+            },
+            {
+              "lettre": "D",
+              "texte": "touch"
+            }
+          ]
+        },
+        {
+          "numero": "E.3",
+          "enonce": "La commande suivante vient d'être exécutée en ligne de commande sous Linux :\ncp /users/luc/interro.txt ./\nQue réalise cette commande ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "copie du fichier users vers le répertoire luc"
+            },
+            {
+              "lettre": "B",
+              "texte": "copie du fichier interro.txt vers le répertoire luc"
+            },
+            {
+              "lettre": "C",
+              "texte": "copie du fichier interro.txt vers le répertoire courant"
+            },
+            {
+              "lettre": "D",
+              "texte": "copie du fichier interro.txt vers le répertoire users"
+            }
+          ]
+        },
+        {
+          "numero": "E.4",
+          "enonce": "Lequel de ces périphériques n'est pas un périphérique d'entrée ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "le moniteur"
+            },
+            {
+              "lettre": "B",
+              "texte": "le clavier"
+            },
+            {
+              "lettre": "C",
+              "texte": "la souris"
+            },
+            {
+              "lettre": "D",
+              "texte": "le scanner"
+            }
+          ]
+        },
+        {
+          "numero": "E.5",
+          "enonce": "Sous Unix, quelle commande permet de créer un nouveau répertoire ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "mkdir"
+            },
+            {
+              "lettre": "B",
+              "texte": "echo"
+            },
+            {
+              "lettre": "C",
+              "texte": "ls"
+            },
+            {
+              "lettre": "D",
+              "texte": "rm"
+            }
+          ]
+        },
+        {
+          "numero": "E.6",
+          "enonce": "L'architecture client-serveur :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "est un mode de communication entre programmes"
+            },
+            {
+              "lettre": "B",
+              "texte": "est une architecture matérielle de coopération entre machines"
+            },
+            {
+              "lettre": "C",
+              "texte": "est un mode de communication entre routeurs"
+            },
+            {
+              "lettre": "D",
+              "texte": "est un mode de communication entre commutateurs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F",
+      "nom": "langages et programmation",
+      "questions": [
+        {
+          "numero": "F.1",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "a < b"
+            },
+            {
+              "lettre": "B",
+              "texte": "a < longueur(T)  et  b < longueur(T)"
+            },
+            {
+              "lettre": "C",
+              "texte": "a <= b  < longueur(T)"
+            },
+            {
+              "lettre": "D",
+              "texte": "a <= b  < longueur(T)  et T est un tableau trié"
+            }
+          ]
+        },
+        {
+          "numero": "F.2",
+          "enonce": "Soit 𝑛 un entier naturel. Sa factorielle est le produit des nombres entiers strictement positifs qui sont plus petits\nou égaux à 𝑛. Par exemple la factorielle de 4 vaut 1 × 2 × 3 × 4 = 24.\nQuelle est la fonction correcte parmi les suivantes ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i <= n:\nfact = fact * i\ni = i + 1\nreturn fact"
+            },
+            {
+              "lettre": "B",
+              "texte": "def factorielle(n):\ni = 1\nfact = 1\nwhile i < n:\nfact = fact * i\ni = i + 1\nreturn fact"
+            },
+            {
+              "lettre": "C",
+              "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i < n:\ni = i + 1\nfact = fact * i\nreturn fact"
+            },
+            {
+              "lettre": "D",
+              "texte": "def factorielle(n):\ni = 0\nfact = 1\nwhile i <= n:\ni = i + 1\nfact = fact * i\nreturn fact"
+            }
+          ]
+        },
+        {
+          "numero": "F.3",
+          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "random.randint(0,8)/2"
+            },
+            {
+              "lettre": "B",
+              "texte": "random.randint(0,8)/2 - 4"
+            },
+            {
+              "lettre": "C",
+              "texte": "random.randint(0,4)*2 - 2"
+            },
+            {
+              "lettre": "D",
+              "texte": "(random.randint(0,4) - 2) * 2"
+            }
+          ]
+        },
+        {
+          "numero": "F.4",
+          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "ranger(1,2,3)"
+            },
+            {
+              "lettre": "B",
+              "texte": "ranger(3,4,1)"
+            },
+            {
+              "lettre": "C",
+              "texte": "ranger(1,3,2)"
+            },
+            {
+              "lettre": "D",
+              "texte": "ranger(4,2,3)"
+            }
+          ]
+        },
+        {
+          "numero": "F.5",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "ce programme ne termine pas"
+            },
+            {
+              "lettre": "B",
+              "texte": "à la fin de l'exécution, la variable a vaut 5"
+            },
+            {
+              "lettre": "C",
+              "texte": "à la fin de l'exécution, la variable b vaut 34"
+            },
+            {
+              "lettre": "D",
+              "texte": "à la fin de l'exécution, la variable c vaut 42"
+            }
+          ]
+        },
+        {
+          "numero": "F.6",
+          "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "4"
+            },
+            {
+              "lettre": "B",
+              "texte": "9"
+            },
+            {
+              "lettre": "C",
+              "texte": "11"
+            },
+            {
+              "lettre": "D",
+              "texte": "19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "nom": "algorithmique",
+      "questions": [
+        {
+          "numero": "G.1",
+          "enonce": "On exécute le script suivant :\nliste = [4,8,12,6,2]\ndef permute(L):\nfor k in range(len(L)-1:\nif L[k] > L[k+1]:\nL[k],L[k+1] = L[k+1],L[k]\npermute(liste)\nQuelle est la valeur de liste à la fin de l'exécution du script ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "[2, 4, 8, 6, 12]"
+            },
+            {
+              "lettre": "B",
+              "texte": "[2, 4, 6, 8, 12]"
+            },
+            {
+              "lettre": "C",
+              "texte": "[4, 8, 6, 2, 12]"
+            },
+            {
+              "lettre": "D",
+              "texte": "[12, 8, 6, 4, 2]"
+            }
+          ]
+        },
+        {
+          "numero": "G.2",
+          "enonce": "À quelle catégorie appartient l’algorithme classique de rendu de monnaie ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "les algorithmes de classification et d'apprentissage"
+            },
+            {
+              "lettre": "B",
+              "texte": "les algorithmes de tri"
+            },
+            {
+              "lettre": "C",
+              "texte": "les algorithmes gloutons"
+            },
+            {
+              "lettre": "D",
+              "texte": "les algorithmes de mariages stables"
+            }
+          ]
+        },
+        {
+          "numero": "G.3",
+          "enonce": "La fonction ci-dessous permet d’effectuer une recherche par dichotomie de l’index m de l’élément x dans un\ntableau L de valeurs distinctes et triées.\ndef dicho(x,L):\ng = 0\nd = len(L)-1\nwhile g <= d:\nm = (g+d)//2\nif L[m] == x:\nreturn m\nelif L[m] < x:\ng = m+1\nelse:\nd = m-1\nreturn None\nCombien de fois la cinquième ligne du code de la fonction (m = (g+d)//2) sera-t-elle exécutée dans l'appel\ndicho(32, [4, 5, 7, 25, 32, 50, 51, 60] ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "1 fois"
+            },
+            {
+              "lettre": "B",
+              "texte": "2 fois"
+            },
+            {
+              "lettre": "C",
+              "texte": "3 fois"
+            },
+            {
+              "lettre": "D",
+              "texte": "4 fois"
+            }
+          ]
+        },
+        {
+          "numero": "G.4",
+          "enonce": "Quel est le coût d'un algorithme de recherche du maximum d'un tableau de nombres ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "constant"
+            },
+            {
+              "lettre": "B",
+              "texte": "logarithmique"
+            },
+            {
+              "lettre": "C",
+              "texte": "linéaire"
+            },
+            {
+              "lettre": "D",
+              "texte": "quadratique"
+            }
+          ]
+        },
+        {
+          "numero": "G.5",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "(4, 5)"
+            },
+            {
+              "lettre": "B",
+              "texte": "(10, 4)"
+            },
+            {
+              "lettre": "C",
+              "texte": "(10, 5)"
+            },
+            {
+              "lettre": "D",
+              "texte": "(15, 5)"
+            }
+          ]
+        },
+        {
+          "numero": "G.6",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "reponses": [
+            {
+              "lettre": "A",
+              "texte": "None"
+            },
+            {
+              "lettre": "B",
+              "texte": "-10"
+            },
+            {
+              "lettre": "C",
+              "texte": "-6"
+            },
+            {
+              "lettre": "D",
+              "texte": "35"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
