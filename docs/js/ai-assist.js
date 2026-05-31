@@ -101,16 +101,17 @@ async function copyPrompt(prompt) {
 export async function openAiProvider(provider, prompt) {
   const copied = await copyPrompt(prompt);
 
+  const url = provider.buildUrl(prompt);
+
   if (isAndroid() && provider.androidPackage) {
     try {
-      openAndroidIntent(prompt, provider.androidPackage);
+      openAndroidIntent(prompt, provider.androidPackage, url);
       return { copied, method: 'intent' };
     } catch {
       /* fallback web */
     }
   }
 
-  const url = provider.buildUrl(prompt);
   window.open(url, '_blank', 'noopener,noreferrer');
   return { copied, method: 'web' };
 }
