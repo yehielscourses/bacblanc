@@ -18,6 +18,7 @@ This repository hosts **E3C NSI Première** annales (PDF) and extracted QCM JSON
 |---------|---------|
 | `pip install -r requirements.txt` | PDF extraction dependency (`pymupdf`) |
 | `python3 scripts/extract_qcm_from_pdfs.py` | Regenerate `annales-nsi-premiere/qcm-json/` from PDFs |
+| `python3 scripts/add_qcm_corrections.py` | Generate `toutes-questions-uniques-avec-corrections.json` from batch files in `corrections-batches/` |
 
 ### VM update script
 
