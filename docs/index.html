@@ -47,6 +47,13 @@
         <div class="card card--hero">
           <h2>Choisissez un mode</h2>
           <p class="muted"><span id="question-bank-count">605</span> questions uniques issues des annales. Les questions répondues correctement ne reviennent plus.</p>
+          <div class="resume-banner card" id="resume-series-banner" hidden>
+            <div class="resume-banner__text">
+              <strong>Série en pause</strong>
+              <p class="muted" id="resume-series-detail"></p>
+            </div>
+            <button type="button" class="btn btn--primary btn--sm" id="btn-resume-series">Reprendre</button>
+          </div>
           <div class="mode-grid">
             <button type="button" class="mode-card" data-mode="series">
               <span class="mode-card__icon" aria-hidden="true">42</span>
@@ -71,12 +78,24 @@
 
       <section id="screen-quiz" class="screen">
         <div class="quiz-bar">
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-quit" title="Quitter">← Quitter</button>
+          <div class="quiz-bar__nav">
+            <button type="button" class="btn btn--ghost btn--sm quiz-bar__btn" id="btn-pause-series" hidden title="Mettre la série en pause">
+              <span class="quiz-bar__btn-icon" aria-hidden="true">⏸</span>
+              <span class="quiz-bar__btn-label">Pause</span>
+            </button>
+            <button type="button" class="btn btn--ghost btn--sm quiz-bar__btn" id="btn-quit" title="Quitter la session">
+              <span class="quiz-bar__btn-icon" aria-hidden="true">✕</span>
+              <span class="quiz-bar__btn-label">Quitter</span>
+            </button>
+          </div>
           <div class="quiz-bar__center">
             <span id="quiz-mode-label" class="badge"></span>
             <span id="quiz-progress" class="quiz-progress"></span>
           </div>
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-back" disabled title="Question précédente">← Préc.</button>
+          <button type="button" class="btn btn--ghost btn--sm quiz-bar__btn quiz-bar__btn--back" id="btn-back" disabled title="Revoir la question précédente">
+            <span class="quiz-bar__btn-icon" aria-hidden="true">←</span>
+            <span class="quiz-bar__btn-label">Précédente</span>
+          </button>
         </div>
 
         <div class="card quiz-card">
@@ -86,18 +105,36 @@
           </div>
           <div id="question-enonce" class="question-enonce"></div>
 
+          <div class="question-toolbar">
+            <button type="button" class="btn btn--secondary btn--sm" id="btn-ask-ai" title="Ouvrir un assistant IA avec la question">
+              <span aria-hidden="true">✨</span> Demander à l'IA
+            </button>
+          </div>
+
           <div id="answers" class="answers" role="group" aria-label="Réponses possibles"></div>
 
           <div id="feedback" class="feedback" hidden>
             <p id="feedback-message" class="feedback__message"></p>
             <div id="explanation" class="explanation" hidden>
-              <h4>Explication</h4>
-              <p id="explanation-text"></p>
+              <div class="explanation__header">
+                <h4>Explication</h4>
+                <button type="button" class="btn btn--ghost btn--sm" id="btn-toggle-explanation" hidden>Réduire</button>
+              </div>
+              <div id="explanation-text" class="explanation__body"></div>
             </div>
             <div class="feedback__actions">
               <button type="button" class="btn btn--primary" id="btn-continue" hidden>Continuer</button>
-              <button type="button" class="btn btn--secondary" id="btn-show-explanation" hidden>Voir l'explication</button>
             </div>
+          </div>
+        </div>
+
+        <div id="ai-menu" class="ai-menu" hidden role="dialog" aria-labelledby="ai-menu-title" aria-modal="true">
+          <div class="ai-menu__backdrop" id="ai-menu-backdrop"></div>
+          <div class="ai-menu__panel card">
+            <h3 id="ai-menu-title" class="ai-menu__title">Choisir un assistant</h3>
+            <p class="muted ai-menu__hint">La question et les réponses seront copiées puis ouvertes dans l'application choisie (Android) ou dans le navigateur.</p>
+            <div id="ai-menu-providers" class="ai-menu__list"></div>
+            <button type="button" class="btn btn--ghost btn--sm ai-menu__close" id="ai-menu-close">Fermer</button>
           </div>
         </div>
 

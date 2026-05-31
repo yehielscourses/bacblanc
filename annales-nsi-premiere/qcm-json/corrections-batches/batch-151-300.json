@@ -362,7 +362,7 @@
   {
     "id": 223,
     "bonne_reponse": "D",
-    "explication": "Le groupe a les droits r-x (lecture et exécution), pas l'écriture : cette affirmation est fausse."
+    "explication": "La réponse fausse est la **D** : **« les membres du groupe de Joseph ont l'autorisation de modifier ce fichier »**.\n\n### En détail : décryptage des droits -rwxr-xr--\n\nPour comprendre pourquoi, il faut découper la chaîne de caractères des droits (10 caractères au total) en quatre parties distinctes :\n\n1. **Le premier caractère (-)** : indique le type de fichier. Un tiret `-` signifie qu'il s'agit d'un **fichier ordinaire** (si c'était un dossier, on aurait un `d`).\n2. **Le premier bloc de trois (rwx)** : les droits du **propriétaire** (Joseph).\n   * `r` (read) : lecture → **autorisée**\n   * `w` (write) : écriture/modification → **autorisée**\n   * `x` (execute) : exécution → **autorisée**\n   * *(Ce qui valide l'affirmation A)*\n3. **Le deuxième bloc de trois (r-x)** : les droits du **groupe** propriétaire.\n   * `r` : lecture → **autorisée** *(valide l'affirmation B)*\n   * `-` : écriture/modification → **interdite** *(rend l'affirmation D fausse)*\n   * `x` : exécution → **autorisée**\n4. **Le troisième bloc de trois (r--)** : les droits de **tous les autres utilisateurs**.\n   * `r` : lecture → **autorisée** *(valide l'affirmation C)*\n   * `-` : écriture → interdite\n   * `-` : exécution → interdite"
   },
   {
     "id": 224,

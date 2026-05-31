@@ -3,7 +3,10 @@ const KEYS = {
   answerLog: 'nsi-quiz-answer-log',
   colorScheme: 'nsi-quiz-color-scheme',
   seriesHistory: 'nsi-quiz-series-results',
+  pausedSeries: 'nsi-quiz-paused-series',
 };
+
+/** @typedef {{ seriesQueueIds: number[], seriesIndex: number, sessionHistory: { questionId: number, selected: string | null, correct: boolean }[], currentSeriesAnswers: { themeId: string, correct: boolean }[], savedAt: number }} PausedSeries */
 
 /** @typedef {{ questionId: number, themeId: string, correct: boolean, at: number, mode: 'series' | 'unlimited' }} AnswerEntry */
 
@@ -69,6 +72,26 @@ export function resetAllProgress() {
   clearMastered();
   clearAnswerLog();
   localStorage.removeItem(KEYS.seriesHistory);
+  clearPausedSeries();
+}
+
+/** @returns {PausedSeries | null} */
+export function getPausedSeries() {
+  try {
+    const raw = localStorage.getItem(KEYS.pausedSeries);
+    return raw ? /** @type {PausedSeries} */ (JSON.parse(raw)) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** @param {PausedSeries} state */
+export function savePausedSeries(state) {
+  localStorage.setItem(KEYS.pausedSeries, JSON.stringify(state));
+}
+
+export function clearPausedSeries() {
+  localStorage.removeItem(KEYS.pausedSeries);
 }
 
 export function getColorSchemePreference() {

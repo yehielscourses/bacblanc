@@ -6,6 +6,9 @@ import {
   resetAllProgress,
   getAnswerLog,
   getSeriesResults,
+  getPausedSeries,
+  savePausedSeries,
+  clearPausedSeries,
 } from './storage.js';
 import {
   unlimitedMainScore,
@@ -22,6 +25,8 @@ import {
   countAvailable,
 } from './quiz-engine.js';
 import { getColorSchemePreference } from './storage.js';
+import { setRichContent } from './rich-text.js';
+import { AI_PROVIDERS, buildQuizPrompt, openAiProvider } from './ai-assist.js';
 
 const QCM_DATA_URL = () => assetUrl('data/qcm.json');
 
@@ -41,7 +46,7 @@ let seriesQueue = [];
 let seriesIndex = 0;
 
 /**
- * @type {{ question: import('./config.js').Question, selected: string | null, correct: boolean, reviewed: boolean }[]}
+ * @type {{ question: import('./config.js').Question, selected: string | null, correct: boolean, explanationCollapsed: boolean }[]}
  */
 let sessionHistory = [];
 
@@ -56,16 +61,6 @@ let awaitingContinue = false;
 
 /** @type {boolean} */
 let isReviewingHistory = false;
-
-/** @type {ReturnType<typeof setTimeout> | null} */
-let autoAdvanceTimer = null;
-
-function clearAutoAdvance() {
-  if (autoAdvanceTimer) {
-    clearTimeout(autoAdvanceTimer);
-    autoAdvanceTimer = null;
-  }
-}
 
 const $ = (sel) => /** @type {HTMLElement} */ (document.querySelector(sel));
 
@@ -92,7 +87,27 @@ async function loadQuestions() {
   if (countEl) countEl.textContent = String(count);
 }
 
+function questionById(id) {
+  return questions.find((q) => q.id === id) ?? null;
+}
+
+function renderResumeBanner() {
+  const paused = getPausedSeries();
+  const banner = $('#resume-series-banner');
+  if (!paused || !paused.seriesQueueIds?.length) {
+    banner.hidden = true;
+    return;
+  }
+  const answered = paused.sessionHistory.filter((e) => e.selected != null).length;
+  const total = paused.seriesQueueIds.length;
+  const idx = Math.min(paused.seriesIndex + 1, total);
+  $('#resume-series-detail').textContent =
+    `Question ${idx} / ${total} · ${answered} réponse${answered > 1 ? 's' : ''} enregistrée${answered > 1 ? 's' : ''}`;
+  banner.hidden = false;
+}
+
 function renderHomeStats() {
+  renderResumeBanner();
   const log = getAnswerLog();
   const seriesHist = getSeriesResults();
   const mastered = countMastered();
@@ -128,7 +143,9 @@ function renderHomeStats() {
     const q = questions.find((x) => x.theme_id === id);
     const name = q ? `${id} — ${q.theme_nom}` : id;
     return `<div class="score-row"><span class="score-row__theme">${escapeHtml(name)}</span><span>${t.note} / 20</span></div>`;
-  }).filter(Boolean).join('');
+  })
+    .filter(Boolean)
+    .join('');
 
   if (themeLines) {
     statsEl.innerHTML += `<div class="stat-block" style="grid-column:1/-1"><div class="stat-block__label">Sous-notes par thème (illimité)</div>${themeLines}</div>`;
@@ -138,7 +155,86 @@ function renderHomeStats() {
     `${mastered} question${mastered > 1 ? 's' : ''} maîtrisée${mastered > 1 ? 's' : ''} · ${avail} restante${avail > 1 ? 's' : ''} dans la banque`;
 }
 
-function startMode(mode) {
+function persistPausedSeries() {
+  if (currentMode !== 'series' || seriesQueue.length === 0) return;
+  savePausedSeries({
+    seriesQueueIds: seriesQueue.map((q) => q.id),
+    seriesIndex,
+    sessionHistory: sessionHistory.map((e) => ({
+      questionId: e.question.id,
+      selected: e.selected,
+      correct: e.correct,
+    })),
+    currentSeriesAnswers: [...currentSeriesAnswers],
+    savedAt: Date.now(),
+  });
+  renderResumeBanner();
+}
+
+function resumePausedSeries() {
+  const paused = getPausedSeries();
+  if (!paused) return;
+
+  const queue = paused.seriesQueueIds.map((id) => questionById(id)).filter(Boolean);
+  if (queue.length === 0) {
+    clearPausedSeries();
+    renderResumeBanner();
+    alert('Impossible de reprendre : questions introuvables.');
+    return;
+  }
+
+  currentMode = 'series';
+  seriesQueue = queue;
+  seriesIndex = Math.min(paused.seriesIndex, seriesQueue.length - 1);
+  currentSeriesAnswers = [...paused.currentSeriesAnswers];
+  sessionHistory = paused.sessionHistory
+    .map((e) => {
+      const q = questionById(e.questionId);
+      if (!q) return null;
+      return {
+        question: q,
+        selected: e.selected,
+        correct: e.correct,
+        explanationCollapsed: false,
+      };
+    })
+    .filter(Boolean);
+  isReviewingHistory = false;
+  awaitingContinue = false;
+
+  const q = seriesQueue[seriesIndex];
+  const histIdx = sessionHistory.findIndex((e) => e.question.id === q?.id);
+  if (histIdx >= 0) {
+    historyIndex = histIdx;
+    renderQuestion(q, sessionHistory[histIdx].selected);
+  } else if (q) {
+    const entry = { question: q, selected: null, correct: false, explanationCollapsed: false };
+    sessionHistory.push(entry);
+    historyIndex = sessionHistory.length - 1;
+    renderQuestion(q, null);
+  }
+
+  $('#quiz-mode-label').textContent = 'Série E3C';
+  updateLiveScores();
+  updateQuizChrome();
+  showScreen('quiz');
+}
+
+function startMode(mode, { resume = false } = {}) {
+  if (mode === 'series' && resume) {
+    resumePausedSeries();
+    return;
+  }
+
+  if (mode === 'series' && getPausedSeries()) {
+    const choice = confirm(
+      'Une série est en pause. OK = nouvelle série (l\'ancienne sera abandonnée). Annuler = revenir à l\'accueil.'
+    );
+    if (!choice) return;
+    clearPausedSeries();
+    renderResumeBanner();
+  }
+
   currentMode = mode;
   sessionHistory = [];
   historyIndex = -1;
@@ -168,19 +264,8 @@ function startMode(mode) {
 
   $('#quiz-mode-label').textContent = mode === 'series' ? 'Série E3C' : 'Illimité';
   updateLiveScores();
+  updateQuizChrome();
   showScreen('quiz');
-}
-
-function getCurrentQuestion() {
-  if (isReviewingHistory && historyIndex >= 0) {
-    return sessionHistory[historyIndex].question;
-  }
-  if (currentMode === 'series') return seriesQueue[seriesIndex] ?? null;
-  const last = sessionHistory[historyIndex];
-  if (last && !last.reviewed && historyIndex === sessionHistory.length - 1) {
-    return last.question;
-  }
-  return sessionHistory[historyIndex]?.question ?? null;
 }
 
 function getCurrentSessionEntry() {
@@ -194,11 +279,18 @@ function showCurrentSeriesQuestion() {
     finishSeries();
     return;
   }
-  const entry = { question: q, selected: null, correct: false, reviewed: false };
-  sessionHistory.push(entry);
-  historyIndex = sessionHistory.length - 1;
-  renderQuestion(q, null);
+  const existing = sessionHistory.find((e) => e.question.id === q.id && e.selected == null);
+  if (existing) {
+    historyIndex = sessionHistory.indexOf(existing);
+    renderQuestion(q, null);
+  } else {
+    const entry = { question: q, selected: null, correct: false, explanationCollapsed: false };
+    sessionHistory.push(entry);
+    historyIndex = sessionHistory.length - 1;
+    renderQuestion(q, null);
+  }
   updateQuizChrome();
+  persistPausedSeries();
 }
 
 function advanceToNewQuestion() {
@@ -210,7 +302,7 @@ function advanceToNewQuestion() {
     renderHomeStats();
     return;
   }
-  const entry = { question: q, selected: null, correct: false, reviewed: false };
+  const entry = { question: q, selected: null, correct: false, explanationCollapsed: false };
   sessionHistory.push(entry);
   historyIndex = sessionHistory.length - 1;
   renderQuestion(q, null);
@@ -225,7 +317,7 @@ function renderQuestion(q, selectedLetter) {
   $('#question-theme').textContent = `${q.theme_id} — ${q.theme_nom}`;
   $('#question-theme').setAttribute('data-theme-id', q.theme_id);
   $('#question-id').textContent = q.numero_original || `#${q.id}`;
-  $('#question-enonce').textContent = q.enonce;
+  setRichContent($('#question-enonce'), q.enonce, 'enonce');
 
   const answersEl = $('#answers');
   answersEl.innerHTML = '';
@@ -238,8 +330,9 @@ function renderQuestion(q, selectedLetter) {
     if (answered) {
       btn.disabled = true;
       if (r.lettre === q.bonne_reponse) extraClass = ' answer-btn--correct';
-      else if (r.lettre === selectedLetter && selectedLetter !== q.bonne_reponse) extraClass = ' answer-btn--wrong';
-      else if (answered) extraClass = ' answer-btn--dimmed';
+      else if (r.lettre === selectedLetter && selectedLetter !== q.bonne_reponse)
+        extraClass = ' answer-btn--wrong';
+      else extraClass = ' answer-btn--dimmed';
     }
     if (selectedLetter === r.lettre && !extraClass.includes('correct') && !extraClass.includes('wrong')) {
       extraClass = ' answer-btn--selected';
@@ -256,58 +349,54 @@ function renderQuestion(q, selectedLetter) {
   const explanation = $('#explanation');
   const msg = $('#feedback-message');
   const btnContinue = $('#btn-continue');
-  const btnShowExp = $('#btn-show-explanation');
+  const btnToggleExp = $('#btn-toggle-explanation');
 
   if (answered) {
     feedback.hidden = false;
-    if (isCorrect) {
-      msg.textContent = isReviewingHistory ? 'Réponse correcte' : 'Bonne réponse !';
-      msg.className = 'feedback__message feedback__message--success';
-      if (isReviewingHistory) entry.reviewed = true;
-      explanation.hidden = !entry?.reviewed;
-      $('#explanation-text').textContent = q.explication;
-      btnShowExp.hidden = entry?.reviewed;
-      if (!entry?.reviewed) {
-        btnShowExp.onclick = () => {
-          entry.reviewed = true;
-          explanation.hidden = false;
-          btnShowExp.hidden = true;
-        };
-      }
-      if (isReviewingHistory) {
-        btnContinue.hidden = false;
-        btnContinue.textContent = 'Reprendre';
-        btnContinue.onclick = () => onResumeFromReview();
-      } else if (currentMode === 'unlimited') {
-        btnContinue.hidden = false;
-        btnContinue.textContent = 'Question suivante';
-        btnContinue.onclick = () => onContinueAfterCorrect();
-      } else if (currentMode === 'series') {
-        btnContinue.hidden = false;
-        btnContinue.textContent =
-          seriesIndex >= seriesQueue.length - 1 ? 'Voir les résultats' : 'Question suivante';
-        btnContinue.onclick = () => onContinueAfterCorrect();
-      } else {
-        btnContinue.hidden = true;
-      }
+    msg.textContent = isCorrect
+      ? isReviewingHistory
+        ? 'Réponse correcte'
+        : 'Bonne réponse !'
+      : 'Mauvaise réponse — la bonne réponse est ' + q.bonne_reponse;
+    msg.className = isCorrect
+      ? 'feedback__message feedback__message--success'
+      : 'feedback__message feedback__message--error';
+
+    explanation.hidden = false;
+    setRichContent($('#explanation-text'), q.explication, 'explanation');
+    const collapsed = entry?.explanationCollapsed ?? false;
+    explanation.classList.toggle('explanation--collapsed', collapsed);
+    btnToggleExp.hidden = false;
+    btnToggleExp.textContent = collapsed ? "Voir l'explication" : 'Réduire';
+    btnToggleExp.onclick = () => {
+      if (!entry) return;
+      entry.explanationCollapsed = !entry.explanationCollapsed;
+      explanation.classList.toggle('explanation--collapsed', entry.explanationCollapsed);
+      btnToggleExp.textContent = entry.explanationCollapsed ? "Voir l'explication" : 'Réduire';
+    };
+
+    btnContinue.hidden = false;
+    if (isReviewingHistory) {
+      btnContinue.textContent = 'Revenir à la question en cours';
+      btnContinue.onclick = () => onResumeFromReview();
+    } else if (currentMode === 'series') {
+      btnContinue.textContent =
+        seriesIndex >= seriesQueue.length - 1 ? 'Voir les résultats' : 'Question suivante';
+      btnContinue.onclick = () => onContinueAfterAnswer();
     } else {
-      msg.textContent = 'Mauvaise réponse';
-      msg.className = 'feedback__message feedback__message--error';
-      explanation.hidden = false;
-      $('#explanation-text').textContent = q.explication;
-      btnShowExp.hidden = true;
-      btnContinue.hidden = false;
-      btnContinue.textContent = isReviewingHistory ? 'Retour' : 'Continuer';
-      btnContinue.onclick = () => onContinueAfterWrong();
+      btnContinue.textContent = 'Question suivante';
+      btnContinue.onclick = () => onContinueAfterAnswer();
     }
   } else {
     feedback.hidden = true;
     explanation.hidden = true;
     btnContinue.hidden = true;
-    btnShowExp.hidden = true;
+    btnToggleExp.hidden = true;
   }
 
   $('#btn-back').disabled = historyIndex <= 0;
+
+  $('#btn-pause-series').hidden = currentMode !== 'series';
 }
 
 function onAnswerSelected(letter) {
@@ -319,6 +408,7 @@ function onAnswerSelected(letter) {
   const correct = letter === q.bonne_reponse;
   entry.selected = letter;
   entry.correct = correct;
+  entry.explanationCollapsed = false;
   awaitingContinue = true;
 
   recordAnswerOutcome(q.id, correct);
@@ -332,67 +422,34 @@ function onAnswerSelected(letter) {
 
   if (currentMode === 'series') {
     currentSeriesAnswers.push({ themeId: q.theme_id, correct });
+    persistPausedSeries();
   }
 
   renderQuestion(q, letter);
   updateLiveScores();
   updateQuizChrome();
-
-  if (correct) {
-    clearAutoAdvance();
-    autoAdvanceTimer = setTimeout(() => {
-      autoAdvanceTimer = null;
-      if (!isReviewingHistory && entry === getCurrentSessionEntry() && entry.selected != null) {
-        awaitingContinue = false;
-        if (currentMode === 'unlimited') {
-          advanceToNewQuestion();
-        } else if (seriesIndex < seriesQueue.length - 1) {
-          seriesIndex += 1;
-          showCurrentSeriesQuestion();
-        } else {
-          finishSeries();
-        }
-      }
-    }, 1400);
-  }
 }
 
 function onResumeFromReview() {
-  clearAutoAdvance();
   awaitingContinue = false;
   isReviewingHistory = false;
+  if (currentMode === 'series') {
+    const q = seriesQueue[seriesIndex];
+    const idx = sessionHistory.findIndex((e) => e.question.id === q?.id);
+    if (idx >= 0) historyIndex = idx;
+    else historyIndex = sessionHistory.length - 1;
+  } else {
+    historyIndex = sessionHistory.length - 1;
+  }
   const entry = getCurrentSessionEntry();
-  const q = entry?.question ?? getCurrentQuestion();
-  if (q && entry) renderQuestion(q, entry.selected);
+  if (entry) renderQuestion(entry.question, entry.selected);
   updateQuizChrome();
 }
 
-function onContinueAfterCorrect() {
-  clearAutoAdvance();
+function onContinueAfterAnswer() {
   awaitingContinue = false;
   if (isReviewingHistory) {
     onResumeFromReview();
-    return;
-  }
-  if (currentMode === 'series') {
-    if (seriesIndex >= seriesQueue.length - 1) {
-      finishSeries();
-      return;
-    }
-    seriesIndex += 1;
-    showCurrentSeriesQuestion();
-  } else {
-    advanceToNewQuestion();
-  }
-}
-
-function onContinueAfterWrong() {
-  clearAutoAdvance();
-  awaitingContinue = false;
-  if (isReviewingHistory) {
-    isReviewingHistory = false;
-    const q = getCurrentQuestion();
-    renderQuestion(q, getCurrentSessionEntry()?.selected ?? null);
     return;
   }
   if (currentMode === 'series') {
@@ -418,6 +475,8 @@ function goBack() {
 }
 
 function updateQuizChrome() {
+  $('#btn-pause-series').hidden = currentMode !== 'series';
+
   if (currentMode === 'series') {
     const total = seriesQueue.length;
     const current = isReviewingHistory
@@ -437,15 +496,13 @@ function updateLiveScores() {
   if (currentMode === 'series') {
     const correct = currentSeriesAnswers.filter((a) => a.correct).length;
     const total = currentSeriesAnswers.length;
-  const byTheme = seriesThemeScores(currentSeriesAnswers);
+    const byTheme = seriesThemeScores(currentSeriesAnswers);
     let html = `<div class="score-row score-row--main"><span>Série en cours</span><span>${correct} / ${total}</span></div>`;
     html += `<div class="score-row"><span class="muted">Objectif</span><span>${seriesQueue.length} questions</span></div>`;
     for (const id of THEME_IDS) {
       const t = byTheme[id];
       if (!t) continue;
-      const q = questions.find((x) => x.theme_id === id);
-      const name = q ? `${id}` : id;
-      html += `<div class="score-row"><span class="score-row__theme">Thème ${name}</span><span>${t.correct} / ${t.total}</span></div>`;
+      html += `<div class="score-row"><span class="score-row__theme">Thème ${id}</span><span>${t.correct} / ${t.total}</span></div>`;
     }
     el.innerHTML = html;
   } else {
@@ -463,6 +520,9 @@ function updateLiveScores() {
 }
 
 function finishSeries() {
+  clearPausedSeries();
+  renderResumeBanner();
+
   const correct = currentSeriesAnswers.filter((a) => a.correct).length;
   const total = currentSeriesAnswers.length;
   const byTheme = seriesThemeScores(currentSeriesAnswers);
@@ -499,13 +559,32 @@ function finishSeries() {
       </div>`;
   }
   themeEl.innerHTML = html;
+  currentMode = null;
   renderHomeStats();
   showScreen('results');
 }
 
+function pauseSeries() {
+  if (currentMode !== 'series') return;
+  persistPausedSeries();
+  currentMode = null;
+  renderHomeStats();
+  showScreen('home');
+}
+
 function quitQuiz() {
-  clearAutoAdvance();
-  if (sessionHistory.some((e) => e.selected != null)) {
+  if (currentMode === 'series' && sessionHistory.some((e) => e.selected != null)) {
+    const pause = confirm(
+      'Mettre la série en pause pour la reprendre plus tard ?\n\nOK = pause · Annuler = choisir une autre action'
+    );
+    if (pause) {
+      pauseSeries();
+      return;
+    }
+    const abandon = confirm('Abandonner définitivement cette série ? La progression de la série sera perdue.');
+    if (!abandon) return;
+    clearPausedSeries();
+  } else if (sessionHistory.some((e) => e.selected != null)) {
     const ok = confirm('Quitter la session en cours ?');
     if (!ok) return;
   }
@@ -514,15 +593,62 @@ function quitQuiz() {
   showScreen('home');
 }
 
+function getCurrentQuestionForAi() {
+  const entry = getCurrentSessionEntry();
+  if (entry) return entry.question;
+  if (currentMode === 'series') return seriesQueue[seriesIndex] ?? null;
+  return null;
+}
+
+function openAiMenu() {
+  const q = getCurrentQuestionForAi();
+  if (!q) return;
+  const menu = $('#ai-menu');
+  const list = $('#ai-menu-providers');
+  list.innerHTML = '';
+  const prompt = buildQuizPrompt(q);
+
+  for (const provider of AI_PROVIDERS) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ai-menu__item';
+    btn.innerHTML = `<span class="ai-menu__item-icon">${provider.icon}</span><span>${escapeHtml(provider.label)}</span>`;
+    btn.addEventListener('click', async () => {
+      closeAiMenu();
+      const result = await openAiProvider(provider, prompt);
+      const toast = document.createElement('p');
+      toast.className = 'ai-toast';
+      toast.textContent = result.copied
+        ? `Texte copié — ouverture de ${provider.label}…`
+        : `Ouverture de ${provider.label}…`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2800);
+    });
+    list.appendChild(btn);
+  }
+
+  menu.hidden = false;
+}
+
+function closeAiMenu() {
+  $('#ai-menu').hidden = true;
+}
+
 function bindEvents() {
   document.querySelectorAll('[data-mode]').forEach((btn) => {
     btn.addEventListener('click', () => startMode(/** @type {Mode} */ (btn.getAttribute('data-mode'))));
   });
 
+  $('#btn-resume-series').addEventListener('click', () => startMode('series', { resume: true }));
   $('#btn-quit').addEventListener('click', quitQuiz);
+  $('#btn-pause-series').addEventListener('click', pauseSeries);
   $('#btn-back').addEventListener('click', goBack);
+  $('#btn-ask-ai').addEventListener('click', openAiMenu);
+  $('#ai-menu-close').addEventListener('click', closeAiMenu);
+  $('#ai-menu-backdrop').addEventListener('click', closeAiMenu);
+
   $('#btn-reset-progress').addEventListener('click', () => {
-    if (confirm('Effacer toute la progression (questions maîtrisées, historique, notes) ?')) {
+    if (confirm('Effacer toute la progression (questions maîtrisées, historique, notes, séries en pause) ?')) {
       resetAllProgress();
       renderHomeStats();
     }
