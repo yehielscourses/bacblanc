@@ -1,15 +1,24 @@
 /**
  * Ouverture d'assistants IA avec la question QCM pré-remplie.
- * Android : intents SEND ou VIEW vers le package de l'app (pas le Play Store).
+ * Android : intents vers le bon package (manifeste Google App / ChatGPT, etc.).
  */
 
-/** @typedef {'send' | 'view'} AndroidLaunchMode */
+/** Package Gemini intégré dans l'app Google (manifeste googlequicksearchbox). */
+export const GEMINI_ANDROID_PACKAGE = 'com.google.android.googlequicksearchbox';
+
+/** Ancienne app Bard autonome (certains appareils). */
+export const GEMINI_BARD_PACKAGE = 'com.google.android.apps.bard';
+
+/**
+ * @typedef {'send' | 'view' | 'text-assist' | 'process-text' | 'gemini'} AndroidLaunchMode
+ */
 
 /**
  * @typedef {{
  *   id: string,
  *   label: string,
  *   androidPackage?: string,
+ *   androidPackageFallbacks?: string[],
  *   androidLaunch?: AndroidLaunchMode,
  *   buildAppUrl?: (prompt: string) => string,
  *   iosScheme?: string,
@@ -42,8 +51,9 @@ export const AI_PROVIDERS = [
   {
     id: 'gemini',
     label: 'Gemini',
-    androidPackage: 'com.google.android.apps.bard',
-    androidLaunch: 'send',
+    androidPackage: GEMINI_ANDROID_PACKAGE,
+    androidPackageFallbacks: [GEMINI_BARD_PACKAGE],
+    androidLaunch: 'gemini',
     buildAppUrl: (prompt) =>
       `https://gemini.google.com/app?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
     iosScheme: 'googlegemini://',
@@ -94,19 +104,22 @@ function isIos() {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
+function encodedTextSlice(text) {
+  return encodeURIComponent(text.slice(0, MAX_INTENT_TEXT));
+}
+
 /**
- * Intent SEND : ouvre l'app ciblée avec android.intent.extra.TEXT (Gemini, etc.).
+ * Intent SEND + EXTRA_TEXT (SharesheetAimEntrypoint dans le manifeste Google).
  * @param {string} packageName
  * @param {string} text
  */
 export function buildAndroidSendIntent(packageName, text) {
-  const body = encodeURIComponent(text.slice(0, MAX_INTENT_TEXT));
+  const body = encodedTextSlice(text);
   return `intent://send/#Intent;action=android.intent.action.SEND;type=text/plain;S.android.intent.extra.TEXT=${body};package=${packageName};end`;
 }
 
 /**
- * Intent VIEW : lien https ouvert dans l'app si installée (ChatGPT ?q=, etc.).
- * Pas de browser_fallback_url ? évite le Play Store.
+ * Intent VIEW : App Link https (gemini.google.com/app, chatgpt.com/?q=, …).
  * @param {string} packageName
  * @param {string} httpsUrl
  */
@@ -117,33 +130,80 @@ export function buildAndroidViewIntent(packageName, httpsUrl) {
 }
 
 /**
+ * Intent TEXT_ASSIST — action déclarée par GoogleAppTextAssistEntrypointExternal.
+ * @param {string} packageName
+ * @param {string} text
+ */
+export function buildAndroidTextAssistIntent(packageName, text) {
+  const body = encodedTextSlice(text);
+  return `intent:#Intent;action=com.google.android.googlequicksearchbox.TEXT_ASSIST;package=${packageName};S.android.intent.extra.TEXT=${body};end`;
+}
+
+/**
+ * Intent PROCESS_TEXT — ProcessTextGatewayActivity (Robin / Gemini).
+ * @param {string} packageName
+ * @param {string} text
+ */
+export function buildAndroidProcessTextIntent(packageName, text) {
+  const body = encodedTextSlice(text);
+  return `intent:#Intent;action=android.intent.action.PROCESS_TEXT;type=text/plain;S.android.intent.extra.PROCESS_TEXT=${body};package=${packageName};end`;
+}
+
+/**
+ * Stratégies Android pour Gemini (ordre : App Link ? TEXT_ASSIST ? PROCESS_TEXT ? SEND).
+ * @param {string} prompt
+ * @param {string} packageName
+ * @returns {{ url: string, method: string }[]}
+ */
+export function buildGeminiAndroidIntents(prompt, packageName = GEMINI_ANDROID_PACKAGE) {
+  const text = prompt.slice(0, MAX_INTENT_TEXT);
+  const appUrl = `https://gemini.google.com/app?q=${encodeURIComponent(prompt.slice(0, 8000))}`;
+  return [
+    { url: buildAndroidViewIntent(packageName, appUrl), method: 'android-view' },
+    { url: buildAndroidTextAssistIntent(packageName, text), method: 'android-text-assist' },
+    { url: buildAndroidProcessTextIntent(packageName, text), method: 'android-process-text' },
+    { url: buildAndroidSendIntent(packageName, text), method: 'android-send' },
+  ];
+}
+
+/**
  * @param {AiProvider} provider
  * @param {string} prompt
+ * @param {string} [packageOverride]
+ * @returns {{ url: string, method: string } | null}
  */
-export function buildAndroidIntentUrl(provider, prompt) {
-  if (!provider.androidPackage) return null;
+export function buildAndroidIntent(provider, prompt, packageOverride) {
+  const pkg = packageOverride ?? provider.androidPackage;
+  if (!pkg) return null;
+
+  if (provider.androidLaunch === 'gemini') {
+    return buildGeminiAndroidIntents(prompt, pkg)[0];
+  }
 
   if (provider.androidLaunch === 'send') {
-    return buildAndroidSendIntent(provider.androidPackage, prompt);
+    return { url: buildAndroidSendIntent(pkg, prompt), method: 'android-send' };
   }
 
   if (provider.buildAppUrl) {
-    return buildAndroidViewIntent(provider.androidPackage, provider.buildAppUrl(prompt));
+    return {
+      url: buildAndroidViewIntent(pkg, provider.buildAppUrl(prompt)),
+      method: 'android-view',
+    };
   }
 
-  return buildAndroidSendIntent(provider.androidPackage, prompt);
+  return { url: buildAndroidSendIntent(pkg, prompt), method: 'android-send' };
+}
+
+/** @deprecated Utiliser buildAndroidIntent */
+export function buildAndroidIntentUrl(provider, prompt) {
+  return buildAndroidIntent(provider, prompt)?.url ?? null;
 }
 
 /**
  * @param {string} intentUrl
  */
 function launchAndroidIntent(intentUrl) {
-  const a = document.createElement('a');
-  a.href = intentUrl;
-  a.style.display = 'none';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
+  window.location.href = intentUrl;
 }
 
 function launchIosApp(scheme) {
@@ -175,30 +235,30 @@ export function canLaunchNativeAiApp() {
 /**
  * @param {AiProvider} provider
  * @param {string} prompt
- * @returns {Promise<{ copied: boolean, method: 'android-send' | 'android-view' | 'ios' | 'unsupported', launched: boolean }>}
+ * @returns {Promise<{ copied: boolean, method: string, launched: boolean }>}
  */
 export async function openAiProvider(provider, prompt) {
   const copied = await copyPrompt(prompt);
   const platform = getAiLaunchPlatform();
 
   if (platform === 'android' && provider.androidPackage) {
-    const intentUrl = buildAndroidIntentUrl(provider, prompt);
-    if (intentUrl) {
+    const packages = [
+      provider.androidPackage,
+      ...(provider.androidPackageFallbacks ?? []),
+    ];
+
+    for (const pkg of packages) {
+      const intent = buildAndroidIntent(provider, prompt, pkg);
+      if (!intent) continue;
       try {
-        launchAndroidIntent(intentUrl);
-        return {
-          copied,
-          method: provider.androidLaunch === 'send' ? 'android-send' : 'android-view',
-          launched: true,
-        };
+        launchAndroidIntent(intent.url);
+        return { copied, method: intent.method, launched: true };
       } catch {
-        return {
-          copied,
-          method: provider.androidLaunch === 'send' ? 'android-send' : 'android-view',
-          launched: false,
-        };
+        /* essayer le package suivant */
       }
     }
+
+    return { copied, method: 'android-failed', launched: false };
   }
 
   if (platform === 'ios' && provider.iosScheme) {
@@ -216,7 +276,7 @@ export async function openAiProvider(provider, prompt) {
 export function getAiMenuHint() {
   const platform = getAiLaunchPlatform();
   if (platform === 'android') {
-    return "Android : intent vers l'app installée avec le texte de la question (SEND ou lien ?q=). Si le champ reste vide, collez depuis le presse-papiers.";
+    return "Gemini s'ouvre via l'app Google (com.google.android.googlequicksearchbox) avec le lien gemini.google.com/app?q=… — pas le Play Store. Texte aussi copié.";
   }
   if (platform === 'ios') {
     return "iOS : l'app s'ouvre si installée ; le texte est copié (préremplissage limité par Safari).";
