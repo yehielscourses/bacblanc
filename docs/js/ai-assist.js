@@ -1,9 +1,20 @@
 /**
  * Ouverture d'assistants IA avec la question QCM pré-remplie.
- * Tente d'ouvrir l'application native (Android / iOS) — pas le site web.
+ * Android : intents SEND ou VIEW vers le package de l'app (pas le Play Store).
  */
 
-/** @typedef {{ id: string, label: string, icon: string, androidPackage?: string, iosScheme?: string }} AiProvider */
+/** @typedef {'send' | 'view'} AndroidLaunchMode */
+
+/**
+ * @typedef {{
+ *   id: string,
+ *   label: string,
+ *   androidPackage?: string,
+ *   androidLaunch?: AndroidLaunchMode,
+ *   buildAppUrl?: (prompt: string) => string,
+ *   iosScheme?: string,
+ * }} AiProvider
+ */
 
 /** @param {import('./config.js').Question} q */
 export function buildQuizPrompt(q) {
@@ -31,39 +42,49 @@ export const AI_PROVIDERS = [
   {
     id: 'gemini',
     label: 'Gemini',
-    icon: '?',
     androidPackage: 'com.google.android.apps.bard',
+    androidLaunch: 'send',
+    buildAppUrl: (prompt) =>
+      `https://gemini.google.com/app?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
     iosScheme: 'googlegemini://',
   },
   {
     id: 'chatgpt',
     label: 'ChatGPT',
-    icon: '??',
     androidPackage: 'com.openai.chatgpt',
+    androidLaunch: 'view',
+    buildAppUrl: (prompt) => `https://chatgpt.com/?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
     iosScheme: 'chatgpt://',
   },
   {
     id: 'claude',
     label: 'Claude',
-    icon: '??',
     androidPackage: 'com.anthropic.claude',
+    androidLaunch: 'view',
+    buildAppUrl: (prompt) =>
+      `https://claude.ai/new?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
     iosScheme: 'claude://',
   },
   {
     id: 'perplexity',
     label: 'Perplexity',
-    icon: '??',
     androidPackage: 'ai.perplexity.app.android',
+    androidLaunch: 'view',
+    buildAppUrl: (prompt) =>
+      `https://www.perplexity.ai/search?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
     iosScheme: 'perplexity://',
   },
   {
     id: 'grok',
     label: 'Grok',
-    icon: '??',
     androidPackage: 'com.twitter.android',
+    androidLaunch: 'view',
+    buildAppUrl: (prompt) => `https://grok.com/?q=${encodeURIComponent(prompt.slice(0, 8000))}`,
     iosScheme: 'twitter://',
   },
 ];
+
+const MAX_INTENT_TEXT = 4000;
 
 function isAndroid() {
   return /Android/i.test(navigator.userAgent);
@@ -74,18 +95,57 @@ function isIos() {
 }
 
 /**
- * Lance l'application Android par nom de package (écran d'accueil de l'app).
+ * Intent SEND : ouvre l'app ciblée avec android.intent.extra.TEXT (Gemini, etc.).
  * @param {string} packageName
+ * @param {string} text
  */
-function launchAndroidApp(packageName) {
-  const intent = `intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=${packageName};end`;
-  window.location.href = intent;
+export function buildAndroidSendIntent(packageName, text) {
+  const body = encodeURIComponent(text.slice(0, MAX_INTENT_TEXT));
+  return `intent://send/#Intent;action=android.intent.action.SEND;type=text/plain;S.android.intent.extra.TEXT=${body};package=${packageName};end`;
 }
 
 /**
- * Tente d'ouvrir l'app iOS via son schéma d'URL.
- * @param {string} scheme
+ * Intent VIEW : lien https ouvert dans l'app si installée (ChatGPT ?q=, etc.).
+ * Pas de browser_fallback_url ? évite le Play Store.
+ * @param {string} packageName
+ * @param {string} httpsUrl
  */
+export function buildAndroidViewIntent(packageName, httpsUrl) {
+  const u = new URL(httpsUrl);
+  const hostPath = `${u.host}${u.pathname}${u.search}`;
+  return `intent://${hostPath}#Intent;scheme=https;package=${packageName};action=android.intent.action.VIEW;end`;
+}
+
+/**
+ * @param {AiProvider} provider
+ * @param {string} prompt
+ */
+export function buildAndroidIntentUrl(provider, prompt) {
+  if (!provider.androidPackage) return null;
+
+  if (provider.androidLaunch === 'send') {
+    return buildAndroidSendIntent(provider.androidPackage, prompt);
+  }
+
+  if (provider.buildAppUrl) {
+    return buildAndroidViewIntent(provider.androidPackage, provider.buildAppUrl(prompt));
+  }
+
+  return buildAndroidSendIntent(provider.androidPackage, prompt);
+}
+
+/**
+ * @param {string} intentUrl
+ */
+function launchAndroidIntent(intentUrl) {
+  const a = document.createElement('a');
+  a.href = intentUrl;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
 function launchIosApp(scheme) {
   window.location.href = scheme;
 }
@@ -108,9 +168,6 @@ export function getAiLaunchPlatform() {
   return 'other';
 }
 
-/**
- * Indique si l'on peut tenter d'ouvrir une application native sur cet appareil.
- */
 export function canLaunchNativeAiApp() {
   return getAiLaunchPlatform() !== 'other';
 }
@@ -118,18 +175,29 @@ export function canLaunchNativeAiApp() {
 /**
  * @param {AiProvider} provider
  * @param {string} prompt
- * @returns {Promise<{ copied: boolean, method: 'android' | 'ios' | 'unsupported', launched: boolean }>}
+ * @returns {Promise<{ copied: boolean, method: 'android-send' | 'android-view' | 'ios' | 'unsupported', launched: boolean }>}
  */
 export async function openAiProvider(provider, prompt) {
   const copied = await copyPrompt(prompt);
   const platform = getAiLaunchPlatform();
 
   if (platform === 'android' && provider.androidPackage) {
-    try {
-      launchAndroidApp(provider.androidPackage);
-      return { copied, method: 'android', launched: true };
-    } catch {
-      return { copied, method: 'android', launched: false };
+    const intentUrl = buildAndroidIntentUrl(provider, prompt);
+    if (intentUrl) {
+      try {
+        launchAndroidIntent(intentUrl);
+        return {
+          copied,
+          method: provider.androidLaunch === 'send' ? 'android-send' : 'android-view',
+          launched: true,
+        };
+      } catch {
+        return {
+          copied,
+          method: provider.androidLaunch === 'send' ? 'android-send' : 'android-view',
+          launched: false,
+        };
+      }
     }
   }
 
@@ -145,16 +213,13 @@ export async function openAiProvider(provider, prompt) {
   return { copied, method: 'unsupported', launched: false };
 }
 
-/**
- * Message d'aide affiché dans le menu selon la plateforme.
- */
 export function getAiMenuHint() {
   const platform = getAiLaunchPlatform();
   if (platform === 'android') {
-    return "La question est copiée dans le presse-papiers, puis l'application choisie s'ouvre. Collez le texte dans le chat de l'app (aucun site web).";
+    return "Android : intent vers l'app installée avec le texte de la question (SEND ou lien ?q=). Si le champ reste vide, collez depuis le presse-papiers.";
   }
   if (platform === 'ios') {
-    return "La question est copiée, puis l'application s'ouvre si elle est installée. Collez le texte dans le chat — l'app ne peut pas être préremplie depuis Safari.";
+    return "iOS : l'app s'ouvre si installée ; le texte est copié (préremplissage limité par Safari).";
   }
-  return "Sur ordinateur, impossible d'ouvrir automatiquement l'app mobile : le texte est copié — ouvrez vous-même Gemini, ChatGPT, etc. et collez-le.";
+  return "Sur ordinateur : texte copié — ouvrez l'app mobile et collez-le.";
 }
