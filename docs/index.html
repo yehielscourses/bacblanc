@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entraînement QCM NSI Première — E3C avec corrections">
+  <meta name="base-path" content="/bacblanc/">
+  <title>QCM NSI Première — E3C</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    (function () {
+      var stored = localStorage.getItem('nsi-quiz-color-scheme');
+      var scheme = stored === 'light' || stored === 'dark' ? stored : null;
+      if (!scheme && window.matchMedia('(prefers-color-scheme: dark)').matches) scheme = 'dark';
+      if (!scheme) scheme = 'light';
+      document.documentElement.setAttribute('data-theme', scheme);
+    })();
+  </script>
+</head>
+<body>
+  <div id="app" class="app" hidden>
+    <header class="header">
+      <div class="header__brand">
+        <span class="header__logo" aria-hidden="true">NSI</span>
+        <div>
+          <h1 class="header__title">QCM NSI Première</h1>
+          <p class="header__subtitle">Annales E3C — entraînement avec corrections</p>
+        </div>
+      </div>
+      <div class="header__actions">
+        <div class="theme-switch" role="group" aria-label="Thème d'affichage">
+          <button type="button" class="theme-switch__btn" data-scheme="light" title="Clair" aria-label="Mode clair">?</button>
+          <button type="button" class="theme-switch__btn" data-scheme="dark" title="Sombre" aria-label="Mode sombre">?</button>
+          <button type="button" class="theme-switch__btn" data-scheme="system" title="Système" aria-label="Suivre le système">?</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Accueil -->
+      <section id="screen-home" class="screen screen--active">
+        <div class="card card--hero">
+          <h2>Choisissez un mode</h2>
+          <p class="muted">605 questions uniques issues des annales. Les questions répondues correctement ne reviennent plus.</p>
+          <div class="mode-grid">
+            <button type="button" class="mode-card" data-mode="series">
+              <span class="mode-card__icon" aria-hidden="true">42</span>
+              <span class="mode-card__title">Série E3C</span>
+              <span class="mode-card__desc">42 questions aléatoires — note sur 42, comme l'épreuve</span>
+            </button>
+            <button type="button" class="mode-card" data-mode="unlimited">
+              <span class="mode-card__icon" aria-hidden="true">?</span>
+              <span class="mode-card__title">Mode illimité</span>
+              <span class="mode-card__desc">Enchaînez les questions — suivi sur vos 100 dernières réponses</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="card" id="stats-panel">
+          <h3>Vos statistiques</h3>
+          <div id="home-stats" class="stats-grid"></div>
+          <p class="stats-footnote muted" id="mastered-count"></p>
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-progress">Réinitialiser la progression</button>
+        </div>
+      </section>
+
+      <!-- Quiz -->
+      <section id="screen-quiz" class="screen">
+        <div class="quiz-bar">
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-quit" title="Quitter">? Quitter</button>
+          <div class="quiz-bar__center">
+            <span id="quiz-mode-label" class="badge"></span>
+            <span id="quiz-progress" class="quiz-progress"></span>
+          </div>
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-back" disabled title="Question précédente">? Préc.</button>
+        </div>
+
+        <div class="card quiz-card">
+          <div class="question-meta">
+            <span id="question-theme" class="theme-badge"></span>
+            <span id="question-id" class="muted question-id"></span>
+          </div>
+          <div id="question-enonce" class="question-enonce"></div>
+
+          <div id="answers" class="answers" role="group" aria-label="Réponses possibles"></div>
+
+          <div id="feedback" class="feedback" hidden>
+            <p id="feedback-message" class="feedback__message"></p>
+            <div id="explanation" class="explanation" hidden>
+              <h4>Explication</h4>
+              <p id="explanation-text"></p>
+            </div>
+            <div class="feedback__actions">
+              <button type="button" class="btn btn--primary" id="btn-continue" hidden>Continuer</button>
+              <button type="button" class="btn btn--secondary" id="btn-show-explanation" hidden>Voir l'explication</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card scores-card" id="live-scores">
+          <h3 class="scores-card__title">Notes en direct</h3>
+          <div id="live-scores-content"></div>
+        </aside>
+      </section>
+
+      <!-- Résultats série -->
+      <section id="screen-results" class="screen">
+        <div class="card card--hero results-card">
+          <h2>Série terminée</h2>
+          <div class="score-hero" id="series-final-score"></div>
+          <p class="muted" id="series-summary"></p>
+          <div id="series-theme-scores" class="theme-scores"></div>
+          <div class="results-actions">
+            <button type="button" class="btn btn--primary" id="btn-new-series">Nouvelle série</button>
+            <button type="button" class="btn btn--ghost" id="btn-home-from-results">Accueil</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Données : annales E3C NSI Première (2020–2021) — <span id="footer-repo"></span></p>
+    </footer>
+  </div>
+
+  <div id="loading" class="loading">
+    <div class="loading__spinner" aria-hidden="true"></div>
+    <p>Chargement des questions…</p>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

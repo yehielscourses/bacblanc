@@ -10,7 +10,19 @@ This repository hosts **E3C NSI Première** annales (PDF) and extracted QCM JSON
 
 | Service | Required? | Notes |
 |---------|-----------|--------|
-| — | — | No runtime services |
+| — | — | No runtime services (quiz is static HTML/JS) |
+
+### Web app QCM (GitHub Pages)
+
+| Item | Detail |
+|------|--------|
+| Sources | `docs/` — static quiz served at `https://yehielscourses.github.io/bacblanc/` |
+| Données | `docs/data/qcm.json` (copie de `annales-nsi-premiere/qcm-json/toutes-questions-uniques-avec-corrections.json`) |
+| Déploiement | Push sur `main` → workflow `.github/workflows/pages.yml` (source : dossier `/docs`) |
+| Préparer les données | `bash scripts/prepare_quiz_app.sh` après régénération du JSON source |
+| Dev local | `cd docs && python3 -m http.server 8765` puis http://localhost:8765 |
+
+Activer GitHub Pages dans le dépôt : **Settings → Pages → Build and deployment → GitHub Actions** (ou source « Deploy from branch » sur `/docs` si vous n’utilisez pas le workflow).
 
 ### Lint / test / build / run
 
@@ -19,6 +31,7 @@ This repository hosts **E3C NSI Première** annales (PDF) and extracted QCM JSON
 | `pip install -r requirements.txt` | PDF extraction dependency (`pymupdf`) |
 | `python3 scripts/extract_qcm_from_pdfs.py` | Regenerate `annales-nsi-premiere/qcm-json/` from PDFs |
 | `python3 scripts/add_qcm_corrections.py` | Generate `toutes-questions-uniques-avec-corrections.json` from batch files in `corrections-batches/` |
+| `bash scripts/prepare_quiz_app.sh` | Copy corrections JSON into `docs/data/qcm.json` for the quiz app |
 
 ### VM update script
 
