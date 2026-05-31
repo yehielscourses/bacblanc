@@ -153,8 +153,7 @@ function inlineFormat(escaped) {
   return escaped
     .replace(/`([^`]+)`/g, '<code class="inline-code">$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\\rightarrow/g, '?')
-    .replace(/?/g, '?');
+    .replace(/\\rightarrow/g, '\u2192');
 }
 
 /**

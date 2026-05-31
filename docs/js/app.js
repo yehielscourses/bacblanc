@@ -94,6 +94,7 @@ function questionById(id) {
 function renderResumeBanner() {
   const paused = getPausedSeries();
   const banner = $('#resume-series-banner');
+  if (!banner) return;
   if (!paused || !paused.seriesQueueIds?.length) {
     banner.hidden = true;
     return;
@@ -249,13 +250,17 @@ function startMode(mode, { resume = false } = {}) {
     seriesIndex = 0;
     if (seriesQueue.length === 0) {
       alert('Félicitations ! Vous avez maîtrisé toutes les questions. Réinitialisez la progression pour recommencer.');
+      currentMode = null;
       return;
     }
     if (seriesQueue.length < SERIES_LENGTH) {
       const ok = confirm(
         `Il ne reste que ${seriesQueue.length} question(s) non maîtrisée(s). Lancer une série de ${seriesQueue.length} ?`
       );
-      if (!ok) return;
+      if (!ok) {
+        currentMode = null;
+        return;
+      }
     }
     showCurrentSeriesQuestion();
   } else {
