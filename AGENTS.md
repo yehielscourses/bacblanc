@@ -31,7 +31,8 @@ Activer GitHub Pages dans le dépôt : **Settings → Pages → Build and deploy
 | `pip install -r requirements.txt` | PDF extraction dependency (`pymupdf`) |
 | `python3 scripts/extract_qcm_from_pdfs.py` | Regenerate `annales-nsi-premiere/qcm-json/` from PDFs |
 | `python3 scripts/add_qcm_corrections.py` | Generate `toutes-questions-uniques-avec-corrections.json` from batch files in `corrections-batches/` |
-| `bash scripts/prepare_quiz_app.sh` | Copy corrections JSON into `docs/data/qcm.json` for the quiz app |
+| `python3 scripts/repair_qcm_questions.py` | Fix known bad extractions in the unique-questions JSON files |
+| `bash scripts/prepare_quiz_app.sh` | Copy corrected bank into `docs/data/qcm.json` for the web app |
 
 ### VM update script
 

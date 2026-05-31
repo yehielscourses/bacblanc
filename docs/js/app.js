@@ -1,4 +1,4 @@
-import { SERIES_LENGTH, THEME_IDS } from './config.js';
+import { SERIES_LENGTH, THEME_IDS, assetUrl } from './config.js';
 import {
   getMasteredIds,
   appendAnswer,
@@ -23,7 +23,7 @@ import {
 } from './quiz-engine.js';
 import { getColorSchemePreference } from './storage.js';
 
-const QCM_DATA_URL = 'data/qcm.json';
+const QCM_DATA_URL = () => assetUrl('data/qcm.json');
 
 /** @typedef {'home' | 'quiz' | 'results'} Screen */
 /** @typedef {'series' | 'unlimited'} Mode */
@@ -82,11 +82,14 @@ function escapeHtml(text) {
 }
 
 async function loadQuestions() {
-  const res = await fetch(QCM_DATA_URL);
+  const res = await fetch(QCM_DATA_URL());
   if (!res.ok) throw new Error(`Impossible de charger les questions (${res.status})`);
   const data = await res.json();
   questions = data.questions || [];
   if (questions.length === 0) throw new Error('Aucune question dans le fichier');
+  const count = data.nombre_questions_uniques ?? questions.length;
+  const countEl = document.getElementById('question-bank-count');
+  if (countEl) countEl.textContent = String(count);
 }
 
 function renderHomeStats() {
@@ -104,7 +107,7 @@ function renderHomeStats() {
   if (lastSeries) {
     html += `
       <div class="stat-block">
-        <div class="stat-block__label">Dernière série</div>
+        <div class="stat-block__label">DerniÃ¨re sÃ©rie</div>
         <div class="stat-block__value">${lastSeries.score} / ${lastSeries.total}</div>
         <div class="stat-block__sub">Note E3C sur 42</div>
       </div>`;
@@ -112,9 +115,9 @@ function renderHomeStats() {
 
   html += `
     <div class="stat-block">
-      <div class="stat-block__label">Mode illimité</div>
-      <div class="stat-block__value">${ul.note !== null ? `${ul.note} / 100` : '—'}</div>
-      <div class="stat-block__sub">100 dernières réponses (${ul.total} enregistrées)</div>
+      <div class="stat-block__label">Mode illimitÃ©</div>
+      <div class="stat-block__value">${ul.note !== null ? `${ul.note} / 100` : 'â€”'}</div>
+      <div class="stat-block__sub">100 derniÃ¨res rÃ©ponses (${ul.total} enregistrÃ©es)</div>
     </div>`;
 
   statsEl.innerHTML = html || '<p class="muted">Commencez une session pour voir vos notes.</p>';
@@ -123,16 +126,16 @@ function renderHomeStats() {
     const t = themes[id];
     if (!t || t.note === null) return '';
     const q = questions.find((x) => x.theme_id === id);
-    const name = q ? `${id} — ${q.theme_nom}` : id;
+    const name = q ? `${id} â€” ${q.theme_nom}` : id;
     return `<div class="score-row"><span class="score-row__theme">${escapeHtml(name)}</span><span>${t.note} / 20</span></div>`;
   }).filter(Boolean).join('');
 
   if (themeLines) {
-    statsEl.innerHTML += `<div class="stat-block" style="grid-column:1/-1"><div class="stat-block__label">Sous-notes par thème (illimité)</div>${themeLines}</div>`;
+    statsEl.innerHTML += `<div class="stat-block" style="grid-column:1/-1"><div class="stat-block__label">Sous-notes par thÃ¨me (illimitÃ©)</div>${themeLines}</div>`;
   }
 
   $('#mastered-count').textContent =
-    `${mastered} question${mastered > 1 ? 's' : ''} maîtrisée${mastered > 1 ? 's' : ''} · ${avail} restante${avail > 1 ? 's' : ''} dans la banque`;
+    `${mastered} question${mastered > 1 ? 's' : ''} maÃ®trisÃ©e${mastered > 1 ? 's' : ''} Â· ${avail} restante${avail > 1 ? 's' : ''} dans la banque`;
 }
 
 function startMode(mode) {
@@ -149,12 +152,12 @@ function startMode(mode) {
     seriesQueue = buildSeriesQueue(pool, SERIES_LENGTH);
     seriesIndex = 0;
     if (seriesQueue.length === 0) {
-      alert('Félicitations ! Vous avez maîtrisé toutes les questions. Réinitialisez la progression pour recommencer.');
+      alert('FÃ©licitations ! Vous avez maÃ®trisÃ© toutes les questions. RÃ©initialisez la progression pour recommencer.');
       return;
     }
     if (seriesQueue.length < SERIES_LENGTH) {
       const ok = confirm(
-        `Il ne reste que ${seriesQueue.length} question(s) non maîtrisée(s). Lancer une série de ${seriesQueue.length} ?`
+        `Il ne reste que ${seriesQueue.length} question(s) non maÃ®trisÃ©e(s). Lancer une sÃ©rie de ${seriesQueue.length} ?`
       );
       if (!ok) return;
     }
@@ -163,7 +166,7 @@ function startMode(mode) {
     advanceToNewQuestion();
   }
 
-  $('#quiz-mode-label').textContent = mode === 'series' ? 'Série E3C' : 'Illimité';
+  $('#quiz-mode-label').textContent = mode === 'series' ? 'SÃ©rie E3C' : 'IllimitÃ©';
   updateLiveScores();
   showScreen('quiz');
 }
@@ -202,7 +205,7 @@ function advanceToNewQuestion() {
   isReviewingHistory = false;
   const q = getNextQuestion(questions);
   if (!q) {
-    alert('Toutes les questions ont été maîtrisées ! Réinitialisez la progression pour recommencer.');
+    alert('Toutes les questions ont Ã©tÃ© maÃ®trisÃ©es ! RÃ©initialisez la progression pour recommencer.');
     showScreen('home');
     renderHomeStats();
     return;
@@ -219,7 +222,7 @@ function renderQuestion(q, selectedLetter) {
   const answered = entry?.selected != null;
   const isCorrect = entry?.correct ?? false;
 
-  $('#question-theme').textContent = `${q.theme_id} — ${q.theme_nom}`;
+  $('#question-theme').textContent = `${q.theme_id} â€” ${q.theme_nom}`;
   $('#question-theme').setAttribute('data-theme-id', q.theme_id);
   $('#question-id').textContent = q.numero_original || `#${q.id}`;
   $('#question-enonce').textContent = q.enonce;
@@ -258,12 +261,11 @@ function renderQuestion(q, selectedLetter) {
   if (answered) {
     feedback.hidden = false;
     if (isCorrect) {
-      msg.textContent = isReviewingHistory ? 'Réponse correcte' : 'Bonne réponse !';
+      msg.textContent = isReviewingHistory ? 'RÃ©ponse correcte' : 'Bonne rÃ©ponse !';
       msg.className = 'feedback__message feedback__message--success';
       if (isReviewingHistory) entry.reviewed = true;
       explanation.hidden = !entry?.reviewed;
       $('#explanation-text').textContent = q.explication;
-      btnContinue.hidden = isReviewingHistory;
       btnShowExp.hidden = entry?.reviewed;
       if (!entry?.reviewed) {
         btnShowExp.onclick = () => {
@@ -272,19 +274,24 @@ function renderQuestion(q, selectedLetter) {
           btnShowExp.hidden = true;
         };
       }
-      if (!isReviewingHistory && currentMode === 'unlimited') {
+      if (isReviewingHistory) {
+        btnContinue.hidden = false;
+        btnContinue.textContent = 'Reprendre';
+        btnContinue.onclick = () => onResumeFromReview();
+      } else if (currentMode === 'unlimited') {
         btnContinue.hidden = false;
         btnContinue.textContent = 'Question suivante';
-      } else if (!isReviewingHistory && currentMode === 'series') {
+        btnContinue.onclick = () => onContinueAfterCorrect();
+      } else if (currentMode === 'series') {
         btnContinue.hidden = false;
         btnContinue.textContent =
-          seriesIndex >= seriesQueue.length - 1 ? 'Voir les résultats' : 'Question suivante';
+          seriesIndex >= seriesQueue.length - 1 ? 'Voir les rÃ©sultats' : 'Question suivante';
+        btnContinue.onclick = () => onContinueAfterCorrect();
       } else {
         btnContinue.hidden = true;
       }
-      btnContinue.onclick = () => onContinueAfterCorrect();
     } else {
-      msg.textContent = 'Mauvaise réponse';
+      msg.textContent = 'Mauvaise rÃ©ponse';
       msg.className = 'feedback__message feedback__message--error';
       explanation.hidden = false;
       $('#explanation-text').textContent = q.explication;
@@ -350,12 +357,21 @@ function onAnswerSelected(letter) {
   }
 }
 
+function onResumeFromReview() {
+  clearAutoAdvance();
+  awaitingContinue = false;
+  isReviewingHistory = false;
+  const entry = getCurrentSessionEntry();
+  const q = entry?.question ?? getCurrentQuestion();
+  if (q && entry) renderQuestion(q, entry.selected);
+  updateQuizChrome();
+}
+
 function onContinueAfterCorrect() {
   clearAutoAdvance();
   awaitingContinue = false;
   if (isReviewingHistory) {
-    isReviewingHistory = false;
-    renderQuestion(getCurrentQuestion(), getCurrentSessionEntry()?.selected ?? null);
+    onResumeFromReview();
     return;
   }
   if (currentMode === 'series') {
@@ -405,14 +421,14 @@ function updateQuizChrome() {
   if (currentMode === 'series') {
     const total = seriesQueue.length;
     const current = isReviewingHistory
-      ? `Révision · question ${historyIndex + 1}`
+      ? `RÃ©vision Â· question ${historyIndex + 1}`
       : `Question ${seriesIndex + 1} / ${total}`;
     $('#quiz-progress').textContent = current;
   } else {
     const mastered = countMastered();
     $('#quiz-progress').textContent = isReviewingHistory
-      ? `Révision · ${historyIndex + 1} / ${sessionHistory.length}`
-      : `${mastered} maîtrisées · ${countAvailable(questions)} restantes`;
+      ? `RÃ©vision Â· ${historyIndex + 1} / ${sessionHistory.length}`
+      : `${mastered} maÃ®trisÃ©es Â· ${countAvailable(questions)} restantes`;
   }
 }
 
@@ -422,25 +438,25 @@ function updateLiveScores() {
     const correct = currentSeriesAnswers.filter((a) => a.correct).length;
     const total = currentSeriesAnswers.length;
   const byTheme = seriesThemeScores(currentSeriesAnswers);
-    let html = `<div class="score-row score-row--main"><span>Série en cours</span><span>${correct} / ${total}</span></div>`;
+    let html = `<div class="score-row score-row--main"><span>SÃ©rie en cours</span><span>${correct} / ${total}</span></div>`;
     html += `<div class="score-row"><span class="muted">Objectif</span><span>${seriesQueue.length} questions</span></div>`;
     for (const id of THEME_IDS) {
       const t = byTheme[id];
       if (!t) continue;
       const q = questions.find((x) => x.theme_id === id);
       const name = q ? `${id}` : id;
-      html += `<div class="score-row"><span class="score-row__theme">Thème ${name}</span><span>${t.correct} / ${t.total}</span></div>`;
+      html += `<div class="score-row"><span class="score-row__theme">ThÃ¨me ${name}</span><span>${t.correct} / ${t.total}</span></div>`;
     }
     el.innerHTML = html;
   } else {
     const log = getAnswerLog();
     const ul = unlimitedMainScore(log);
     const themes = unlimitedThemeScores(log);
-    let html = `<div class="score-row score-row--main"><span>Note (100 dernières)</span><span>${ul.note !== null ? `${ul.note} / 100` : '—'}</span></div>`;
+    let html = `<div class="score-row score-row--main"><span>Note (100 derniÃ¨res)</span><span>${ul.note !== null ? `${ul.note} / 100` : 'â€”'}</span></div>`;
     for (const id of THEME_IDS) {
       const t = themes[id];
       if (t.note === null) continue;
-      html += `<div class="score-row"><span class="score-row__theme">Thème ${id} (20 dernières)</span><span>${t.note} / 20</span></div>`;
+      html += `<div class="score-row"><span class="score-row__theme">ThÃ¨me ${id} (20 derniÃ¨res)</span><span>${t.note} / 20</span></div>`;
     }
     el.innerHTML = html;
   }
@@ -458,18 +474,22 @@ function finishSeries() {
     byTheme,
   });
 
-  const note20 = ((correct / total) * 20).toFixed(1);
+  const note20 = ((correct * 20) / SERIES_LENGTH).toFixed(1);
   $('#series-final-score').textContent = `${correct} / ${total}`;
+  const shortened =
+    total < SERIES_LENGTH
+      ? ` SÃ©rie raccourcie (${total} question${total > 1 ? 's' : ''} jouÃ©e${total > 1 ? 's' : ''}).`
+      : '';
   $('#series-summary').textContent =
-    `Équivalent bac : ${note20} / 20 (barème officiel : points × 20/42). ${total < SERIES_LENGTH ? `Série raccourcie (${total} questions disponibles).` : ''}`;
+    `Ã‰quivalent bac : ${note20} / 20 (barÃ¨me officiel : ${correct} Ã— 20/42).${shortened}`;
 
   const themeEl = $('#series-theme-scores');
-  let html = '<h3>Par thème</h3>';
+  let html = '<h3>Par thÃ¨me</h3>';
   for (const id of THEME_IDS) {
     const t = byTheme[id];
     if (!t) continue;
     const q = questions.find((x) => x.theme_id === id);
-    const label = q ? `${id} — ${q.theme_nom}` : id;
+    const label = q ? `${id} â€” ${q.theme_nom}` : id;
     const pct = t.total ? (t.correct / t.total) * 100 : 0;
     html += `
       <div class="theme-score-item">
@@ -502,7 +522,7 @@ function bindEvents() {
   $('#btn-quit').addEventListener('click', quitQuiz);
   $('#btn-back').addEventListener('click', goBack);
   $('#btn-reset-progress').addEventListener('click', () => {
-    if (confirm('Effacer toute la progression (questions maîtrisées, historique, notes) ?')) {
+    if (confirm('Effacer toute la progression (questions maÃ®trisÃ©es, historique, notes) ?')) {
       resetAllProgress();
       renderHomeStats();
     }
