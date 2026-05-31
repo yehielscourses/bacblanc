@@ -915,8 +915,19 @@ body {
   z-index: 100;
 }
 
-.loading[hidden] {
-  display: none;
+.loading[hidden],
+.loading.loading--done {
+  display: none !important;
+}
+
+body.is-loading #app[hidden] {
+  display: none !important;
+}
+
+.loading__hint {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  text-align: center;
 }
 
 .loading__spinner {

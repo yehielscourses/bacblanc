@@ -77,8 +77,14 @@ function escapeHtml(text) {
 }
 
 async function loadQuestions() {
-  const res = await fetch(QCM_DATA_URL());
-  if (!res.ok) throw new Error(`Impossible de charger les questions (${res.status})`);
+  const url = QCM_DATA_URL();
+  let res;
+  try {
+    res = await fetch(url);
+  } catch {
+    throw new Error(`Impossible de joindre les données (${url}). Vérifiez l'URL de la page.`);
+  }
+  if (!res.ok) throw new Error(`Impossible de charger les questions (${res.status}) — ${url}`);
   const data = await res.json();
   questions = data.questions || [];
   if (questions.length === 0) throw new Error('Aucune question dans le fichier');
@@ -644,31 +650,63 @@ function bindEvents() {
     btn.addEventListener('click', () => startMode(/** @type {Mode} */ (btn.getAttribute('data-mode'))));
   });
 
-  $('#btn-resume-series').addEventListener('click', () => startMode('series', { resume: true }));
-  $('#btn-quit').addEventListener('click', quitQuiz);
-  $('#btn-pause-series').addEventListener('click', pauseSeries);
-  $('#btn-back').addEventListener('click', goBack);
-  $('#btn-ask-ai').addEventListener('click', openAiMenu);
-  $('#ai-menu-close').addEventListener('click', closeAiMenu);
-  $('#ai-menu-backdrop').addEventListener('click', closeAiMenu);
+  bindOptional('btn-resume-series', 'click', () => startMode('series', { resume: true }));
+  bindOptional('btn-quit', 'click', quitQuiz);
+  bindOptional('btn-pause-series', 'click', pauseSeries);
+  bindOptional('btn-back', 'click', goBack);
+  bindOptional('btn-ask-ai', 'click', openAiMenu);
+  bindOptional('ai-menu-close', 'click', closeAiMenu);
+  bindOptional('ai-menu-backdrop', 'click', closeAiMenu);
 
-  $('#btn-reset-progress').addEventListener('click', () => {
+  bindOptional('btn-reset-progress', 'click', () => {
     if (confirm('Effacer toute la progression (questions maîtrisées, historique, notes, séries en pause) ?')) {
       resetAllProgress();
       renderHomeStats();
     }
   });
 
-  $('#btn-new-series').addEventListener('click', () => startMode('series'));
-  $('#btn-home-from-results').addEventListener('click', () => {
+  bindOptional('btn-new-series', 'click', () => startMode('series'));
+  bindOptional('btn-home-from-results', 'click', () => {
     renderHomeStats();
     showScreen('home');
   });
 
-  initThemeSwitcher(document.querySelector('.theme-switch'));
+  const themeEl = document.querySelector('.theme-switch');
+  if (themeEl) initThemeSwitcher(themeEl);
+}
+
+function hideLoadingScreen() {
+  const loading = document.getElementById('loading');
+  const app = document.getElementById('app');
+  if (loading) {
+    loading.hidden = true;
+    loading.classList.add('loading--done');
+  }
+  if (app) app.hidden = false;
+  document.body.classList.remove('is-loading');
+}
+
+function showLoadingError(err) {
+  const loading = document.getElementById('loading');
+  const app = document.getElementById('app');
+  if (!loading) return;
+  loading.hidden = false;
+  loading.classList.remove('loading--done');
+  loading.classList.add('loading--error');
+  document.body.classList.add('is-loading');
+  if (app) app.hidden = true;
+  const msg = err instanceof Error ? err.message : String(err);
+  loading.innerHTML = `<p class="error-banner">${escapeHtml(msg)}</p><p class="muted" style="margin-top:0.75rem;font-size:0.875rem">Vérifiez votre connexion ou rechargez la page (Ctrl+Shift+R).</p>`;
+}
+
+function bindOptional(id, event, handler) {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener(event, handler);
 }
 
 async function init() {
+  document.body.classList.add('is-loading');
+
   const repoLink = $('#footer-repo');
   if (repoLink) {
     repoLink.innerHTML = `<a href="https://github.com/yehielscourses/bacblanc" target="_blank" rel="noopener">bacblanc</a>`;
@@ -676,14 +714,26 @@ async function init() {
 
   applyColorScheme(getColorSchemePreference());
 
+  const loadTimeout = window.setTimeout(() => {
+    const loading = document.getElementById('loading');
+    if (loading && !loading.classList.contains('loading--done') && !loading.classList.contains('loading--error')) {
+      const hint = document.createElement('p');
+      hint.className = 'muted loading__hint';
+      hint.textContent = 'Le chargement prend plus de temps que prévu…';
+      if (!loading.querySelector('.loading__hint')) loading.appendChild(hint);
+    }
+  }, 8000);
+
   try {
     await loadQuestions();
-    $('#loading').hidden = true;
-    $('#app').hidden = false;
+    hideLoadingScreen();
     bindEvents();
     renderHomeStats();
   } catch (err) {
-    $('#loading').innerHTML = `<p class="error-banner">${escapeHtml(err instanceof Error ? err.message : String(err))}</p>`;
+    console.error('Échec initialisation quiz:', err);
+    showLoadingError(err);
+  } finally {
+    window.clearTimeout(loadTimeout);
   }
 }
 
