@@ -27,6 +27,7 @@ import {
 import { getColorSchemePreference } from './storage.js';
 import { setRichContent } from './rich-text.js';
 import { AI_PROVIDERS, buildQuizPrompt, openAiProvider, getAiMenuHint } from './ai-assist.js';
+import { getAiProviderIcon } from './ai-icons.js';
 import { yieldToMain, mayNeedJitHint, isStorageAvailable } from './compat.js';
 
 const QCM_DATA_URL = () => assetUrl('data/qcm.json');
@@ -636,7 +637,7 @@ function openAiMenu() {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'ai-menu__item';
-    btn.innerHTML = `<span class="ai-menu__item-icon">${provider.icon}</span><span>${escapeHtml(provider.label)}</span>`;
+    btn.innerHTML = `<span class="ai-menu__item-icon">${getAiProviderIcon(provider.id)}</span><span>${escapeHtml(provider.label)}</span>`;
     btn.addEventListener('click', async () => {
       closeAiMenu();
       const result = await openAiProvider(provider, prompt);
@@ -651,9 +652,15 @@ function openAiMenu() {
           ? `Texte copié — installez l'app ${provider.label} puis collez le texte.`
           : `Installez l'app ${provider.label}.`;
       } else {
+        const viaIntent =
+          result.method === 'android-send'
+            ? ' (intent SEND)'
+            : result.method === 'android-view'
+              ? ' (intent VIEW ?q=)'
+              : '';
         toast.textContent = result.copied
-          ? `Texte copié — ouverture de ${provider.label}… Collez dans le chat.`
-          : `Ouverture de ${provider.label}…`;
+          ? `Ouverture de ${provider.label}${viaIntent} — texte aussi copié.`
+          : `Ouverture de ${provider.label}${viaIntent}…`;
       }
       document.body.appendChild(toast);
       setTimeout(() => toast.remove(), 4200);
