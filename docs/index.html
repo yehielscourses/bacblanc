@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EntraÓnement QCM NSI PremiËre ó E3C avec corrections">
+  <meta name="description" content="Entra√Ænement QCM NSI Premi√®re ‚Äî E3C avec corrections">
   <meta name="base-path" content="/bacblanc/">
-  <title>QCM NSI PremiËre ó E3C</title>
+  <title>QCM NSI Premi√®re ‚Äî E3C</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -13,9 +13,12 @@
   <script>
     (function () {
       var stored = localStorage.getItem('nsi-quiz-color-scheme');
-      var scheme = stored === 'light' || stored === 'dark' ? stored : null;
-      if (!scheme && window.matchMedia('(prefers-color-scheme: dark)').matches) scheme = 'dark';
-      if (!scheme) scheme = 'light';
+      var scheme;
+      if (stored === 'light' || stored === 'dark') {
+        scheme = stored;
+      } else {
+        scheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
       document.documentElement.setAttribute('data-theme', scheme);
     })();
   </script>
@@ -26,35 +29,34 @@
       <div class="header__brand">
         <span class="header__logo" aria-hidden="true">NSI</span>
         <div>
-          <h1 class="header__title">QCM NSI PremiËre</h1>
-          <p class="header__subtitle">Annales E3C ó entraÓnement avec corrections</p>
+          <h1 class="header__title">QCM NSI Premi√®re</h1>
+          <p class="header__subtitle">Annales E3C ‚Äî entra√Ænement avec corrections</p>
         </div>
       </div>
       <div class="header__actions">
-        <div class="theme-switch" role="group" aria-label="ThËme d'affichage">
-          <button type="button" class="theme-switch__btn" data-scheme="light" title="Clair" aria-label="Mode clair">?</button>
-          <button type="button" class="theme-switch__btn" data-scheme="dark" title="Sombre" aria-label="Mode sombre">?</button>
-          <button type="button" class="theme-switch__btn" data-scheme="system" title="SystËme" aria-label="Suivre le systËme">?</button>
+        <div class="theme-switch" role="group" aria-label="Th√®me d'affichage">
+          <button type="button" class="theme-switch__btn" data-scheme="light" title="Clair" aria-label="Mode clair">‚òÄ</button>
+          <button type="button" class="theme-switch__btn" data-scheme="dark" title="Sombre" aria-label="Mode sombre">‚òΩ</button>
+          <button type="button" class="theme-switch__btn" data-scheme="system" title="Syst√®me" aria-label="Suivre le syst√®me">‚óê</button>
         </div>
       </div>
     </header>
 
     <main class="main">
-      <!-- Accueil -->
       <section id="screen-home" class="screen screen--active">
         <div class="card card--hero">
           <h2>Choisissez un mode</h2>
-          <p class="muted">605 questions uniques issues des annales. Les questions rÈpondues correctement ne reviennent plus.</p>
+          <p class="muted"><span id="question-bank-count">605</span> questions uniques issues des annales. Les questions r√©pondues correctement ne reviennent plus.</p>
           <div class="mode-grid">
             <button type="button" class="mode-card" data-mode="series">
               <span class="mode-card__icon" aria-hidden="true">42</span>
-              <span class="mode-card__title">SÈrie E3C</span>
-              <span class="mode-card__desc">42 questions alÈatoires ó note sur 42, comme l'Èpreuve</span>
+              <span class="mode-card__title">S√©rie E3C</span>
+              <span class="mode-card__desc">42 questions al√©atoires ‚Äî note sur 42, comme l'√©preuve</span>
             </button>
             <button type="button" class="mode-card" data-mode="unlimited">
-              <span class="mode-card__icon" aria-hidden="true">?</span>
-              <span class="mode-card__title">Mode illimitÈ</span>
-              <span class="mode-card__desc">EnchaÓnez les questions ó suivi sur vos 100 derniËres rÈponses</span>
+              <span class="mode-card__icon" aria-hidden="true">‚àû</span>
+              <span class="mode-card__title">Mode illimit√©</span>
+              <span class="mode-card__desc">Encha√Ænez les questions ‚Äî suivi sur vos 100 derni√®res r√©ponses</span>
             </button>
           </div>
         </div>
@@ -63,19 +65,18 @@
           <h3>Vos statistiques</h3>
           <div id="home-stats" class="stats-grid"></div>
           <p class="stats-footnote muted" id="mastered-count"></p>
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-progress">RÈinitialiser la progression</button>
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-progress">R√©initialiser la progression</button>
         </div>
       </section>
 
-      <!-- Quiz -->
       <section id="screen-quiz" class="screen">
         <div class="quiz-bar">
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-quit" title="Quitter">? Quitter</button>
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-quit" title="Quitter">‚Üê Quitter</button>
           <div class="quiz-bar__center">
             <span id="quiz-mode-label" class="badge"></span>
             <span id="quiz-progress" class="quiz-progress"></span>
           </div>
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-back" disabled title="Question prÈcÈdente">? PrÈc.</button>
+          <button type="button" class="btn btn--ghost btn--sm" id="btn-back" disabled title="Question pr√©c√©dente">‚Üê Pr√©c.</button>
         </div>
 
         <div class="card quiz-card">
@@ -85,7 +86,7 @@
           </div>
           <div id="question-enonce" class="question-enonce"></div>
 
-          <div id="answers" class="answers" role="group" aria-label="RÈponses possibles"></div>
+          <div id="answers" class="answers" role="group" aria-label="R√©ponses possibles"></div>
 
           <div id="feedback" class="feedback" hidden>
             <p id="feedback-message" class="feedback__message"></p>
@@ -106,15 +107,14 @@
         </aside>
       </section>
 
-      <!-- RÈsultats sÈrie -->
       <section id="screen-results" class="screen">
         <div class="card card--hero results-card">
-          <h2>SÈrie terminÈe</h2>
+          <h2>S√©rie termin√©e</h2>
           <div class="score-hero" id="series-final-score"></div>
           <p class="muted" id="series-summary"></p>
           <div id="series-theme-scores" class="theme-scores"></div>
           <div class="results-actions">
-            <button type="button" class="btn btn--primary" id="btn-new-series">Nouvelle sÈrie</button>
+            <button type="button" class="btn btn--primary" id="btn-new-series">Nouvelle s√©rie</button>
             <button type="button" class="btn btn--ghost" id="btn-home-from-results">Accueil</button>
           </div>
         </div>
@@ -122,13 +122,13 @@
     </main>
 
     <footer class="footer">
-      <p>DonnÈes : annales E3C NSI PremiËre (2020ñ2021) ó <span id="footer-repo"></span></p>
+      <p>Donn√©es : annales E3C NSI Premi√®re (2020‚Äì2021) ‚Äî <span id="footer-repo"></span></p>
     </footer>
   </div>
 
   <div id="loading" class="loading">
     <div class="loading__spinner" aria-hidden="true"></div>
-    <p>Chargement des questionsÖ</p>
+    <p>Chargement des questions‚Ä¶</p>
   </div>
 
   <script type="module" src="js/app.js"></script>

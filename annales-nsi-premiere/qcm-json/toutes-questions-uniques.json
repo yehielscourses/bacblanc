@@ -4226,23 +4226,7 @@
         },
         {
           "lettre": "D",
-          "texte": "le téléchargement se poursuit mais des données seront perdues\nS"
-        },
-        {
-          "lettre": "A",
-          "texte": ""
-        },
-        {
-          "lettre": "B",
-          "texte": ""
-        },
-        {
-          "lettre": "C",
-          "texte": ""
-        },
-        {
-          "lettre": "D",
-          "texte": "E\nV"
+          "texte": "le téléchargement se poursuit mais des données seront perdues"
         }
       ]
     },
@@ -5809,11 +5793,7 @@
         },
         {
           "lettre": "B",
-          "texte": ""
-        },
-        {
-          "lettre": "B",
-          "texte": ""
+          "texte": " "
         },
         {
           "lettre": "C",
@@ -6856,7 +6836,24 @@
       "theme_id": "G",
       "theme_nom": "algorithmique",
       "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\nS = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
-      "reponses": []
+      "reponses": [
+        {
+          "lettre": "A",
+          "texte": "15"
+        },
+        {
+          "lettre": "B",
+          "texte": "16"
+        },
+        {
+          "lettre": "C",
+          "texte": "18"
+        },
+        {
+          "lettre": "D",
+          "texte": "20"
+        }
+      ]
     },
     {
       "id": 275,
@@ -9620,12 +9617,12 @@
           "texte": "def test(a,b):\nreturn a[0] < b[0]"
         },
         {
-          "lettre": "A",
-          "texte": "def test(a,b):\nreturn a[0] > b[0]"
-        },
-        {
           "lettre": "B",
           "texte": "def test(a,b):\nreturn a[1] < b[1]"
+        },
+        {
+          "lettre": "C",
+          "texte": "def test(a,b):\nreturn a[0] > b[0]"
         },
         {
           "lettre": "D",
@@ -11292,19 +11289,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": ""
+          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue"
         },
         {
           "lettre": "B",
-          "texte": ""
+          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue"
         },
         {
           "lettre": "C",
-          "texte": ""
+          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nTrue\nTrue"
         },
         {
           "lettre": "D",
-          "texte": ""
+          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nTrue\nFalse"
         }
       ]
     },

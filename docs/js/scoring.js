@@ -1,7 +1,7 @@
 import { UNLIMITED_WINDOW, THEME_WINDOW, THEME_IDS } from './config.js';
 
 /**
- * Note sur 100 pour les N dernières réponses (ou proportionnel si < N).
+ * Note sur 100 pour les N derniÃ¨res rÃ©ponses (ou proportionnel si < N).
  * @param {import('./storage.js').AnswerEntry[]} log
  */
 export function unlimitedMainScore(log) {
@@ -15,7 +15,7 @@ export function unlimitedMainScore(log) {
 }
 
 /**
- * Sous-notes par thème : 20 dernières questions de chaque thème (mode illimité).
+ * Sous-notes par thÃ¨me : 20 derniÃ¨res questions de chaque thÃ¨me (mode illimitÃ©).
  * @param {import('./storage.js').AnswerEntry[]} log
  */
 export function unlimitedThemeScores(log) {

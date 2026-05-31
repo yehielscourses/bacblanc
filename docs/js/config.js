@@ -8,9 +8,15 @@ export const THEME_IDS = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 export function getBasePath() {
   const meta = document.querySelector('meta[name="base-path"]');
   const fromMeta = meta?.getAttribute('content')?.trim();
-  if (fromMeta) return fromMeta.endsWith('/') ? fromMeta : `${fromMeta}/`;
+  if (fromMeta) {
+    const normalized = fromMeta.endsWith('/') ? fromMeta : `${fromMeta}/`;
+    const path = location.pathname;
+    if (path === normalized || path.startsWith(normalized) || path.endsWith('/bacblanc')) {
+      return normalized;
+    }
+  }
   const parts = location.pathname.split('/').filter(Boolean);
-  if (parts.length <= 1) return '/';
+  if (parts.length === 0) return '/';
   return `/${parts[0]}/`;
 }
 

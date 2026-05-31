@@ -39,6 +39,21 @@ def extract_lines_from_doc(doc: fitz.Document) -> list[str]:
     return lines
 
 
+def validate_reponses(reponses: list[dict[str, str]]) -> str | None:
+    """Retourne un message d'avertissement si les réponses semblent mal extraites."""
+    letters = [r.get("lettre") for r in reponses]
+    if len(reponses) != 4:
+        return f"attendu 4 réponses, extrait {len(reponses)}"
+    if len(set(letters)) != 4 or set(letters) != {"A", "B", "C", "D"}:
+        return f"lettres invalides: {letters}"
+    empty = [r["lettre"] for r in reponses if r.get("texte", "") == ""]
+    if len(empty) == len(reponses):
+        return "toutes les réponses sont vides"
+    if empty:
+        return f"réponses vides: {', '.join(empty)}"
+    return None
+
+
 def parse_answers(lines: list[str], start: int) -> tuple[list[dict[str, str]], int]:
     reponses: list[dict[str, str]] = []
     i = start
@@ -126,13 +141,15 @@ def parse_qcm_lines(lines: list[str]) -> list[dict]:
                 theme_index[theme_id] = theme_data
                 themes.append(theme_data)
 
-            theme_index[theme_id]["questions"].append(
-                {
-                    "numero": numero,
-                    "enonce": "\n".join(enonce_parts).strip(),
-                    "reponses": reponses,
-                }
-            )
+            question = {
+                "numero": numero,
+                "enonce": "\n".join(enonce_parts).strip(),
+                "reponses": reponses,
+            }
+            warn = validate_reponses(reponses)
+            if warn:
+                question["avertissement_extraction"] = warn
+            theme_index[theme_id]["questions"].append(question)
             continue
 
         i += 1
