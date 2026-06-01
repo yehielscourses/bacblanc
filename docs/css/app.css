@@ -705,6 +705,19 @@ body {
   border-radius: 6px;
 }
 
+.answer-btn__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.answer-btn__text--pre {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  white-space: pre;
+  overflow-x: auto;
+}
+
 .answer-btn--selected {
   border-color: var(--accent);
   background: var(--accent-soft);

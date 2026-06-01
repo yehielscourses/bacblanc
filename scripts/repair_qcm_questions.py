@@ -8,38 +8,91 @@ import json
 import sys
 from pathlib import Path
 
-TRUTH_TABLE_HEADER = "\U0001d44e\n\U0001d44f\n(\U0001d44e or \U0001d44f) and \U0001d44e"
+def format_truth_table(headers: tuple[str, ...], rows: tuple[tuple[str, ...], ...]) -> str:
+    """Table alignée en colonnes (lignes indentées pour l'affichage bloc code du quiz)."""
+    columns = list(zip(headers, *rows, strict=True))
+    widths = [max(len(str(cell)) for cell in col) for col in columns]
+    lines = [
+        "  " + "  ".join(str(h).ljust(w) for h, w in zip(headers, widths, strict=True))
+    ]
+    for row in rows:
+        lines.append(
+            "  "
+            + "  ".join(str(c).ljust(w) for c, w in zip(row, widths, strict=True))
+        )
+    return "\n".join(lines)
 
-TRUTH_TABLE_A = (
-    f"{TRUTH_TABLE_HEADER}\n"
-    "False\nFalse\nFalse\n"
-    "False\nTrue\nFalse\n"
-    "True\nFalse\nTrue\n"
-    "True\nTrue\nTrue"
+
+_A = "\U0001d44e"
+_B = "\U0001d44f"
+_EXPR = f"({_A} or {_B}) and {_A}"
+
+TRUTH_TABLE_A = format_truth_table(
+    (_A, _B, _EXPR),
+    (
+        ("False", "False", "False"),
+        ("False", "True", "False"),
+        ("True", "False", "True"),
+        ("True", "True", "True"),
+    ),
 )
 
-TRUTH_TABLE_B = (
-    f"{TRUTH_TABLE_HEADER}\n"
-    "False\nFalse\nFalse\n"
-    "False\nTrue\nFalse\n"
-    "True\nFalse\nFalse\n"
-    "True\nTrue\nTrue"
+TRUTH_TABLE_B = format_truth_table(
+    (_A, _B, _EXPR),
+    (
+        ("False", "False", "False"),
+        ("False", "True", "False"),
+        ("True", "False", "False"),
+        ("True", "True", "True"),
+    ),
 )
 
-TRUTH_TABLE_C = (
-    f"{TRUTH_TABLE_HEADER}\n"
-    "False\nFalse\nFalse\n"
-    "False\nTrue\nFalse\n"
-    "True\nFalse\nFalse\n"
-    "False\nTrue\nTrue"
+TRUTH_TABLE_C = format_truth_table(
+    (_A, _B, _EXPR),
+    (
+        ("False", "False", "False"),
+        ("False", "True", "False"),
+        ("True", "False", "False"),
+        ("False", "True", "True"),
+    ),
 )
 
-TRUTH_TABLE_D = (
-    f"{TRUTH_TABLE_HEADER}\n"
-    "False\nFalse\nFalse\n"
-    "False\nTrue\nFalse\n"
-    "True\nFalse\nFalse\n"
-    "False\nTrue\nFalse"
+TRUTH_TABLE_D = format_truth_table(
+    (_A, _B, _EXPR),
+    (
+        ("False", "False", "False"),
+        ("False", "True", "False"),
+        ("True", "False", "False"),
+        ("False", "True", "False"),
+    ),
+)
+
+ENONCE_304 = (
+    "On considère une formule booléenne form des variables booléennes a et b "
+    "dont voici la table de vérité.\n"
+    + format_truth_table(
+        ("a", "b", "form"),
+        (
+            ("True", "True", "False"),
+            ("False", "True", "False"),
+            ("True", "False", "True"),
+            ("False", "False", "False"),
+        ),
+    )
+    + "\nQuelle est cette formule booléenne form ?"
+)
+
+ENONCE_411 = (
+    "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\n"
+    + format_truth_table(
+        ("A", "B", "S"),
+        (
+            ("0", "0", "1"),
+            ("0", "1", "0"),
+            ("1", "0", "1"),
+            ("1", "1", "1"),
+        ),
+    )
 )
 
 FIXES: dict[int, dict] = {
@@ -87,6 +140,8 @@ FIXES: dict[int, dict] = {
             {"lettre": "D", "texte": "def test(a,b):\nreturn a[1] > b[1]"},
         ],
     },
+    304: {"enonce": ENONCE_304},
+    411: {"enonce": ENONCE_411},
     452: {
         "reponses": [
             {"lettre": "A", "texte": TRUTH_TABLE_A},

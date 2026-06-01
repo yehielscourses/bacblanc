@@ -529,7 +529,14 @@ function renderQuestion(q, selectedLetter) {
       extraClass = ' answer-btn--selected';
     }
     btn.className = `answer-btn${extraClass}`;
-    btn.innerHTML = `<span class="answer-btn__letter">${r.lettre}</span><span>${escapeHtml(r.texte)}</span>`;
+    const letterSpan = document.createElement('span');
+    letterSpan.className = 'answer-btn__letter';
+    letterSpan.textContent = r.lettre;
+    const textSpan = document.createElement('span');
+    textSpan.className = 'answer-btn__text';
+    if (r.texte.includes('\n')) textSpan.classList.add('answer-btn__text--pre');
+    textSpan.textContent = r.texte;
+    btn.append(letterSpan, textSpan);
     if (!answered && !isReviewingHistory) {
       btn.addEventListener('click', () => onAnswerSelected(r.lettre));
     }
