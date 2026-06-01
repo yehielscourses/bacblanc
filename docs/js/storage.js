@@ -2,15 +2,29 @@ import { safeStorageGet, safeStorageRemove, safeStorageSet } from './compat.js';
 
 const KEYS = {
   mastered: 'nsi-quiz-mastered-ids',
+  seen: 'nsi-quiz-seen-ids',
   answerLog: 'nsi-quiz-answer-log',
   colorScheme: 'nsi-quiz-color-scheme',
   seriesHistory: 'nsi-quiz-series-results',
   pausedSeries: 'nsi-quiz-paused-series',
 };
 
-/** @typedef {{ seriesQueueIds: number[], seriesIndex: number, sessionHistory: { questionId: number, selected: string | null, correct: boolean }[], currentSeriesAnswers: { themeId: string, correct: boolean }[], savedAt: number }} PausedSeries */
+/** @typedef {'e3c' | 'theme'} PausedSeriesKind */
 
-/** @typedef {{ questionId: number, themeId: string, correct: boolean, at: number, mode: 'series' | 'unlimited' }} AnswerEntry */
+/**
+ * @typedef {{
+ *   id: string,
+ *   kind: PausedSeriesKind,
+ *   themeId?: string,
+ *   seriesQueueIds: number[],
+ *   seriesIndex: number,
+ *   sessionHistory: { questionId: number, selected: string | null, correct: boolean }[],
+ *   currentSeriesAnswers: { themeId: string, correct: boolean }[],
+ *   savedAt: number,
+ * }} PausedSeries
+ */
+
+/** @typedef {{ questionId: number, themeId: string, correct: boolean, at: number, mode: 'series' | 'unlimited' | 'theme' }} AnswerEntry */
 
 /** @typedef {{ at: number, score: number, total: number, byTheme: Record<string, { correct: number, total: number }> }} SeriesResult */
 
@@ -31,6 +45,25 @@ export function addMasteredId(id) {
 
 export function clearMastered() {
   safeStorageRemove(KEYS.mastered);
+}
+
+export function getSeenIds() {
+  try {
+    const raw = safeStorageGet(KEYS.seen);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+export function addSeenId(id) {
+  const set = getSeenIds();
+  set.add(id);
+  safeStorageSet(KEYS.seen, JSON.stringify([...set]));
+}
+
+export function clearSeen() {
+  safeStorageRemove(KEYS.seen);
 }
 
 export function getAnswerLog() {
@@ -70,30 +103,86 @@ export function appendSeriesResult(result) {
   safeStorageSet(KEYS.seriesHistory, JSON.stringify(list));
 }
 
-export function resetAllProgress() {
-  clearMastered();
+/** Efface notes et historique ; conserve questions vues et maîtrisées. */
+export function resetScoresOnly() {
   clearAnswerLog();
   safeStorageRemove(KEYS.seriesHistory);
-  clearPausedSeries();
+  clearAllPausedSeries();
 }
 
-/** @returns {PausedSeries | null} */
-export function getPausedSeries() {
+export function resetAllProgress() {
+  clearMastered();
+  clearSeen();
+  clearAnswerLog();
+  safeStorageRemove(KEYS.seriesHistory);
+  clearAllPausedSeries();
+}
+
+function migrateLegacyPaused(raw) {
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return /** @type {PausedSeries[]} */ (parsed);
+    if (parsed && typeof parsed === 'object' && parsed.seriesQueueIds) {
+      return [
+        {
+          id: `legacy-${parsed.savedAt ?? Date.now()}`,
+          kind: 'e3c',
+          seriesQueueIds: parsed.seriesQueueIds,
+          seriesIndex: parsed.seriesIndex ?? 0,
+          sessionHistory: parsed.sessionHistory ?? [],
+          currentSeriesAnswers: parsed.currentSeriesAnswers ?? [],
+          savedAt: parsed.savedAt ?? Date.now(),
+        },
+      ];
+    }
+  } catch {
+    /* ignore */
+  }
+  return [];
+}
+
+/** @returns {PausedSeries[]} */
+export function getPausedSeriesList() {
   try {
     const raw = safeStorageGet(KEYS.pausedSeries);
-    return raw ? /** @type {PausedSeries} */ (JSON.parse(raw)) : null;
+    return migrateLegacyPaused(raw);
   } catch {
-    return null;
+    return [];
   }
 }
 
 /** @param {PausedSeries} state */
 export function savePausedSeries(state) {
-  safeStorageSet(KEYS.pausedSeries, JSON.stringify(state));
+  const list = getPausedSeriesList().filter((p) => p.id !== state.id);
+  list.push(state);
+  list.sort((a, b) => b.savedAt - a.savedAt);
+  safeStorageSet(KEYS.pausedSeries, JSON.stringify(list));
 }
 
-export function clearPausedSeries() {
+/** @param {string} id */
+export function removePausedSeries(id) {
+  const list = getPausedSeriesList().filter((p) => p.id !== id);
+  if (list.length === 0) {
+    safeStorageRemove(KEYS.pausedSeries);
+  } else {
+    safeStorageSet(KEYS.pausedSeries, JSON.stringify(list));
+  }
+}
+
+export function clearAllPausedSeries() {
   safeStorageRemove(KEYS.pausedSeries);
+}
+
+/** @deprecated Utiliser getPausedSeriesList */
+export function getPausedSeries() {
+  const list = getPausedSeriesList();
+  return list.length > 0 ? list[0] : null;
+}
+
+/** @deprecated Utiliser removePausedSeries */
+export function clearPausedSeries() {
+  clearAllPausedSeries();
 }
 
 export function getColorSchemePreference() {

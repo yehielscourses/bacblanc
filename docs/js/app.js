@@ -1,14 +1,16 @@
 import { SERIES_LENGTH, THEME_IDS, assetUrl } from './config.js';
 import {
   getMasteredIds,
+  getSeenIds,
   appendAnswer,
   appendSeriesResult,
   resetAllProgress,
+  resetScoresOnly,
   getAnswerLog,
   getSeriesResults,
-  getPausedSeries,
+  getPausedSeriesList,
   savePausedSeries,
-  clearPausedSeries,
+  removePausedSeries,
 } from './storage.js';
 import {
   unlimitedMainScore,
@@ -21,8 +23,10 @@ import {
   buildSeriesQueue,
   getNextQuestion,
   recordAnswerOutcome,
+  markQuestionSeen,
   countMastered,
   countAvailable,
+  countAvailableForSeries,
 } from './quiz-engine.js';
 import { getColorSchemePreference } from './storage.js';
 import { setRichContent } from './rich-text.js';
@@ -31,15 +35,22 @@ import { getAiProviderIcon } from './ai-icons.js';
 import { yieldToMain, mayNeedJitHint, isStorageAvailable } from './compat.js';
 
 const QCM_DATA_URL = () => assetUrl('data/qcm.json');
+const DONT_KNOW = '?';
 
 /** @typedef {'home' | 'quiz' | 'results'} Screen */
-/** @typedef {'series' | 'unlimited'} Mode */
+/** @typedef {'series' | 'unlimited' | 'theme'} Mode */
 
 /** @type {import('./config.js').Question[]} */
 let questions = [];
 
 /** @type {Mode | null} */
 let currentMode = null;
+
+/** @type {string | null} */
+let currentThemeId = null;
+
+/** @type {string | null} */
+let activePausedId = null;
 
 /** @type {import('./config.js').Question[]} */
 let seriesQueue = [];
@@ -78,6 +89,15 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+function themeLabel(themeId) {
+  const q = questions.find((x) => x.theme_id === themeId);
+  return q ? `${themeId} — ${q.theme_nom}` : themeId;
+}
+
+function newPausedId() {
+  return `pause-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+}
+
 async function loadQuestions() {
   const url = QCM_DATA_URL();
   let res;
@@ -106,20 +126,66 @@ function questionById(id) {
   return questions.find((q) => q.id === id) ?? null;
 }
 
+function isSeriesMode() {
+  return currentMode === 'series' || currentMode === 'theme';
+}
+
+function pausedSeriesLabel(paused) {
+  if (paused.kind === 'theme' && paused.themeId) {
+    return `Série thématique · ${themeLabel(paused.themeId)}`;
+  }
+  return 'Série E3C';
+}
+
 function renderResumeBanner() {
-  const paused = getPausedSeries();
-  const banner = $('#resume-series-banner');
-  if (!banner) return;
-  if (!paused || !paused.seriesQueueIds?.length) {
-    banner.hidden = true;
+  const container = $('#paused-series-container');
+  if (!container) return;
+
+  const list = getPausedSeriesList();
+  if (list.length === 0) {
+    container.hidden = true;
+    container.innerHTML = '';
     return;
   }
-  const answered = paused.sessionHistory.filter((e) => e.selected != null).length;
-  const total = paused.seriesQueueIds.length;
-  const idx = Math.min(paused.seriesIndex + 1, total);
-  $('#resume-series-detail').textContent =
-    `Question ${idx} / ${total} · ${answered} réponse${answered > 1 ? 's' : ''} enregistrée${answered > 1 ? 's' : ''}`;
-  banner.hidden = false;
+
+  container.hidden = false;
+  container.innerHTML = list
+    .map((paused) => {
+      const answered = paused.sessionHistory.filter((e) => e.selected != null).length;
+      const total = paused.seriesQueueIds.length;
+      const idx = Math.min(paused.seriesIndex + 1, total);
+      const label = pausedSeriesLabel(paused);
+      return `
+        <div class="resume-banner card" data-pause-id="${escapeHtml(paused.id)}">
+          <div class="resume-banner__text">
+            <strong>${escapeHtml(label)} — en pause</strong>
+            <p class="muted">Question ${idx} / ${total} · ${answered} réponse${answered > 1 ? 's' : ''} enregistrée${answered > 1 ? 's' : ''}</p>
+          </div>
+          <div class="resume-banner__actions">
+            <button type="button" class="btn btn--primary btn--sm" data-resume-id="${escapeHtml(paused.id)}">Reprendre</button>
+            <button type="button" class="btn btn--ghost btn--sm" data-abandon-id="${escapeHtml(paused.id)}" title="Abandonner cette série">✕</button>
+          </div>
+        </div>`;
+    })
+    .join('');
+
+  container.querySelectorAll('[data-resume-id]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-resume-id');
+      if (id) resumePausedSeries(id);
+    });
+  });
+
+  container.querySelectorAll('[data-abandon-id]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-abandon-id');
+      if (!id) return;
+      if (confirm('Abandonner définitivement cette série en pause ?')) {
+        removePausedSeries(id);
+        renderResumeBanner();
+      }
+    });
+  });
 }
 
 function renderHomeStats() {
@@ -156,15 +222,14 @@ function renderHomeStats() {
   const themeLines = THEME_IDS.map((id) => {
     const t = themes[id];
     if (!t || t.note === null) return '';
-    const q = questions.find((x) => x.theme_id === id);
-    const name = q ? `${id} — ${q.theme_nom}` : id;
+    const name = themeLabel(id);
     return `<div class="score-row"><span class="score-row__theme">${escapeHtml(name)}</span><span>${t.note} / 20</span></div>`;
   })
     .filter(Boolean)
     .join('');
 
   if (themeLines) {
-    statsEl.innerHTML += `<div class="stat-block" style="grid-column:1/-1"><div class="stat-block__label">Sous-notes par thème (illimité)</div>${themeLines}</div>`;
+    statsEl.innerHTML += `<div class="stat-block stat-block--themes"><div class="stat-block__label">Sous-notes par thème (illimité)</div>${themeLines}</div>`;
   }
 
   const storageNote = !isStorageAvailable()
@@ -174,9 +239,28 @@ function renderHomeStats() {
     `${mastered} question${mastered > 1 ? 's' : ''} maîtrisée${mastered > 1 ? 's' : ''} · ${avail} restante${avail > 1 ? 's' : ''} dans la banque${storageNote}`;
 }
 
+function findResumeSeriesIndex(queue, sessionHist) {
+  const historyByQ = new Map(sessionHist.map((e) => [e.questionId, e]));
+
+  for (let i = 0; i < queue.length; i++) {
+    const q = queue[i];
+    const h = historyByQ.get(q.id);
+    if (!h || h.selected == null) return i;
+  }
+
+  return Math.max(0, queue.length - 1);
+}
+
 function persistPausedSeries() {
-  if (currentMode !== 'series' || seriesQueue.length === 0) return;
+  if (!isSeriesMode() || seriesQueue.length === 0) return;
+
+  const id = activePausedId || newPausedId();
+  activePausedId = id;
+
   savePausedSeries({
+    id,
+    kind: currentMode === 'theme' ? 'theme' : 'e3c',
+    themeId: currentThemeId ?? undefined,
     seriesQueueIds: seriesQueue.map((q) => q.id),
     seriesIndex,
     sessionHistory: sessionHistory.map((e) => ({
@@ -190,21 +274,26 @@ function persistPausedSeries() {
   renderResumeBanner();
 }
 
-function resumePausedSeries() {
-  const paused = getPausedSeries();
+function resumePausedSeries(pauseId) {
+  const paused = getPausedSeriesList().find((p) => p.id === pauseId);
   if (!paused) return;
 
   const queue = paused.seriesQueueIds.map((id) => questionById(id)).filter(Boolean);
   if (queue.length === 0) {
-    clearPausedSeries();
+    removePausedSeries(pauseId);
     renderResumeBanner();
     alert('Impossible de reprendre : questions introuvables.');
     return;
   }
 
-  currentMode = 'series';
+  activePausedId = pauseId;
+  currentMode = paused.kind === 'theme' ? 'theme' : 'series';
+  currentThemeId = paused.themeId ?? null;
   seriesQueue = queue;
-  seriesIndex = Math.min(paused.seriesIndex, seriesQueue.length - 1);
+  seriesIndex = findResumeSeriesIndex(
+    queue,
+    paused.sessionHistory
+  );
   currentSeriesAnswers = [...paused.currentSeriesAnswers];
   sessionHistory = paused.sessionHistory
     .map((e) => {
@@ -221,57 +310,114 @@ function resumePausedSeries() {
   isReviewingHistory = false;
   awaitingContinue = false;
 
-  const q = seriesQueue[seriesIndex];
-  const histIdx = sessionHistory.findIndex((e) => e.question.id === q?.id);
-  if (histIdx >= 0) {
-    historyIndex = histIdx;
-    renderQuestion(q, sessionHistory[histIdx].selected);
-  } else if (q) {
-    const entry = { question: q, selected: null, correct: false, explanationCollapsed: false };
-    sessionHistory.push(entry);
-    historyIndex = sessionHistory.length - 1;
-    renderQuestion(q, null);
-  }
-
-  $('#quiz-mode-label').textContent = 'Série E3C';
+  showCurrentSeriesQuestion();
+  updateQuizModeLabel();
   updateLiveScores();
   updateQuizChrome();
   showScreen('quiz');
 }
 
-function startMode(mode, { resume = false } = {}) {
-  if (mode === 'series' && resume) {
-    resumePausedSeries();
+function updateQuizModeLabel() {
+  if (currentMode === 'series') {
+    $('#quiz-mode-label').textContent = 'Série E3C';
+  } else if (currentMode === 'theme' && currentThemeId) {
+    $('#quiz-mode-label').textContent = `Thème ${currentThemeId}`;
+  } else {
+    $('#quiz-mode-label').textContent = 'Illimité';
+  }
+}
+
+function showThemePicker() {
+  const picker = $('#theme-picker');
+  const list = $('#theme-picker-list');
+  if (!picker || !list) return;
+
+  list.innerHTML = THEME_IDS.map((id) => {
+    const avail = countAvailableForSeries(questions, id);
+    const disabled = avail === 0;
+    return `
+      <button type="button" class="theme-picker__item" data-theme-id="${id}" ${disabled ? 'disabled' : ''}>
+        <span class="theme-picker__item-label">${escapeHtml(themeLabel(id))}</span>
+        <span class="theme-picker__item-meta">${avail} dispo.</span>
+      </button>`;
+  }).join('');
+
+  list.querySelectorAll('[data-theme-id]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const themeId = btn.getAttribute('data-theme-id');
+      if (themeId) {
+        picker.hidden = true;
+        startMode('theme', { themeId });
+      }
+    });
+  });
+
+  picker.hidden = false;
+}
+
+function hideThemePicker() {
+  const picker = $('#theme-picker');
+  if (picker) picker.hidden = true;
+}
+
+function startMode(mode, { resume = false, themeId = null, pauseId = null } = {}) {
+  if (resume && pauseId) {
+    resumePausedSeries(pauseId);
     return;
   }
 
-  if (mode === 'series' && getPausedSeries()) {
-    const choice = confirm(
-      'Une série est en pause. OK = nouvelle série (l\'ancienne sera abandonnée). Annuler = revenir à l\'accueil.'
-    );
-    if (!choice) return;
-    clearPausedSeries();
-    renderResumeBanner();
+  if (mode === 'theme' && !themeId) {
+    showThemePicker();
+    return;
+  }
+
+  hideThemePicker();
+
+  if (isSeriesMode() || mode === 'series' || mode === 'theme') {
+    const existing = getPausedSeriesList();
+    if (existing.length > 0 && (mode === 'series' || mode === 'theme')) {
+      const choice = confirm(
+        `Vous avez ${existing.length} série(s) en pause. OK = lancer une nouvelle série (les pauses restent disponibles à l'accueil). Annuler = revenir.`
+      );
+      if (!choice) return;
+    }
   }
 
   currentMode = mode;
+  currentThemeId = themeId;
+  activePausedId = newPausedId();
   sessionHistory = [];
   historyIndex = -1;
   currentSeriesAnswers = [];
   isReviewingHistory = false;
   awaitingContinue = false;
 
-  if (mode === 'series') {
+  if (mode === 'series' || mode === 'theme') {
     const mastered = getMasteredIds();
-    const pool = questions.filter((q) => !mastered.has(q.id));
-    seriesQueue = buildSeriesQueue(pool, SERIES_LENGTH);
+    const seen = getSeenIds();
+    let pool = questions.filter((q) => !mastered.has(q.id) && !seen.has(q.id));
+    if (mode === 'theme' && themeId) {
+      pool = pool.filter((q) => q.theme_id === themeId);
+    }
+
+    const targetLen = mode === 'series' ? SERIES_LENGTH : Math.min(SERIES_LENGTH, pool.length);
+    seriesQueue = buildSeriesQueue(pool, targetLen, {
+      referencePool: questions,
+      themeId: themeId ?? undefined,
+    });
     seriesIndex = 0;
+
     if (seriesQueue.length === 0) {
-      alert('Félicitations ! Vous avez maîtrisé toutes les questions. Réinitialisez la progression pour recommencer.');
+      alert(
+        mode === 'theme'
+          ? 'Aucune question disponible pour ce thème. Réinitialisez la progression ou choisissez un autre thème.'
+          : 'Félicitations ! Vous avez maîtrisé toutes les questions. Réinitialisez la progression pour recommencer.'
+      );
       currentMode = null;
       return;
     }
-    if (seriesQueue.length < SERIES_LENGTH) {
+
+    if (mode === 'series' && seriesQueue.length < SERIES_LENGTH) {
       const ok = confirm(
         `Il ne reste que ${seriesQueue.length} question(s) non maîtrisée(s). Lancer une série de ${seriesQueue.length} ?`
       );
@@ -280,12 +426,21 @@ function startMode(mode, { resume = false } = {}) {
         return;
       }
     }
+
+    if (mode === 'theme' && seriesQueue.length < targetLen && seriesQueue.length < pool.length) {
+      const ok = confirm(`Lancer une série de ${seriesQueue.length} question(s) pour ce thème ?`);
+      if (!ok) {
+        currentMode = null;
+        return;
+      }
+    }
+
     showCurrentSeriesQuestion();
   } else {
     advanceToNewQuestion();
   }
 
-  $('#quiz-mode-label').textContent = mode === 'series' ? 'Série E3C' : 'Illimité';
+  updateQuizModeLabel();
   updateLiveScores();
   updateQuizChrome();
   showScreen('quiz');
@@ -302,6 +457,9 @@ function showCurrentSeriesQuestion() {
     finishSeries();
     return;
   }
+
+  markQuestionSeen(q.id);
+
   const existing = sessionHistory.find((e) => e.question.id === q.id && e.selected == null);
   if (existing) {
     historyIndex = sessionHistory.indexOf(existing);
@@ -320,11 +478,12 @@ function advanceToNewQuestion() {
   isReviewingHistory = false;
   const q = getNextQuestion(questions);
   if (!q) {
-    alert('Toutes les questions ont été maîtrisées ! Réinitialisez la progression pour recommencer.');
+    alert('Plus aucune question disponible dans la banque ! Réinitialisez la progression pour recommencer.');
     showScreen('home');
     renderHomeStats();
     return;
   }
+  markQuestionSeen(q.id);
   const entry = { question: q, selected: null, correct: false, explanationCollapsed: false };
   sessionHistory.push(entry);
   historyIndex = sessionHistory.length - 1;
@@ -336,6 +495,7 @@ function renderQuestion(q, selectedLetter) {
   const entry = getCurrentSessionEntry();
   const answered = entry?.selected != null;
   const isCorrect = entry?.correct ?? false;
+  const isDontKnow = selectedLetter === DONT_KNOW;
 
   $('#question-theme').textContent = `${q.theme_id} — ${q.theme_nom}`;
   $('#question-theme').setAttribute('data-theme-id', q.theme_id);
@@ -353,11 +513,19 @@ function renderQuestion(q, selectedLetter) {
     if (answered) {
       btn.disabled = true;
       if (r.lettre === q.bonne_reponse) extraClass = ' answer-btn--correct';
-      else if (r.lettre === selectedLetter && selectedLetter !== q.bonne_reponse)
+      else if (
+        !isDontKnow &&
+        r.lettre === selectedLetter &&
+        selectedLetter !== q.bonne_reponse
+      )
         extraClass = ' answer-btn--wrong';
       else extraClass = ' answer-btn--dimmed';
     }
-    if (selectedLetter === r.lettre && !extraClass.includes('correct') && !extraClass.includes('wrong')) {
+    if (
+      selectedLetter === r.lettre &&
+      !extraClass.includes('correct') &&
+      !extraClass.includes('wrong')
+    ) {
       extraClass = ' answer-btn--selected';
     }
     btn.className = `answer-btn${extraClass}`;
@@ -368,6 +536,16 @@ function renderQuestion(q, selectedLetter) {
     answersEl.appendChild(btn);
   });
 
+  const secondary = $('#answers-secondary');
+  const btnDontKnow = $('#btn-dont-know');
+  if (secondary && btnDontKnow) {
+    const showSecondary = !answered && !isReviewingHistory;
+    secondary.hidden = !showSecondary;
+    if (showSecondary) {
+      btnDontKnow.onclick = () => onDontKnow();
+    }
+  }
+
   const feedback = $('#feedback');
   const explanation = $('#explanation');
   const msg = $('#feedback-message');
@@ -376,11 +554,15 @@ function renderQuestion(q, selectedLetter) {
 
   if (answered) {
     feedback.hidden = false;
-    msg.textContent = isCorrect
-      ? isReviewingHistory
-        ? 'Réponse correcte'
-        : 'Bonne réponse !'
-      : 'Mauvaise réponse — la bonne réponse est ' + q.bonne_reponse;
+    if (isDontKnow) {
+      msg.textContent = 'Pas de souci — la bonne réponse est ' + q.bonne_reponse;
+    } else {
+      msg.textContent = isCorrect
+        ? isReviewingHistory
+          ? 'Réponse correcte'
+          : 'Bonne réponse !'
+        : 'Mauvaise réponse — la bonne réponse est ' + q.bonne_reponse;
+    }
     msg.className = isCorrect
       ? 'feedback__message feedback__message--success'
       : 'feedback__message feedback__message--error';
@@ -402,7 +584,7 @@ function renderQuestion(q, selectedLetter) {
     if (isReviewingHistory) {
       btnContinue.textContent = 'Revenir à la question en cours';
       btnContinue.onclick = () => onResumeFromReview();
-    } else if (currentMode === 'series') {
+    } else if (isSeriesMode()) {
       btnContinue.textContent =
         seriesIndex >= seriesQueue.length - 1 ? 'Voir les résultats' : 'Question suivante';
       btnContinue.onclick = () => onContinueAfterAnswer();
@@ -418,32 +600,32 @@ function renderQuestion(q, selectedLetter) {
   }
 
   $('#btn-back').disabled = historyIndex <= 0;
-
-  $('#btn-pause-series').hidden = currentMode !== 'series';
+  $('#btn-pause-series').hidden = !isSeriesMode();
 }
 
-function onAnswerSelected(letter) {
+function submitAnswer(letter, correct) {
   if (awaitingContinue || isReviewingHistory) return;
   const entry = getCurrentSessionEntry();
   if (!entry || entry.selected != null) return;
 
   const q = entry.question;
-  const correct = letter === q.bonne_reponse;
   entry.selected = letter;
   entry.correct = correct;
   entry.explanationCollapsed = false;
   awaitingContinue = true;
 
   recordAnswerOutcome(q.id, correct);
+  const modeKey =
+    currentMode === 'theme' ? 'theme' : currentMode === 'series' ? 'series' : 'unlimited';
   appendAnswer({
     questionId: q.id,
     themeId: q.theme_id,
     correct,
     at: Date.now(),
-    mode: currentMode,
+    mode: modeKey,
   });
 
-  if (currentMode === 'series') {
+  if (isSeriesMode()) {
     currentSeriesAnswers.push({ themeId: q.theme_id, correct });
     persistPausedSeries();
   }
@@ -453,10 +635,20 @@ function onAnswerSelected(letter) {
   updateQuizChrome();
 }
 
+function onAnswerSelected(letter) {
+  const entry = getCurrentSessionEntry();
+  if (!entry) return;
+  submitAnswer(letter, letter === entry.question.bonne_reponse);
+}
+
+function onDontKnow() {
+  submitAnswer(DONT_KNOW, false);
+}
+
 function onResumeFromReview() {
   awaitingContinue = false;
   isReviewingHistory = false;
-  if (currentMode === 'series') {
+  if (isSeriesMode()) {
     const q = seriesQueue[seriesIndex];
     const idx = sessionHistory.findIndex((e) => e.question.id === q?.id);
     if (idx >= 0) historyIndex = idx;
@@ -475,7 +667,7 @@ function onContinueAfterAnswer() {
     onResumeFromReview();
     return;
   }
-  if (currentMode === 'series') {
+  if (isSeriesMode()) {
     if (seriesIndex >= seriesQueue.length - 1) {
       finishSeries();
       return;
@@ -498,9 +690,9 @@ function goBack() {
 }
 
 function updateQuizChrome() {
-  $('#btn-pause-series').hidden = currentMode !== 'series';
+  $('#btn-pause-series').hidden = !isSeriesMode();
 
-  if (currentMode === 'series') {
+  if (isSeriesMode()) {
     const total = seriesQueue.length;
     const current = isReviewingHistory
       ? `Révision · question ${historyIndex + 1}`
@@ -516,7 +708,7 @@ function updateQuizChrome() {
 
 function updateLiveScores() {
   const el = $('#live-scores-content');
-  if (currentMode === 'series') {
+  if (isSeriesMode()) {
     const correct = currentSeriesAnswers.filter((a) => a.correct).length;
     const total = currentSeriesAnswers.length;
     const byTheme = seriesThemeScores(currentSeriesAnswers);
@@ -543,7 +735,8 @@ function updateLiveScores() {
 }
 
 function finishSeries() {
-  clearPausedSeries();
+  if (activePausedId) removePausedSeries(activePausedId);
+  activePausedId = null;
   renderResumeBanner();
 
   const correct = currentSeriesAnswers.filter((a) => a.correct).length;
@@ -557,22 +750,31 @@ function finishSeries() {
     byTheme,
   });
 
-  const note20 = ((correct * 20) / SERIES_LENGTH).toFixed(1);
+  const denom = currentMode === 'series' ? SERIES_LENGTH : seriesQueue.length;
+  const note20 = ((correct * 20) / denom).toFixed(1);
   $('#series-final-score').textContent = `${correct} / ${total}`;
   const shortened =
-    total < SERIES_LENGTH
+    currentMode === 'series' && total < SERIES_LENGTH
       ? ` Série raccourcie (${total} question${total > 1 ? 's' : ''} jouée${total > 1 ? 's' : ''}).`
       : '';
+  const title =
+    currentMode === 'theme' && currentThemeId
+      ? `Série thématique (${currentThemeId}) terminée`
+      : 'Série terminée';
+  const resultsHeading = document.querySelector('#screen-results h2');
+  if (resultsHeading) resultsHeading.textContent = title;
+
   $('#series-summary').textContent =
-    `Équivalent bac : ${note20} / 20 (barème officiel : ${correct} × 20/42).${shortened}`;
+    currentMode === 'series'
+      ? `Équivalent bac : ${note20} / 20 (barème officiel : ${correct} × 20/42).${shortened}`
+      : `${correct} bonne${correct > 1 ? 's' : ''} réponse${correct > 1 ? 's' : ''} sur ${total}.${shortened}`;
 
   const themeEl = $('#series-theme-scores');
   let html = '<h3>Par thème</h3>';
   for (const id of THEME_IDS) {
     const t = byTheme[id];
     if (!t) continue;
-    const q = questions.find((x) => x.theme_id === id);
-    const label = q ? `${id} — ${q.theme_nom}` : id;
+    const label = themeLabel(id);
     const pct = t.total ? (t.correct / t.total) * 100 : 0;
     html += `
       <div class="theme-score-item">
@@ -583,20 +785,23 @@ function finishSeries() {
   }
   themeEl.innerHTML = html;
   currentMode = null;
+  currentThemeId = null;
   renderHomeStats();
   showScreen('results');
 }
 
 function pauseSeries() {
-  if (currentMode !== 'series') return;
+  if (!isSeriesMode()) return;
   persistPausedSeries();
   currentMode = null;
+  currentThemeId = null;
+  activePausedId = null;
   renderHomeStats();
   showScreen('home');
 }
 
 function quitQuiz() {
-  if (currentMode === 'series' && sessionHistory.some((e) => e.selected != null)) {
+  if (isSeriesMode() && sessionHistory.some((e) => e.selected != null)) {
     const pause = confirm(
       'Mettre la série en pause pour la reprendre plus tard ?\n\nOK = pause · Annuler = choisir une autre action'
     );
@@ -606,12 +811,15 @@ function quitQuiz() {
     }
     const abandon = confirm('Abandonner définitivement cette série ? La progression de la série sera perdue.');
     if (!abandon) return;
-    clearPausedSeries();
+    if (activePausedId) removePausedSeries(activePausedId);
+    activePausedId = null;
   } else if (sessionHistory.some((e) => e.selected != null)) {
     const ok = confirm('Quitter la session en cours ?');
     if (!ok) return;
   }
   currentMode = null;
+  currentThemeId = null;
+  activePausedId = null;
   renderHomeStats();
   showScreen('home');
 }
@@ -619,7 +827,7 @@ function quitQuiz() {
 function getCurrentQuestionForAi() {
   const entry = getCurrentSessionEntry();
   if (entry) return entry.question;
-  if (currentMode === 'series') return seriesQueue[seriesIndex] ?? null;
+  if (isSeriesMode()) return seriesQueue[seriesIndex] ?? null;
   return null;
 }
 
@@ -679,10 +887,18 @@ function closeAiMenu() {
 
 function bindEvents() {
   document.querySelectorAll('[data-mode]').forEach((btn) => {
-    btn.addEventListener('click', () => startMode(/** @type {Mode} */ (btn.getAttribute('data-mode'))));
+    btn.addEventListener('click', () => {
+      const mode = /** @type {Mode} */ (btn.getAttribute('data-mode'));
+      if (mode === 'theme') {
+        showThemePicker();
+      } else {
+        hideThemePicker();
+        startMode(mode);
+      }
+    });
   });
 
-  bindOptional('btn-resume-series', 'click', () => startMode('series', { resume: true }));
+  bindOptional('btn-close-theme-picker', 'click', hideThemePicker);
   bindOptional('btn-quit', 'click', quitQuiz);
   bindOptional('btn-pause-series', 'click', pauseSeries);
   bindOptional('btn-back', 'click', goBack);
@@ -690,8 +906,23 @@ function bindEvents() {
   bindOptional('ai-menu-close', 'click', closeAiMenu);
   bindOptional('ai-menu-backdrop', 'click', closeAiMenu);
 
+  bindOptional('btn-reset-scores', 'click', () => {
+    if (
+      confirm(
+        'Réinitialiser uniquement les notes (historique des réponses et séries terminées) ?\n\nLes questions déjà vues ne seront pas reposées.'
+      )
+    ) {
+      resetScoresOnly();
+      renderHomeStats();
+    }
+  });
+
   bindOptional('btn-reset-progress', 'click', () => {
-    if (confirm('Effacer toute la progression (questions maîtrisées, historique, notes, séries en pause) ?')) {
+    if (
+      confirm(
+        'Effacer toute la progression (questions vues, maîtrisées, historique, notes, séries en pause) ?'
+      )
+    ) {
       resetAllProgress();
       renderHomeStats();
     }
