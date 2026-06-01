@@ -6,7 +6,7 @@
   <meta name="description" content="Entraînement QCM NSI Première — E3C avec corrections">
   <meta name="base-path" content="/bacblanc/">
   <title>QCM NSI Première — E3C</title>
-  <link rel="stylesheet" href="css/app.css?v=7">
+  <link rel="stylesheet" href="css/app.css?v=8">
   <script>
     (function () {
       try {
@@ -46,24 +46,28 @@
         <div class="card card--hero">
           <h2>Choisissez un mode</h2>
           <p class="muted"><span id="question-bank-count">605</span> questions uniques issues des annales. Les questions répondues correctement ne reviennent plus.</p>
-          <div class="resume-banner card" id="resume-series-banner" hidden>
-            <div class="resume-banner__text">
-              <strong>Série en pause</strong>
-              <p class="muted" id="resume-series-detail"></p>
-            </div>
-            <button type="button" class="btn btn--primary btn--sm" id="btn-resume-series">Reprendre</button>
-          </div>
-          <div class="mode-grid">
+          <div id="paused-series-container" class="paused-series-container" hidden></div>
+          <div class="mode-grid mode-grid--three">
             <button type="button" class="mode-card" data-mode="series">
               <span class="mode-card__icon" aria-hidden="true">42</span>
               <span class="mode-card__title">Série E3C</span>
-              <span class="mode-card__desc">42 questions aléatoires — note sur 42, comme l'épreuve</span>
+              <span class="mode-card__desc">42 questions — répartition par thème comme aux annales</span>
             </button>
             <button type="button" class="mode-card" data-mode="unlimited">
               <span class="mode-card__icon" aria-hidden="true">∞</span>
               <span class="mode-card__title">Mode illimité</span>
-              <span class="mode-card__desc">Enchaînez les questions — suivi sur vos 100 dernières réponses</span>
+              <span class="mode-card__desc">Enchaînez les questions — priorité aux thèmes les plus faibles</span>
             </button>
+            <button type="button" class="mode-card" data-mode="theme" id="btn-open-theme-series">
+              <span class="mode-card__icon" aria-hidden="true">◎</span>
+              <span class="mode-card__title">Série thématique</span>
+              <span class="mode-card__desc">Choisissez un thème — pause et reprise possibles</span>
+            </button>
+          </div>
+          <div class="theme-picker card" id="theme-picker" hidden>
+            <h3 class="theme-picker__title">Choisir un thème</h3>
+            <div id="theme-picker-list" class="theme-picker__list"></div>
+            <button type="button" class="btn btn--ghost btn--sm" id="btn-close-theme-picker">Annuler</button>
           </div>
         </div>
 
@@ -71,7 +75,10 @@
           <h3>Vos statistiques</h3>
           <div id="home-stats" class="stats-grid"></div>
           <p class="stats-footnote muted" id="mastered-count"></p>
-          <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-progress">Réinitialiser la progression</button>
+          <div class="reset-actions">
+            <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-scores">Réinitialiser les notes</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-progress">Tout effacer</button>
+          </div>
         </div>
       </section>
 
@@ -111,6 +118,9 @@
           </div>
 
           <div id="answers" class="answers" role="group" aria-label="Réponses possibles"></div>
+          <div class="answers-secondary" id="answers-secondary" hidden>
+            <button type="button" class="btn btn--ghost btn--sm" id="btn-dont-know">Je ne sais pas</button>
+          </div>
 
           <div id="feedback" class="feedback" hidden>
             <p id="feedback-message" class="feedback__message"></p>
@@ -178,6 +188,6 @@
         '<p class="muted" style="margin-top:0.75rem;font-size:0.875rem">Sur Vanadium : activez « JavaScript JIT » pour ce site (menu ⋮ → Paramètres du site).</p>';
     });
   </script>
-  <script type="module" src="js/app.js?v=7"></script>
+  <script type="module" src="js/app.js?v=8"></script>
 </body>
 </html>
