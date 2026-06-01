@@ -37,7 +37,7 @@
         },
         {
           "numero": "A.2",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\nc = True\nelif a > b+10:\nc = True\nelse:\nc = False",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\n    c = True\nelif a > b+10:\n    c = True\nelse:\n    c = False",
           "reponses": [
             {
               "lettre": "A",
@@ -81,7 +81,7 @@
         },
         {
           "numero": "A.4",
-          "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\na\nb\nform\nTrue\nTrue\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nQuelle est cette formule booléenne form ?",
+          "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\n        a\n            b\n                form\n        True\n            True\n                False\n        False\n            True\n                False\n        True\n            False\n                True\n        False\n            False\n                False\nQuelle est cette formule booléenne form ?",
           "reponses": [
             {
               "lettre": "A",
@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n('avril',20), ('mai',23), ('juin',25),\n('juillet',29), ('août',25), ('septembre',22),\n('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\nif (m > mois[1]):\nm = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
+          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n              ('avril',20), ('mai',23), ('juin',25),\n              ('juillet',29), ('août',25), ('septembre',22),\n              ('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\n        if (m > mois[1]):\n         m = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -219,23 +219,23 @@
         },
         {
           "numero": "B.4",
-          "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n[\n[0, 0, 0, …, 0],\n[0, 0, 0, …, 0],\n[0, 0, 0, …, 0]\n….\n[0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
+          "enonce": "On définit une grille G remplie de 0, sous la forme d'une liste de listes, où toutes les sous-listes ont le même\nnombre d'éléments.\nG =\n    [\n        [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0],\n        [0, 0, 0, …, 0]\n        ….\n        [0, 0, 0, …, 0] ]\nOn appelle hauteur de la grille le nombre de sous-listes contenues dans G et largeur de la grille le nombre\nd'éléments dans chacune de ces sous-listes. Comment peut-on les obtenir ?",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "hauteur = len(G[0])\nlargeur = len(G)"
+              "texte": "hauteur = len(G[0])\n    largeur = len(G)"
             },
             {
               "lettre": "B",
-              "texte": "hauteur = len(G)\nlargeur = len(G[0])"
+              "texte": "hauteur = len(G)\n    largeur = len(G[0])"
             },
             {
               "lettre": "C",
-              "texte": "hauteur = len(G[0])\nlargeur = len(G[1])"
+              "texte": "hauteur = len(G[0])\n    largeur = len(G[1])"
             },
             {
               "lettre": "D",
-              "texte": "hauteur = len(G[1])\nlargeur = len(G[0])"
+              "texte": "hauteur = len(G[1])\n    largeur = len(G[0])"
             }
           ]
         },
@@ -303,11 +303,11 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche\nle numéro de Dupond ?\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]\nfor i in range(len(repertoire)):\nif ......   :\nprint(repertoire[i]['tel'])",
+          "enonce": "Par quelle expression remplacer les pointillés dans le programme Python suivant, pour que son exécution affiche\nle numéro de Dupond ?\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n        {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]\nfor i in range(len(repertoire)):\n    if ......   :\n        print(repertoire[i]['tel'])",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n    {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -451,7 +451,7 @@
         },
         {
           "numero": "D.2",
-          "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n<div>\n<label for=\"nom\">Classe:</label>\n<input type=\"text\" id=\"nom\" name=\"leNom\" />\n</div>\n<div>\n<label for=\"effectif\">Effectif:</label>\n<input type=\"number\" id=\"effectif\" name=\"n\" />\n</div>\n<div>\n<button type=\"submit\">Go!</button>\n</div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
+          "enonce": "Voici un formulaire contenu dans une page HTML :\n<form action=\"traitement.php\" method=\"get\">\n    <div>\n        <label for=\"nom\">Classe:</label>\n        <input type=\"text\" id=\"nom\" name=\"leNom\" />\n    </div>\n    <div>\n        <label for=\"effectif\">Effectif:</label>\n        <input type=\"number\" id=\"effectif\" name=\"n\" />\n    </div>\n    <div>\n        <button type=\"submit\">Go!</button>\n    </div>\n</form>\nUn utilisateur remplit le formulaire comme suit :\nQuelle est l'adresse de la page obtenue lorsque l'utilisateur clique sur le bouton Go! ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\nif m < L[j]:\nm = L[j]",
+          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\n    if m < L[j]:\n        m = L[j]",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "enonce": "La\n    documentation\n            de\n                la\n                    bibliothèque\n                        random\n                            de\n                                Python\n                                    précise\n                                        que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\nalert(i)\ni = i + 1\n}\nalert(\"Fin\")",
+          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\n    alert(i)\n    i = i + 1\n}\nalert(\"Fin\")",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\nn = 0\nfor item in L:\nif item == x:\nn = n + 1\nreturn n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
+          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\n    n = 0\n    for item in L:\n        if item == x:\n            n = n + 1\n    return n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\np = 1\nn = m\nq = a\nwhile n > 0:\nif n%2 == 0:\nq = q * q\n#\nn = n // 2\nelse:\np = q * p\nn = n - 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\n    p = 1\n    n = m\n    q = a\n    while n > 0:\n        if n%2 == 0:\n            q = q * q\n            #\n            n = n // 2\n        else:\n            p = q * p\n            n = n - 1\n    return p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\nfor i in range(len(t) - 1):\nif t[i] + 1 != t[i+1]:\nreturn False\nreturn True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
+          "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\n    for i in range(len(t) - 1):\n        if t[i] + 1 != t[i+1]:\n            return False\n    return True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
           "reponses": [
             {
               "lettre": "A",

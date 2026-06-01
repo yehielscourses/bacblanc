@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\nt = []\nfor i in range(L):\nligne = []\nfor j in range(C):\n......\nt.append(ligne)\nreturn t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n[0, 1, 2],\n[3, 4, 5]\n]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
+          "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\n    t = []\n    for i in range(L):\n        ligne = []\n        for j in range(C):\n            ......\n        t.append(ligne)\n    return t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n    [0, 1, 2],\n    [3, 4, 5]\n                 ]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\nfor j in range(4):\nif (i+j) == 3:\nimage[i][j] = 1",
+          "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\n    for j in range(4):\n        if (i+j) == 3:\n            image[i][j] = 1",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+          "enonce": "On a défini :\nmendeleiev = [\n    ['H','.', '.','.','.','.','.','He'],\n    ['Li','Be','B','C','N','O','Fl','Ne'],\n    ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n    ...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
+          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n    {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n    {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\nreturn sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
+          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\n    return sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\ny = 1\nwhile y < x:\ny = y + 1\nx = x – 1",
+          "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\n    y = 1\n    while y < x:\n        y = y + 1\n        x = x – 1",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\nn = n + 2",
+          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\n    n = n + 2",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\ni = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
+          "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\n    i = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le script suivant :\ndef calcul(a,b):\na = a + 2\nb = b + 5\nc = a + b\nreturn c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
+          "enonce": "On exécute le script suivant :\ndef calcul(a,b):\n    a = a + 2\n    b = b + 5\n    c = a + b\n    return c\na,b = 3,5\ncalcul(a,b)\nÀ la fin de cette exécution :",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",
@@ -869,25 +869,25 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "for i in range(n//2):\nfor j in range(i+1,n):\nprint('hello')"
+              "texte": "for i in range(n//2):\n    for j in range(i+1,n):\n        print('hello')"
             },
             {
               "lettre": "B",
-              "texte": "for i in range(n):\nprint('hello')"
+              "texte": "for i in range(n):\n    print('hello')"
             },
             {
               "lettre": "C",
-              "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\nprint('hello')"
+              "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\n    print('hello')"
             },
             {
               "lettre": "D",
-              "texte": "for i in range(n//2):\nfor j in range(n//2):\nprint('hello')"
+              "texte": "for i in range(n//2):\n    for j in range(n//2):\n        print('hello')"
             }
           ]
         },
         {
           "numero": "G.3",
-          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\nif k > element:\nelement = k",
+          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\n    if k > element:\n        element = k",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On définit :\ndef traite(chaine,a):\nnouvelle_chaine = \"\"\nfor k in range(len(chaine)):\nif chaine[k] != a:\nnouvelle_chaine = nouvelle_chaine + chaine[k]\nreturn nouvelle_chaine\nQuelle est la valeur renvoyée par l'appel traite(\"histoire\",\"i\") ?",
+          "enonce": "On définit :\ndef traite(chaine,a):\n    nouvelle_chaine = \"\"\n    for k in range(len(chaine)):\n        if chaine[k] != a:\n            nouvelle_chaine = nouvelle_chaine + chaine[k]\n    return nouvelle_chaine\nQuelle est la valeur renvoyée par l'appel traite(\"histoire\",\"i\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\nif k == L[1]:\nc = c+1",
+          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\n    if k == L[1]:\n        c = c+1",
           "reponses": [
             {
               "lettre": "A",

@@ -85,19 +85,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    True\nTrue\n        False\n                    True\nTrue\n        True\n                    True"
             },
             {
               "lettre": "B",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    True\nTrue\n        True\n                    True"
             },
             {
               "lettre": "C",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    False\nTrue\n        True\n                    True"
             },
             {
               "lettre": "D",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    False\nTrue\n        True\n                    False"
             }
           ]
         },
@@ -141,7 +141,7 @@
             },
             {
               "lettre": "D",
-              "texte": "1011 1101\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nTrue\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nFalse"
+              "texte": "1011 1101"
             }
           ]
         }
@@ -197,7 +197,7 @@
         },
         {
           "numero": "B.3",
-          "enonce": "On a défini\nrepertoire = [\n{'nom': 'Francette', 'poste': 412},\n{'nom': 'Jeanne', 'poste': 222},\n{'nom': 'Éric', 'poste': 231}       ]\nQuelle expression permet d'accéder au poste d'Éric ?",
+          "enonce": "On a défini\nrepertoire = [\n    {'nom': 'Francette', 'poste': 412},\n        {'nom': 'Jeanne', 'poste': 222},\n        {'nom': 'Éric', 'poste': 231}       ]\nQuelle expression permet d'accéder au poste d'Éric ?",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "Voici une définition incomplète d'une fonction qui renvoie le couple du quotient et du reste de la division\neuclidienne :\ndef divEuclid(n,d):\n'''renvoie le couple formé du quotient et du reste dans la division de n par d'''\nq = 0\nwhile n-d > 0:\nq = q + 1\nn = n - d\n.......\nPar quelle instruction faut-il remplacer la ligne en pointillés pour que l'appel\n(quotient,reste) = divEuclid(15,6)\naffecte les valeurs attendues ?",
+          "enonce": "Voici une définition incomplète d'une fonction qui renvoie le couple du quotient et du reste de la division\neuclidienne :\ndef divEuclid(n,d):\n    '''renvoie le couple formé du quotient et du reste dans la division de n par d'''\n    q = 0\n    while n-d > 0:\n        q = q + 1\n        n = n - d\n    .......\nPar quelle instruction faut-il remplacer la ligne en pointillés pour que l'appel\n(quotient,reste) = divEuclid(15,6)\naffecte les valeurs attendues ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n{\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n......\n{\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
+          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n    {\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n    ......\n    {\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n<li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n<li><a href=\"onglet2.html\">Onglet 2</a></li>\n<li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n    <li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n    <li><a href=\"onglet2.html\">Onglet 2</a></li>\n    <li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
           "reponses": [
             {
               "lettre": "A",
@@ -633,7 +633,7 @@
         },
         {
           "numero": "E.4",
-          "enonce": "Pour analyser les réponses saisies par l'utilisateur dans un formulaire d’une page Web personnelle, hébergée\nchez unfournisseur d'accès à internet, on dispose du code suivant :\n<?php if ($_POST['choix']=='choix4')\n{echo 'Bravo,';}\nelse\n{echo \"Non, vous vous trompez !\";}\n?>\nOù s’exécutera ce code ?",
+          "enonce": "Pour analyser les réponses saisies par l'utilisateur dans un formulaire d’une page Web personnelle, hébergée\nchez unfournisseur d'accès à internet, on dispose du code suivant :\n<?php if ($_POST['choix']=='choix4')\n    {echo 'Bravo,';}\n        else\n    {echo \"Non, vous vous trompez !\";}\n    ?>\nOù s’exécutera ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\n    if a > b :\n        a, b = b, a\n    if b > c:\n        b, c = c, b\n    return a, b, c",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\nn = n + 2",
+          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\n    n = n + 2",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\nfor x in L:\nif n == x:\nreturn True\nreturn False",
+          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\n    for x in L:\n        if n == x:\n            return True\n    return False",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\ntotal = ...\nfor valeur in tableau:\ntotal = total + valeur\nreturn total / ...",
+          "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\n    total = ...\n    for valeur in tableau:\n        total = total + valeur\n    return total / ...",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\np = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
+          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\n    p = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
           "reponses": [
             {
               "lettre": "A",

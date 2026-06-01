@@ -103,7 +103,7 @@
         },
         {
           "numero": "A.5",
-          "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\na\nb\nform\nTrue\nTrue\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nQuelle est cette formule booléenne form ?",
+          "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\n        a\n            b\n                form\n        True\n            True\n                False\n        False\n            True\n                False\n        True\n            False\n                True\n        False\n            False\n                False\nQuelle est cette formule booléenne form ?",
           "reponses": [
             {
               "lettre": "A",
@@ -157,25 +157,25 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "def nombreDistincts(L):\nn = 1\nfor i in range(1,len(L)):\nif L[i] != L[i-1]:\nn = n + 1\nreturn n"
+              "texte": "def nombreDistincts(L):\n    n = 1\n    for i in range(1,len(L)):\n        if L[i] != L[i-1]:\n            n = n + 1\n    return n"
             },
             {
               "lettre": "B",
-              "texte": "def nombreDistincts(L):\nn = 1\nfor i in range(0,len(L)-1):\nif L[i] != L[i+1]:\nn = n + 1\nreturn n"
+              "texte": "def nombreDistincts(L):\n    n = 1\n    for i in range(0,len(L)-1):\n        if L[i] != L[i+1]:\n            n = n + 1\n    return n"
             },
             {
               "lettre": "C",
-              "texte": "def nombreDistincts(L):\nn = 0\nfor i in range(0,len(L)-1):\nif L[i] != L[i+1]:\nn = n + 1\nreturn n"
+              "texte": "def nombreDistincts(L):\n    n = 0\n    for i in range(0,len(L)-1):\n        if L[i] != L[i+1]:\n            n = n + 1\n    return n"
             },
             {
               "lettre": "D",
-              "texte": "def nombreDistincts(L):\nn = 0\nfor i in range(1,len(L)):\nif L[i] != L[i-1]:\nn = n + 1\nreturn n"
+              "texte": "def nombreDistincts(L):\n    n = 0\n    for i in range(1,len(L)):\n        if L[i] != L[i-1]:\n            n = n + 1\n    return n"
             }
           ]
         },
         {
           "numero": "B.2",
-          "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
+          "enonce": "Après l'affectation suivante :\nalphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',\n                'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  ]\nquelle est l'expression qui permet d'accéder à la lettre E ?",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n['O', 'O', 'O'],\n['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
+          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n    ['O', 'O', 'O'],\n    ['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n{'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n{'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\nif i[a] > 10:\nprint(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
+          "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n        {'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n    {'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\n     if i[a] > 10:\n         print(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n<li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n<li><a href=\"onglet2.html\">Onglet 2</a></li>\n<li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n    <li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n    <li><a href=\"onglet2.html\">Onglet 2</a></li>\n    <li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\ns = 0\nfor k in T:\nif k % 2 == 0:\ns = s+k\nreturn s",
+          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\n    s = 0\n    for k in T:\n        if k % 2 == 0:\n            s = s+k\n    return s",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On définit une fonction f de la façon suivante :\ndef f(L,m):\nR = []\nfor i in range(len(L)):\nif L[i] > m:\nR.append(L[i])\nreturn R\nOn définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].\nQue vaut f(L,4) ?",
+          "enonce": "On définit une fonction f de la façon suivante :\ndef f(L,m):\n    R = []\n    for i in range(len(L)):\n        if L[i] > m:\n            R.append(L[i])\n    return R\nOn définit L = [1, 7, 3, 4, 8, 2, 0, 3, 5].\nQue vaut f(L,4) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\np = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
+          "enonce": "On considère le code suivant, où n désigne un entier au moins égal à 2.\np = 1\nwhile p < n:\n    p = 2*p\nQuel argument permet d'affirmer que son exécution termine à coup sûr ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "La fonction suivante doit déterminer la valeur maximale d'un tableau de nombres passé en argument. Avec\nquelles expressions faut-il remplacer les pointillés du script suivant pour que la fonction soit correcte ?\ndef maximum(T):\nmaxi = T[0]\nn = len(T)\nfor i in range(i, .....):\nif T[i] > maxi:\nmaxi = ......\nreturn maxi",
+          "enonce": "La fonction suivante doit déterminer la valeur maximale d'un tableau de nombres passé en argument. Avec\nquelles expressions faut-il remplacer les pointillés du script suivant pour que la fonction soit correcte ?\ndef maximum(T):\n    maxi = T[0]\n    n = len(T)\n    for i in range(i, .....):\n        if T[i] > maxi:\n            maxi = ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction ci-dessous renvoie le maximum d'une liste.\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\n#\nif L[i] > m:\nm = L[i]\nreturn m\nAu passage dans la ligne marquée d'un #, quelle propriété reste toujours vérifiée ?",
+          "enonce": "La fonction ci-dessous renvoie le maximum d'une liste.\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        #\n        if L[i] > m:\n            m = L[i]\n    return m\nAu passage dans la ligne marquée d'un #, quelle propriété reste toujours vérifiée ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\nprint('vert')\nif a > b and b == 4:\nprint('rouge')\nif a == 4 or b > a:\nprint('bleu')\nif a == 3 or a < b:\nprint('jaune')",
+          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\n    print('vert')\nif a > b and b == 4:\n    print('rouge')\nif a == 4 or b > a:\n    print('bleu')\nif a == 3 or a < b:\n    print('jaune')",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\nfor i in range(len(t) - 1):\nif t[i] + 1 != t[i+1]:\nreturn False\nreturn True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
+          "enonce": "La fonction mystere suivante prend en argument un tableau d'entiers.\ndef mystere(t):\n    for i in range(len(t) - 1):\n        if t[i] + 1 != t[i+1]:\n            return False\n    return True\nÀ quelle condition la valeur renvoyée par la fonction est-elle True ?",
           "reponses": [
             {
               "lettre": "A",

@@ -37,7 +37,7 @@
         },
         {
           "numero": "A.2",
-          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\nx = x - 0.1",
+          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\n    x = x - 0.1",
           "reponses": [
             {
               "lettre": "A",
@@ -81,7 +81,7 @@
         },
         {
           "numero": "A.4",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nc = False\nif a==b:\nc = True\nif a > b+10:\nc = True",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nc = False\nif a==b:\n    c = True\nif a > b+10:\n    c = True",
           "reponses": [
             {
               "lettre": "A",
@@ -179,19 +179,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "B",
-              "texte": "effectifs = {}\nfor lettre in sequence:\neffectifs[lettre] = effectifs[lettre] + 1"
+              "texte": "effectifs = {}\nfor lettre in sequence:\n    effectifs[lettre] = effectifs[lettre] + 1"
             },
             {
               "lettre": "C",
-              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {'A':0, 'B':0, 'C':0, 'D':0}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             },
             {
               "lettre": "D",
-              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\neffectifs[lettre] = len([lettre in effectifs])"
+              "texte": "effectifs = {}\nfor lettre in effectifs.keys():\n    effectifs[lettre] = len([lettre in effectifs])"
             }
           ]
         },
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
+          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n{\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n......\n{\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
+          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n    {\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n    ......\n    {\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\ntmp = tableau[0]\nfor i in range(......): # à compléter\nif tableau[i] > tmp:\ntmp = tableau[i]\nreturn tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
+          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\n    tmp = tableau[0]\n    for i in range(......): # à compléter\n        if tableau[i] > tmp:\n            tmp = tableau[i]\n    return tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On définit :\ndef f(a,m):\ni = 1\nn = 0\nwhile n <= m:\ni = i * a\nn = n + 1\nreturn i\nQuelle est la valeur renvoyée par l'appel f(2,4) ?",
+          "enonce": "On définit :\ndef f(a,m):\n    i = 1\n    n = 0\n    while n <= m:\n        i = i * a\n        n = n + 1\n    return i\nQuelle est la valeur renvoyée par l'appel f(2,4) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\ni = 0\nfor j in phrase:\nif j == lettre:\ni = i+1\nreturn i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\n    i = 0\n    for j in phrase:\n        if j == lettre:\n            i = i+1\n    return i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\nif k == L[1]:\nc = c+1",
+          "enonce": "Quelle est la valeur de c à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nc = 0\nfor k in L:\n    if k == L[1]:\n        c = c+1",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Que fait la fonction suivante :\ndef trouver(L):\ni = 0\nfor j in range(1, len(L)):\nif L[j] >= L[i]:\ni = j\nreturn i",
+          "enonce": "Que fait la fonction suivante :\ndef trouver(L):\n    i = 0\n    for j in range(1, len(L)):\n        if L[j] >= L[i]:\n            i = j\n    return i",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "def traitement(tableau):\nr = 0\nfor i in range(1, len(tableau)):\nif tableau[i] > tableau[r]:\nr = i\nreturn r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
+          "enonce": "def traitement(tableau):\n    r = 0\n    for i in range(1, len(tableau)):\n        if tableau[i] > tableau[r]:\n            r = i\n    return r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
           "reponses": [
             {
               "lettre": "A",

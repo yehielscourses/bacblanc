@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n('avril',20), ('mai',23), ('juin',25),\n('juillet',29), ('août',25), ('septembre',22),\n('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\nif (m > mois[1]):\nm = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
+          "enonce": "On dispose dans le tableau annee2019 les températures mensuelles moyennes d'une région française.\nOn exécute le script suivant :\nannee2019  = [('janvier',6), ('février',6), ('mars',12),\n              ('avril',20), ('mai',23), ('juin',25),\n              ('juillet',29), ('août',25), ('septembre',22),\n              ('octobre',15), ('novembre',11), ('décembre',7)]\nm = annee2019[0][1]\nfor mois in annee2019:\n        if (m > mois[1]):\n         m = mois[1]\nQue contient la variable m à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nOn considère le code suivant :\nimport csv\nwith open('departements.csv', newline='') as monFichier:\nlesLignes = csv.reader(monFichier)\nfor uneLigne in lesLignes:\nprint(uneLigne[3])\nQue va produire l'exécution de ce code ?",
+          "enonce": "On considère l’extraction suivante d'une base de données des départements français. Cette extraction a ensuite\nété sauvegardée dans un fichier texte.\n\"1\",\"01\",\"Ain\",\"AIN\",\"ain\",\"A500\"\n\"2\",\"02\",\"Aisne\",\"AISNE\",\"aisne\",\"A250\"\n\"3\",\"03\",\"Allier\",\"ALLIER\",\"allier\",\"A460\"\n\"4\",\"04\",\"Alpes-de-Haute-Provence\",\"ALPES-DE-HAUTE-PROVENCE\",\"alpes-de-haute-\nprovence\",\"A412316152\"\n\"5\",\"05\",\"Hautes-Alpes\",\"HAUTES-ALPES\",\"hautes-alpes\",\"H32412\"\nOn considère le code suivant :\nimport csv\nwith open('departements.csv', newline='') as monFichier:\n    lesLignes = csv.reader(monFichier)\n    for uneLigne in lesLignes:\n        print(uneLigne[3])\nQue va produire l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n('Peugeot', '504', 1970, 82),\n('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
+          "enonce": "On exécute le code suivant :\ncollection = [('Renault', '4L', 1974, 30),\n              ('Peugeot', '504', 1970, 82),\n              ('Citroën', 'Traction', 1950, 77)]\nQue vaut  collection[1][2] ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On exécute le code suivant :\ndef maxi(t):\nm = t[0]\nfor x in t:\nif x[1] >= m[1]:\nm = x\nreturn m\nL = [  ('Alice', 17), ('Barnabé', 17),\n('Casimir', 17), ('Doriane', 17),\n('Emilien', 14), ('Fabienne', 16) ]\nQuelle est alors la valeur de maxi(L) ?",
+          "enonce": "On exécute le code suivant :\ndef maxi(t):\n    m = t[0]\n    for x in t:\n        if x[1] >= m[1]:\n            m = x\n    return m\nL = [  ('Alice', 17), ('Barnabé', 17),\n            ('Casimir', 17), ('Doriane', 17),\n            ('Emilien', 14), ('Fabienne', 16) ]\nQuelle est alors la valeur de maxi(L) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+          "enonce": "On a défini :\nmendeleiev = [\n                ['H','.', '.','.','.','.','.','He'],\n                ['Li','Be','B','C','N','O','Fl','Ne'],\n                ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n                ...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -451,7 +451,7 @@
         },
         {
           "numero": "D.2",
-          "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\nPrénom :\n<input type=\"text\" id=\"champ1\" name=\"p\"/>\n<br/>\n<input type=\"hidden\" name=\"util\" value=\"1549\"/>\n<input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
+          "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\n    Prénom :\n        <input type=\"text\" id=\"champ1\" name=\"p\"/>\n    <br/>\n    <input type=\"hidden\" name=\"util\" value=\"1549\"/>\n   <input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\nalert(i)\ni = i + 1\n}\nalert(\"Fin\")",
+          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\n    alert(i)\n    i = i + 1\n}\nalert(\"Fin\")",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\ni = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
+          "enonce": "Dans le programme suivant, la variable A contient un entier strictement positif. Quelle est la valeur numérique\nde la variable i en fin de programme ?\ni = 0\nwhile 2**i < A :\n    i = i + 1\nQue vaut la variable i à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\nRenvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
+          "enonce": "La documentation de la bibliothèque random de Python précise :\nrandom.randint(a, b)\n    Renvoie un entier aléatoire N tel que a <= N <= b.\nQuelle est l’expression Python permettant de simuler le tirage d’un dé à 6 faces après avoir exécuté import\nrandom ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\nn = 0\nfor item in L:\nif item == x:\nn = n + 1\nreturn n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
+          "enonce": "La fonction ci-dessous compte le nombre d'occurrences d'un élément x dans une liste L :\ndef compteur(L,x):\n    n = 0\n    for item in L:\n        if item == x:\n            n = n + 1\n    return n\nComment évolue le temps d'exécution d'un appel de cette fonction si on prend comme argument une liste deux\nfois plus grande ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On définit la fonction f comme suit :\ndef f(L):\na = L[0]\nfor x in L:\nif x < a:\na = x\nreturn a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
+          "enonce": "On définit la fonction f comme suit :\ndef f(L):\n    a = L[0]\n    for x in L:\n        if x < a:\n            a = x\n    return a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\nresultat = resultat * compt\ncompt = compt + 1\nLaquelle de ces affirmations est vraie ?",
+          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\n   resultat = resultat * compt\n   compt = compt + 1\nLaquelle de ces affirmations est vraie ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\nS = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
+          "enonce": "On exécute le code suivant :\ntab = [1, 4, 3, 8, 2]\nS = 0\nfor i in range(len(tab)):\n    S = S + tab[i]\nQue vaut la variable S à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",

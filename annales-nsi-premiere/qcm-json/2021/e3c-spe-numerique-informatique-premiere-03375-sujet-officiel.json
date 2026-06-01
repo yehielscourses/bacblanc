@@ -37,7 +37,7 @@
         },
         {
           "numero": "A.2",
-          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\nx = x - 0.1",
+          "enonce": "Que peut-on dire du programme Python suivant de calcul sur les nombres flottants ?\nx = 1.0\nwhile x != 0.0:\n    x = x - 0.1",
           "reponses": [
             {
               "lettre": "A",
@@ -81,7 +81,7 @@
         },
         {
           "numero": "A.4",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\nc = True\nelif a > b+10:\nc = True\nelse:\nc = False",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\n    c = True\nelif a > b+10:\n    c = True\nelse:\n    c = False",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "Un programme Python présente la ligne suivante\nx = [ \"x1\", \"x2\", \"x3\" ]\nElle définit :",
+          "enonce": "Un programme Python présente la ligne suivante\nx = [ \"x1\", \"x2\", \"x3\" ]\n Elle définit :",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On exécute le script suivant :\ndef quoi(liste):\nmaListe = []\nfor i in range(len(liste))\nmaListe.append(liste[i][0])\nreturn maListe\nL = [[5,8,12,1], [20,11,3,8], [3,12,1,4], [2,13,17,3]]\nm = quoi(L)\nQue contient la variable m à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant :\ndef quoi(liste):\n    maListe = []\n    for i in range(len(liste))\n        maListe.append(liste[i][0])\n    return maListe\nL = [[5,8,12,1], [20,11,3,8], [3,12,1,4], [2,13,17,3]]\nm = quoi(L)\nQue contient la variable m à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n        'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n{\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n......\n{\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
+          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n            {\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n            ......\n            {\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique, son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n(7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
+          "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique, son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n    (7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
           "reponses": [
             {
               "lettre": "A",
@@ -429,7 +429,7 @@
       "questions": [
         {
           "numero": "D.1",
-          "enonce": "On considère le formulaire ci-dessous :\nQuel est votre langage préféré ?\nPython □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
+          "enonce": "On considère le formulaire ci-dessous :\n    Quel est votre langage préféré ?\n        Python □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\nsomme = 0\nfor i in range(.........):   # ligne à modifier\nsomme = somme + i\nreturn somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
+          "enonce": "La fonction ajoute(n,p) codée ci-dessous en Python doit calculer la somme de tous les entiers compris entre n et\np (n et p compris).\nPar exemple, ajoute(2,4) doit renvoyer 2+3+4 = 9.\ndef ajoute(n,p):\n    somme = 0\n    for i in range(.........):   # ligne à modifier\n        somme = somme + i\n    return somme\nQuelle est la bonne écriture de la ligne marquée à modifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\ns = 0\nfor k in T:\nif k % 2 == 0:\ns = s+k\nreturn s",
+          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\n    s = 0\n    for k in T:\n        if k % 2 == 0:\n            s = s+k\n    return s",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n# x est la valeur à chercher\n# y est une liste de valeurs\nfor i in range(len(y)):\nif x == y[i]:\nreturn i\nreturn None\nQuel est le coût de cet algorithme ?",
+          "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n    # x est la valeur à chercher\n    # y est une liste de valeurs\n    for i in range(len(y)):\n        if x == y[i]:\n            return i\n    return None\nQuel est le coût de cet algorithme ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On considère la fonction suivante :\ndef f(T,i):\nindice = i\nm = T[i]\nfor k in range(i+1, len(T)):\nif T[k] < m:\nindice = k\nm = T[k]\nreturn indice\nQuelle est la valeur de f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0) ?",
+          "enonce": "On considère la fonction suivante :\ndef f(T,i):\n    indice = i\n    m = T[i]\n    for k in range(i+1, len(T)):\n        if T[k] < m:\n            indice = k\n            m = T[k]\n    return indice\nQuelle est la valeur de f([ 7, 3, 1, 8, 19, 9, 3, 5 ], 0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\nif k > element:\nelement = k",
+          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\n    if k > element:\n        element = k",
           "reponses": [
             {
               "lettre": "A",

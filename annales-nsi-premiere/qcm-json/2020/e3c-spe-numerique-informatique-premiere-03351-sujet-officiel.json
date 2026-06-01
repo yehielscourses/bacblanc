@@ -15,7 +15,7 @@
       "questions": [
         {
           "numero": "A.1",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\nc = True\nelif a > b+10:\nc = True\nelse:\nc = False",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\n    c = True\nelif a > b+10:\n    c = True\nelse:\n    c = False",
           "reponses": [
             {
               "lettre": "A",
@@ -59,7 +59,7 @@
         },
         {
           "numero": "A.3",
-          "enonce": "On considère l'extrait de code suivant :\nwhile (a < 20) or (b > 50):\n......\n......\nQuelles conditions permettent de mettre fin à cette boucle ?",
+          "enonce": "On considère l'extrait de code suivant :\nwhile (a < 20) or (b > 50):\n    ......\n    ......\nQuelles conditions permettent de mettre fin à cette boucle ?",
           "reponses": [
             {
               "lettre": "A",
@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On dispose d'une liste L :\nL = [6, 2, 8, 24, 3, 6, 7, 8]\nQuelle est la valeur de M après exécution du code suivant ?\np = 8\nM = [x for x in L if x<p] + [x for x in L if x==p]\n+ [x for x in L if x>p]",
+          "enonce": "On dispose d'une liste L :\nL = [6, 2, 8, 24, 3, 6, 7, 8]\nQuelle est la valeur de M après exécution du code suivant ?\np = 8\nM = [x for x in L if x<p] + [x for x in L if x==p]\n                + [x for x in L if x>p]",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "On définit en Python la fonction suivante :\ndef f(L):\nU = []\nfor i in L:\nU.append(i**2 - 1)\nreturn U\nQue vaut f([-1, 0, 1, 2]) ?",
+          "enonce": "On définit en Python la fonction suivante :\ndef f(L):\n    U = []\n    for i in L:\n        U.append(i**2 - 1)\n    return U\nQue vaut f([-1, 0, 1, 2]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\nm = L[0]\nfor x in L:\nif x > m:\nm = x\nreturn m\nQue calcule cette fonction ?",
+          "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\n    m = L[0]\n    for x in L:\n        if x > m:\n            m = x\n    return m\nQue calcule cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n    {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n{\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n......\n{\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
+          "enonce": "On définit une table d'élèves et une liste finale de la façon suivante :\ntable_eleves = [ {\"prenom\": \"Ada\", \"nom\" : \"Lovelace\", \"age\" : 17},\n            {\"prenom\": \"Charles\", \"nom\" : \"Babbage\", \"age\" : 18},\n            ......\n            {\"prenom\": \"John\", \"nom\" : \"Von Neumann\", \"age\" : 16} ]\nliste_finale = [ eleve for eleve in table_eleves if eleve[\"age\"] >= 18 ]\nQue contient cette liste finale ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "Soit la table de données suivante :\nnom\nprenom\ndate_naissance\nDupont\nPierre\n17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
+          "enonce": "Soit la table de données suivante :\nnom\n    prenom\n                date_naissance\nDupont\n    Pierre\n            17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+          "enonce": "On a défini :\nmendeleiev = [\n        ['H','.', '.','.','.','.','.','He'],\n        ['Li','Be','B','C','N','O','Fl','Ne'],\n        ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n        ...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\nif table[index][3] > 1954:\nL.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n            ['von neumann','john', 1903, 1957],\n            ['turing', 'alan', 1912, 1954],\n            ['mccarthy', 'john', 1927, 2011],\n            ['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\n    if table[index][3] > 1954:\n        L.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"blue\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML contenant un bouton auquel est associée la fonction suivante, que se\npasse-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"blue\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\nreturn sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
+          "enonce": "La fonction suivante calcule la racine carrée du double d’un nombre flottant.\nfrom math import sqrt\ndef racine_du_double(x):\n    return sqrt(2*x)\nQuelle est la précondition sur l'argument de cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On considère le code suivant :\ndef puiss(y,x):\nres = y\nfor i in range(x):\nres = res*y\nreturn res\nQuelles sont les préconditions sur les arguments ?",
+          "enonce": "On considère le code suivant :\ndef puiss(y,x):\n    res = y\n    for i in range(x):\n         res = res*y\n    return res\nQuelles sont les préconditions sur les arguments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On exécute le code suivant\ndef calculPourcentage (prix,reduction):\nassert reduction >= 0, 'la réduction doit être un nombre positif'\nassert reduction < 100, 'la réduction doit être inférieure à 100'\nassert prix > 0, 'le prix doit être un nombre strictement positif'\nremise = (reduction*prix)/100\nprix_remise = prix - remise\nreturn prix_remise\nQuelle est la valeur renvoyée par l'appel calcul(30,100) ?",
+          "enonce": "On exécute le code suivant\ndef calculPourcentage (prix,reduction):\n    assert reduction >= 0, 'la réduction doit être un nombre positif'\n    assert reduction < 100, 'la réduction doit être inférieure à 100'\n    assert prix > 0, 'le prix doit être un nombre strictement positif'\n    remise = (reduction*prix)/100\n    prix_remise = prix - remise\n    return prix_remise\nQuelle est la valeur renvoyée par l'appel calcul(30,100) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On exécute le script suivant :\na = 10\nif a < 5:\na = 20\nelif a < 100:\na = 500\nelif a < 1000:\na = 1\nelse:\na = 0\nQuelle est la valeur de la variable a à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant :\na = 10\nif a < 5:\n    a = 20\nelif a < 100:\n    a = 500\nelif a < 1000:\n    a = 1\nelse:\n    a = 0\nQuelle est la valeur de la variable a à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le script suivant.\na = 11\nfor i in range(3):\na = a * 2\na = a - 10\nQue contient la variable a à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant.\na = 11\nfor i in range(3):\n    a = a * 2\n    a = a - 10\nQue contient la variable a à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Que fait la fonction suivante :\ndef trouver(L):\ni = 0\nfor j in range(1, len(L)):\nif L[j] >= L[i]:\ni = j\nreturn i",
+          "enonce": "Que fait la fonction suivante :\ndef trouver(L):\n    i = 0\n    for j in range(1, len(L)):\n        if L[j] >= L[i]:\n            i = j\n    return i",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\nresultat = resultat * compt\ncompt = compt + 1\nLaquelle de ces affirmations est vraie ?",
+          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\n   resultat = resultat * compt\n   compt = compt + 1\nLaquelle de ces affirmations est vraie ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\nindexResultat = 0\nfor i in range(len(phrase)):\nif phrase[i]== lettre:\nindexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\n    indexResultat = 0\n    for i in range(len(phrase)):\n    if phrase[i]== lettre:\n        indexResultat=i\n    return indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",

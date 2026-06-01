@@ -153,23 +153,23 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [\n['A', 'B', 'C', 'D'],\n['E', 'F', 'G', 'H'],\n['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
+          "enonce": "On dispose d'une table tab constituée d'une liste de trois sous-listes contenant chacune quatre caractères.\ntab = [\n        ['A', 'B', 'C', 'D'],\n            ['E', 'F', 'G', 'H'],\n            ['I', 'J', 'K', 'L'] ]\nParmi les propositions suivantes, laquelle permet de convertir cette table en une liste L contenant dans l'ordre,\nligne par ligne, les 12 caractères de tab ?\n# à la fin, on a l'égalité :\nL == [  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L' ]",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "L = []\nfor i in range(3):\nfor j in range(4):\nL.append(tab[i][j])"
+              "texte": "L = []\nfor i in range(3):\n    for j in range(4):\n        L.append(tab[i][j])"
             },
             {
               "lettre": "B",
-              "texte": "L = []\nfor i in range(4):\nfor j in range(3):\nL.append(tab[i][j])"
+              "texte": "L = []\nfor i in range(4):\n    for j in range(3):\n        L.append(tab[i][j])"
             },
             {
               "lettre": "C",
-              "texte": "L = []\nfor i in range(3):\nL.append(tab[i])"
+              "texte": "L = []\nfor i in range(3):\n    L.append(tab[i])"
             },
             {
               "lettre": "D",
-              "texte": "L = []\nfor i in range(4):\nL.append(tab[i])"
+              "texte": "L = []\nfor i in range(4):\n    L.append(tab[i])"
             }
           ]
         },
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n    {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,23 +379,23 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère une table de données <films> qui est une liste de dictionnaires \"Titre\", \"Réalisateur\",\"Date\".\nUn enregistrement de la table contient un titre de film, le nom de son réalisateur et l'année de sortie du film.\nfilms = [{\"Titre\": \"ET\", \"Réalisateur\": \"Spielberg\", \"Date\": 1982},\n{\"Titre\": \"Ready Player One\", \"Réalisateur\": \"Spielberg\", \"Date\": 2018},\n{\"Titre\": \"The Artist\", \"Réalisateur\": \"Hazanavicius\", \"Date\": 2011},\n...]\nOn souhaite obtenir la liste des films réalisés par \"Spielberg\" ou par \"Hazanavicius\" depuis l'année 2000.\nQuelle doit être la condition utilisée pour sélectionner les enregistrements correspondants, lors du parcours de\nla table ?",
+          "enonce": "On considère une table de données <films> qui est une liste de dictionnaires \"Titre\", \"Réalisateur\",\"Date\".\nUn enregistrement de la table contient un titre de film, le nom de son réalisateur et l'année de sortie du film.\n   films = [{\"Titre\": \"ET\", \"Réalisateur\": \"Spielberg\", \"Date\": 1982},\n        {\"Titre\": \"Ready Player One\", \"Réalisateur\": \"Spielberg\", \"Date\": 2018},\n        {\"Titre\": \"The Artist\", \"Réalisateur\": \"Hazanavicius\", \"Date\": 2011},\n        ...]\nOn souhaite obtenir la liste des films réalisés par \"Spielberg\" ou par \"Hazanavicius\" depuis l'année 2000.\nQuelle doit être la condition utilisée pour sélectionner les enregistrements correspondants, lors du parcours de\nla table ?",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] ==  \"Hazanavicius\")\nand film[\"Date\"] >= 2000"
+              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] ==  \"Hazanavicius\")\n    and film[\"Date\"] >= 2000"
             },
             {
               "lettre": "B",
-              "texte": "film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\"\nand film[\"Date\"] >= 2000"
+              "texte": "film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\"\n    and film[\"Date\"] >= 2000"
             },
             {
               "lettre": "C",
-              "texte": "film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] == \"Hazanavicius\"\nor film[\"Date\"] >= 2000"
+              "texte": "film[\"Réalisateur\"] == \"Spielberg\" or film[\"Réalisateur\"] == \"Hazanavicius\"\n    or film[\"Date\"] >= 2000"
             },
             {
               "lettre": "D",
-              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\")\nor film[\"Date\"] >= 2000"
+              "texte": "(film[\"Réalisateur\"] == \"Spielberg\" and film[\"Réalisateur\"] == \"Hazanavicius\")\n    or film[\"Date\"] >= 2000"
             }
           ]
         },
@@ -473,7 +473,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On exécute le code suivant :\ndef f(t):\nn = len(t)\nfor k in range(1,n):\nt[k] = t[k] + t[k-1]\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef f(t):\n    n = len(t)\n    for k in range(1,n):\n        t[k] = t[k] + t[k-1]\nL = [1, 3, 4, 5, 2]\nf(L)\nQuelle est la valeur de L après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\ny = 1\nwhile y < x:\ny = y + 1\nx = x – 1",
+          "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\n    y = 1\n    while y < x:\n        y = y + 1\n        x = x – 1",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On considère le code suivant\ndef moyenne(notes):\nsomme = 0\nfor cpt in range(len(notes)):\n....\nm = somme/len(notes)\nreturn m\nPar quoi remplacer la ligne en pointillée pour que cette fonction calcule la moyenne d'une liste de nombres ?",
+          "enonce": "On considère le code suivant\ndef moyenne(notes):\n    somme = 0\n    for cpt in range(len(notes)):\n        ....\n    m = somme/len(notes)\n    return m\nPar quoi remplacer la ligne en pointillée pour que cette fonction calcule la moyenne d'une liste de nombres ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On exécute le script suivant :\nfor i in range(n):\nfor j in range(i):\nprint('NSI')\nCombien de fois le mot NSI est-il affiché ?",
+          "enonce": "On exécute le script suivant :\nfor i in range(n):\n    for j in range(i):\n        print('NSI')\nCombien de fois le mot NSI est-il affiché ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\nindexResultat = 0\nfor i in range(len(phrase)):\nif phrase[i]== lettre:\nindexResultat=i\nreturn indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef trouverLettre(phrase,lettre):\n    indexResultat = 0\n    for i in range(len(phrase)):\n    if phrase[i]== lettre:\n        indexResultat=i\n    return indexResultat\nQue renvoie l'appel trouverLettre(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\nX = X + k\nm = m + 1",
+          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\n    X = X + k\n    m = m + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction suivante doit déterminer la valeur maximale d'un tableau de nombres passé en argument. Avec\nquelles expressions faut-il remplacer les pointillés du script suivant pour que la fonction soit correcte ?\ndef maximum(T):\nmaxi = T[0]\nn = len(T)\nfor i in range(i, .....):\nif T[i] > maxi:\nmaxi = ......\nreturn maxi",
+          "enonce": "La fonction suivante doit déterminer la valeur maximale d'un tableau de nombres passé en argument. Avec\nquelles expressions faut-il remplacer les pointillés du script suivant pour que la fonction soit correcte ?\ndef maximum(T):\n    maxi = T[0]\n    n = len(T)\n    for i in range(i, .....):\n        if T[i] > maxi:\n            maxi = ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",

@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\nreturn (x, x**2)",
+          "enonce": "Quel est le type de l'expression f(4) si la fonction f est définie par :\ndef f(x):\n    return (x, x**2)",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n        {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\nreturn personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n        ['von neumann','john', 1903, 1957],\n        ['turing', 'alan', 1912, 1954],\n        ['mccarthy', 'john', 1927, 2011],\n        ['floyd', 'robert', 1936, 2001] ]\ndef age(personnage):\n    return personnage[3] - personnage[2]\ntable.sort(key=age, reverse=True)\nQuelle est la première ligne de la table table à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\nfor j in range(4):\nif (i+j) == 3:\nimage[i][j] = 1",
+          "enonce": "Quelle est la valeur de la variable image après exécution du programme Python suivant ?\nimage = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]\nfor i in range(4):\n    for j in range(4):\n        if (i+j) == 3:\n            image[i][j] = 1",
           "reponses": [
             {
               "lettre": "A",
@@ -517,7 +517,7 @@
         },
         {
           "numero": "D.5",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n<li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n<li><a href=\"onglet2.html\">Onglet 2</a></li>\n<li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n    <li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n    <li><a href=\"onglet2.html\">Onglet 2</a></li>\n    <li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On exécute le code suivant :\ndef essai():\na = 2\nb = 3\nc = 4\nreturn a\nreturn b\nreturn c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef essai():\n    a = 2\n    b = 3\n    c = 4\n    return a\n    return b\n    return c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\nreturn math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
+          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\n    return math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\ns = 0\nfor k in T:\nif k % 2 == 0:\ns = s+k\nreturn s",
+          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\n    s = 0\n    for k in T:\n        if k % 2 == 0:\n            s = s+k\n    return s",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\nif m < L[j]:\nm = L[j]",
+          "enonce": "On a défini une liste L de nombres entiers.\nQuelle est la valeur de la variable m à la fin de l'exécution du script suivant ?\nm = L[0]\nfor j in range(len(L)):\n    if m < L[j]:\n        m = L[j]",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\ntotal = ...\nfor valeur in tableau:\ntotal = total + valeur\nreturn total / ...",
+          "enonce": "La fonction suivante doit calculer la moyenne d’un tableau de nombres, passé en paramètre. Avec quelles\nexpressions faut-il remplacer les points de suspension pour que la fonction soit correcte ?\ndef moyenne(tableau):\n    total = ...\n    for valeur in tableau:\n        total = total + valeur\n    return total / ...",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\n# assertion vraie à cet endroit\nreturn L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
+          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n        # assertion vraie à cet endroit\n    return L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
           "reponses": [
             {
               "lettre": "A",

@@ -63,19 +63,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    True\nTrue\n        False\n                    True\nTrue\n        True\n                    True"
             },
             {
               "lettre": "B",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    True\nTrue\n        True\n                    True"
             },
             {
               "lettre": "C",
-              "texte": ""
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    False\nTrue\n        True\n                    True"
             },
             {
               "lettre": "D",
-              "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nTrue\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue\n𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nFalse"
+              "texte": "𝑎\n            𝑏\n                (𝑎 or 𝑏) and 𝑎\nFalse\n        False\n                    False\nFalse\n        True\n                    False\nTrue\n        False\n                    False\nTrue\n        True\n                    False"
             }
           ]
         },
@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n[24,25,26,27],\n[35,36,49,33],\n[61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
+          "enonce": "On exécute l'instruction suivante :\nT = [ [12,13,14,15],\n    [24,25,26,27],\n    [35,36,49,33],\n    [61,53,55,58] ]\nQuelle expression parmi les quatre suivantes a pour valeur 26 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -245,11 +245,11 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "T = []\nfor k in range(10):\nT.append(2*k)"
+              "texte": "T = []\nfor k in range(10):\n    T.append(2*k)"
             },
             {
               "lettre": "B",
-              "texte": "T = [0] * 10\nfor k in range(9):\nT[k+1] = 2*(k+1)"
+              "texte": "T = [0] * 10\nfor k in range(9):\n    T[k+1] = 2*(k+1)"
             },
             {
               "lettre": "C",
@@ -257,7 +257,7 @@
             },
             {
               "lettre": "D",
-              "texte": "T = [0] * 10\nfor k in range(0):\nT[k+1] = 2*T[k]"
+              "texte": "T = [0] * 10\nfor k in range(0):\n    T[k+1] = 2*T[k]"
             }
           ]
         },
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n(\"Durand\", \"Jacques\", 2),\n(\"Dutronc\", \"Jean\", 3),\n...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\nif clients[i][1] == \"Jean\":\nx = clients[i]",
+          "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n                (\"Durand\", \"Jacques\", 2),\n                (\"Dutronc\", \"Jean\", 3),\n                ...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\n   if clients[i][1] == \"Jean\":\n           x = clients[i]",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815),\n('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n                ('Tim', 'Berners-Lee', 'H', 1955),\n                ('Ada', 'Lovelace', 'F', 1815),\n                ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\n    mystere = []\n    for ligne in table:\n        if ligne[2] == 'F':\n            mystere.append(ligne[1])\n    return mystere\nQue vaut  fonctionMystere(table)?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\nb = 10\nelif a > 6:\nb = 3",
+          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\n    b = 10\nelif a > 6:\n    b = 3",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+          "enonce": "On définit la fonction suivante :\ndef rey(n):\n    i = 0\n    while i <= n:\n        i = 2*i\n    return i\nQuelle valeur renvoie l'appel rey(100) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\nreturn math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
+          "enonce": "Karine écrit une bibliothèque Python, nommée GeomPlan, de géométrie plane dont voici un extrait :\nimport math\ndef aireDisque(R):\n    return math.pi * R**2\nGilles utilise cette bibliothèque pour calculer l'aire d'un disque de rayon 8.\nLaquelle des instructions suivantes renvoie un message d'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On exécute le code suivant :\ndef essai():\na = 2\nb = 3\nc = 4\nreturn a\nreturn b\nreturn c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
+          "enonce": "On exécute le code suivant :\ndef essai():\n    a = 2\n    b = 3\n    c = 4\n    return a\n    return b\n    return c\nt = essai()\nQuelle est la valeur de t après l'exécution de ce code ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On définit une fonction de recherche dichotomique de l'indice d'un élément x à l'intérieur d'une liste triée de la\nfaçon suivante:\ndef recherchee(x, liste_triee):\na = 0\nb = len(liste_triee)-1\nwhile a < b:\nm = (a + b)//2\nif liste_triee[m] == x:\nreturn m\nelif liste_triee[m] > x:\nb = m - 1\nelse:\n........\nreturn a\nPar quoi faut-il remplacer la ligne pointillée pour répondre à l'objectif ?",
+          "enonce": "On définit une fonction de recherche dichotomique de l'indice d'un élément x à l'intérieur d'une liste triée de la\nfaçon suivante:\ndef recherchee(x, liste_triee):\n    a = 0\n    b = len(liste_triee)-1\n    while a < b:\n        m = (a + b)//2\n        if liste_triee[m] == x:\n            return m\n        elif liste_triee[m] > x:\n            b = m - 1\n        else:\n            ........\n    return a\nPar quoi faut-il remplacer la ligne pointillée pour répondre à l'objectif ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "def traitement(tableau):\nr = 0\nfor i in range(1, len(tableau)):\nif tableau[i] > tableau[r]:\nr = i\nreturn r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
+          "enonce": "def traitement(tableau):\n    r = 0\n    for i in range(1, len(tableau)):\n        if tableau[i] > tableau[r]:\n            r = i\n    return r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
           "reponses": [
             {
               "lettre": "A",

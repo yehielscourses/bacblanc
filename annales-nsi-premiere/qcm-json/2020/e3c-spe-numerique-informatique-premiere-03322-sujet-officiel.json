@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On exécute le script suivant.\nm = []\nfor i in range(5):\nn = []\nfor j in range(3):\nn.append(i*j)\nm.append(n)\nQuelle est la valeur de m à la fin de son exécution ?",
+          "enonce": "On exécute le script suivant.\nm = []\nfor i in range(5):\n    n = []\n    for j in range(3):\n        n.append(i*j)\n    m.append(n)\nQuelle est la valeur de m à la fin de son exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "On exécute le script suivant :\ninventaire = {'pommes': 430, 'bananes': 312,\n'oranges' : 274, 'poires' : 137}\nstock = 0\nfor fruit in inventaire.keys():\nif fruit != 'bananes':\nstock = stock + inventaire[fruit]\nQue contient la variable stock à la fin de cette exécution ?",
+          "enonce": "On exécute le script suivant :\ninventaire = {'pommes': 430, 'bananes': 312,\n              'oranges' : 274, 'poires' : 137}\nstock = 0\nfor fruit in inventaire.keys():\n    if fruit != 'bananes':\n        stock = stock + inventaire[fruit]\nQue contient la variable stock à la fin de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -335,7 +335,7 @@
         },
         {
           "numero": "C.3",
-          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\ns = 0\nfor k in T:\nif k == 8:\ns = s+1\nif s > 1:\nreturn True\nelse:\nreturn False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
+          "enonce": "On déifnit la fonction suivante qui prend en argument un tableau non vide d'entiers.\ndef f(T):\n     s = 0\n    for k in T:\n        if k == 8:\n            s = s+1\n    if s > 1:\n        return True\n    else:\n        return False\nDans quel cas cette fonction renvoie-t-elle la valeur True ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "Voici un extrait d'un document HTML.\n<body>\n.........\nClic !\n</button>\n<h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
+          "enonce": "Voici un extrait d'un document HTML.\n<body>\n    .........\n    Clic !\n    </button>\n    <h1><span id=\"valeur\">2000</span></h1>\n</body>\n<html>\nQuelle doit être la ligne qui remplace les pointillés pour obtenir un bouton dont l'appui déclenche la fonction\njavascript actionBouton() ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\ns = 0\nfor k in T:\nif k % 2 == 0:\ns = s+k\nreturn s",
+          "enonce": "T est un tableau de nombres entiers non vide. Que représente la valeur de s renvoyée par cette fonction ?\ndef mystere(T):\n    s = 0\n    for k in T:\n        if k % 2 == 0:\n            s = s+k\n    return s",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On considère la fonction ci-dessous :\ndef maFonction(c):\nif c <= 10:\np = 12\nif c <= 18:\np = 15\nif c <= 40:\np = 19\nelse:\np = 20\nreturn p\nQue renvoie maFonction(18) ?",
+          "enonce": "On considère la fonction ci-dessous :\ndef maFonction(c):\n    if c <= 10:\n        p = 12\n    if c <= 18:\n        p = 15\n    if c <= 40:\n        p = 19\n    else:\n        p = 20\n    return p\nQue renvoie maFonction(18) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\na = a - 1\nb = b + 1\nc = c * b\nQue peut-on dire ?",
+          "enonce": "On exécute le script suivant :\na = 4\nb = 4\nc = 4\nwhile a < 5:\n    a = a - 1\n    b = b + 1\n    c = c * b\nQue peut-on dire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On définit la fonction suivante :\ndef f(n):\nc = 0\nwhile n > 0:\nc = c + 1\nn = n // 2\nreturn c\nQuel est la valeur renvoyée par l'appel f(35) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(n):\n    c = 0\n    while n > 0:\n        c = c + 1\n        n = n // 2\n    return c\nQuel est la valeur renvoyée par l'appel f(35) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "def traitement(tableau):\nr = 0\nfor i in range(1, len(tableau)):\nif tableau[i] > tableau[r]:\nr = i\nreturn r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
+          "enonce": "def traitement(tableau):\n    r = 0\n    for i in range(1, len(tableau)):\n        if tableau[i] > tableau[r]:\n            r = i\n    return r\nCette fonction dont le paramètre est un tableau de nombres renvoie :",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\nfor x in L:\nif n == x:\nreturn True\nreturn False",
+          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\n    for x in L:\n        if n == x:\n            return True\n    return False",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",

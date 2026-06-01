@@ -125,7 +125,7 @@
         },
         {
           "numero": "A.6",
-          "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\nPourquoi cela ?",
+          "enonce": "Dans le bloc <head> d'un fichier HTML, afin d'encoder les caractères avec le standard Unicode/UTF-8  on insère\nla ligne :\n<meta http-equiv=\"Content -Type\" content=\"text/html; charset=UTF-8\">\n Pourquoi cela ?",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "On exécute le code suivant :\nA = [ [1,2,3], [4,5,6], [7,8,9] ]\nB = [ [0,0,0], [0,0,0], [0,0,0] ]\nfor i in range(3):\nfor j in range(3):\nB[i][j] = A[j][i]\nQue vaut B à la fin de l'exécution ?",
+          "enonce": "On exécute le code suivant :\nA = [ [1,2,3], [4,5,6], [7,8,9] ]\nB = [ [0,0,0], [0,0,0], [0,0,0] ]\nfor i in range(3):\n    for j in range(3):\n        B[i][j] = A[j][i]\nQue vaut B à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n(7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
+          "enonce": "Dans une course de chevaux, chaque participant est représenté par un numéro de dossard unique , son nom et\nsa ville sous la forme d'un couple formé d'un entier et d'une liste : (dossard, [nom, ville]).\nLes données de quelques  participants sont réunies au sein de la liste course ci-dessous :\ncourse = [ (5,['Mistral','Lille']), (3,['Zéphir','Paris']),\n        (7,['Ouragan','Bordeaux']), ......, ....... ]\nQuelle expression permet d'obtenir la ville du cheval nommé Zéphir ?",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "Quelle est la valeur de la variable t1 à la fin de l'exécution du script suivant :\nt1 = [['Valenciennes', 24],['Lille', 23],['Laon', 31],['Arras', 18]]\nt2 = [['Lille', 62],['Arras', 53],['Valenciennes', 67],['Laon', 48]]\nfor i in range(len(t1)):\nfor v in t2:\nif v[0] == t1[i][0]:\nt1[i].append(v[1])",
+          "enonce": "Quelle est la valeur de la variable t1 à la fin de l'exécution du script suivant :\nt1 = [['Valenciennes', 24],['Lille', 23],['Laon', 31],['Arras', 18]]\nt2 = [['Lille', 62],['Arras', 53],['Valenciennes', 67],['Laon', 48]]\nfor i in range(len(t1)):\n    for v in t2:\n        if v[0] == t1[i][0]:\n            t1[i].append(v[1])",
           "reponses": [
             {
               "lettre": "A",
@@ -429,7 +429,7 @@
       "questions": [
         {
           "numero": "D.1",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\nfunction BoutonGris() {\nvar btn = document.createElement(\"BUTTON\");\nbtn.innerHTML = \"Annulation\";\ndocument.getElementById(\"DIV\").appendChild(btn);\n}",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\nfunction BoutonGris() {\n    var btn = document.createElement(\"BUTTON\");\n    btn.innerHTML = \"Annulation\";\n    document.getElementById(\"DIV\").appendChild(btn);\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\nalert(i)\ni = i + 1\n}\nalert(\"Fin\")",
+          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\n    alert(i)\n    i = i + 1\n}\nalert(\"Fin\")",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère le code suivant :\nif x < 4:\nx = x + 3\nelse:\nx = x - 3\nQuelle construction élémentaire peut-on identifier ?",
+          "enonce": "On considère le code suivant :\nif x < 4:\n    x = x + 3\nelse:\n    x = x - 3\nQuelle construction élémentaire peut-on identifier ?",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\nX = X + k\nm = m + 1",
+          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\n    X = X + k\n    m = m + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On exécute le script suivant :\nliste = [17, 12, 5, 18, 2, 7, 9, 15, 14, 20]\nsomme = 0\ni = 0\nwhile i < len(liste):\nsomme = somme + liste[i]\ni = i + 1\nresultat = somme / len(liste)\nQuelle affirmation est fausse parmi les suivantes ?",
+          "enonce": "On exécute le script suivant :\nliste = [17, 12, 5, 18, 2, 7, 9, 15, 14, 20]\nsomme = 0\ni = 0\nwhile i < len(liste):\n    somme = somme + liste[i]\n    i = i + 1\nresultat = somme / len(liste)\nQuelle affirmation est fausse parmi les suivantes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -957,19 +957,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "for i in range(n//2):\nfor j in range(i+1,n):\nprint('hello')"
+              "texte": "for i in range(n//2):\n    for j in range(i+1,n):\n        print('hello')"
             },
             {
               "lettre": "B",
-              "texte": "for i in range(n):\nprint('hello')"
+              "texte": "for i in range(n):\n    print('hello')"
             },
             {
               "lettre": "C",
-              "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\nprint('hello')"
+              "texte": "L = [ i+j for i in range(n) for j in range(n) ]\nfor x in L:\n    print('hello')"
             },
             {
               "lettre": "D",
-              "texte": "for i in range(n//2):\nfor j in range(n//2):\nprint('hello')"
+              "texte": "for i in range(n//2):\n    for j in range(n//2):\n        print('hello')"
             }
           ]
         }

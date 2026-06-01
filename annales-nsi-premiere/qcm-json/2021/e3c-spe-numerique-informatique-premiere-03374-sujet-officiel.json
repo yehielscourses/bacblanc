@@ -75,7 +75,7 @@
             },
             {
               "lettre": "D",
-              "texte": "a  = False b = True\nc = True"
+              "texte": "a  = False b = True\n    c = True"
             }
           ]
         },
@@ -85,19 +85,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n        𝑠= 𝑎 𝑂𝑈 𝑏"
             },
             {
               "lettre": "B",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n        𝑠= 𝑎 𝐸𝑇 𝑏"
             },
             {
               "lettre": "C",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n        𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
             },
             {
               "lettre": "D",
-              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n        𝑠= 𝑎 𝐸𝑇 𝑏"
             }
           ]
         },
@@ -183,7 +183,7 @@
             },
             {
               "lettre": "B",
-              "texte": "Z\n=\n[\np\nfor\np\nin\nL\nif\n(p['marque']\n==\n'Canon'\nand\np['focale']\n==\n'19mm')\nand (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
+              "texte": "Z\n    =\n        [\n            p\n                for\n                    p\n                        in\n                            L\n                                if\n                                    (p['marque']\n                                        ==\n                                            'Canon'\n                                                    and\n                                                        p['focale']\n                                                            ==\n                                                                '19mm')\nand (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
             },
             {
               "lettre": "C",
@@ -191,7 +191,7 @@
             },
             {
               "lettre": "D",
-              "texte": "Z\n=\n[\np\nfor\np\nin\nL\nif\n(p['marque']\n==\n'Canon'\nand\np['focale']\n==\n'19mm')\nor (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
+              "texte": "Z\n    =\n        [\n            p\n                for\n                    p\n                        in\n                            L\n                                if\n                                    (p['marque']\n                                        ==\n                                            'Canon'\n                                                    and\n                                                        p['focale']\n                                                            ==\n                                                                '19mm')\nor (p['marque'] == 'Nikon' and p['focale'] == '19mm') ]"
             }
           ]
         },
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
+          "enonce": "On définit :\ncontacts = { 'Toto': 'toto@nsi.fr', 'Chloé': 'chloe@nsi.com',\n        'Paul': 'paul@nsi.net', 'Clémence': 'clemence@nsi.org' }\nParmi les propositions suivantes, laquelle est exacte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -325,17 +325,17 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
         {
           "numero": "C.3",
-          "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n# chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
+          "enonce": "On dispose du fichier « info.csv » donné ci-dessous :\nnom, prenom, naissance, deces\nlovelace, ada, 1815, 1852\nvon neumann, john, 1903, 1957\nturing, alan, 1912, 1954\nmccarthy, john, 1927, 2011\nfloyd, robert, 1936, 2001\nLe programme ci-dessous nous permet de créer un tableau à partir de ce fichier.\nfile = open(\"info.csv\", \"r\")\nfirstLine = file.readline()\n                # chargement de la ligne d’entête\ntableau = [line.split(',') for line in file]  # chargement des données\nLes index des lignes de ce tableau vont…",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
+          "enonce": "On a défini :\nmendeleiev = [\n    ['H','.', '.','.','.','.','.','He'],\n    ['Li','Be','B','C','N','O','Fl','Ne'],\n    ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n    ...... ]\nComment construire la liste des gaz rares, c'est-à-dire la liste des éléments de la dernière colonne ?",
           "reponses": [
             {
               "lettre": "A",
@@ -567,7 +567,7 @@
       "questions": [
         {
           "numero": "E.1",
-          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
+          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\n                    C\n            B\n        A\n                        E\n                                V\n    S\n                D\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
           "reponses": [
             {
               "lettre": "A",
@@ -605,23 +605,7 @@
             },
             {
               "lettre": "D",
-              "texte": "elle liste tous les fichiers du répertoire courant et enregistre le résultat dans un fichier /home/pi/toto.txt\nS"
-            },
-            {
-              "lettre": "A",
-              "texte": ""
-            },
-            {
-              "lettre": "B",
-              "texte": ""
-            },
-            {
-              "lettre": "C",
-              "texte": ""
-            },
-            {
-              "lettre": "D",
-              "texte": "E\nV"
+              "texte": "elle liste tous les fichiers du répertoire courant et enregistre le résultat dans un fichier /home/pi/toto.txt"
             }
           ]
         },
@@ -743,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On exécute le script Python suivant :\ndef cube(a):\na = a*a*a\nreturn a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
+          "enonce": "On exécute le script Python suivant :\ndef cube(a):\n    a = a*a*a\n    return a\na = 2\nb = cube(a)\nQue vaut le couple (a,b) à la fin de l'exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -765,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "On définit la fonction :\ndef f(a,b):\nassert b!=0,'le deuxième argument est nul'\nresult = a/b\nreturn result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
+          "enonce": "On définit la fonction :\ndef f(a,b):\n    assert b!=0,'le deuxième argument est nul'\n    result = a/b\n    return result\nQu'obtient-on en exécutant la commande r = f(4,0) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -787,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -831,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On définit la fonction suivante :\ndef rey(n):\ni = 0\nwhile i <= n:\ni = 2*i\nreturn i\nQuelle valeur renvoie l'appel rey(100) ?",
+          "enonce": "On définit la fonction suivante :\ndef rey(n):\n    i = 0\n    while i <= n:\n        i = 2*i\n    return i\nQuelle valeur renvoie l'appel rey(100) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -881,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\np = 1\nn = m\nq = a\nwhile n > 0:\n#\nif n%2 == 0:\nq = q * q\nn = n // 2\nelse:\np = q * p\nn = n - 1\nreturn p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
+          "enonce": "𝑎 et 𝑚 étant deux entiers supérieurs à 1, la fonction suivante renvoie 𝑎𝑚.\ndef puissance(a,m):\n    p = 1\n    n = m\n    q = a\n    while n > 0:\n        #\n        if n%2 == 0:\n            q = q * q\n            n = n // 2\n        else:\n            p = q * p\n            n = n - 1\n    return p\nQuelle est l'égalité qui est vérifiée à chaque passage par la ligne marquée # ?",
           "reponses": [
             {
               "lettre": "A",
@@ -925,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\nif k > element:\nelement = k",
+          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\n    if k > element:\n        element = k",
           "reponses": [
             {
               "lettre": "A",

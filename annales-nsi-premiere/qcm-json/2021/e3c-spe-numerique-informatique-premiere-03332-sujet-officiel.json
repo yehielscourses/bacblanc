@@ -119,7 +119,7 @@
             },
             {
               "lettre": "D",
-              "texte": "a  = False b = True\nc = True"
+              "texte": "a  = False b = True\n    c = True"
             }
           ]
         },
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n(\"Durand\", \"Jacques\", 2),\n(\"Dutronc\", \"Jean\", 3),\n...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\nif clients[i][1] == \"Jean\":\nx = clients[i]",
+          "enonce": "Une table d’un fichier client contient le nom, le prénom et l’identifiant des clients sous la forme :\nclients = [ (\"Dupont\", \"Paul\", 1),\n        (\"Durand\", \"Jacques\", 2),\n        (\"Dutronc\", \"Jean\", 3),\n        ...]\nEn supposant que plusieurs clients se prénomment Jean, que vaut la liste x après l’exécution du  code suivant ?\nx = []\nfor i in range(len(clients)):\n   if clients[i][1] == \"Jean\":\n           x = clients[i]",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -473,7 +473,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\nFirst name : <input type=\"text\" name = \"fname\"><br>\nLast name : <input type=\"text\" name = \"lname\"><br>\n<input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
+          "enonce": "Une page Web contient un formulaire dont le code HTML est le suivant :\n<form action=\"/action_page.php\" method=\"post\">\n   First name : <input type=\"text\" name = \"fname\"><br>\n   Last name : <input type=\"text\" name = \"lname\"><br>\n   <input type=\"submit\" value=\"Submit\">\n</form>\nQue peut-on dire des informations transmises dans ce formulaire ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\nalert(i)\ni = i + 1\n}\nalert(\"Fin\")",
+          "enonce": "Dans le programme JavaScript suivant, quelle est la notation qui délimite le bloc d’instructions exécuté à chaque\npassage dans la boucle while ?\ni = 0\nwhile (i < 10) {\n    alert(i)\n    i = i + 1\n}\nalert(\"Fin\")",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\nb = 10\nelif a > 6:\nb = 3",
+          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 2\nb = 5\nif a > 8:\n    b = 10\nelif a > 6:\n    b = 3",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On construit une liste L de la façon suivante :\nL = []\nfor i in range(1,11,2)\nL.append(5*i)\net on obtient ainsi la liste [5, 15, 25, 35, 45].\nOn pourrait aussi procéder de la façon suivante :\nL = []\n# ligne 1 .......\nwhile i < 11:\nL.append(5*i)\n# ligne 2 .......\nQue faudrait-il écrire en ligne 1 et en ligne 2 pour obtenir le même résultat ?",
+          "enonce": "On construit une liste L de la façon suivante :\nL = []\nfor i in range(1,11,2)\n    L.append(5*i)\net on obtient ainsi la liste [5, 15, 25, 35, 45].\nOn pourrait aussi procéder de la façon suivante :\nL = []\n# ligne 1 .......\nwhile i < 11:\n    L.append(5*i)\n    # ligne 2 .......\nQue faudrait-il écrire en ligne 1 et en ligne 2 pour obtenir le même résultat ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 3\nb = 6\nif a > 5 or b != 3:\nb = 4\nelse:\nb = 2",
+          "enonce": "Quelle est la valeur de la variable b à la fin de l'exécution du script suivant ?\na = 3\nb = 6\nif a > 5 or b != 3:\n    b = 4\nelse:\n    b = 2",
           "reponses": [
             {
               "lettre": "A",
@@ -843,7 +843,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\n# assertion vraie à cet endroit\nreturn L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
+          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n        # assertion vraie à cet endroit\n    return L\nParmi les assertions suivantes laquelle reste vraie à chaque itération de la boucle, à l'endroit indiqué ci-dessus ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\nresultat = resultat * compt\ncompt = compt + 1\nLaquelle de ces affirmations est vraie ?",
+          "enonce": "On exécute le script suivant :\ncompt = 0\nresultat = 1\nwhile compt !=7 :\n   resultat = resultat * compt\n   compt = compt + 1\nLaquelle de ces affirmations est vraie ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\nprint('vert')\nif a > b and b == 4:\nprint('rouge')\nif a == 4 or b > a:\nprint('bleu')\nif a == 3 or a < b:\nprint('jaune')",
+          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\n    print('vert')\nif a > b and b == 4:\n    print('rouge')\nif a == 4 or b > a:\n    print('bleu')\nif a == 3 or a < b:\n    print('jaune')",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\nif k > element:\nelement = k",
+          "enonce": "Quelle est la valeur de element à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nelement = L[0]\nfor k in L:\n    if k > element:\n        element = k",
           "reponses": [
             {
               "lettre": "A",

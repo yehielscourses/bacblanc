@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\nm = L[0]\nfor x in L:\nif x > m:\nm = x\nreturn m\nQue calcule cette fonction ?",
+          "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\n    m = L[0]\n    for x in L:\n        if x > m:\n            m = x\n    return m\nQue calcule cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On exécute le code suivant :\ndict = {\n\"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n\"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\nfor cle, valeur in dic.items() :\nif valeur > 18:\nreturn cle\nQue renvoie l'appel f(dict) ?",
+          "enonce": "On exécute le code suivant :\ndict = {\n            \"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n            \"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\n    for cle, valeur in dic.items() :\n        if valeur > 18:\n            return cle\nQue renvoie l'appel f(dict) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -325,17 +325,17 @@
             },
             {
               "lettre": "C",
-              "texte": "[\n{ \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
+              "texte": "[\n    { \"Nom\": \"Camille Muffat\", \"Pays\": \"France\", \"Temps\": 241.45},"
             },
             {
               "lettre": "D",
-              "texte": "[\n{ Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
+              "texte": "[\n    { Nom: \"Camille Muffat\", Pays: \"France\", Temps: 241.45},"
             }
           ]
         },
         {
           "numero": "C.3",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n        {'type': 'marteau', 'prix': 17, 'quantité': 32},\n        {'type': 'scie', 'prix': 24, 'quantité': 3},\n        {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On a défini :\nmendeleiev = [\n['H','.', '.','.','.','.','.','He'],\n['Li','Be','B','C','N','O','Fl','Ne'],\n['Na','Mg','Al','Si','P','S','Cl','Ar'],\n...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
+          "enonce": "On a défini :\nmendeleiev = [\n    ['H','.', '.','.','.','.','.','He'],\n    ['Li','Be','B','C','N','O','Fl','Ne'],\n    ['Na','Mg','Al','Si','P','S','Cl','Ar'],\n    ...... ]\nUne erreur s'est glissée dans le tableau, car le symbole du Fluor est F et non Fl. Quelle instruction permet de\nrectifier ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "On considère le formulaire ci-dessous :\nQuel est votre langage préféré ?\nPython □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
+          "enonce": "On considère le formulaire ci-dessous :\n    Quel est votre langage préféré ?\n        Python □   Java □    Php □\nQuelle balise parmi les quatre suivantes a été utilisée pour les cases à cocher ?",
           "reponses": [
             {
               "lettre": "A",
@@ -539,7 +539,7 @@
         },
         {
           "numero": "D.6",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n<li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n<li><a href=\"onglet2.html\">Onglet 2</a></li>\n<li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n    <li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n    <li><a href=\"onglet2.html\">Onglet 2</a></li>\n    <li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\nif a > b :\na, b = b, a\nif b > c:\nb, c = c, b\nreturn a, b, c",
+          "enonce": "Ce programme ne renvoie pas toujours ses trois arguments dans l’ordre croissant. Parmi les tests suivants, lequel\nva permettre de détecter l’erreur ?\ndef ranger(a, b, c):\n    if a > b :\n        a, b = b, a\n    if b > c:\n        b, c = c, b\n    return a, b, c",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\nif x+y == z:\nreturn True\nelse:\nreturn False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y,z):\n    if x+y == z:\n        return True\n    else:\n        return False\nQuel type de paramètres est-il déconseillé d'utiliser avec cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\nm = liste[0]\nfor i in range (len(liste)) :\nif liste[i] > m:\nm = liste[i]\nreturn m\nQue vaut traitement([-2,5,6,-10,35]) ?",
+          "enonce": "On définit la fonction suivante :\ndef traitement(liste) :\n    m = liste[0]\n    for i in range (len(liste)) :\n        if liste[i] > m:\n            m = liste[i]\n    return m\nQue vaut traitement([-2,5,6,-10,35]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\ni = 0\nfor j in phrase:\nif j == lettre:\ni = i+1\nreturn i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\n    i = 0\n    for j in phrase:\n        if j == lettre:\n            i = i+1\n    return i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On considère la fonction suivante :\ndef f(x,L):\ni = 0\nj = len(L)-1\nwhile i<j:\nk = (i+j)//2\nif x <= L[k]:\nj = k\nelse:\ni = k + 1\nreturn i\nCette fonction implémente :",
+          "enonce": "On considère la fonction suivante :\ndef f(x,L):\n    i = 0\n    j = len(L)-1\n    while i<j:\n        k = (i+j)//2\n        if x <= L[k]:\n            j = k\n        else:\n            i = k + 1\n    return i\nCette fonction implémente :",
           "reponses": [
             {
               "lettre": "A",
@@ -957,19 +957,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "i = K+1\nwhile i < K:\ni = i + 1"
+              "texte": "i = K+1\nwhile i < K:\n    i = i + 1"
             },
             {
               "lettre": "B",
-              "texte": "i = K-1\nwhile i < K:\ni = i - 1"
+              "texte": "i = K-1\nwhile i < K:\n    i = i - 1"
             },
             {
               "lettre": "C",
-              "texte": "i = K-1\nwhile i < K:\ni = i + 1"
+              "texte": "i = K-1\nwhile i < K:\n    i = i + 1"
             },
             {
               "lettre": "D",
-              "texte": "i = K+1\nwhile i >= K:\ni = i - 1"
+              "texte": "i = K+1\nwhile i >= K:\n    i = i - 1"
             }
           ]
         }

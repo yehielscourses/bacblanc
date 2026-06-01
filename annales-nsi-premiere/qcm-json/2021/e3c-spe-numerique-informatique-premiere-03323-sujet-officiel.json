@@ -59,7 +59,8 @@
               "lettre": "D",
               "texte": "é"
             }
-          ]
+          ],
+          "avertissement_extraction": "attendu 4 réponses, extrait 5"
         },
         {
           "numero": "A.3",
@@ -85,7 +86,7 @@
         },
         {
           "numero": "A.4",
-          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\nc = True\nelif a > b+10:\nc = True\nelse:\nc = False",
+          "enonce": "À quelle affectation sont équivalentes les instructions suivantes, où a, b sont des variables entières et c une\nvariable booléenne ?\nif a==b:\n    c = True\nelif a > b+10:\n    c = True\nelse:\n    c = False",
           "reponses": [
             {
               "lettre": "A",
@@ -111,19 +112,19 @@
           "reponses": [
             {
               "lettre": "A",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝑂𝑈 𝑏"
             },
             {
               "lettre": "B",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝐸𝑇 𝑏"
             },
             {
               "lettre": "C",
-              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
+              "texte": "𝑟= 𝑎 𝐸𝑇 𝑏\n    𝑠= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏"
             },
             {
               "lettre": "D",
-              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n𝑠= 𝑎 𝐸𝑇 𝑏"
+              "texte": "𝑟= 𝑎 𝑂𝑈 𝐸𝑋𝐶𝐿𝑈𝑆𝐼𝐹 𝑏\n    𝑠= 𝑎 𝐸𝑇 𝑏"
             }
           ]
         },
@@ -179,7 +180,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\nt = []\nfor i in range(L):\nligne = []\nfor j in range(C):\n......\nt.append(ligne)\nreturn t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n[0, 1, 2],\n[3, 4, 5]\n]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
+          "enonce": "On considère deux entiers strictement positifs L et C. On note n = L*C leur produit et on écrit la fonction\nsuivante, qui construit un tableau de L lignes et C colonnes, contenant les entiers consécutifs de 0 à n-1 :\ndef construitTable(L,C):\n    t = []\n    for i in range(L):\n        ligne = []\n        for j in range(C):\n            ......\n        t.append(ligne)\n    return t\nPar exemple, l'appel construitTable(2,3) doit renvoyer la table :\n[\n    [0, 1, 2],\n    [3, 4, 5]\n                 ]\nQue faut-il écrire à la place des points de suspension pour obtenir ce résultat ?",
           "reponses": [
             {
               "lettre": "A",
@@ -223,7 +224,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\nm = L[0]\nfor x in L:\nif x > m:\nm = x\nreturn m\nQue calcule cette fonction ?",
+          "enonce": "L est une liste d'entiers.\nOn définit la fonction suivante :\ndef f(L):\n    m = L[0]\n    for x in L:\n    if x > m:\n        m = x\nreturn m\nQue calcule cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -295,7 +296,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "Soit la table de données suivante :\nnom\nprenom\ndate_naissance\nDupont\nPierre\n17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
+          "enonce": "Soit la table de données suivante :\nnom\n        prenom\n                date_naissance\nDupont\n        Pierre\n            17/05/1987\nDupond Catherine 18/07/1981\nHaddock Archibald 23/04/1998\nQuels sont les descripteurs de ce tableau ?",
           "reponses": [
             {
               "lettre": "A",
@@ -383,7 +384,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On considère la table suivants :\nt = [\n{'type': 'marteau', 'prix': 17, 'quantité': 32},\n{'type': 'scie', 'prix': 24, 'quantité': 3},\n{'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
+          "enonce": "On considère la table suivants :\nt = [\n    {'type': 'marteau', 'prix': 17, 'quantité': 32},\n    {'type': 'scie', 'prix': 24, 'quantité': 3},\n    {'type': 'tournevis', 'prix': 8, 'quantité': 45} ]\nQuelle expression permet d'obtenir la quantié de scies ?",
           "reponses": [
             {
               "lettre": "A",
@@ -405,7 +406,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
+          "enonce": "On définit ainsi une liste t :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nQuelle affirmation est correcte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -477,7 +478,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\nPrénom :\n<input type=\"text\" id=\"champ1\" name=\"p\"/>\n<br/>\n<input type=\"hidden\" name=\"util\" value=\"1549\"/>\n<input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
+          "enonce": "On considère le formulaire HTML suivant :\n<form action=\"action.php\" method=\"get\" name=\"prenom\">\n    Prénom :\n        <input type=\"text\" id=\"champ1\" name=\"p\"/>\n    <br/>\n    <input type=\"hidden\" name=\"util\" value=\"1549\"/>\n   <input value=\"Envoi du prénom\" type=\"submit\"/>\n</form>\nLe prénom entré par l'utilisateur est contenu dans :",
           "reponses": [
             {
               "lettre": "A",
@@ -709,7 +710,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\np = x\nfor i in range (y - 1):\np = p * x\nreturn p",
+          "enonce": "La fonction Python suivante ne calcule pas toujours correctement le résultat de 𝑥𝑦 pour des arguments entiers.\nParmi les tests suivants, lequel va permettre de détecter l’erreur ?\ndef puissance (x,y):\n    p = x\n    for i in range (y - 1):\n        p = p * x\n    return p",
           "reponses": [
             {
               "lettre": "A",
@@ -775,7 +776,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On définit la fonction suivante :\ndef f(n):\nc = 0\nwhile n > 0:\nc = c + 1\nn = n // 2\nreturn c\nQuel est la valeur renvoyée par l'appel f(35) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(n):\n    c = 0\n    while n > 0:\n        c = c + 1\n        n = n // 2\n    return c\nQuel est la valeur renvoyée par l'appel f(35) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -797,7 +798,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
           "reponses": [
             {
               "lettre": "A",
@@ -847,7 +848,7 @@
       "questions": [
         {
           "numero": "G.1",
-          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\nfor i in range(len(L)):\nindice_min = i\nfor j in range(i+1, len(L)):\nif L[j] < L[indice_min] :\nindice_min = j\nL[i], L[indice_min] = L[indice_min], L[i]\nreturn L\nQuelle est l'affirmation exacte ?",
+          "enonce": "Un algorithme de tri d’une liste d’entiers est implémenté  de la façon suivante :\ndef trier(L) :\n    for i in range(len(L)):\n    indice_min = i\n    for j in range(i+1, len(L)):\n        if L[j] < L[indice_min] :\n            indice_min = j\n        L[i], L[indice_min] = L[indice_min], L[i]\n    return L\nQuelle est l'affirmation exacte ?",
           "reponses": [
             {
               "lettre": "A",
@@ -869,7 +870,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\ns = s + i\ni = i + 1",
+          "enonce": "Quelle est la valeur du couple (s,i) à la fin de l'exécution du script suivant ?\ns = 0\ni = 1\nwhile i < 5:\n    s = s + i\n    i = i + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -891,7 +892,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n# x est la valeur à chercher\n# y est une liste de valeurs\nfor i in range(len(y)):\nif x == y[i]:\nreturn i\nreturn None\nQuel est le coût de cet algorithme ?",
+          "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n    # x est la valeur à chercher\n    # y est une liste de valeurs\n    for i in range(len(y)):\n        if x == y[i]:\n            return i\n    return None\nQuel est le coût de cet algorithme ?",
           "reponses": [
             {
               "lettre": "A",
@@ -913,7 +914,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\np = ...\nfor elt in L:\n.......\nreturn p",
+          "enonce": "La fonction suivante doit calculer le produit de tous les éléments de la liste passée en paramètre. Avec quelles\nexpressions doit-on la compléter pour que cette fonction soit correcte ?\ndef produit (L):\n    p = ...\n    for elt in L:\n        .......\n    return p",
           "reponses": [
             {
               "lettre": "A",

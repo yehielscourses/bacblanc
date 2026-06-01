@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n{'id':2, 'age':27, 'sejour':'ISTANBUL'},\n{'id':3, 'age':53, 'sejour':'LONDRES'},\n{'id':4, 'age':41, 'sejour':'ISTANBUL'},\n{'id':5, 'age':62, 'sejour':'RIO'},\n{'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
+          "enonce": "On définit ainsi une liste t puis une liste r :\nt = [ {'id':1, 'age':23, 'sejour':'PEKIN'},\n      {'id':2, 'age':27, 'sejour':'ISTANBUL'},\n      {'id':3, 'age':53, 'sejour':'LONDRES'},\n      {'id':4, 'age':41, 'sejour':'ISTANBUL'},\n      {'id':5, 'age':62, 'sejour':'RIO'},\n      {'id':6, 'age':28, 'sejour':'ALGER'}]\nr = [ c for c in t if c['age']>30 and c['sejour']=='ISTANBUL' ]\nCombien la liste r contient-elle d'éléments ?",
           "reponses": [
             {
               "lettre": "A",
@@ -473,7 +473,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n<li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n<li><a href=\"onglet2.html\">Onglet 2</a></li>\n<li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
+          "enonce": "On  considère cet extrait de fichier HTML représentant les onglets d'une barre de navigation :\n<ul id=\"tab-nav\">\n    <li><a href=\"onglet1.html\" class=\"tab-nav-active\">Onglet 1</a></li>\n    <li><a href=\"onglet2.html\">Onglet 2</a></li>\n    <li><a href=\"onglet3.html\">Onglet 3</a></li>\n</ul>\nQuel code CSS permet de mettre en bleu la couleur de fond des onglets et uniquement eux ?",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On définit deux fonctions :\ndef f(x):\ny = 2*x + 1\nreturn y\ndef calcul(x):\ny = x - 1\nreturn f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
+          "enonce": "On définit deux fonctions :\ndef f(x):\n    y = 2*x + 1\n    return y\ndef calcul(x):\n    y = x - 1\n    return f(y)\nQuelle est la valeur renvoyée par l'appel calcul(5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\ny = 1\nwhile y < x:\ny = y + 1\nx = x – 1",
+          "enonce": "Quelles sont les valeurs des variables x et y à la fin de l'exécution du script suivant :\nx = 4\nwhile x > 0:\n    y = 1\n    while y < x:\n        y = y + 1\n        x = x – 1",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "La\ndocumentation\nde\nla\nbibliothèque\nrandom\nde\nPython\nprécise\nque\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
+          "enonce": "La\n    documentation\n            de\n                la\n                    bibliothèque\n                        random\n                            de\n                                Python\n                                    précise\n                                        que\nrandom.randint(a,b) renvoie un entier aléatoire N tel que a  ≤ N ≤ b.\nAfin d’obtenir un entier choisi aléatoirement dans l’ensemble {-4 ; -2 ; 0 ; 2 ; 4}, après avoir importé la librairie\nrandom de Python, on peut utiliser l’instruction :",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\nn = n + 2",
+          "enonce": "Quelle est la valeur de la variable n à la fin de l'exécution du script ci-dessous ?\nn = 1\nfor i in range(4):\n    n = n + 2",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\nm = (x-y+abs(x+y))/2\nreturn m\nParmi les tests suivants, lequel va détecter l'erreur ?",
+          "enonce": "La fonction suivante ne calcule pas toujours correctement le maximum des deux nombres donnés en argument.\nOn rappelle que abs(z) calcule la valeur absolue du nombre z.\ndef maxi(x,y) :\n    m = (x-y+abs(x+y))/2\n    return m\nParmi les tests suivants, lequel va détecter l'erreur ?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\nX = X + k\nm = m + 1",
+          "enonce": "Quelle est la valeur de X/m à la fin de l'exécution du code suivant :\nL = [1,2,3,4,1,2,3,4,0,2]\nX = 0\nm = 0\nfor k in L:\n    X = X + k\n    m = m + 1",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "On définit la fonction f comme suit :\ndef f(L):\na = L[0]\nfor x in L:\nif x < a:\na = x\nreturn a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
+          "enonce": "On définit la fonction f comme suit :\ndef f(L):\n    a = L[0]\n    for x in L:\n        if x < a:\n            a = x\n    return a\nQuelle est la valeur renvoyée par l'appel f([7, 10.3, -4, 12 ,7 ,2, 0.7, -5, 14, 1.4]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\ni = 0\nfor j in phrase:\nif j == lettre:\ni = i+1\nreturn i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
+          "enonce": "On considère la fonction suivante :\ndef comptage(phrase,lettre):\n    i = 0\n    for j in phrase:\n        if j == lettre:\n            i = i+1\n    return i\nQue renvoie l'appel comptage(\"Vive l’informatique\",\"e\") ?",
           "reponses": [
             {
               "lettre": "A",

@@ -103,7 +103,7 @@
         },
         {
           "numero": "A.5",
-          "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\nB\nS\n0\n0\n1\n0\n1\n0\n1\n0\n1\n1\n1\n1",
+          "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\n    B\n        S\n0\n    0\n        1\n0\n    1\n        0\n1\n    0\n        1\n1\n    1\n        1",
           "reponses": [
             {
               "lettre": "A",
@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "Quelle est la valeur de la variable S à la fin de l'exécution du script suivant ?\nres =  [ [1,2,3], [4,5,6], [7,8,9] ]\nS = 0\nfor i in range(3):\nS = S + res[i][2]",
+          "enonce": "Quelle est la valeur de la variable S à la fin de l'exécution du script suivant ?\nres =  [ [1,2,3], [4,5,6], [7,8,9] ]\nS = 0\nfor i in range(3):\n    S = S + res[i][2]",
           "reponses": [
             {
               "lettre": "A",
@@ -291,7 +291,7 @@
       "questions": [
         {
           "numero": "C.1",
-          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n{'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
+          "enonce": "Quelle expression Python permet d’accéder au numéro de téléphone de Tournesol, sachant que le répertoire a\nété défini par l’affectation suivante :\nrepertoire = [ {'nom':'Dupont', 'tel':'5234'},\n        {'nom':'Tournesol', 'tel':'5248'}, {'nom':'Dupond', 'tel':'3452'}]",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n['von neumann','john', 1903, 1957],\n['turing', 'alan', 1912, 1954],\n['mccarthy', 'john', 1927, 2011],\n['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\nif table[index][3] > 1954:\nL.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
+          "enonce": "On exécute le code suivant :\ntable = [ ['lovelace', 'ada', 1815, 1852],\n    ['von neumann','john', 1903, 1957],\n    ['turing', 'alan', 1912, 1954],\n    ['mccarthy', 'john', 1927, 2011],\n    ['floyd', 'robert', 1936, 2001]      ]\nL = []\nfor index in range(len(table)):\n    if table[index][3] > 1954:\n        L.append(index)\nQuelle est la valeur de la liste L à la suite de cette exécution ?",
           "reponses": [
             {
               "lettre": "A",
@@ -357,7 +357,7 @@
         },
         {
           "numero": "C.4",
-          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n{'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
+          "enonce": "On définit :\nT = [ {'fruit': 'banane', 'nombre': 25}, {'fruit': 'orange', 'nombre': 124},\n        {'fruit': 'pomme', 'nombre': 75}, {'fruit': 'kiwi', 'nombre': 51}      ]\nQuelle expression a-t-elle pour valeur le nombre de pommes ?",
           "reponses": [
             {
               "lettre": "A",
@@ -379,7 +379,7 @@
         },
         {
           "numero": "C.5",
-          "enonce": "On exécute le code suivant :\ndict = {\n\"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n\"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\nfor cle, valeur in dic.items() :\nif valeur > 18:\nreturn cle\nQue renvoie l'appel f(dict) ?",
+          "enonce": "On exécute le code suivant :\ndict = {\n            \"alexandre\" : 17, \"mehdi\" : 18,  \"jeanne\" : 16,\n            \"charlotte\" : 19, \"celina\" : 18, \"noé\" : 19  }\ndef f(dic):\n    for cle, valeur in dic.items() :\n        if valeur > 18:\n            return cle\nQue renvoie l'appel f(dict) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -473,7 +473,7 @@
         },
         {
           "numero": "D.3",
-          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n<h1>Les auteurs de ce site</h1>\n<button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\nfunction auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
+          "enonce": "Une page HTML comporte ce bout de code :\n<article>\n    <h1>Les auteurs de ce site</h1>\n    <button onclick=\"auteurs()\">Appuyer ici</button>\n</article>\n<script src=\"java_script/ScriptJava.js\"></script>\n<script>\n    function auteurs() { alert(\"Auteurs anonymes\"); }\n<\\script>\nQuel sera le résultat d’un clic sur le bouton \"Appuyer ici\" ?",
           "reponses": [
             {
               "lettre": "A",
@@ -495,7 +495,7 @@
         },
         {
           "numero": "D.4",
-          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\nthis.style.color = \"red\"\n}",
+          "enonce": "Lors de la consultation d’une page HTML, contenant un bouton auquel est associée la fonction javascript\nsuivante, que se passe-t-il quand on clique sur ce bouton ?\nfunction action(event) {\n    this.style.color = \"red\"\n}",
           "reponses": [
             {
               "lettre": "A",
@@ -705,7 +705,7 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\nS = 0\nfor i in range(a, b+1) :\nS = S + T[i]\nreturn S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
+          "enonce": "Soit T un tableau de flottants, a et b deux entiers. On considère une fonction nommée somme renvoyant la\nsomme des éléments du tableau d'indice compris entre a et b définie par :\ndef somme(T, a, b):\n        S = 0\n        for i in range(a, b+1) :\n            S = S + T[i]\n    return S\nQuel ensemble de préconditions doit-on prévoir pour cette fonction ?",
           "reponses": [
             {
               "lettre": "A",
@@ -727,7 +727,7 @@
         },
         {
           "numero": "F.2",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -749,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\nx = x + 1\nreturn x + 1\nx = 0\nf(x+1)",
+          "enonce": "Quelle est la valeur de la variable x à la fin de l'exécution du script suivant :\ndef f(x):\n    x = x + 1\n    return x + 1\nx = 0\nf(x+1)",
           "reponses": [
             {
               "lettre": "A",
@@ -771,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On construit une liste L de la façon suivante :\nL = []\nfor i in range(1,11,2)\nL.append(5*i)\net on obtient ainsi la liste [5, 15, 25, 35, 45].\nOn pourrait aussi procéder de la façon suivante :\nL = []\n# ligne 1 .......\nwhile i < 11:\nL.append(5*i)\n# ligne 2 .......\nQue faudrait-il écrire en ligne 1 et en ligne 2 pour obtenir le même résultat ?",
+          "enonce": "On construit une liste L de la façon suivante :\nL = []\nfor i in range(1,11,2)\n    L.append(5*i)\net on obtient ainsi la liste [5, 15, 25, 35, 45].\nOn pourrait aussi procéder de la façon suivante :\nL = []\n# ligne 1 .......\nwhile i < 11:\n    L.append(5*i)\n    # ligne 2 .......\nQue faudrait-il écrire en ligne 1 et en ligne 2 pour obtenir le même résultat ?",
           "reponses": [
             {
               "lettre": "A",
@@ -793,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On exécute le code suivant\ndef calculPourcentage (prix,reduction):\nassert reduction >= 0, 'la réduction doit être un nombre positif'\nassert reduction < 100, 'la réduction doit être inférieure à 100'\nassert prix > 0, 'le prix doit être un nombre strictement positif'\nremise = (reduction*prix)/100\nprix_remise = prix - remise\nreturn prix_remise\nQuelle est la valeur renvoyée par l'appel calcul(30,100) ?",
+          "enonce": "On exécute le code suivant\ndef calculPourcentage (prix,reduction):\n    assert reduction >= 0, 'la réduction doit être un nombre positif'\n    assert reduction < 100, 'la réduction doit être inférieure à 100'\n    assert prix > 0, 'le prix doit être un nombre strictement positif'\n    remise = (reduction*prix)/100\n    prix_remise = prix - remise\n    return prix_remise\nQuelle est la valeur renvoyée par l'appel calcul(30,100) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -815,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\ntmp = tableau[0]\nfor i in range(......): # à compléter\nif tableau[i] > tmp:\ntmp = tableau[i]\nreturn tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
+          "enonce": "La fonction maximum codée ci-dessous en Python doit renvoyer la plus grande valeur contenue dans le tableau\nd'entiers passé en argument.\ndef maximum(tableau):\n    tmp = tableau[0]\n    for i in range(......): # à compléter\n        if tableau[i] > tmp:\n            tmp = tableau[i]\n    return tmp\nQuelle expression faut-il écrire à la place des pointillés ?",
           "reponses": [
             {
               "lettre": "A",
@@ -865,7 +865,7 @@
         },
         {
           "numero": "G.2",
-          "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n# x est la valeur à chercher\n# y est une liste de valeurs\nfor i in range(len(y)):\nif x == y[i]:\nreturn i\nreturn None\nQuel est le coût de cet algorithme ?",
+          "enonce": "On considère le code suivant de recherche d'une valeur dans une liste :\ndef search(x, y):\n    # x est la valeur à chercher\n    # y est une liste de valeurs\n    for i in range(len(y)):\n        if x == y[i]:\n            return i\n    return None\nQuel est le coût de cet algorithme ?",
           "reponses": [
             {
               "lettre": "A",
@@ -887,7 +887,7 @@
         },
         {
           "numero": "G.3",
-          "enonce": "On définit une fonction de calcul de la moyenne d'une liste de nombres :\ndef moyenne(L):\ns = 0\nn = len(L)\nfor x in L:\ns = s + x\nreturn s/n\nCombien cette fonction utilise-t-elle d'additions et de divisions pour calculer la moyenne d'une liste de 7 nombres\n?",
+          "enonce": "On définit une fonction de calcul de la moyenne d'une liste de nombres :\ndef moyenne(L):\n    s = 0\n    n = len(L)\n    for x in L:\n        s = s + x\n    return s/n\nCombien cette fonction utilise-t-elle d'additions et de divisions pour calculer la moyenne d'une liste de 7 nombres\n?",
           "reponses": [
             {
               "lettre": "A",
@@ -909,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\nprint('vert')\nif a > b and b == 4:\nprint('rouge')\nif a == 4 or b > a:\nprint('bleu')\nif a == 3 or a < b:\nprint('jaune')",
+          "enonce": "Qu'affiche le programme suivant :\na = 3\nb = 4\nif a > b and a == 3:\n    print('vert')\nif a > b and b == 4:\n    print('rouge')\nif a == 4 or b > a:\n    print('bleu')\nif a == 3 or a < b:\n    print('jaune')",
           "reponses": [
             {
               "lettre": "A",
@@ -931,7 +931,7 @@
         },
         {
           "numero": "G.5",
-          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\nM = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
+          "enonce": "Soit L une liste de 𝑛 nombres réels (𝑛 entier naturel non nul). On considère l'algorithme suivant, en langage\nPython, calculant la moyenne des éléments de L.\nM = 0\nfor k in range(n):\n         M = M + L[k]\nM = M/n\nSi le nombre 𝑛 de données double alors le temps d'exécution de ce script  :",
           "reponses": [
             {
               "lettre": "A",
@@ -953,7 +953,7 @@
         },
         {
           "numero": "G.6",
-          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\nmaxi = T[0]\nfor i in range(len(T)):\n.... T[i] > maxi:\n......\nreturn maxi",
+          "enonce": "La fonction maximum doit renvoyer la valeur maximale d'un tableau de nombres. Par quoi doit-on remplacer les\npointillés pour qu'elle donne le résultat attendu ?\ndef maximum(T):\n    maxi = T[0]\n    for i in range(len(T)):\n        .... T[i] > maxi:\n            ......\n    return maxi",
           "reponses": [
             {
               "lettre": "A",

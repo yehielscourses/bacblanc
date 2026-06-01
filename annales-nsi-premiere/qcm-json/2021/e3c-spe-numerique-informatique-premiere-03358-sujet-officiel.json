@@ -37,7 +37,7 @@
         },
         {
           "numero": "A.2",
-          "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\nx = x * 2",
+          "enonce": "Quelle est la valeur de x à la fin de l'exécution du script Python suivant ?\nx = 1\nfor i in range(10):\n    x = x * 2",
           "reponses": [
             {
               "lettre": "A",
@@ -153,7 +153,7 @@
       "questions": [
         {
           "numero": "B.1",
-          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n['O', 'O', 'O'],\n['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
+          "enonce": "On considère la liste de listes suivante :\ntictactoe = [ ['X', 'O', 'O'],\n    ['O', 'O', 'O'],\n    ['O', 'O', 'X']  ]\nQuelle instruction permet d'obtenir une diagonale de 'X' ?",
           "reponses": [
             {
               "lettre": "A",
@@ -175,7 +175,7 @@
         },
         {
           "numero": "B.2",
-          "enonce": "On considère le code suivant :\ndef feed(t):\nfor i in range(len(t)):\nt[i] = 0\nreturn t\nQue renvoie feed([12, 24, 32]) ?",
+          "enonce": "On considère le code suivant :\ndef feed(t):\n    for i in range(len(t)):\n        t[i] = 0\n    return t\nQue renvoie feed([12, 24, 32]) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -219,7 +219,7 @@
         },
         {
           "numero": "B.4",
-          "enonce": "t1 est un tableau à n lignes et n colonnes. On souhaite remplir un tableau t2 de mêmes dimensions que t1 avec\nles contraintes suivantes : les lignes de t2 sont les colonnes de t1 et les colonnes de t2 sont les lignes de t1.\nPar quelle instruction faut-il remplacer la ligne en pointillées du code suivant ?\nfor i in range(n):\nfor j in range(n):\n......",
+          "enonce": "t1 est un tableau à n lignes et n colonnes. On souhaite remplir un tableau t2 de mêmes dimensions que t1 avec\nles contraintes suivantes : les lignes de t2 sont les colonnes de t1 et les colonnes de t2 sont les lignes de t1.\nPar quelle instruction faut-il remplacer la ligne en pointillées du code suivant ?\nfor i in range(n):\n    for j in range(n):\n        ......",
           "reponses": [
             {
               "lettre": "A",
@@ -241,7 +241,7 @@
         },
         {
           "numero": "B.5",
-          "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n{\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nQue fait alors l'instruction P[1][\"âge\"] = 25 ?",
+          "enonce": "On définit ainsi une liste P :\nP = [ {\"nom\":\"Turing\",\"prénom\":\"Alan\",\"âge\":28},\n      {\"nom\":\"Lovelace\",\"prénom\":\"Ada\",\"âge\":27} ]\nQue fait alors l'instruction P[1][\"âge\"] = 25 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -263,7 +263,7 @@
         },
         {
           "numero": "B.6",
-          "enonce": "On considère la fonction suivante :\ndef somme(tab):\ns = 0\nfor i in range(len(tab)):\n......\nreturn s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
+          "enonce": "On considère la fonction suivante :\ndef somme(tab):\n    s = 0\n    for i in range(len(tab)):\n        ......\n    return s\nPar quelle instruction faut-il remplacer les points de suspension pour que l'appel somme([10,11,12,13,14])\nrenvoie 60 ?",
           "reponses": [
             {
               "lettre": "A",
@@ -313,7 +313,7 @@
         },
         {
           "numero": "C.2",
-          "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n{'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n{'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\nif i[a] > 10:\nprint(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
+          "enonce": "Par quoi faut-il remplacer les pointillés dans le script suivant :\nrelevé = [ {'matière':'EPS','moyenne':11}, {'matière':'Sciences','moyenne':6},\n        {'matière':'LV1','moyenne':14}, {'matière':'Histoire','moyenne':9},\n    {'matière':'LV2','moyenne':15} ]\na = ......\nb = ......\nfor i in relevé :\n     if i[a] > 10:\n         print(i[b])\npour qu'il affiche\nEPS\nLV1\nLV2",
           "reponses": [
             {
               "lettre": "A",
@@ -401,7 +401,7 @@
         },
         {
           "numero": "C.6",
-          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n('Tim', 'Berners-Lee', 'H', 1955),\n('Ada', 'Lovelace', 'F', 1815),\n('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\nmystere = []\nfor ligne in table:\nif ligne[2] == 'F':\nmystere.append(ligne[1])\nreturn mystere\nQue vaut  fonctionMystere(table)?",
+          "enonce": "On considère la liste de p-uplets suivante :\ntable = [ ('Grace', 'Hopper', 'F', 1906),\n                ('Tim', 'Berners-Lee', 'H', 1955),\n                ('Ada', 'Lovelace', 'F', 1815),\n                ('Alan', 'Turing', 'H', 1912)     ]\noù chaque p-uplet représente un informaticien ou une informaticienne célèbre ; le premier élément est son\nprénom, le deuxième élément son nom, le troisième élément son sexe (‘H’ pour un homme, ‘F’ pour une femme)\net le quatrième élément son année de naissance (un nombre entier entre 1000 et 2000).\nOn définit une fonction :\ndef fonctionMystere(table):\n    mystere = []\n    for ligne in table:\n        if ligne[2] == 'F':\n            mystere.append(ligne[1])\n    return mystere\nQue vaut  fonctionMystere(table)?",
           "reponses": [
             {
               "lettre": "A",
@@ -655,7 +655,7 @@
         },
         {
           "numero": "E.5",
-          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
+          "enonce": "Vivien télécharge un logiciel à partir d’un site commercial. Le transfert par Internet du logiciel a débuté entre le\nserveur (machine S) et son domicile (machine V). On a représenté des routeurs A, B, C, D et E et les liens existants.\nLes paquets IP suivent le chemin passant par les routeurs A, B, C et E.\n                    C\n            B\n        A\n                        E\n                                V\n    S\n                D\nDurant un orage, la foudre frappe et détruit le serveur C par lequel transitent les paquets correspondant au\nfichier que télécharge Vivien. Que se passe-t-il ?",
           "reponses": [
             {
               "lettre": "A",
@@ -693,23 +693,7 @@
             },
             {
               "lettre": "D",
-              "texte": "DNS\nS"
-            },
-            {
-              "lettre": "A",
-              "texte": ""
-            },
-            {
-              "lettre": "B",
-              "texte": ""
-            },
-            {
-              "lettre": "C",
-              "texte": ""
-            },
-            {
-              "lettre": "D",
-              "texte": "E\nV"
+              "texte": "DNS"
             }
           ]
         }
@@ -721,29 +705,29 @@
       "questions": [
         {
           "numero": "F.1",
-          "enonce": "On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de\nnombres :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\n..............\n..............\nreturn m\nQue faut-il écrire à la place des lignes pointillées ?",
+          "enonce": "On considère le code incomplet suivant, où la fonction maximum renvoie le plus grand élément d’une liste de\nnombres :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        ..............\n        ..............\n    return m\nQue faut-il écrire à la place des lignes pointillées ?",
           "reponses": [
             {
               "lettre": "A",
-              "texte": "if m < L[i]:\nL[i] = m"
+              "texte": "if m < L[i]:\n    L[i] = m"
             },
             {
               "lettre": "B",
-              "texte": "if L[i-1] < L[i]:\nm = L[i]"
+              "texte": "if L[i-1] < L[i]:\n    m = L[i]"
             },
             {
               "lettre": "C",
-              "texte": "if L[i] < L[0]:\nL[i],L[0] = L[0],L[i]"
+              "texte": "if L[i] < L[0]:\n    L[i],L[0] = L[0],L[i]"
             },
             {
               "lettre": "D",
-              "texte": "if L[i] > m:\nm = L[i]"
+              "texte": "if L[i] > m:\n    m = L[i]"
             }
           ]
         },
         {
           "numero": "F.2",
-          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\nif a < b:\nreturn a\nelse:\nreturn b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
+          "enonce": "On considère la fonction suivante :\ndef comparaison(a,b):\n    if a < b:\n        return a\n    else:\n        return b\nQuel est le type de la valeur renvoyée par l'appel comparaison(6,5) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -765,7 +749,7 @@
         },
         {
           "numero": "F.3",
-          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\nf = 1\n.........\nf = f * i\nreturn f",
+          "enonce": "𝑛 étant un entier strictement positif, la fonction suivante calcule sa factorielle, c'est-à-dire le produit 1 × 2 ×\n3 × ⋯× (𝑛−1) × 𝑛. Comment faut-il écrire la ligne en pointillée ci-dessous pour ce faire ?\ndef factorielle(n):\n    f = 1\n    .........\n        f = f * i\n    return f",
           "reponses": [
             {
               "lettre": "A",
@@ -787,7 +771,7 @@
         },
         {
           "numero": "F.4",
-          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\nm = L[0]\nfor i in range(1,len(L)):\nif .........:\nm = L[i]\nreturn m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
+          "enonce": "On souhaite écrire une fonction qui renvoie le maximum d'une liste d'entiers :\ndef maximum(L):\n    m = L[0]\n    for i in range(1,len(L)):\n        if .........:\n            m = L[i]\n    return m\nPar quoi faut-il remplacer les pointillés pour que cette fonction produise bien le résultat attendu ?",
           "reponses": [
             {
               "lettre": "A",
@@ -809,7 +793,7 @@
         },
         {
           "numero": "F.5",
-          "enonce": "On définit la fonction suivante :\ndef f(x,y):\nx = x + y\ny = x - y\nx = x - y\nreturn (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
+          "enonce": "On définit la fonction suivante :\ndef f(x,y):\n    x = x + y\n    y = x - y\n    x = x - y\n    return (x,y)\nQuel est la valeur renvoyée par l'appel f(2019,2020) ?",
           "reponses": [
             {
               "lettre": "A",
@@ -831,7 +815,7 @@
         },
         {
           "numero": "F.6",
-          "enonce": "On considère le code suivant\ndef moyenne(notes):\nsomme = 0\nfor cpt in range(len(notes)):\n....\nm = somme/len(notes)\nreturn m\nPar quoi remplacer la ligne en pointillée pour que cette fonction calcule la moyenne d'une liste de nombres ?",
+          "enonce": "On considère le code suivant\ndef moyenne(notes):\n    somme = 0\n    for cpt in range(len(notes)):\n        ....\n    m = somme/len(notes)\n    return m\nPar quoi remplacer la ligne en pointillée pour que cette fonction calcule la moyenne d'une liste de nombres ?",
           "reponses": [
             {
               "lettre": "A",
@@ -925,7 +909,7 @@
         },
         {
           "numero": "G.4",
-          "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
+          "enonce": "On a représenté sur un quadrillage les éléments de quatre classes (chaque classe est représentée par un carré,\nun triangle, un losange ou un disque) ainsi qu’un nouvel élément X.\n    X\nEn appliquant l'algorithme des k plus proches voisins pour la distance usuelle dans le plan, avec k=5, à quelle\nclasse est affecté le nouvel élément X ?",
           "reponses": [
             {
               "lettre": "A",
@@ -963,13 +947,13 @@
             },
             {
               "lettre": "D",
-              "texte": "un changement de répertoire\nX"
+              "texte": "un changement de répertoire"
             }
           ]
         },
         {
           "numero": "G.6",
-          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\nfor x in L:\nif n == x:\nreturn True\nreturn False",
+          "enonce": "Que renvoie la fonction suivante quand on l'appelle avec un nombre entier et une liste d'entiers ?\ndef mystere(n,L):\n    for x in L:\n        if n == x:\n            return True\n    return False",
           "reponses": [
             {
               "lettre": "A",
