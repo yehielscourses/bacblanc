@@ -7585,7 +7585,7 @@
       "numero_original": "A.6",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\n    a\n        b\n            form\n    True\n        True\n            False\n    False\n        True\n            False\n    True\n        False\n            True\n    False\n        False\n            False\nQuelle est cette formule booléenne form ?",
+      "enonce": "On considère une formule booléenne form des variables booléennes a et b dont voici la table de vérité.\n  a      b      form \n  True   True   False\n  False  True   False\n  True   False  True \n  False  False  False\nQuelle est cette formule booléenne form ?",
       "reponses": [
         {
           "lettre": "A",
@@ -10260,7 +10260,7 @@
       "numero_original": "A.3",
       "theme_id": "A",
       "theme_nom": "types de base",
-      "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\nA\n    B\n        S\n0\n    0\n        1\n0\n    1\n        0\n1\n    0\n        1\n1\n    1\n        1",
+      "enonce": "Choisir une expression booléenne pour la variable S qui satisfait la table de vérité suivante.\n  A  B  S\n  0  0  1\n  0  1  0\n  1  0  1\n  1  1  1",
       "reponses": [
         {
           "lettre": "A",
@@ -11289,19 +11289,19 @@
       "reponses": [
         {
           "lettre": "A",
-          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nTrue\nTrue\nTrue\nTrue"
+          "texte": "  𝑎      𝑏      (𝑎 or 𝑏) and 𝑎\n  False  False  False         \n  False  True   False         \n  True   False  True          \n  True   True   True          "
         },
         {
           "lettre": "B",
-          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nTrue\nTrue\nTrue"
+          "texte": "  𝑎      𝑏      (𝑎 or 𝑏) and 𝑎\n  False  False  False         \n  False  True   False         \n  True   False  False         \n  True   True   True          "
         },
         {
           "lettre": "C",
-          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nTrue\nTrue"
+          "texte": "  𝑎      𝑏      (𝑎 or 𝑏) and 𝑎\n  False  False  False         \n  False  True   False         \n  True   False  False         \n  False  True   True          "
         },
         {
           "lettre": "D",
-          "texte": "𝑎\n𝑏\n(𝑎 or 𝑏) and 𝑎\nFalse\nFalse\nFalse\nFalse\nTrue\nFalse\nTrue\nFalse\nFalse\nFalse\nTrue\nFalse"
+          "texte": "  𝑎      𝑏      (𝑎 or 𝑏) and 𝑎\n  False  False  False         \n  False  True   False         \n  True   False  False         \n  False  True   False         "
         }
       ]
     },
